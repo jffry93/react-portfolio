@@ -38,13 +38,14 @@ const StyledWork = styled.div`
   min-height: 100vh;
   overflow: hidden;
   padding: 5rem 10rem;
-  h2 {
-    padding: 1rem 0rem;
-  }
 `;
 
 const StyledMovie = styled.div`
   padding-bottom: 10rem;
+  h2 {
+    color: #cccccc;
+    padding: 1rem 0rem;
+  }
   .line {
     height: 0.5rem;
     background: #cccccc;
