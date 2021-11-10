@@ -1,4 +1,3 @@
-import React from 'react';
 import home from '../img/home1.png';
 //Styled
 import {
@@ -10,6 +9,9 @@ import {
 
 //Framer Motion
 import { motion } from 'framer-motion';
+import { titleAnimation, fade, photoAnimation } from '../animation';
+//wave animation on about page
+import Wave from './Wave';
 
 const AboutSection = () => {
   return (
@@ -17,26 +19,31 @@ const AboutSection = () => {
       <StyledDescription>
         <motion.div>
           <StyledHide>
-            <motion.h2>We work to make</motion.h2>
+            <motion.h2 variants={titleAnimation}>We work to make</motion.h2>
           </StyledHide>
           <StyledHide>
-            <motion.h2>
+            <motion.h2 variants={titleAnimation}>
               your <span>dreams</span>
             </motion.h2>
           </StyledHide>
           <StyledHide>
-            <motion.h2>come true</motion.h2>
+            <motion.h2 variants={titleAnimation}>come true</motion.h2>
           </StyledHide>
         </motion.div>
-        <p>
+        <motion.p variants={fade}>
           Contact us for any photography or videography ideas that you have. We
           have skills that pay the bills
-        </p>
-        <button>Contact Us</button>
+        </motion.p>
+        <motion.button variants={fade}>Contact Us</motion.button>
       </StyledDescription>
       <StyledImage>
-        <img src={home} alt='Guy with a camera' />
+        <motion.img
+          variants={photoAnimation}
+          src={home}
+          alt='Guy with a camera'
+        />
       </StyledImage>
+      <Wave />
     </StyledAbout>
   );
 };

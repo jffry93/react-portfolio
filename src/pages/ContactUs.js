@@ -9,6 +9,7 @@ const ContactUs = () => {
       initial='hidden'
       animate='show'
       exit='exit'
+      style={{ background: '#fff' }}
     >
       <h1>Contact</h1>
     </motion.div>

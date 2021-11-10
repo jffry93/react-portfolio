@@ -15,6 +15,7 @@ const OurWork = () => {
       initial='hidden'
       animate='show'
       exit='exit'
+      style={{ background: '#fff' }}
     >
       <StyledMovie>
         <h2>The Athlete</h2>
@@ -50,7 +51,6 @@ const StyledWork = styled(motion.div)`
 const StyledMovie = styled.div`
   padding-bottom: 10rem;
   h2 {
-    color: #cccccc;
     padding: 1rem 0rem;
   }
   .line {
