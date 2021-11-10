@@ -2,6 +2,9 @@ import { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 import styled from 'styled-components';
 import { MovieState } from '../movieState';
+//PAGE ANIMATION
+import { motion } from 'framer-motion';
+import { pageAnimation } from '../animation';
 
 const MovieDetail = () => {
   const history = useHistory();
@@ -24,7 +27,12 @@ const MovieDetail = () => {
     //added a fraction tag around to add a function
     <>
       {movie && (
-        <StyledDetails>
+        <StyledDetails
+          variants={pageAnimation}
+          initial='hidden'
+          animate='show'
+          exit='exit'
+        >
           <StyledHeadLine>
             <h2>{movie.title}</h2>
             <img src={movie.mainImg} alt='poo' />
@@ -47,7 +55,7 @@ const MovieDetail = () => {
   );
 };
 
-const StyledDetails = styled.div`
+const StyledDetails = styled(motion.div)`
   color: white;
 `;
 const StyledHeadLine = styled.div`

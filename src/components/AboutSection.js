@@ -8,23 +8,26 @@ import {
   StyledHide,
 } from '../Styles';
 
+//Framer Motion
+import { motion } from 'framer-motion';
+
 const AboutSection = () => {
   return (
     <StyledAbout>
       <StyledDescription>
-        <div className='title'>
+        <motion.div>
           <StyledHide>
-            <h2>We work to make</h2>
+            <motion.h2>We work to make</motion.h2>
           </StyledHide>
           <StyledHide>
-            <h2>
+            <motion.h2>
               your <span>dreams</span>
-            </h2>
+            </motion.h2>
           </StyledHide>
           <StyledHide>
-            <h2>come true</h2>
+            <motion.h2>come true</motion.h2>
           </StyledHide>
-        </div>
+        </motion.div>
         <p>
           Contact us for any photography or videography ideas that you have. We
           have skills that pay the bills
