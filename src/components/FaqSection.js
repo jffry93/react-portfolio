@@ -1,7 +1,12 @@
 import React from 'react';
+//Toggle Reusable Component
+import Toggle from './Toggle';
 //Styles
 import styled from 'styled-components';
 import { StyledAbout } from '../Styles';
+//Framer Motion
+//detects when layout changes
+import { AnimateSharedLayout } from 'framer-motion';
 
 const FaqSection = () => {
   return (
@@ -9,50 +14,44 @@ const FaqSection = () => {
       <h2>
         Any Questions <span>FAQ</span>
       </h2>
-      <div className='question'>
-        <h4>How Do I Start?</h4>
-        <div className='answer'>
-          <div className='faq-line'></div>
-          <p>Lorem ipsum dolor sit amet.</p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            Reiciendis, tempora!
-          </p>
-        </div>
-      </div>
-      <div className='question'>
-        <h4>Daily Schedule</h4>
-        <div className='answer'>
-          <div className='faq-line'></div>
-          <p>Lorem ipsum dolor sit amet.</p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            Reiciendis, tempora!
-          </p>
-        </div>
-      </div>
-      <div className='question'>
-        <h4>Different Payment Methods</h4>
-        <div className='answer'>
-          <div className='faq-line'></div>
-          <p>Lorem ipsum dolor sit amet.</p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            Reiciendis, tempora!
-          </p>
-        </div>
-      </div>
-      <div className='question'>
-        <h4>What Products Do You Offer?</h4>
-        <div className='answer'>
-          <div className='faq-line'></div>
-          <p>Lorem ipsum dolor sit amet.</p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            Reiciendis, tempora!
-          </p>
-        </div>
-      </div>
+      <AnimateSharedLayout>
+        <Toggle title='How Do I Start?'>
+          <div className='answer'>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Reiciendis, tempora!
+            </p>
+          </div>
+        </Toggle>
+        <Toggle title='Daily Schedule'>
+          <div className='answer'>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Reiciendis, tempora!
+            </p>
+          </div>
+        </Toggle>
+        <Toggle title='Different Payment Methods'>
+          <div className='answer'>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Reiciendis, tempora!
+            </p>
+          </div>
+        </Toggle>
+        <Toggle title='What Products Do You Offer?'>
+          <div className='answer'>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Reiciendis, tempora!
+            </p>
+          </div>
+        </Toggle>
+      </AnimateSharedLayout>
     </Faq>
   );
 };

@@ -39,6 +39,9 @@ const AboutSection = () => {
       <StyledImage>
         <motion.img
           variants={photoAnimation}
+          //will remove animation delay
+          // initial='hidden'
+          // animate='show'
           src={home}
           alt='Guy with a camera'
         />
