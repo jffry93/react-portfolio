@@ -63,10 +63,11 @@ const StyledHeadLine = styled.div`
   padding-top: 20vh;
   position: relative;
   h2 {
+    text-align: center;
     position: absolute;
     top: 10%;
     right: 50%;
-    transform: translate(-50%, -10%);
+    transform: translate(50%, -10%);
   }
   img {
     width: 100%;
@@ -80,6 +81,10 @@ const StyledAwards = styled.div`
   margin: 5rem 10rem;
   align-items: center;
   justify-content: space-around;
+  @media (max-width: 1300px) {
+    display: block;
+    margin: 2rem 2rem;
+  }
 `;
 
 const StyledAward = styled.div`
