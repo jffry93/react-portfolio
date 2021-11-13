@@ -7,10 +7,19 @@ import { StyledAbout } from '../Styles';
 //Framer Motion
 //detects when layout changes
 import { AnimateSharedLayout } from 'framer-motion';
+import { useScroll } from './useScroll';
+import { fade } from '../animation';
 
 const FaqSection = () => {
+  const [element, controls] = useScroll();
   return (
-    <Faq className='faq'>
+    <Faq
+      variants={fade}
+      ref={element}
+      animate={controls}
+      initial='hidden'
+      className='faq'
+    >
       <h2>
         Any Questions <span>FAQ</span>
       </h2>

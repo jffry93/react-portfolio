@@ -7,16 +7,20 @@ import home2 from '../img/home2.png';
 //Styles
 import styled from 'styled-components';
 //Reusable styles
-import {
-  StyledAbout,
-  StyledDescription,
-  StyledImage,
-  StyledHide,
-} from '../Styles';
+import { StyledAbout, StyledDescription, StyledImage } from '../Styles';
+//scroll animation that runs when an element is in view
+import { fade } from '../animation';
+import { useScroll } from './useScroll';
 
 const ServicesSection = () => {
+  const [element, controls] = useScroll();
   return (
-    <StyledServices>
+    <StyledServices
+      variants={fade}
+      animate={controls}
+      initial='hidden'
+      ref={element}
+    >
       <StyledDescription>
         <h2>
           High <span>Quality</span> services
