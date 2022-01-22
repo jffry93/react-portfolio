@@ -1,4 +1,5 @@
-import React from 'react';
+import { useState } from 'react';
+import '../src/index.css';
 //Styled
 import GlobalStyle from './components/GlobalStyle';
 //NavBar
@@ -15,12 +16,14 @@ import { Switch, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 
 function App() {
+  const [navToggle, setNavToggle] = useState(false);
+
   const location = useLocation();
 
   return (
     <div className='App'>
       <GlobalStyle />
-      <Nav />
+      <Nav navToggle={navToggle} setNavToggle={setNavToggle} />
       <AnimatePresence exitBeforeEnter>
         <Switch location={location} key={location.key}>
           <Route path='/' exact>

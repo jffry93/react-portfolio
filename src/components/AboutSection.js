@@ -1,8 +1,10 @@
 import home from '../img/home1.png';
+
 //Styled
 import {
   StyledAbout,
-  StyledDescription,
+  StyledOverlay,
+  StyledAboutDescription,
   StyledImage,
   StyledHide,
 } from '../Styles';
@@ -16,37 +18,27 @@ import Wave from './Wave';
 const AboutSection = () => {
   return (
     <StyledAbout>
-      <StyledDescription>
-        <motion.div>
-          <StyledHide>
-            <motion.h2 variants={titleAnimation}>We work to make</motion.h2>
-          </StyledHide>
-          <StyledHide>
+      <StyledOverlay>
+        <StyledAboutDescription>
+          <motion.div>
+            <StyledHide>
+              <motion.h3 variants={titleAnimation}>Hi, my name is</motion.h3>
+            </StyledHide>
+            {/* <StyledHide>
             <motion.h2 variants={titleAnimation}>
-              your <span>dreams</span>
+              <span>Jeff</span>
             </motion.h2>
-          </StyledHide>
-          <StyledHide>
-            <motion.h2 variants={titleAnimation}>come true</motion.h2>
-          </StyledHide>
-        </motion.div>
-        <motion.p variants={fade}>
-          Contact us for any photography or videography ideas that you have. We
-          have skills that pay the bills
-        </motion.p>
-        <motion.button variants={fade}>Contact Us</motion.button>
-      </StyledDescription>
-      <StyledImage>
-        <motion.img
-          variants={photoAnimation}
-          //will remove animation delay
-          // initial='hidden'
-          // animate='show'
-          src={home}
-          alt='Guy with a camera'
-        />
-      </StyledImage>
-      <Wave />
+          </StyledHide> */}
+            <StyledHide>
+              <motion.h2 variants={titleAnimation}>
+                <span>Jeffrey</span> Zalischi
+              </motion.h2>
+            </StyledHide>
+          </motion.div>
+          <motion.h4 variants={fade}>Frontend Web Developer</motion.h4>
+          <motion.button variants={fade}>Let's talk</motion.button>
+        </StyledAboutDescription>
+      </StyledOverlay>
     </StyledAbout>
   );
 };

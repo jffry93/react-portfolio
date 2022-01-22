@@ -7,7 +7,7 @@ import home2 from '../img/home2.png';
 //Styles
 import styled from 'styled-components';
 //Reusable styles
-import { StyledAbout, StyledDescription, StyledImage } from '../Styles';
+import { StyledAbout, StyledServicesDescription, StyledImage } from '../Styles';
 //scroll animation that runs when an element is in view
 import { fade } from '../animation';
 import { useScroll } from './useScroll';
@@ -21,7 +21,10 @@ const ServicesSection = () => {
       initial='hidden'
       ref={element}
     >
-      <StyledDescription>
+      <StyledImage>
+        <img src={home2} alt='Img of a camera' />
+      </StyledImage>
+      <StyledServicesDescription>
         <h2>
           High <span>Quality</span> services
         </h2>
@@ -31,34 +34,31 @@ const ServicesSection = () => {
               <img src={clock} alt='clock' />
               <h3>Efficent</h3>
             </div>
-            <p>Lorem ipsum dolor sit amet.</p>
+            <p>Never missed a deadline</p>
           </StyledCard>
           <StyledCard>
             <div className='icon'>
               <img src={diaphragm} alt='diaphragm' />
-              <h3>Diaphragm</h3>
+              <h3>Modern</h3>
             </div>
-            <p>Lorem ipsum dolor sit amet.</p>
+            <p>I use the latest tools and libraries</p>
           </StyledCard>
           <StyledCard>
             <div className='icon'>
               <img src={money} alt='moneyz' />
               <h3>Affordable</h3>
             </div>
-            <p>Lorem ipsum dolor sit amet.</p>
+            <p>Let's find something that works for you</p>
           </StyledCard>
           <StyledCard>
             <div className='icon'>
               <img src={teamwork} alt='teamwork' />
-              <h3>Teamwork</h3>
+              <h3>Custom</h3>
             </div>
-            <p>Lorem ipsum dolor sit amet.</p>
+            <p>A unique design for your business needs</p>
           </StyledCard>
         </StyledCards>
-      </StyledDescription>
-      <StyledImage>
-        <img src={home2} alt='Img of a camera' />
-      </StyledImage>
+      </StyledServicesDescription>
     </StyledServices>
   );
 };
