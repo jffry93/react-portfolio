@@ -30,9 +30,7 @@ const AboutSection = () => {
             </motion.h2>
           </StyledHide> */}
             <StyledHide>
-              <motion.h2 variants={titleAnimation}>
-                <span>Jeffrey</span> Zalischi
-              </motion.h2>
+              <motion.h2 variants={titleAnimation}>Jeffrey Zalischi</motion.h2>
             </StyledHide>
           </motion.div>
           <motion.h4 variants={fade}>Frontend Web Developer</motion.h4>

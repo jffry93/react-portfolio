@@ -8,7 +8,7 @@ export const StyledAbout = styled(motion.div)`
   text-align: right;
 
   color: white;
-  border: red 3px solid;
+  /* border: red 3px solid; */
   background-image: url(${coffee});
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -20,7 +20,7 @@ export const StyledAbout = styled(motion.div)`
   } */
 `;
 export const StyledOverlay = styled.div`
-  border: green 3px solid;
+  /* border: green 3px solid; */
   background-color: rgba(0, 0, 0, 0.4);
   display: flex;
   align-items: center;
@@ -28,31 +28,39 @@ export const StyledOverlay = styled.div`
   padding: 5rem 10rem;
   height: 100vh;
   width: 100%;
+  @media (max-width: 750px) {
+    padding: 5rem 3rem;
+  }
 `;
 export const StyledAboutDescription = styled.div`
-  border: 3px solid blue;
+  /* border: 3px solid blue; */
   width: 100%;
   flex: 1;
   /* margin-right: 5rem; */
   /* z-index: 2; */
+  //name
   h2 {
-    font-size: 6rem;
+    font-size: clamp(4rem, 10vw, 7rem);
     font-weight: bold;
-    margin: 3rem 0 6rem;
+    margin: 1.5rem 0 6rem;
   }
+  //greeting
   h3 {
-    font-size: 2.3rem;
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
     font-weight: 300;
     letter-spacing: 3px;
+    margin-top: 12rem;
   }
+  //title
   h4 {
-    font-size: 3rem;
+    font-size: clamp(1rem, 5vw, 3.3rem);
     font-weight: 600;
     letter-spacing: 3px;
     margin: 0 0 6rem;
   }
   button {
-    font-size: 25px;
+    font-size: clamp(1rem, 3vw, 1.5rem);
+    border: white 3px solid;
   }
   @media (max-width: 1300px) {
     padding: 0;

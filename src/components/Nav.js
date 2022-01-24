@@ -27,7 +27,7 @@ const Nav = ({ navToggle, setNavToggle }) => {
       <ul className={`${navToggle ? 'library-active' : ''}`}>
         <li>
           <Link href='#' to='/'>
-            <span aria-hidden='true'>1.</span> ABOUT
+            <span>ABOUT</span>
           </Link>
           {/* <StyledLine
             transition={{ duration: 0.75 }}
@@ -37,7 +37,7 @@ const Nav = ({ navToggle, setNavToggle }) => {
         </li>
         <li>
           <Link href='#' to='/work'>
-            <span aria-hidden='true'>2.</span> WORK
+            <span>WORK</span>
           </Link>
           {/* <StyledLine
             transition={{ duration: 0.75 }}
@@ -47,7 +47,7 @@ const Nav = ({ navToggle, setNavToggle }) => {
         </li>
         <li>
           <Link href='#' to='/contact'>
-            <span aria-hidden='true'>3.</span> CONTACT
+            <span>CONTACT</span>
           </Link>
           {/* <StyledLine
             transition={{ duration: 0.75 }}
@@ -69,11 +69,13 @@ const StyledNav = styled.nav`
   gap: var(--gap, 1rem);
   /* margin: auto; */
   width: 100%;
-  padding: 1rem 0 1rem 10rem; //site margin border
-  background: transparent;
+  padding: 2rem 0 1rem 10rem; //site margin border
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.9));
+  backdrop-filter: blur(0.15rem);
+  /* border-bottom: white 1px solid; */
   top: 0;
   /* z-index: 10; */
-  border: pink 3px solid;
+  /* border: pink 3px solid; */
   .close-toggle {
     background: url(${closeHamburger});
     background-repeat: no-repeat;
@@ -90,34 +92,36 @@ const StyledNav = styled.nav`
   }
   ul {
     display: flex;
+    /* align-items: center; */
+    justify-content: center;
     list-style: none;
     white-space: nowrap;
     padding: 0;
     margin: 0;
-    border: 3px solid purple;
-    gap: var(--gap, 1rem);
+    /* border: 3px solid purple; */
+    gap: var(--gap, 2rem);
 
-    background: hsl(0 0% 0% / 0.9);
+    /* background: hsl(0 0% 0% / 0.9); */
   }
 
   //uses the value if the browser supports it
-  @supports (backdrop-filter: blur(1rem)) {
+  /* @supports (backdrop-filter: blur(1rem)) {
     ul {
-      background: hsl(0 0% 100% / 0.1);
+      background: hsl(0 0% 0% / 0.5);
       backdrop-filter: blur(
         1rem
       ); //firefox does not support backdrop-filter rn 01/21/22
     }
-  }
+  } */
   li {
     /* padding-left: 10rem;
     position: relative; */
-    border: 3px solid cyan;
-    font-weight: 500;
+    /* border: 3px solid cyan; */
+    font-weight: 700;
+    letter-spacing: 1px;
     span {
+      font-size: 1.15rem;
       color: white;
-      font-weight: 700;
-      margin-inline-end: 0.5em;
     }
   }
   h1 {
@@ -136,7 +140,7 @@ const StyledNav = styled.nav`
   //desktop
   @media (min-width: 750px) {
     ul {
-      --gap: clamp(1.5rem, 5vw, 3rem);
+      --gap: clamp(5rem, 5vw, 6rem);
       /* padding-block: 2rem; */
       /* padding-inline: clamp(3rem, 10vw, 10rem); */
       padding: 1rem 10rem 1rem 5rem;
@@ -144,6 +148,7 @@ const StyledNav = styled.nav`
   }
   //mobile
   @media (max-width: 750px) {
+    backdrop-filter: none;
     /* flex-direction: column; */
     padding: 2rem 1rem;
     #Logo {
@@ -151,12 +156,15 @@ const StyledNav = styled.nav`
       /* margin: 2rem; */
     }
     ul {
-      --gap: 2em;
+      --gap: 4rem;
 
       position: fixed;
       inset: 0 0 0 30%;
       /* background: steelblue; */
       z-index: 2;
+      height: 100vh;
+
+      background: rgba(0, 0, 0, 0.5);
 
       flex-direction: column;
       padding: min(30vh, 10rem) 2em;
@@ -170,8 +178,10 @@ const StyledNav = styled.nav`
     }
     .library-active {
       transform: translateX(0%);
+      backdrop-filter: blur(6rem) !important;
     }
     li {
+      margin-left: 3rem;
       white-space: nowrap;
       /* padding: 0; */
     }
@@ -189,7 +199,7 @@ const StyledNavToggle = styled.button`
     width: 2rem;
     aspect-ratio: 1;
     top: 3.4rem;
-    right: 2rem;
+    right: 1rem;
   }
 `;
 
