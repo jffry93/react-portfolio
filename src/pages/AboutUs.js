@@ -1,6 +1,7 @@
 import React from 'react';
 import AboutSection from '../components/AboutSection';
 import ServicesSection from '../components/ServicesSection';
+import PersonalProjects from '../components/PersonalProjects';
 import FaqSection from '../components/FaqSection';
 //PAGE ANIMATION
 import { motion } from 'framer-motion';
@@ -18,6 +19,7 @@ const AboutUs = () => {
       <ScrollTop />
       <AboutSection />
       <ServicesSection />
+      <PersonalProjects />
       <FaqSection />
     </motion.div>
   );

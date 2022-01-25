@@ -11,29 +11,25 @@ import {
 
 //Framer Motion
 import { motion } from 'framer-motion';
-import { titleAnimation, fade, photoAnimation } from '../animation';
-//wave animation on about page
-import Wave from './Wave';
+import { titleAnimation, fade } from '../animation';
 
 const AboutSection = () => {
   return (
     <StyledAbout>
       <StyledOverlay>
         <StyledAboutDescription>
-          <motion.div>
-            <StyledHide>
-              <motion.h3 variants={titleAnimation}>Hi, my name is</motion.h3>
-            </StyledHide>
-            {/* <StyledHide>
-            <motion.h2 variants={titleAnimation}>
-              <span>Jeff</span>
-            </motion.h2>
-          </StyledHide> */}
-            <StyledHide>
-              <motion.h2 variants={titleAnimation}>Jeffrey Zalischi</motion.h2>
-            </StyledHide>
-          </motion.div>
-          <motion.h4 variants={fade}>Frontend Web Developer</motion.h4>
+          <StyledHide>
+            <motion.h3 variants={titleAnimation}>Hi, my name is</motion.h3>
+          </StyledHide>
+
+          <StyledHide>
+            <motion.h2 variants={titleAnimation}>Jeffrey Zalischi</motion.h2>
+          </StyledHide>
+          <StyledHide>
+            <motion.h4 variants={titleAnimation}>
+              Frontend Web Developer & <span>Designer</span>
+            </motion.h4>
+          </StyledHide>
           <motion.button variants={fade}>Let's talk</motion.button>
         </StyledAboutDescription>
       </StyledOverlay>

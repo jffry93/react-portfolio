@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import coffee from './img/ibrahim.jpg';
 
 export const StyledAbout = styled(motion.div)`
-  min-height: 100vh;
+  min-height: 90vh;
 
   text-align: right;
 
@@ -26,7 +26,7 @@ export const StyledOverlay = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: 5rem 10rem;
-  height: 100vh;
+  height: 90vh;
   width: 100%;
   @media (max-width: 750px) {
     padding: 5rem 3rem;
@@ -39,17 +39,18 @@ export const StyledAboutDescription = styled.div`
   /* margin-right: 5rem; */
   /* z-index: 2; */
   //name
+
   h2 {
     font-size: clamp(4rem, 10vw, 7rem);
     font-weight: bold;
-    margin: 1.5rem 0 6rem;
+    margin: 1.5rem 0 3rem;
   }
   //greeting
   h3 {
     font-size: clamp(1.5rem, 2.5vw, 2rem);
     font-weight: 300;
     letter-spacing: 3px;
-    margin-top: 12rem;
+    margin-top: 3rem;
   }
   //title
   h4 {
@@ -65,35 +66,11 @@ export const StyledAboutDescription = styled.div`
   @media (max-width: 1300px) {
     padding: 0;
     button {
-      margin: 2rem 0 5rem 0;
-    }
-  }
-`;
-export const StyledServicesDescription = styled.div`
-  flex: 1;
-  margin-left: 5rem;
-  z-index: 2;
-  h2 {
-    font-weight: lighter;
-  }
-  @media (max-width: 1300px) {
-    padding: 0;
-    button {
-      margin: 2rem 0 5rem 0;
+      margin: 2rem 0 0rem 0;
     }
   }
 `;
 
-export const StyledImage = styled.div`
-  flex: 1;
-  overflow: hidden;
-  z-index: 2;
-  img {
-    width: 100%;
-    height: 80vh;
-    object-fit: cover;
-  }
-`;
 export const StyledHide = styled.div`
   overflow: hidden;
 `;

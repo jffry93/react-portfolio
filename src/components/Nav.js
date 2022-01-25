@@ -61,20 +61,21 @@ const Nav = ({ navToggle, setNavToggle }) => {
 };
 
 const StyledNav = styled.nav`
-  /* min-height: 10vh; */
-  position: fixed;
+  min-height: 10vh;
+  position: sticky;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: var(--gap, 1rem);
   /* margin: auto; */
   width: 100%;
-  padding: 2rem 0 1rem 10rem; //site margin border
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.9));
+  padding: 1rem 0 1rem 10rem; //site margin border
+  background: rgba(12, 12, 12);
+  /* background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)); */
   backdrop-filter: blur(0.15rem);
   /* border-bottom: white 1px solid; */
   top: 0;
-  /* z-index: 10; */
+  z-index: 10;
   /* border: pink 3px solid; */
   .close-toggle {
     background: url(${closeHamburger});

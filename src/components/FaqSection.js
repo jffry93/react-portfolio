@@ -65,13 +65,16 @@ const FaqSection = () => {
   );
 };
 
-const Faq = styled(StyledAbout)`
+const Faq = styled.div`
+  padding: 10rem 0;
+  background: rgba(12, 12, 12, 0.5);
   display: block;
+  color: white;
   span {
     display: block;
   }
   h2 {
-    padding-bottom: 2rem;
+    padding: 0 10rem 2rem;
     font-weight: lighter;
   }
   .faq-line {
@@ -80,6 +83,9 @@ const Faq = styled(StyledAbout)`
     margin: 2rem 0rem;
     width: 100%;
   }
+  h4 {
+    padding: 0rem 10rem;
+  }
   .question {
     padding: 3rem 0;
     cursor: pointer;
@@ -87,7 +93,7 @@ const Faq = styled(StyledAbout)`
   .answer {
     padding: 2rem 0rem;
     p {
-      padding: 1rem 0rem;
+      padding: 1rem 10rem;
     }
   }
 `;
