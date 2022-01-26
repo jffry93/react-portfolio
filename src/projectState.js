@@ -9,7 +9,7 @@ import theracer2 from './img/the-racer2.jpg';
 const projectState = () => {
   return [
     {
-      title: 'The Athlete',
+      title: 'Project 1',
       mainImg: athlete,
       secondaryImg: athlete2,
       url: '/work/the-athlete',
@@ -34,7 +34,7 @@ const projectState = () => {
       ],
     },
     {
-      title: 'Good Times',
+      title: 'Project 2',
       mainImg: goodtimes,
       url: '/work/good-times',
       secondaryImg: goodtimes2,
@@ -59,7 +59,7 @@ const projectState = () => {
       ],
     },
     {
-      title: 'The Racer',
+      title: 'Project 3',
       mainImg: theracer,
       url: '/work/the-racer',
       secondaryImg: theracer2,

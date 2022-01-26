@@ -3,15 +3,24 @@ import projectState from '../projectState';
 
 //COMPONENTS
 import Project from './Project';
-
+import ProjectDetails from './ProjectDetails';
+//STYLING
 import styled from 'styled-components';
 
 const PersonalProjects = () => {
   const [projects, setProjects] = useState(projectState);
+  const [caseDetail, setCaseDetail] = useState({});
+  const [showDetail, setShowDetail] = useState(false);
 
-  console.log(projects);
   return (
     <StyledProjectSection>
+      {showDetail && (
+        <ProjectDetails
+          caseDetail={caseDetail}
+          showDetail={showDetail}
+          setShowDetail={setShowDetail}
+        />
+      )}
       <h1>Personal Projects</h1>
       <h4>Click on card to preview Case Study</h4>
       <StyledProjectList>
@@ -22,6 +31,9 @@ const PersonalProjects = () => {
             url={project.url}
             description={project.description}
             key={project.title}
+            caseDetail={caseDetail}
+            setCaseDetail={setCaseDetail}
+            setShowDetail={setShowDetail}
           ></Project>
         ))}
       </StyledProjectList>
@@ -35,7 +47,7 @@ const StyledProjectSection = styled.div`
   min-height: 90vh;
   width: 100%;
   border: 3px solid blue;
-  padding: 5rem;
+  padding: 5rem 10rem;
 
   display: flex;
   flex-direction: column;
@@ -66,6 +78,7 @@ const StyledProjectSection = styled.div`
 `;
 const StyledProjectList = styled.div`
   border: 3px solid red;
+  width: 100%;
 
   /* display: flex; */
   gap: 2rem;

@@ -1,8 +1,23 @@
 import styled from 'styled-components';
 
-const Project = ({ title, url, img, description }) => {
+const Project = ({
+  title,
+  url,
+  img,
+  description,
+  setCaseDetail,
+  setShowDetail,
+}) => {
+  const updateDetailHandler = () => {
+    setCaseDetail({
+      title: { title }.title,
+      img: { img }.img,
+    });
+    setShowDetail(true);
+    document.body.style.overflow = 'hidden';
+  };
   return (
-    <StyledProject>
+    <StyledProject onClick={updateDetailHandler}>
       <StyledImgContainer>
         <img src={img} alt='project image' />
       </StyledImgContainer>
@@ -21,6 +36,7 @@ const StyledProject = styled.div`
   border: 3px solid green;
   background-color: pink;
   border-radius: 20px;
+  cursor: pointer;
   /* box-shadow: 00 30px rgba(0, 0, 0, 0.18); */
 `;
 
@@ -61,4 +77,8 @@ const StyledDetails = styled.div`
     font-weight: 400;
     margin: 10px 0 15px 0;
   }
+`;
+
+const StyledProjectDetails = styled.div`
+  /* display: none; */
 `;
