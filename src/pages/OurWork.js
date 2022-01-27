@@ -19,6 +19,8 @@ import { useScroll } from '../components/useScroll';
 import ScrollTop from '../components/ScrollTop';
 
 const OurWork = () => {
+  document.body.style.overflow = 'auto';
+
   const [element, controls] = useScroll();
   const [element2, control2] = useScroll();
 

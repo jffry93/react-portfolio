@@ -7,6 +7,7 @@ import styled from 'styled-components';
 import ContactForm from '../components/ContactForm';
 
 const ContactUs = () => {
+  document.body.style.overflow = 'auto';
   return (
     <StyledContactStyle
       variants={pageAnimation}
@@ -17,7 +18,6 @@ const ContactUs = () => {
     >
       <StyledContactContainer>
         <ContactForm />
-        <div>contact info</div>
       </StyledContactContainer>
       <div>map</div>
       {/* <StyledTitle>
@@ -80,8 +80,8 @@ export default ContactUs;
 
 const StyledContactStyle = styled(motion.div)`
   border: 3px solid yellow;
-  padding: 5rem 10rem;
-  color: #353535;
+  /* padding: 5rem 10rem; */
+
   min-height: 90vh;
   /* justify-content: center; */
   width: 100%;
@@ -94,10 +94,12 @@ const StyledContactStyle = styled(motion.div)`
   }
 `;
 const StyledContactContainer = styled.div`
-  height: 100%;
+  flex: 1;
+  height: 90vh;
   width: 100%;
   background-color: grey;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   border: 3px solid green;

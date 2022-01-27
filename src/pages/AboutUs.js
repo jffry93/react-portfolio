@@ -9,6 +9,7 @@ import { pageAnimation } from '../animation';
 import ScrollTop from '../components/ScrollTop';
 
 const AboutUs = () => {
+  document.body.style.overflow = 'auto';
   return (
     <motion.div
       variants={pageAnimation}
