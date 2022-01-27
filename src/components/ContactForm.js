@@ -1,12 +1,16 @@
-import React from 'react';
+import { useState } from 'react';
 import styled from 'styled-components';
 //email JS
 import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 
 const ContactForm = () => {
+  const [formValidation, setFormValidation] = useState(false);
+  const [nameValidation, setNameValidation] = useState(false);
+  const [emailValidation, setEmailValidation] = useState(false);
+  const [messageValidation, setMessageValidation] = useState(false);
   //EMAIL JS
-  const form = useRef();
+  const form = useRef(null);
   function sendEmail(e) {
     e.preventDefault();
 
@@ -20,34 +24,100 @@ const ContactForm = () => {
       .then(
         (result) => {
           console.log(result.text);
+          setFormValidation(true);
+          e.target.reset();
         },
         (error) => {
           console.log(error.text);
         }
       );
-    // e.target.reset();
+  }
+
+  function validateForm(e) {
+    // console.log(form.current[0]); //name
+    function validateName() {
+      if (form.current[0].value == '') {
+        setNameValidation(true);
+        return false;
+      } else {
+        setNameValidation(false);
+      }
+    }
+    function validateEmail() {
+      if (
+        form.current[1].value
+          .toLowerCase()
+          .match(
+            /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+          )
+      ) {
+        setEmailValidation(false);
+      } else {
+        setEmailValidation(true);
+      }
+    }
+    function validateMessage() {
+      if (form.current[3].value == '') {
+        setMessageValidation(true);
+      } else {
+        setMessageValidation(false);
+      }
+    }
+    validateName();
+    validateEmail();
+    validateMessage();
+    // let emailID = form.current[1].value;
+    // const re =
+    //   /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+    // console.log(emailID); //email
+    // if (emailID == '') {
+    //   setEmailValidation(false);
+    // } else {
+    //   setEmailValidation(true);
+    // }
+
+    // console.log(form.current[3]); //message
   }
 
   return (
     <div className='container'>
-      <StyledForm onSubmit={sendEmail} action=''>
+      <StyledForm novalidate ref={form} onSubmit={sendEmail} action=''>
         <div className='form-group'>
           <label>Name</label>
-          <input type='text' name='user_name' />
+          <input type='text' name='user_name' required />
+          {nameValidation && (
+            <div>
+              <span>ERROR</span> Please fill in name
+            </div>
+          )}
         </div>
         <div className='form-group'>
           <label>Email</label>
-          <input type='email' name='user_email' />
+          <input type='email' name='user_email' required />
+          {emailValidation && (
+            <div>
+              <span>ERROR</span> Please fill in email
+            </div>
+          )}
+        </div>
+        <div className='form-group'>
+          <label>Subject</label>
+          <input type='text' name='user_subject' />
         </div>
         <div className='form-group'>
           <label>Message</label>
-          <textarea name='message' />
+          <textarea name='message' required />
+          {messageValidation && (
+            <div>
+              <span>ERROR</span> Please fill in email
+            </div>
+          )}
         </div>
         <div className='form-group'>
-          <input type='submit' value='Send' />
+          <input onClick={validateForm} type='submit' value='Send' />
         </div>
       </StyledForm>
-      <StyledStatus id='status'>Success</StyledStatus>
+      {formValidation && <StyledStatus id='status'>Success</StyledStatus>}
     </div>
   );
 };

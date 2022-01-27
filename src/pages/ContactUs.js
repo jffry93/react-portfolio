@@ -19,7 +19,7 @@ const ContactUs = () => {
       <StyledContactContainer>
         <ContactForm />
       </StyledContactContainer>
-      <div>map</div>
+      <StyledMapContainer>map</StyledMapContainer>
       {/* <StyledTitle>
         <StyledHide>
           <motion.h2 variants={titleAnimation}> Get in Touch</motion.h2>
@@ -103,4 +103,10 @@ const StyledContactContainer = styled.div`
   align-items: center;
   justify-content: center;
   border: 3px solid green;
+`;
+
+const StyledMapContainer = styled.div`
+  flex: 1;
+  height: 90vh;
+  width: 100%;
 `;
