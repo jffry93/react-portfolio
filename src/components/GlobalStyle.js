@@ -35,7 +35,11 @@ const GlobalStyle = createGlobalStyle`
         }
         
     }
-
+    h1,h2,h3,h4,p{
+        color: white;
+    }
+    
+/* 
     h2{
         font-weight: lighter;
         font-size: 4rem;
@@ -59,7 +63,7 @@ const GlobalStyle = createGlobalStyle`
         color: #ccc;
         font-size: 1.4rem;
         line-height: 150%;
-    }
+    } */
 `;
 
 export default GlobalStyle;

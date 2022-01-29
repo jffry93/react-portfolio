@@ -3,8 +3,11 @@ import { motion } from 'framer-motion';
 import { pageAnimation, titleAnimation } from '../animation';
 import styled from 'styled-components';
 
+import cntower from '../img/alex_wong.jpg';
+
 //COMPONENTS
 import ContactForm from '../components/ContactForm';
+import ContactMap from '../components/ContactMap';
 
 const ContactUs = () => {
   document.body.style.overflow = 'auto';
@@ -18,33 +21,8 @@ const ContactUs = () => {
     >
       <StyledContactContainer>
         <ContactForm />
+        <ContactMap />
       </StyledContactContainer>
-      <StyledMapContainer>map</StyledMapContainer>
-      {/* <StyledTitle>
-        <StyledHide>
-          <motion.h2 variants={titleAnimation}> Get in Touch</motion.h2>
-        </StyledHide>
-      </StyledTitle>
-      <div>
-        <StyledHide>
-          <StyledSocial variants={titleAnimation}>
-            <StyledCircle></StyledCircle>
-            <h2>Send us a message</h2>
-          </StyledSocial>
-        </StyledHide>
-        <StyledHide>
-          <StyledSocial variants={titleAnimation}>
-            <StyledCircle></StyledCircle>
-            <h2>Send us an email</h2>
-          </StyledSocial>
-        </StyledHide>
-        <StyledHide>
-          <StyledSocial variants={titleAnimation}>
-            <StyledCircle></StyledCircle>
-            <h2>Social Media</h2>
-          </StyledSocial>
-        </StyledHide>
-      </div> */}
     </StyledContactStyle>
   );
 };
@@ -79,34 +57,35 @@ const ContactUs = () => {
 export default ContactUs;
 
 const StyledContactStyle = styled(motion.div)`
-  border: 3px solid yellow;
-  /* padding: 5rem 10rem; */
-
+  background-image: url(${cntower}) !important;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed !important;
+  background-position: center !important;
+  background-size: cover !important;
+  /* border: 3px solid yellow; */
   min-height: 90vh;
-  /* justify-content: center; */
   width: 100%;
+  padding: 3rem 10rem;
+  /* justify-content: center; */
   display: flex;
   justify-content: center;
   align-items: center;
-  @media (max-width: 1300px) {
-    padding: 2rem;
-    font-size: 1rem;
-  }
 `;
 const StyledContactContainer = styled.div`
-  flex: 1;
-  height: 90vh;
   width: 100%;
-  background-color: grey;
+  /* height: calc(90vh - 6rem); */
+  min-height: clamp(650px, 100%, calc(90vh - 6rem));
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(6px) !important;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: 3px solid green;
+  /* border: 3px solid green; */
+
+  border-radius: 8px;
+  overflow: hidden;
 `;
 
-const StyledMapContainer = styled.div`
-  flex: 1;
-  height: 90vh;
-  width: 100%;
-`;
+// const StyledMapContainer = styled.div`
+//   width: 100%;
+// `;

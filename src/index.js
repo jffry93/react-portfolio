@@ -4,6 +4,8 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 //REACT ROUTER DOME
 import { BrowserRouter } from 'react-router-dom';
+//MAPBOX
+import 'mapbox-gl/dist/mapbox-gl.css';
 
 ReactDOM.render(
   <React.StrictMode>
