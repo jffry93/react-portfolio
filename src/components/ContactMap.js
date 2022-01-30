@@ -22,7 +22,7 @@ const ContactMap = () => {
       center: [lng, lat],
       zoom: zoom,
     });
-    const marker1 = new mapboxgl.Marker({ color: 'red' })
+    const marker1 = new mapboxgl.Marker({ color: '#F0544F' })
       .setLngLat([-79.3832, 43.6952])
       .addTo(map.current);
     //ADD CONTAINER TO INCLUDE GIF AND TEXT
@@ -71,6 +71,10 @@ const StyledMapContainer = styled.div`
   .map-container {
     height: calc(90vh - 6rem);
     min-height: 598px;
+    @media (max-width: 1050px) {
+      height: 20vh;
+      min-height: 200px;
+    }
   }
   .mapboxgl-marker {
     /* border: 3px solid pink; */
@@ -87,12 +91,13 @@ const StyledMapContainer = styled.div`
     align-items: center;
     gap: 10px;
     /* border: 3px solid green; */
-    background-color: red;
+    background-color: #f0544f;
     padding: 1rem;
     border-radius: 8px;
 
     position: absolute;
     top: -45px;
+
     h3 {
       white-space: nowrap;
     }

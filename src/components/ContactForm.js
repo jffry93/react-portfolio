@@ -7,8 +7,7 @@ import ContactInfo from './ContactInfo';
 //REACT ICONS
 import { BiError } from 'react-icons/bi';
 
-const ContactForm = () => {
-  const [formValidation, setFormValidation] = useState(false);
+const ContactForm = ({ formValidation, setFormValidation }) => {
   const [nameValidation, setNameValidation] = useState(false);
   const [emailValidation, setEmailValidation] = useState(false);
   const [messageValidation, setMessageValidation] = useState(false);
@@ -85,11 +84,11 @@ const ContactForm = () => {
   return (
     <StyledFormContainer>
       <StyledContactForm>
-        <h1>Let's Chat!</h1>
-        <p>
-          Please use this form to contact me and I will get back to you ASAP!
-        </p>
         <StyledForm ref={form} onSubmit={sendEmail} action='' novalidate>
+          <h1>Let's Chat!</h1>
+          <p>
+            Please use this form to contact me and I will get back to you ASAP!
+          </p>
           <div className='form-group'>
             <label htmlFor='user_name'>
               {nameValidation ? (
@@ -131,7 +130,9 @@ const ContactForm = () => {
             />
           </div>
           <div className='form-group'>
-            <label htmlFor='user_subject'>Subject</label>
+            <label className='not-required' htmlFor='user_subject'>
+              Subject
+            </label>
             <input
               type='text'
               name='user_subject'
@@ -143,7 +144,7 @@ const ContactForm = () => {
               {messageValidation ? (
                 <div className='validation-popup'>
                   <BiError size={15} />
-                  <p>Don't be shy ;)</p>
+                  <p>Use those fingers</p>
                 </div>
               ) : (
                 <>
@@ -162,7 +163,6 @@ const ContactForm = () => {
           <div className='form-group submit-group'>
             <input onClick={validateForm} type='submit' value='Send' />
           </div>
-          {formValidation && <StyledStatus id='status'>Success</StyledStatus>}
         </StyledForm>
       </StyledContactForm>
       <ContactInfo />
@@ -178,6 +178,9 @@ const StyledFormContainer = styled.div`
   height: 100%;
   padding: 3rem 5rem;
   gap: 5rem;
+  @media (max-width: 1050px) {
+    flex-direction: column;
+  }
 `;
 const StyledContactForm = styled.div`
   /* height: calc(90vh - 10rem); */
@@ -185,14 +188,15 @@ const StyledContactForm = styled.div`
   display: flex;
   flex-direction: column;
   flex: 1.5;
+
   h1 {
     font-size: 2.4rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1.12rem;
     white-space: nowrap;
   }
   p {
     font-size: 1.1rem;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
   }
 `;
 
@@ -217,6 +221,9 @@ const StyledForm = styled.form`
     .required {
       margin-left: 2rem;
     }
+    .not-required {
+      margin-left: 1.175rem;
+    }
     .validation-popup {
       display: flex;
 
@@ -225,8 +232,7 @@ const StyledForm = styled.form`
       margin-left: 1rem; */
 
       border-radius: 8px;
-      color: red;
-      /* background-color: red; */
+      color: #f0544f; /* background-color: red; */
       /* span {
         color: white;
         margin-left: 1rem;
@@ -235,7 +241,7 @@ const StyledForm = styled.form`
       p {
         margin: 0;
         font-weight: 500;
-        color: red;
+        color: #f0544f;
         font-size: 1rem;
       }
     }
@@ -268,26 +274,4 @@ const StyledForm = styled.form`
     border-radius: 8px;
     background-color: black;
   }
-`;
-
-const StyledStatus = styled.div`
-  border: 3px solid red;
-  width: 100%;
-  text-align: center;
-  padding: 2rem;
-  margin: 0 auto;
-  border-radius: 8px;
-  .success {
-    background-color: rgb(211, 250, 153);
-  }
-  .error {
-    background-color: rgb(250, 129, 92);
-  }
-`;
-
-const StyledContactInfo = styled.div`
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  flex: 1;
 `;

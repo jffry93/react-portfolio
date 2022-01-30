@@ -5,6 +5,7 @@ import { SiIndeed } from 'react-icons/si';
 import { BsGithub } from 'react-icons/bs';
 import { GrMail } from 'react-icons/gr';
 import { RiLinkedinFill } from 'react-icons/ri';
+import drake from '../img/icons/drake-sitting.png';
 
 const ContactInfo = () => {
   return (
@@ -16,6 +17,7 @@ const ContactInfo = () => {
             <FaMapMarkerAlt size={15} />
           </span>
           <div className='location'>
+            <img src={drake} alt='drake' />
             <p>HOMETOWN</p>
             <a href='https://www.google.com/maps/place/Toronto,+ON/@43.717899,-79.6582408,10z/data=!3m1!4b1!4m5!3m4!1s0x89d4cb90d7c63ba5:0x323555502ab4c477!8m2!3d43.653226!4d-79.3831843'>
               Toronto ON
@@ -38,26 +40,42 @@ const ContactInfo = () => {
       <div className='line'></div>
       <div className='social-media'>
         <div className='icon-container'>
-          <span>
-            <BsGithub size={22} />
-          </span>
+          <a
+            href='https://github.com/jffry93'
+            target='_blank'
+            className='github'
+          >
+            <BsGithub size={22} className='github-icon' />
+          </a>
         </div>
         <div className='icon-container'>
-          <span>
-            <RiLinkedinFill size={22} />
-          </span>
+          <a
+            href='www.linkedin.com/in/jffry93'
+            target='_blank'
+            className='linkedin'
+          >
+            <RiLinkedinFill size={22} className='linkedin-icon' />
+          </a>
         </div>
         <div className='icon-container'>
-          <span>
+          <a
+            href='https://my.indeed.com/p/jeffreyz-n48gpy7'
+            target='_blank'
+            className='indeed'
+          >
             <div>
               <SiIndeed size={22} className='indeed-icon' />
             </div>
-          </span>
+          </a>
         </div>
         <div className='icon-container'>
-          <span>
-            <FaInstagram size={22} />
-          </span>
+          <a
+            href='https://www.instagram.com/jffry93/'
+            target='_blank'
+            className='instagram'
+          >
+            <FaInstagram size={22} className='instagram-icon' />
+          </a>
         </div>
       </div>
       <div className='footer'>
@@ -102,6 +120,17 @@ const StyledContactInfo = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+    img {
+      -webkit-transform: scaleX(-1);
+      transform: scaleX(-1);
+      width: 35px;
+      height: 35px;
+
+      position: absolute;
+      top: -16.5px;
+      left: 57px;
+    }
     p {
       font-weight: 600;
     }
@@ -113,7 +142,8 @@ const StyledContactInfo = styled.div`
     margin: 1.5rem 0;
   }
   .social-media {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     gap: 1.5rem;
     color: rgba(0, 0, 0, 0.5);
@@ -121,8 +151,8 @@ const StyledContactInfo = styled.div`
       display: flex;
       align-items: center;
       justify-content: center;
-      span {
-        background-color: white;
+      a {
+        /* background-color: white; */
         padding: 10px;
         border-radius: 50%;
         line-height: 1;
@@ -132,6 +162,34 @@ const StyledContactInfo = styled.div`
         position: relative;
         right: 1.665px;
       }
+      .github {
+        background-color: #6e5494;
+        color: #f3f3f3;
+      }
+      .indeed {
+        background-color: #003a9b;
+        color: #f3f3f3;
+      }
+      .linkedin {
+        background-color: #0b66c2;
+        color: #f3f3f3;
+      }
+      .instagram {
+        background: radial-gradient(
+          circle at 30% 107%,
+          #fdf497 0%,
+          #fdf497 5%,
+          #fd5949 45%,
+          #d6249f 60%,
+          #285aeb 90%
+        );
+        color: #f3f3f3;
+      }
+    }
+
+    @media (max-width: 1050px) {
+      grid-row: auto;
+      flex-direction: row;
     }
   }
   .footer {
