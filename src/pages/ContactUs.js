@@ -5,7 +5,6 @@ import { pageAnimation, titleAnimation } from '../animation';
 import styled from 'styled-components';
 //IMAGES
 import cntower from '../img/alex_wong.jpg';
-import drake from '../img/icons/drake-sitting.png';
 import { SiNike } from 'react-icons/si';
 import { MdClose } from 'react-icons/md';
 //COMPONENTS
@@ -59,19 +58,6 @@ const ContactUs = () => {
 
 export default ContactUs;
 
-const StyledDrake = styled(motion.div)`
-  position: absolute;
-  bottom: 33%;
-  left: 7%;
-  z-index: 10;
-  @media (min-height: 2000px) {
-    bottom: 42%;
-  }
-  @media (min-height: 1500px) {
-    bottom: 40%;
-  }
-`;
-
 const StyledContactStyle = styled(motion.div)`
   background-image: url(${cntower}) !important;
   background-repeat: no-repeat !important;
@@ -84,10 +70,20 @@ const StyledContactStyle = styled(motion.div)`
   width: 100%;
   padding: 3rem 10rem;
   /* justify-content: center; */
-  display: block;
+  display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
+  ::after {
+    content: ''; // ::before and ::after both require content
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0.7;
+  }
   @media (max-width: 1050px) {
     padding: 0rem;
   }
@@ -96,6 +92,7 @@ const StyledContactContainer = styled.div`
   width: 100%;
   /* height: calc(90vh - 6rem); */
   min-height: clamp(650px, 100%, calc(90vh - 6rem));
+  max-height: 750px;
   background-color: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(6px) !important;
   display: flex;
@@ -105,9 +102,12 @@ const StyledContactContainer = styled.div`
 
   border-radius: 8px;
   overflow: hidden;
+  z-index: 2;
   @media (max-width: 1050px) {
     flex-direction: column-reverse;
     border-radius: 0;
+    min-height: 90vh;
+    max-height: unset;
   }
 `;
 
@@ -121,6 +121,7 @@ const StyledStatus = styled.div`
   left: 0;
   height: 90vh;
   width: 100%;
+  z-index: 2;
   .success-container {
     background-color: #ffffff;
 
@@ -149,7 +150,7 @@ const StyledStatus = styled.div`
       .success-icon {
         position: relative;
         left: 6.66px;
-        color: #ffffff;
+        color: #f3f3f3;
       }
     }
 

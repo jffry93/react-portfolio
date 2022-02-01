@@ -11,29 +11,9 @@ const ContactForm = ({ formValidation, setFormValidation }) => {
   const [nameValidation, setNameValidation] = useState(false);
   const [emailValidation, setEmailValidation] = useState(false);
   const [messageValidation, setMessageValidation] = useState(false);
+
   //EMAIL JS
   const form = useRef(null);
-  function sendEmail(e) {
-    e.preventDefault();
-
-    emailjs
-      .sendForm(
-        'service_wm8y8eo',
-        'template_8mqb8d4',
-        e.target,
-        'user_l63HFouUVaxbBVgQdO1Td'
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-          setFormValidation(true);
-          e.target.reset();
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
-  }
 
   function validateForm(e) {
     // console.log(form.current[0]); //name
@@ -68,23 +48,50 @@ const ContactForm = ({ formValidation, setFormValidation }) => {
     validateName();
     validateEmail();
     validateMessage();
-    // let emailID = form.current[1].value;
-    // const re =
-    //   /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
-    // console.log(emailID); //email
-    // if (emailID == '') {
-    //   setEmailValidation(false);
-    // } else {
-    //   setEmailValidation(true);
-    // }
-
-    // console.log(form.current[3]); //message
   }
+
+  function sendEmail(e) {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        'service_wm8y8eo',
+        'template_8mqb8d4',
+        e.target,
+        'user_l63HFouUVaxbBVgQdO1Td'
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          setFormValidation(true);
+          e.target.reset();
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  }
+  function dontSendEmail(e) {
+    e.preventDefault();
+    console.log('all fields must be filled');
+  }
+
+  // let emailID = form.current[1].value;
+  // const re =
+  //   /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+  // console.log(emailID); //email
+  // if (emailID == '') {
+  //   setEmailValidation(false);
+  // } else {
+  //   setEmailValidation(true);
+  // }
+
+  // console.log(form.current[3]); //message
 
   return (
     <StyledFormContainer>
       <StyledContactForm>
-        <StyledForm ref={form} onSubmit={sendEmail} action='' novalidate>
+        <StyledForm ref={form} onSubmit={sendEmail} action=''>
           <h1>Let's Chat!</h1>
           <p>
             Please use this form to contact me and I will get back to you ASAP!
@@ -103,6 +110,7 @@ const ContactForm = ({ formValidation, setFormValidation }) => {
               )}
             </label>
             <input
+              className={`${nameValidation ? 'validation-input' : ''}`}
               type='text'
               name='user_name'
               placeholder='Enter Name or Alias'
@@ -123,6 +131,7 @@ const ContactForm = ({ formValidation, setFormValidation }) => {
               )}
             </label>
             <input
+              className={`${emailValidation ? 'validation-input' : ''}`}
               type='email'
               name='user_email'
               placeholder='Enter a valid email address'
@@ -154,6 +163,7 @@ const ContactForm = ({ formValidation, setFormValidation }) => {
               )}
             </label>
             <textarea
+              className={`${messageValidation ? 'validation-input' : ''}`}
               name='message'
               required
               placeholder='There is no characer limit because im lonely...'
@@ -180,6 +190,7 @@ const StyledFormContainer = styled.div`
   gap: 5rem;
   @media (max-width: 1050px) {
     flex-direction: column;
+    padding: 5rem;
   }
 `;
 const StyledContactForm = styled.div`
@@ -187,6 +198,7 @@ const StyledContactForm = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   flex: 1.5;
 
   h1 {
@@ -202,6 +214,11 @@ const StyledContactForm = styled.div`
 
 const StyledForm = styled.form`
   height: 100%;
+  @media (max-width: 1050px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 
   .form-group {
     display: flex;
@@ -244,6 +261,10 @@ const StyledForm = styled.form`
         color: #f0544f;
         font-size: 1rem;
       }
+    }
+    .validation-input {
+      outline: 1px solid #f0544f;
+      outline-offset: -4px;
     }
   }
   .submit-group {

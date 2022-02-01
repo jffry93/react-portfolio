@@ -13,27 +13,33 @@ const ContactInfo = () => {
       <h1 className='contact-heading'>Contact Info</h1>
       <div className='contact-detail'>
         <div className='info-group'>
-          <span>
+          <a
+            href='https://www.google.com/maps/place/Toronto,+ON/@43.717899,-79.6582408,10z/data=!3m1!4b1!4m5!3m4!1s0x89d4cb90d7c63ba5:0x323555502ab4c477!8m2!3d43.653226!4d-79.3831843'
+            target='_blank'
+          >
             <FaMapMarkerAlt size={15} />
-          </span>
+          </a>
           <div className='location'>
-            <img src={drake} alt='drake' />
             <p>HOMETOWN</p>
-            <a href='https://www.google.com/maps/place/Toronto,+ON/@43.717899,-79.6582408,10z/data=!3m1!4b1!4m5!3m4!1s0x89d4cb90d7c63ba5:0x323555502ab4c477!8m2!3d43.653226!4d-79.3831843'>
+            <a
+              href='https://www.google.com/maps/place/Toronto,+ON/@43.717899,-79.6582408,10z/data=!3m1!4b1!4m5!3m4!1s0x89d4cb90d7c63ba5:0x323555502ab4c477!8m2!3d43.653226!4d-79.3831843'
+              target='_blank'
+            >
               Toronto ON
+              <img src={drake} alt='drake' />
             </a>
           </div>
         </div>
         <div className='info-group'>
-          <span>
+          <a href='tel:6474485732'>
             <FaPhoneAlt size={13} />
-          </span>
+          </a>
           <a href='tel:6474485732'>+1 (647) 448-5732</a>
         </div>
         <div className='info-group'>
-          <span>
+          <a href='mailto:jay.zalischi@gmail.com'>
             <GrMail size={15} />
-          </span>
+          </a>
           <a href='mailto:jay.zalischi@gmail.com'>jay.zalischi@gmail.com</a>
         </div>
       </div>
@@ -93,6 +99,9 @@ const StyledContactInfo = styled.div`
   display: flex;
   flex-direction: column;
   flex: 1;
+  @media (max-width: 1050px) {
+    justify-content: center;
+  }
   h1 {
     font-size: 2.4rem;
     margin-bottom: 2rem;
@@ -121,6 +130,7 @@ const StyledContactInfo = styled.div`
     flex-direction: column;
     align-items: center;
     position: relative;
+
     img {
       -webkit-transform: scaleX(-1);
       transform: scaleX(-1);
@@ -160,7 +170,7 @@ const StyledContactInfo = styled.div`
       }
       .indeed-icon {
         position: relative;
-        right: 1.665px;
+        right: 1.35px;
       }
       .github {
         background-color: #6e5494;

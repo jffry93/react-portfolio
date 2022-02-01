@@ -68,12 +68,16 @@ export default ContactMap;
 const StyledMapContainer = styled.div`
   flex: 1;
   width: 100%;
+  @media (max-width: 1050px) {
+    flex: unset;
+  }
   .map-container {
     height: calc(90vh - 6rem);
     min-height: 598px;
+    max-height: 750px;
     @media (max-width: 1050px) {
-      height: 20vh;
-      min-height: 200px;
+      min-height: 300px;
+      height: 30vh;
     }
   }
   .mapboxgl-marker {

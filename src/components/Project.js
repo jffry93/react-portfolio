@@ -33,9 +33,11 @@ const Project = ({
 export default Project;
 
 const StyledProject = styled.div`
-  border: 3px solid green;
-  background-color: pink;
+  position: relative;
+  border: 1px solid white;
+  background-color: rgba(0, 0, 0, 0.5);
   border-radius: 20px;
+  overflow: hidden;
   cursor: pointer;
   /* box-shadow: 00 30px rgba(0, 0, 0, 0.18); */
 `;
@@ -62,16 +64,16 @@ const StyledImgContainer = styled.div`
 `;
 
 const StyledDetails = styled.div`
-  padding: 3rem;
+  padding: 0 2rem 3rem;
   h3 {
     color: white;
     font-weight: 700;
     font-size: 2rem;
-    margin: 10px 0 15px 0;
+    margin: 1rem 0 1rem 0;
   }
   div {
     color: white;
-    font-size: 1.5rem;
+    font-size: 1rem;
     line-height: 1;
     letter-spacing: 2px;
     font-weight: 400;

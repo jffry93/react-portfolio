@@ -59,7 +59,7 @@ const StyledProjectShadow = styled(motion.div)`
   position: fixed;
   top: 10vh;
   left: 0;
-  z-index: 1;
+  z-index: 2;
   width: 100%;
   min-height: 90vh;
 

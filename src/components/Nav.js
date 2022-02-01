@@ -199,8 +199,9 @@ const StyledNavToggle = styled.button`
     z-index: 9999; //OVER 9000!!!
     width: 2rem;
     aspect-ratio: 1;
-    top: 3.4rem;
-    right: 1rem;
+    top: 50%;
+    right: 0rem;
+    transform: translate(-50%, -50%);
   }
 `;
 
