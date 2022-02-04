@@ -221,6 +221,27 @@ const ServicesSection = () => {
               alt='express'
             />{' '}
           </a>
+          <a href='https://glidejs.com/' target='_blank'>
+            <img
+              height='45px'
+              src='https://camo.githubusercontent.com/9269a9ed4f6937f05b84f3e09abf733e57b90e52af260a6861ba189f72ee2ada/68747470733a2f2f676c6964656a732e636f6d2f696d616765732f676c6964656a732d6c6f676f747970652d6461726b2e706e67'
+            />
+          </a>
+          <a
+            href='https://www.squarespace.com/website-design/?channel=pbr&subchannel=go&campaign=pbr-dr-go-ca-en-squarespace-general-bmm&subcampaign=(brand-general_squarespaces_bmm)&&utm_source=google&utm_medium=pbr&utm_campaign=pbr-dr-go-ca-en-squarespace-general-bmm&utm_term=%2Bsquarespaces&gclid=Cj0KCQiA9OiPBhCOARIsAI0y71BWTQrHPzNlNAj3PLrK1YEnRFlPhD9T3zNybnHk4k4bu5YWFh_1UYMaAnxdEALw_wcB&gclsrc=aw.ds'
+            target='_blank'
+          >
+            <img
+              height='50px'
+              src='https://cdn.iconscout.com/icon/free/png-256/squarespace-3-739563.png'
+            />
+          </a>
+          <a href='https://lesscss.org/' target='_blank'>
+            <img
+              height='50px'
+              src='https://lesscss.org/public/img/less_logo.png'
+            />
+          </a>
           {/*         
    
       

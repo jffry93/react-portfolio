@@ -2,8 +2,15 @@ import styled from 'styled-components';
 
 const Project = ({
   title,
+  secondaryTitle,
   url,
-  img,
+  desktopImg,
+  mobileImg,
+  roles,
+  icons,
+  highlights,
+  colours,
+  fonts,
   description,
   setCaseDetail,
   setShowDetail,
@@ -11,7 +18,16 @@ const Project = ({
   const updateDetailHandler = () => {
     setCaseDetail({
       title: { title }.title,
-      img: { img }.img,
+      secondaryTitle: { secondaryTitle }.secondaryTitle,
+      url: { url }.url,
+      desktopImg: { desktopImg }.desktopImg,
+      mobileImg: { mobileImg }.mobileImg,
+      description: { description }.description,
+      roles: { roles }.roles,
+      icons: { icons }.icons,
+      highlights: { highlights }.highlights,
+      colours: { colours }.colours,
+      fonts: { fonts }.fonts,
     });
     setShowDetail(true);
     document.body.style.overflow = 'hidden';
@@ -19,12 +35,12 @@ const Project = ({
   return (
     <StyledProject onClick={updateDetailHandler}>
       <StyledImgContainer>
-        <img src={img} alt='project image' />
+        <img src={desktopImg} alt='project image' />
       </StyledImgContainer>
       <StyledDetails>
         <h3>{title}</h3>
-        <div>{description}</div>
-        <a href={url}>GitHub Page</a>
+        <p>{description}</p>
+        <a href={url}>GitHub Repo</a>
       </StyledDetails>
     </StyledProject>
   );
@@ -35,7 +51,7 @@ export default Project;
 const StyledProject = styled.div`
   position: relative;
   border: 1px solid white;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 1);
   border-radius: 20px;
   overflow: hidden;
   cursor: pointer;
@@ -64,20 +80,26 @@ const StyledImgContainer = styled.div`
 `;
 
 const StyledDetails = styled.div`
-  padding: 0 2rem 3rem;
+  padding: 0 2rem 5rem;
   h3 {
     color: white;
     font-weight: 700;
     font-size: 2rem;
     margin: 1rem 0 1rem 0;
   }
-  div {
+  p {
     color: white;
     font-size: 1rem;
     line-height: 1;
     letter-spacing: 2px;
     font-weight: 400;
-    margin: 10px 0 15px 0;
+    margin: 1rem 0 3rem;
+  }
+  a {
+    border: 2px solid white;
+    padding: 1rem;
+    text-decoration: none;
+    color: white;
   }
 `;
 

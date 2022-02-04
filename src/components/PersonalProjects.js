@@ -25,20 +25,6 @@ const PersonalProjects = () => {
   const [caseDetail, setCaseDetail] = useState({});
   const [showDetail, setShowDetail] = useState(false);
 
-  //SWIPER JS
-  // const [controlledSwiper, setControlledSwiper] = useState(null);
-
-  // const swiper = new Swiper('.swiper', {
-  //   // Install modules
-  //   modules: [Navigation, Pagination, Scrollbar],
-  //   speed: 500,
-  //   navigation: {
-  //     nextEl: '.swiper-button-next',
-  //     prevEl: '.swiper-button-prev',
-  //   },
-  //   // ...
-  // });
-
   return (
     <StyledProjectSection>
       {showDetail && (
@@ -51,20 +37,6 @@ const PersonalProjects = () => {
       <h1>Personal Projects</h1>
       <h4>Click on card to preview Case Study</h4>
 
-      {/* <StyledProjectList>
-        {projects.map((project) => (
-          <Project
-            title={project.title}
-            img={project.mainImg}
-            url={project.url}
-            description={project.description}
-            key={project.title}
-            caseDetail={caseDetail}
-            setCaseDetail={setCaseDetail}
-            setShowDetail={setShowDetail}
-          ></Project>
-        ))}
-      </StyledProjectList> */}
       <Swiper
         className='swiper-js-container'
         modules={[Navigation, Pagination, A11y, EffectCoverflow]}
@@ -77,7 +49,7 @@ const PersonalProjects = () => {
             spaceBetween: 40,
             coverflowEffect: {
               rotate: 10,
-              stretch: -10,
+              stretch: -50,
               depth: 200,
               modifier: 1,
               slideShadows: true,
@@ -90,34 +62,8 @@ const PersonalProjects = () => {
           type: 'bullets',
         }}
         effect='coverflow'
-        // coverflowEffect={{
-        //   rotate: 10,
-        //   stretch: 50,
-        //   depth: 200,
-        //   modifier: 1,
-        //   slideShadows: true,
-        // }}
-        // scrollbar={{ draggable: true }}
         centeredSlides
         loop={true}
-        // effect={'slide'}
-        // breakpoints={{
-        //   // when window width is >= 320px
-        //   320: {
-        //     slidesPerView: 2,
-        //     spaceBetween: 20,
-        //   },
-        //   // when window width is >= 480px
-        //   800: {
-        //     slidesPerView: 3,
-        //     spaceBetween: 30,
-        //   },
-        //   // when window width is >= 640px
-        //   1050: {
-        //     slidesPerView: 4,
-        //     spaceBetween: 40,
-        //   },
-        // }}
         onSwiper={(swiper) => console.log(swiper)}
         onSlideChange={() => console.log('slide change')}
       >
@@ -125,7 +71,14 @@ const PersonalProjects = () => {
           <SwiperSlide>
             <Project
               title={project.title}
-              img={project.mainImg}
+              secondaryTitle={project.secondaryTitle}
+              desktopImg={project.mainImg}
+              mobileImg={project.secondaryImg}
+              roles={project.roles}
+              icons={project.icons}
+              highlights={project.highlights}
+              colours={project.colours}
+              fonts={project.fonts}
               url={project.url}
               description={project.description}
               key={project.url}
@@ -145,7 +98,6 @@ export default PersonalProjects;
 const StyledProjectSection = styled.div`
   min-height: 90vh;
   width: 100%;
-  border: 3px solid blue;
   padding: 5rem 10rem;
 
   display: flex;
@@ -179,11 +131,11 @@ const StyledProjectSection = styled.div`
     width: 100%;
   }
   .swiper-slide {
-    opacity: 0;
+    opacity: 0.3;
   }
   .swiper-slide-next,
   .swiper-slide-prev {
-    opacity: 0.7;
+    opacity: 0.8;
   }
   .swiper-slide-active {
     opacity: 1;
