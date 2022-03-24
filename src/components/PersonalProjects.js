@@ -16,9 +16,10 @@ import SwiperCore, {
   Pagination,
   A11y,
   EffectCoverflow,
+  EffectFade,
 } from 'swiper';
 //install swiper modules
-SwiperCore.use([Navigation, Pagination, A11y, EffectCoverflow]);
+SwiperCore.use([Navigation, Pagination, A11y, EffectCoverflow, EffectFade]);
 
 const PersonalProjects = () => {
   const [projects, setProjects] = useState(projectState);
@@ -39,18 +40,19 @@ const PersonalProjects = () => {
 
       <Swiper
         className='swiper-js-container'
-        modules={[Navigation, Pagination, A11y, EffectCoverflow]}
-        spaceBetween={50}
+        modules={[Navigation, Pagination, A11y, EffectCoverflow, EffectFade]}
+        spaceBetween={0}
         watchSlidesProgress={true}
-        slidesPerView={3}
+        touchRatio={0.2}
+        slidesPerView={1.5}
         breakpoints={{
-          1050: {
-            slidesPerView: 3,
-            spaceBetween: 40,
+          1000: {
+            slidesPerView: 3.5,
+            spaceBetween: 0,
             coverflowEffect: {
-              rotate: 10,
-              stretch: -50,
-              depth: 200,
+              rotate: 30,
+              stretch: 0,
+              depth: 0,
               modifier: 1,
               slideShadows: true,
             },
@@ -62,6 +64,13 @@ const PersonalProjects = () => {
           type: 'bullets',
         }}
         effect='coverflow'
+        coverflowEffect={{
+          rotate: 30,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: true,
+        }}
         centeredSlides
         loop={true}
         onSwiper={(swiper) => console.log(swiper)}
@@ -81,6 +90,7 @@ const PersonalProjects = () => {
               fonts={project.fonts}
               url={project.url}
               description={project.description}
+              secondDescription={project.secondDescription}
               key={project.url}
               caseDetail={caseDetail}
               setCaseDetail={setCaseDetail}
@@ -96,9 +106,11 @@ const PersonalProjects = () => {
 export default PersonalProjects;
 
 const StyledProjectSection = styled.div`
-  min-height: 90vh;
+  min-height: var(--container-height);
+  max-width: var(--max-width);
   width: 100%;
-  padding: 5rem 10rem;
+  margin: auto;
+  padding: 5rem 2rem;
 
   display: flex;
   flex-direction: column;
@@ -108,6 +120,13 @@ const StyledProjectSection = styled.div`
   /* overflow-x: hidden; */
   /* display: grid;
   place-items: center center; */
+  /* ${SwiperSlide} {
+    div:first-child {
+      div:last-child {
+        display: none;
+      }
+    }
+  } */
 
   h1,
   h4 {
@@ -129,16 +148,40 @@ const StyledProjectSection = styled.div`
   }
   .swiper-js-container {
     width: 100%;
+    overflow: hidden;
   }
   .swiper-slide {
-    opacity: 0.3;
+    opacity: 0;
+    position: relative;
+
+    transform: scale(0.8) !important;
+    div:last-child {
+      display: none;
+      position: absolute;
+      top: 50%;
+      left: -20%;
+      transform: translate(0%, -25%);
+
+      height: auto;
+      width: 100%;
+    }
   }
+
   .swiper-slide-next,
   .swiper-slide-prev {
-    opacity: 0.8;
+    opacity: 0.5;
   }
   .swiper-slide-active {
+    transform: scale(1) !important;
+
+    div {
+      overflow: visible;
+      background-color: rgba(0, 0, 0, 0.9);
+    }
     opacity: 1;
+    div:last-child {
+      display: block;
+    }
   }
   .swiper-button-prev,
   .swiper-button-next {

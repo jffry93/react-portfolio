@@ -33,20 +33,7 @@ const ServicesSection = () => {
           sint dignissimos debitis voluptate corporis voluptatem quae adipisci
           cupiditate,
         </p>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima in
-          sint
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima in
-          sint dignissimos debitis voluptate corporis voluptatem quae adipisci
-          cupiditate,
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima in
-          sint dignissimos debitis voluptate corporis voluptatem quae adipisci
-          cupiditate,
-        </p>
+
         <h3>Skills & Tools</h3>
         <p>
           Click on the icon to see <span>Developer Documentation</span>
@@ -267,12 +254,15 @@ const ServicesSection = () => {
 };
 
 const StyledServices = styled.div`
-  min-height: 90vh;
+  min-height: var(--container-height);
+  max-width: var(--max-width);
+  margin: auto;
+
+  padding: 5rem 2rem;
 
   display: flex;
   flex-direction: row-reverse;
-  /* background: rgba(12, 12, 12); */
-  padding: 10rem 10rem;
+
   h2,
   h3 {
     font-weight: 700 !important;

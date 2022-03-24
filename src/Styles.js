@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import coffee from './img/ibrahim.jpg';
 
 export const StyledAbout = styled(motion.div)`
-  min-height: 90vh;
+  min-height: var(--container-height);
 
   text-align: right;
 
@@ -25,15 +25,17 @@ export const StyledOverlay = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 5rem 10rem;
-  height: 90vh;
+  padding: 5rem 2rem;
+  min-height: var(--container-height);
   width: 100%;
-  @media (max-width: 750px) {
+  /* @media (max-width: 750px) {
     padding: 5rem 3rem;
-  }
+  } */
 `;
 export const StyledAboutDescription = styled.div`
-  /* border: 3px solid blue; */
+  max-width: calc(var(--max-width) - 4rem);
+  margin: auto;
+  border: 1px solid yellow;
   width: 100%;
   flex: 1;
   /* margin-right: 5rem; */

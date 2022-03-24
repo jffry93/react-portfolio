@@ -18,7 +18,7 @@ const ContactForm = ({ formValidation, setFormValidation }) => {
   function validateForm(e) {
     // console.log(form.current[0]); //name
     function validateName() {
-      if (form.current[0].value == '') {
+      if (form.current[0].value === '') {
         setNameValidation(true);
         return false;
       } else {
@@ -39,7 +39,7 @@ const ContactForm = ({ formValidation, setFormValidation }) => {
       }
     }
     function validateMessage() {
-      if (form.current[3].value == '') {
+      if (form.current[3].value === '') {
         setMessageValidation(true);
       } else {
         setMessageValidation(false);
@@ -71,10 +71,10 @@ const ContactForm = ({ formValidation, setFormValidation }) => {
         }
       );
   }
-  function dontSendEmail(e) {
-    e.preventDefault();
-    console.log('all fields must be filled');
-  }
+  // function dontSendEmail(e) {
+  //   e.preventDefault();
+  //   console.log('all fields must be filled');
+  // }
 
   // let emailID = form.current[1].value;
   // const re =

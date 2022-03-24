@@ -12,6 +12,7 @@ const Project = ({
   colours,
   fonts,
   description,
+  secondDescription,
   setCaseDetail,
   setShowDetail,
 }) => {
@@ -23,6 +24,7 @@ const Project = ({
       desktopImg: { desktopImg }.desktopImg,
       mobileImg: { mobileImg }.mobileImg,
       description: { description }.description,
+      secondDescription: { secondDescription }.secondDescription,
       roles: { roles }.roles,
       icons: { icons }.icons,
       highlights: { highlights }.highlights,
@@ -51,15 +53,15 @@ export default Project;
 const StyledProject = styled.div`
   position: relative;
   border: 1px solid white;
-  background-color: rgba(0, 0, 0, 1);
-  border-radius: 20px;
+  /* background-color: rgba(0, 0, 0, 1); */
+  /* border-radius: 20px; */
   overflow: hidden;
   cursor: pointer;
   /* box-shadow: 00 30px rgba(0, 0, 0, 0.18); */
 `;
 
 const StyledImgContainer = styled.div`
-  position: relative;
+  /* position: relative;
   clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
   ::after {
     content: '';
@@ -76,6 +78,16 @@ const StyledImgContainer = styled.div`
     width: 100%;
     display: block;
     border-radius: 20px 20px 0 0;
+  } */
+  img {
+    width: 100%;
+    height: 50vh;
+    min-height: 400px;
+    max-height: 700px;
+    display: block;
+    /* border-radius: 20px 20px 0 0; */
+
+    object-fit: cover;
   }
 `;
 

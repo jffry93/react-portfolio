@@ -16,6 +16,7 @@ const ContactInfo = () => {
           <a
             href='https://www.google.com/maps/place/Toronto,+ON/@43.717899,-79.6582408,10z/data=!3m1!4b1!4m5!3m4!1s0x89d4cb90d7c63ba5:0x323555502ab4c477!8m2!3d43.653226!4d-79.3831843'
             target='_blank'
+            rel='noreferrer'
           >
             <FaMapMarkerAlt size={15} />
           </a>
@@ -24,6 +25,7 @@ const ContactInfo = () => {
             <a
               href='https://www.google.com/maps/place/Toronto,+ON/@43.717899,-79.6582408,10z/data=!3m1!4b1!4m5!3m4!1s0x89d4cb90d7c63ba5:0x323555502ab4c477!8m2!3d43.653226!4d-79.3831843'
               target='_blank'
+              rel='noreferrer'
             >
               Toronto ON
               <img src={drake} alt='drake' />
@@ -50,6 +52,7 @@ const ContactInfo = () => {
             href='https://github.com/jffry93'
             target='_blank'
             className='github'
+            rel='noreferrer'
           >
             <BsGithub size={22} className='github-icon' />
           </a>
@@ -68,6 +71,7 @@ const ContactInfo = () => {
             href='https://my.indeed.com/p/jeffreyz-n48gpy7'
             target='_blank'
             className='indeed'
+            rel='noreferrer'
           >
             <div>
               <SiIndeed size={22} className='indeed-icon' />
@@ -79,6 +83,7 @@ const ContactInfo = () => {
             href='https://www.instagram.com/jffry93/'
             target='_blank'
             className='instagram'
+            rel='noreferrer'
           >
             <FaInstagram size={22} className='instagram-icon' />
           </a>

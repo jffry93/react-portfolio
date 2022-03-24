@@ -67,8 +67,9 @@ const StyledContactStyle = styled(motion.div)`
   /* border: 3px solid yellow; */
   min-height: 90vh;
   height: 100%;
-  width: 100%;
-  padding: 3rem 10rem;
+  padding: 0 2rem;
+  /* width: 100%;
+  padding: 3rem 10rem; */
   /* justify-content: center; */
   display: flex;
   justify-content: center;
@@ -90,6 +91,9 @@ const StyledContactStyle = styled(motion.div)`
 `;
 const StyledContactContainer = styled.div`
   width: 100%;
+  max-width: calc(var(--max-width) - 4rem);
+  margin: auto;
+
   /* height: calc(90vh - 6rem); */
   min-height: clamp(650px, 100%, calc(90vh - 6rem));
   max-height: 750px;

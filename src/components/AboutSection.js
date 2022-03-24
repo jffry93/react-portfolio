@@ -1,11 +1,11 @@
-import home from '../img/home1.png';
+// import home from '../img/home1.png';
 
 //Styled
 import {
   StyledAbout,
   StyledOverlay,
   StyledAboutDescription,
-  StyledImage,
+  // StyledImage,
   StyledHide,
 } from '../Styles';
 

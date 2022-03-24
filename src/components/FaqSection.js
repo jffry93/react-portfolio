@@ -74,7 +74,9 @@ const Faq = styled.div`
     display: block;
   }
   h2 {
-    padding: 0 10rem 2rem;
+    margin: auto;
+    max-width: var(--max-width);
+    padding: 0 2rem 2rem;
     font-weight: lighter;
   }
   .faq-line {
@@ -84,7 +86,9 @@ const Faq = styled.div`
     width: 100%;
   }
   h4 {
-    padding: 0rem 10rem;
+    margin: auto;
+    max-width: var(--max-width);
+    padding: 0rem 2rem;
   }
   .question {
     padding: 3rem 0;
@@ -93,7 +97,9 @@ const Faq = styled.div`
   .answer {
     padding: 2rem 0rem;
     p {
-      padding: 1rem 10rem;
+      margin: auto;
+      max-width: var(--max-width);
+      padding: 1rem 2rem;
     }
   }
 `;
