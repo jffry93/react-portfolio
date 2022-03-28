@@ -110,7 +110,7 @@ const StyledProjectSection = styled.div`
   max-width: var(--max-width);
   width: 100%;
   margin: auto;
-  padding: 5rem 2rem;
+  padding: 5rem;
 
   display: flex;
   flex-direction: column;
@@ -127,6 +127,9 @@ const StyledProjectSection = styled.div`
       }
     }
   } */
+  @media (max-width: 1200px) {
+    padding: 5rem 0;
+  }
 
   h1,
   h4 {

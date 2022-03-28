@@ -23,11 +23,9 @@ const ServicesSection = () => {
       initial='hidden'
       ref={element}
     >
-      <StyledImage>
-        <img src={headshot} alt='headshot' />
-      </StyledImage>
       <StyledServicesDescription>
         <h2>About me</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima in
           sint dignissimos debitis voluptate corporis voluptatem quae adipisci
@@ -35,19 +33,32 @@ const ServicesSection = () => {
         </p>
         <motion.button variants={fade}>Download Resume</motion.button>
       </StyledServicesDescription>
+      <StyledImage>
+        <img src={headshot} alt='headshot' />
+      </StyledImage>
     </StyledServices>
   );
 };
 
 const StyledServices = styled.div`
-  min-height: var(--container-height);
-  max-width: var(--max-width);
+  border: 3px solid red;
+
+  /* min-height: 500px;
+  height: var(--container-height); */
+  max-width: 1200px;
+  /* max-height: 800px; */
+
   margin: auto;
 
-  padding: 5rem 2rem;
+  padding: 5rem;
 
   display: flex;
-  flex-direction: row-reverse;
+  align-items: center;
+
+  gap: 32px;
+  @media (max-width: 750px) {
+    padding: 5rem 2rem;
+  }
 
   h2,
   h3 {
@@ -55,58 +66,65 @@ const StyledServices = styled.div`
     font-size: 3rem;
     letter-spacing: 1px;
     color: white;
-    padding-bottom: 0rem;
-    margin: 0 0 3rem 0;
   }
-  h3 {
-    margin-top: 6rem;
-  }
+
   p {
-    padding: 1rem 0rem;
     font-weight: 400;
     letter-spacing: 2px;
     line-height: 1.65;
     color: white;
   }
   @media (max-width: 750px) {
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
   }
 `;
 const StyledServicesDescription = styled.div`
+  border: 3px solid blue;
+  display: flex;
+  flex-direction: column;
   flex: 1;
-  margin-right: 10rem;
+  gap: 16px;
+
   z-index: 2;
   h2 {
     font-weight: lighter;
   }
-  @media (max-width: 1300px) {
-    padding: 0;
-    button {
-      margin: 2rem 0 5rem 0;
-    }
+  button {
+    margin-top: 32px;
+    width: fit-content;
+    text-align: left;
   }
 `;
 
 const StyledImage = styled.div`
-  position: sticky;
-  top: 25%;
-  border: white 3px solid;
-  border-radius: 20px;
-  flex: 1;
-  overflow: hidden;
-  z-index: 1;
+  border: 3px solid green;
 
-  height: 50vh;
-  img {
-    height: 70vh;
-    width: 100%;
-    object-fit: cover;
-  }
+  flex: 1;
+  height: 70vh;
+  /* min-height: 400px; */
+  max-height: 700px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   @media (max-width: 750px) {
-    height: 300px;
-    width: 300px;
-    flex: none;
+    /* border-radius: 50%; */
+    /* height: unset; */
+    /* width: 300px; */
+    width: 100%;
+    max-height: 400px;
+  }
+
+  img {
+    /* min-height: 400px; */
+    /* margin: auto; */
+    /* height: 70vh; */
+    width: 100%;
+    min-width: 500px;
+    @media (max-width: 750px) {
+      /* min-width: unset; */
+    }
   }
 `;
 
