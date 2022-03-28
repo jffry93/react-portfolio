@@ -7,6 +7,7 @@ import FaqSection from '../components/FaqSection';
 import { motion } from 'framer-motion';
 import { pageAnimation } from '../animation';
 import ScrollTop from '../components/ScrollTop';
+import SkillsSections from '../components/SkillsSections';
 
 const AboutUs = () => {
   document.body.style.overflow = 'auto';
@@ -20,6 +21,7 @@ const AboutUs = () => {
       <ScrollTop />
       <AboutSection />
       <ServicesSection />
+      <SkillsSections />
       <PersonalProjects />
       <FaqSection />
     </motion.div>

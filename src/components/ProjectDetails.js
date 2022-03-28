@@ -266,7 +266,8 @@ const StyledProjectDetail = styled(motion.div)`
 
   /* transform: translate(-50%, 0%); */
   z-index: 11;
-  border-radius: 20px;
+  /* border-top-left-radius: 20px;
+  border-top-right-radius: 20px; */
   background: #1e1e1e;
 
   /* margin: auto; */

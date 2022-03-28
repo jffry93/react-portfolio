@@ -149,6 +149,12 @@ const StyledProjectSection = styled.div`
   .swiper-js-container {
     width: 100%;
     overflow: hidden;
+    //pagination
+    padding-bottom: 50px;
+    /* .swiper-pagination {
+      position: absolute;
+      bottom: 0;
+    } */
   }
   .swiper-slide {
     opacity: 0;
@@ -195,7 +201,7 @@ const StyledProjectSection = styled.div`
   }
   .swiper-slide-shadow-right,
   .swiper-slide-shadow-left {
-    border-radius: 20px;
+    /* border-radius: 20px; */
   }
 `;
 const StyledProjectList = styled.div`
