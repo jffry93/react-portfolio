@@ -4,9 +4,6 @@ import coffee from './img/ibrahim.jpg';
 
 export const StyledAbout = styled(motion.div)`
   min-height: var(--container-height);
-
-  text-align: right;
-
   color: white;
   /* border: red 3px solid; */
   background-image: url(${coffee});
@@ -35,40 +32,36 @@ export const StyledOverlay = styled.div`
 export const StyledAboutDescription = styled.div`
   max-width: calc(var(--max-width) - 4rem);
   margin: auto;
-  border: 1px solid yellow;
   width: 100%;
-  flex: 1;
-  /* margin-right: 5rem; */
-  /* z-index: 2; */
-  //name
 
+  border: 1px solid yellow;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
   h2 {
-    font-size: clamp(4rem, 10vw, 7rem);
+    /* font-size: clamp(4rem, 10vw, 7rem); */
     font-weight: bold;
-    margin: 1.5rem 0 3rem;
   }
   //greeting
   h3 {
-    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    /* font-size: clamp(1.5rem, 2.5vw, 2rem); */
     font-weight: 300;
     letter-spacing: 3px;
-    margin-top: 3rem;
   }
   //title
   h4 {
-    font-size: clamp(1rem, 5vw, 3.3rem);
+    /* font-size: clamp(1rem, 5vw, 3.3rem); */
     font-weight: 600;
     letter-spacing: 3px;
-    margin: 0 0 6rem;
   }
   button {
-    font-size: clamp(1rem, 3vw, 1.5rem);
+    /* font-size: clamp(1rem, 3vw, 1.5rem); */
     border: white 3px solid;
+    width: 200px;
   }
   @media (max-width: 1300px) {
     padding: 0;
     button {
-      margin: 2rem 0 0rem 0;
     }
   }
 `;

@@ -69,6 +69,7 @@ const SkillsSections = () => {
 export default SkillsSections;
 
 const StyledSkillsContainer = styled.div`
+  border: 3px solid yellow;
   padding: 5rem 0;
   .skills-header {
     max-width: calc(var(--max-width) - 4rem);

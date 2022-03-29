@@ -57,6 +57,9 @@ const PersonalProjects = () => {
               slideShadows: true,
             },
           },
+          600: {
+            slidesPerView: 1.8,
+          },
         }}
         navigation
         pagination={{
@@ -106,6 +109,8 @@ const PersonalProjects = () => {
 export default PersonalProjects;
 
 const StyledProjectSection = styled.div`
+  border: 3px solid purple;
+
   min-height: var(--container-height);
   max-width: var(--max-width);
   width: 100%;
@@ -127,7 +132,7 @@ const StyledProjectSection = styled.div`
       }
     }
   } */
-  @media (max-width: 1200px) {
+  @media (max-width: 600px) {
     padding: 5rem 0;
   }
 
@@ -169,7 +174,7 @@ const StyledProjectSection = styled.div`
       position: absolute;
       top: 50%;
       left: -20%;
-      transform: translate(0%, -25%);
+      transform: translate(0%, -50%);
 
       height: auto;
       width: 100%;

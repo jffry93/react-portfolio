@@ -19,18 +19,20 @@ const AboutSection = () => {
       <StyledOverlay>
         <StyledAboutDescription>
           <StyledHide>
-            <motion.h3 variants={titleAnimation}>Hi, my name is</motion.h3>
+            <motion.h3 variants={titleAnimation}>Hi, I'm Jeff.</motion.h3>
           </StyledHide>
 
+          {/* <StyledHide>
+            <motion.h3 variants={titleAnimation}>Jeff</motion.h3>
+          </StyledHide> */}
           <StyledHide>
-            <motion.h2 variants={titleAnimation}>Jeffrey Zalischi</motion.h2>
+            <motion.h2 variants={titleAnimation}>Frontend Developer</motion.h2>
           </StyledHide>
-          <StyledHide>
-            <motion.h4 variants={titleAnimation}>
-              Frontend Web Developer & <span>Designer</span>
-            </motion.h4>
-          </StyledHide>
+          <motion.h3 variants={titleAnimation}>
+            I build things for the web.
+          </motion.h3>
           <motion.button variants={fade}>Let's talk</motion.button>
+          <motion.button variants={fade}>View Work</motion.button>
         </StyledAboutDescription>
       </StyledOverlay>
     </StyledAbout>

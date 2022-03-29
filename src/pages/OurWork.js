@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 //ALL IMAGES
@@ -30,7 +29,7 @@ const OurWork = () => {
       initial='hidden'
       animate='show'
       exit='exit'
-      style={{ background: '#fff' }}
+      style={{ background: '#121212' }}
     >
       <ScrollTop />
       <motion.div variants={sliderContainer}>
@@ -39,25 +38,63 @@ const OurWork = () => {
         <StyledFrame3 variants={sliderAnimation}></StyledFrame3>
         <StyledFrame4 variants={sliderAnimation}></StyledFrame4>
       </motion.div>
+
       <StyledMovie>
-        <motion.h2 variants={fade}>The Athlete</motion.h2>
-        <motion.div variants={lineAnimation} className='line'></motion.div>
         <Link to='/work/the-athlete'>
-          <StyledHide>
-            <motion.img variants={photoAnimation} src={athlete} alt='athlete' />
-          </StyledHide>
+          <div className='work-card'>
+            <div className='card-details'>
+              <motion.h2 variants={fade}>The Athlete</motion.h2>
+              <motion.div
+                variants={lineAnimation}
+                className='line'
+              ></motion.div>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptates, voluptas. Numquam at impedit reiciendis consectetur
+                distinctio ab quis vitae eos.
+              </p>
+              <div>
+                <button>View Github</button>
+              </div>
+            </div>
+            <StyledHide className='work-image'>
+              <motion.img
+                variants={photoAnimation}
+                src={athlete}
+                alt='athlete'
+              />
+            </StyledHide>
+          </div>
         </Link>
       </StyledMovie>
+
       <StyledMovie
         ref={element}
         variants={fade}
         animate={controls}
         initials='hidden'
       >
-        <h2>The Racer</h2>
-        <motion.div variants={lineAnimation} className='line'></motion.div>
         <Link to='/work/the-racer'>
-          <img src={theracer} alt='the racer' />
+          <div className='work-card'>
+            <div className='card-details'>
+              <motion.h2 variants={fade}>The Racer</motion.h2>
+              <motion.div
+                variants={lineAnimation}
+                className='line'
+              ></motion.div>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptates, voluptas. Numquam at impedit reiciendis consectetur
+                distinctio ab quis vitae eos.
+              </p>
+              <div>
+                <button>View Github</button>
+              </div>
+            </div>
+            <StyledHide className='work-image'>
+              <img src={theracer} alt='the racer' />
+            </StyledHide>
+          </div>
         </Link>
       </StyledMovie>
       <StyledMovie
@@ -66,10 +103,27 @@ const OurWork = () => {
         animate={control2}
         initials='hidden'
       >
-        <h2>The Good times</h2>
-        <motion.div variants={lineAnimation} className='line'></motion.div>
         <Link to='/work/good-times'>
-          <img src={goodtimes} alt='the goodtimes' />
+          <div className='work-card'>
+            <div className='card-details'>
+              <motion.h2 variants={fade}>The GoodTimes</motion.h2>
+              <motion.div
+                variants={lineAnimation}
+                className='line'
+              ></motion.div>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptates, voluptas. Numquam at impedit reiciendis consectetur
+                distinctio ab quis vitae eos.
+              </p>
+              <div>
+                <button>View Github</button>
+              </div>
+            </div>
+            <StyledHide className='work-image'>
+              <img src={goodtimes} alt='the goodtimes' />
+            </StyledHide>
+          </div>
         </Link>
       </StyledMovie>
     </StyledWork>
@@ -77,27 +131,75 @@ const OurWork = () => {
 };
 
 const StyledWork = styled(motion.div)`
-  min-height: 100vh;
+  position: relative;
   overflow: hidden;
-  padding: 5rem 10rem;
-  @media (max-width: 1300px) {
-    padding: 2rem 2rem;
-  }
+  border: 1px solid red;
 `;
 
 const StyledMovie = styled(motion.div)`
-  padding-bottom: 10rem;
+  border: 1px solid green;
+  width: 82%;
+  margin: auto;
+  min-height: 500px;
+  max-height: 800px;
+  height: 85vh;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+
+  .work-card {
+    border: 1px solid yellow;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    align-items: center;
+    background-color: #1b1b1b;
+
+    height: 60vh;
+    min-height: 400px;
+    max-height: 500px;
+    max-width: 1200px;
+    margin: auto;
+
+    position: relative;
+    .card-details {
+      flex: 1;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      padding: 2rem;
+      @media (max-width: 750px) {
+        position: absolute;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+      }
+      p {
+        margin: 0 0 2rem;
+      }
+    }
+    .work-image {
+      flex: 1.5;
+
+      display: flex;
+      height: 100%;
+    }
+  }
   h2 {
     padding: 1rem 0rem;
   }
   .line {
     height: 0.5rem;
     background: #23d997;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
   }
   img {
+    flex: 2;
     width: 100%;
-    height: 70vh;
+
     object-fit: cover;
   }
 `;

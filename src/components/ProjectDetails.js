@@ -49,7 +49,6 @@ const ProjectDetails = ({ caseDetail, setShowDetail }) => {
               <h3>{project.secondDescription}</h3>
             </div>
             <div className='view-container'>
-              {/* <h2>View Project</h2> */}
               <div className='project-sites'>
                 {project.url.map((url) => (
                   <a
@@ -208,26 +207,6 @@ const ProjectDetails = ({ caseDetail, setShowDetail }) => {
           </div>
         </div>
         <div className='section-divider'></div>
-
-        {/* <div className='highlight-details'>
-          <div className='title-with-icon'>
-            <img
-              src={highlightIcon}
-              alt='highlight icon'
-              className='title-icon'
-            />
-            <h2>Highlight</h2>
-          </div>
-
-          <div className='detail-container'>
-            <h3>{project.highlights.title}</h3>
-            {project.highlights.description.map((highlight) => (
-              <div className='role'>
-                <p>{highlight.description}</p>
-              </div>
-            ))}
-          </div>
-        </div> */}
       </StyledProjectDetail>
     </StyledProjectShadow>
   );
@@ -513,6 +492,7 @@ const StyledProjectDetail = styled(motion.div)`
       gap: 2rem;
       justify-content: center;
       padding: 16px 0;
+      width: 100%;
       @media (max-width: 750px) {
         flex-direction: column;
         .role {
@@ -526,6 +506,7 @@ const StyledProjectDetail = styled(motion.div)`
       border-radius: 16px;
       padding: 1.5rem 1rem;
       max-width: 350px;
+      width: 100%;
     }
     .role-icon {
       display: flex;
@@ -544,7 +525,7 @@ const StyledProjectDetail = styled(motion.div)`
     gap: 2rem;
     /* margin: 0 2rem; */
     position: relative;
-    @media (max-width: 750px) {
+    @media (max-width: 650px) {
       flex-direction: column-reverse;
       align-items: flex-start;
       .browser-screenshot {
