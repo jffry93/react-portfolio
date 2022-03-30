@@ -20,8 +20,8 @@ const SkillsSections = () => {
   return (
     <StyledSkillsContainer>
       <div className='skills-header'>
-        <h1>Skills & Tools</h1>
-        <h4>Some neat tricks I've picked up along the way</h4>
+        <h2>Skills & Tools</h2>
+        <p>Some neat tricks I've picked up along the way</p>
       </div>
       <Swiper
         modules={[Navigation, Pagination, A11y, Autoplay]}
@@ -70,25 +70,35 @@ export default SkillsSections;
 
 const StyledSkillsContainer = styled.div`
   border: 3px solid yellow;
-  padding: 5rem 0;
+
   .skills-header {
     max-width: calc(var(--max-width) - 4rem);
     margin: auto;
-    padding: 0 2rem;
+
+    padding: 116px var(--layout-secondary-padding) 0;
+    @media (max-width: 850px) {
+      flex-direction: column-reverse;
+      align-items: center;
+      padding: 63px var(--layout-secondary-padding) 0;
+    }
+    @media (max-width: 650px) {
+      flex-direction: column-reverse;
+      align-items: center;
+      padding: 63px var(--layout-padding) 0;
+    }
   }
 
-  h1 {
-    font-size: 3rem;
-    letter-spacing: 1px;
-  }
-  h4 {
-    letter-spacing: 1px;
-    font-size: 1.125rem;
-    padding: 1.5rem 0 3rem;
+  p {
+    padding: 16px 0 16px;
   }
 
   .swiper-js-container {
-    padding-bottom: 50px;
+    padding-bottom: 119px;
+    padding-top: 53px;
+    @media (max-width: 850px) {
+      padding-top: 37px;
+      padding-bottom: 94px;
+    }
   }
   .swiper-js-container > .swiper-wrapper {
     transition-timing-function: linear;

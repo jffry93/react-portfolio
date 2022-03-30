@@ -41,6 +41,7 @@ export default HomeSection;
 
 const StyledHomepageContainer = styled(motion.div)`
   height: var(--container-height);
+  min-height: 500px;
   max-height: 800px;
   color: white;
   /* border: red 3px solid; */
@@ -57,6 +58,7 @@ const StyledHomepageContainer = styled(motion.div)`
   }
 
   .overlay {
+    min-height: 500px;
     max-height: 800px;
   }
   .buttons {
@@ -64,7 +66,7 @@ const StyledHomepageContainer = styled(motion.div)`
     gap: 20px;
     margin-top: 1.35em;
     button {
-      width: 200px;
+      min-width: 180px;
       font-size: 1.625rem;
     }
   }
@@ -81,20 +83,11 @@ const StyledDescription = styled.div`
   @media (max-width: 450px) {
     padding: var(--layout-padding);
   }
-  h2 {
-    /* font-size: clamp(4rem, 10vw, 7rem); */
-    font-weight: bold;
-  }
+
   //greeting
   h3 {
     /* font-size: clamp(1.5rem, 2.5vw, 2rem); */
     font-weight: 300;
-    letter-spacing: 3px;
-  }
-  //title
-  h4 {
-    /* font-size: clamp(1rem, 5vw, 3.3rem); */
-    font-weight: 600;
     letter-spacing: 3px;
   }
 `;

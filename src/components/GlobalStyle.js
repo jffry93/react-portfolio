@@ -36,7 +36,7 @@ const GlobalStyle = createGlobalStyle`
 
         font-weight: 700;
         font-size: 17px;
-        padding: 1rem 1.5rem;
+        padding: 8px 16px;
         border: 1.5px solid white;
         background: transparent;
         color: white;
@@ -48,17 +48,18 @@ const GlobalStyle = createGlobalStyle`
         
     }
     h1{
-        font-size: clamp(3.125rem, 8vw, 4rem);
+        font-size: clamp(3.125rem, 4vw, 4rem);
         line-height: 1.07143;
         letter-spacing: -.005em;
     }
     h2{
-        font-size: clamp(32px, 8vw, 56px);
+        font-size: clamp(32px, 4vw, 48px);
+        font-weight: 700 ;
         line-height: 1.07143;
         letter-spacing: -.005em;
     }
     h3{
-        font-size: clamp(21px, 8vw, 28px);
+        font-size: clamp(21px, 4vw, 28px);
         line-height: 1.14286;
         letter-spacing: .007em;
     }
@@ -66,13 +67,13 @@ const GlobalStyle = createGlobalStyle`
         font-size: clamp(.9rem, .5vw, 1rem);
         font-weight: 300;
         letter-spacing: 0px;
-        line-height: 1.26;
+        line-height: 1.381;
     }
     p{
-        font-size: clamp(17px, 1vw, 18px);
-        font-weight: 300;
-        line-height: 1.6;
-        letter-spacing: 0px;
+        font-size: clamp(17px, 1.2vw, 19px);
+        font-weight: lighter;
+        line-height: clamp(25.000032424926758px, .5vw, 29.001001358032227px);
+        letter-spacing:  clamp(.011em, .5vw, .022em);
     }
     h1,h2,h3,h4,h5,p{
         color: white;
@@ -103,6 +104,7 @@ const GlobalStyle = createGlobalStyle`
         font-size: 1.4rem;
         line-height: 150%;
     } */
+    
 `;
 
 export default GlobalStyle;

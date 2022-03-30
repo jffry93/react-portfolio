@@ -31,7 +31,7 @@ const ServicesSection = () => {
           sint dignissimos debitis voluptate corporis voluptatem quae adipisci
           cupiditate,
         </p>
-        <motion.button variants={fade}>Download Resume</motion.button>
+        <motion.button variants={fade}>Resume</motion.button>
       </StyledServicesDescription>
       <StyledImage>
         <img src={headshot} alt='headshot' />
@@ -47,36 +47,29 @@ const StyledServices = styled.div`
   height: var(--container-height); */
   max-width: 1200px;
   /* max-height: 800px; */
-
   margin: auto;
 
-  padding: 5rem;
+  padding: 116px var(--layout-secondary-padding) 119px;
 
   display: flex;
   align-items: center;
-
-  gap: 32px;
-  @media (max-width: 750px) {
-    padding: 5rem 2rem;
-  }
-
-  h2,
-  h3 {
-    font-weight: 700 !important;
-    font-size: 3rem;
-    letter-spacing: 1px;
-    color: white;
-  }
-
+  gap: 45px;
+  /* 
   p {
     font-weight: 400;
     letter-spacing: 2px;
     line-height: 1.65;
     color: white;
-  }
-  @media (max-width: 750px) {
+  } */
+  @media (max-width: 850px) {
     flex-direction: column-reverse;
     align-items: center;
+    padding: 63px var(--layout-secondary-padding) 94px;
+  }
+  @media (max-width: 650px) {
+    flex-direction: column-reverse;
+    align-items: center;
+    padding: 63px var(--layout-padding) 94px;
   }
 `;
 const StyledServicesDescription = styled.div`
@@ -87,33 +80,35 @@ const StyledServicesDescription = styled.div`
   gap: 16px;
 
   z-index: 2;
-  h2 {
-    font-weight: lighter;
+  @media (max-width: 850px) {
+    max-width: 650px;
   }
   button {
     margin-top: 32px;
     width: fit-content;
-    text-align: left;
+    font-size: 1.625rem;
   }
 `;
 
 const StyledImage = styled.div`
   border: 3px solid green;
 
-  flex: 1;
-  height: 70vh;
-  /* min-height: 400px; */
-  max-height: 700px;
+  height: 450px;
+  width: 450px;
+  border-radius: 50%;
+
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  @media (max-width: 750px) {
+  @media (max-width: 500px) {
     /* border-radius: 50%; */
     /* height: unset; */
     /* width: 300px; */
-    width: 100%;
-    max-height: 400px;
+    /* width: 100%; */
+    /* max-height: 400px; */
+    height: 250px;
+    width: 250px;
   }
 
   img {

@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const SkillCard = ({ title, description, documentation }) => {
   return (
     <StyledSkillCard>
-      <h2>{title}</h2>
+      <h3>{title}</h3>
       <div className='space-container'>
         <p>{description}</p>
         <a href={documentation} target='_blank'>
@@ -19,6 +19,12 @@ const SkillCard = ({ title, description, documentation }) => {
 export default SkillCard;
 
 const StyledSkillCard = styled.div`
+  background-color: #121212;
+  border-radius: 20px;
+  padding: 1rem 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   h2 {
     font-size: 2rem;
   }
@@ -29,18 +35,11 @@ const StyledSkillCard = styled.div`
     text-decoration: none;
     color: white;
   }
-  background-color: #121212;
-  border-radius: 20px;
-  padding: 1rem 1rem 2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  height: 100%;
   .space-container {
     height: 100%;
     display: flex;
     flex-direction: column;
-    gap: 32px;
+    gap: 16px;
     justify-content: space-between;
   }
 `;
