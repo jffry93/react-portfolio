@@ -1,5 +1,5 @@
 import React from 'react';
-import AboutSection from '../components/AboutSection';
+import HomeSection from '../components/HomeSection';
 import ServicesSection from '../components/ServicesSection';
 import PersonalProjects from '../components/PersonalProjects';
 import FaqSection from '../components/FaqSection';
@@ -19,7 +19,7 @@ const AboutUs = () => {
       exit='exit'
     >
       <ScrollTop />
-      <AboutSection />
+      <HomeSection />
       <ServicesSection />
       <SkillsSections />
       <PersonalProjects />

@@ -190,7 +190,12 @@ const StyledFormContainer = styled.div`
   gap: 5rem;
   @media (max-width: 1050px) {
     flex-direction: column;
-    padding: 5rem;
+    padding: 4rem;
+  }
+
+  @media (max-width: 450px) {
+    flex-direction: column;
+    padding: 4rem 1rem;
   }
 `;
 const StyledContactForm = styled.div`

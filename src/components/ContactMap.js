@@ -72,9 +72,7 @@ const StyledMapContainer = styled.div`
     flex: unset;
   }
   .map-container {
-    height: calc(90vh - 6rem);
-    min-height: 598px;
-    max-height: 750px;
+    height: 90vh;
     @media (max-width: 1050px) {
       min-height: 300px;
       height: 30vh;

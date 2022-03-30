@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 //components
-import AboutSection from '../components/AboutSection';
+import HomeSection from '../components/HomeSection';
 import styled from 'styled-components';
 import { MovieState } from '../movieState';
 //PAGE ANIMATION

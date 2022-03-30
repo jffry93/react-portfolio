@@ -67,7 +67,7 @@ const StyledContactStyle = styled(motion.div)`
   /* border: 3px solid yellow; */
   min-height: 90vh;
   height: 100%;
-  padding: 0 2rem;
+  /* padding: 0 2rem; */
   /* width: 100%;
   padding: 3rem 10rem; */
   /* justify-content: center; */

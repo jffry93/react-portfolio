@@ -17,9 +17,17 @@ import SwiperCore, {
   A11y,
   EffectCoverflow,
   EffectFade,
+  Autoplay,
 } from 'swiper';
 //install swiper modules
-SwiperCore.use([Navigation, Pagination, A11y, EffectCoverflow, EffectFade]);
+SwiperCore.use([
+  Navigation,
+  Pagination,
+  A11y,
+  EffectCoverflow,
+  EffectFade,
+  Autoplay,
+]);
 
 const PersonalProjects = () => {
   const [projects, setProjects] = useState(projectState);
@@ -40,7 +48,14 @@ const PersonalProjects = () => {
 
       <Swiper
         className='swiper-js-container'
-        modules={[Navigation, Pagination, A11y, EffectCoverflow, EffectFade]}
+        modules={[
+          Navigation,
+          Pagination,
+          A11y,
+          EffectCoverflow,
+          EffectFade,
+          Autoplay,
+        ]}
         spaceBetween={0}
         watchSlidesProgress={true}
         touchRatio={0.2}
@@ -75,6 +90,11 @@ const PersonalProjects = () => {
           slideShadows: true,
         }}
         centeredSlides
+        autoplay={{
+          delay: 4000,
+          disableOnInteraction: false,
+        }}
+        speed={500}
         loop={true}
         onSwiper={(swiper) => console.log(swiper)}
         onSlideChange={() => console.log('slide change')}
