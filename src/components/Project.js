@@ -41,8 +41,8 @@ const Project = ({
       </StyledImgContainer>
       <StyledDetails>
         <h3>{title}</h3>
-        <p>{description}</p>
-        <a href={url}>GitHub Repo</a>
+        <p>{secondaryTitle}</p>
+        <button href={url}>GitHub Repo</button>
       </StyledDetails>
     </StyledProject>
   );
@@ -53,36 +53,16 @@ export default Project;
 const StyledProject = styled.div`
   position: relative;
   border: 1px solid white;
-  /* background-color: rgba(0, 0, 0, 1); */
-  /* border-radius: 20px; */
+
   overflow: hidden;
   cursor: pointer;
-  /* box-shadow: 00 30px rgba(0, 0, 0, 0.18); */
 `;
 
 const StyledImgContainer = styled.div`
-  /* position: relative;
-  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-  ::after {
-    content: '';
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    border-radius: 20px 20px 0 0;
-    background-image: linear-gradient(135deg, #0100ec, #fb36f4);
-    opacity: 0.3;
-  }
   img {
     width: 100%;
-    display: block;
-    border-radius: 20px 20px 0 0;
-  } */
-  img {
-    width: 100%;
-    height: 50vh;
-    min-height: 400px;
+    height: 60vh;
+    min-height: 500px;
     max-height: 700px;
     display: block;
     /* border-radius: 20px 20px 0 0; */
@@ -92,12 +72,11 @@ const StyledImgContainer = styled.div`
 `;
 
 const StyledDetails = styled.div`
-  padding: 0 2rem 5rem;
+  padding: 1.5rem 1.5rem 3rem 1.5rem;
   h3 {
     color: white;
     font-weight: 700;
     font-size: 2rem;
-    margin: 1rem 0 1rem 0;
   }
   p {
     color: white;
@@ -105,11 +84,12 @@ const StyledDetails = styled.div`
     line-height: 1;
     letter-spacing: 2px;
     font-weight: 400;
-    margin: 1rem 0 3rem;
+    padding: 16px 0 32px;
   }
-  a {
-    border: 2px solid white;
-    padding: 1rem;
+  button {
+    /* border: 2px solid white; */
+    padding: 0.7rem;
+    font-size: 17px;
     text-decoration: none;
     color: white;
   }

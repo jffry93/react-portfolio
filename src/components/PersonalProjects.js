@@ -43,8 +43,8 @@ const PersonalProjects = () => {
           setShowDetail={setShowDetail}
         />
       )}
-      <h1>Personal Projects</h1>
-      <h4>Click on card to preview Case Study</h4>
+      <h2>Personal Projects</h2>
+      <p>Click on card to preview Case Study</p>
 
       <Swiper
         className='swiper-js-container'
@@ -96,8 +96,8 @@ const PersonalProjects = () => {
         }}
         speed={500}
         loop={true}
-        onSwiper={(swiper) => console.log(swiper)}
-        onSlideChange={() => console.log('slide change')}
+        // onSwiper={(swiper) => console.log(swiper)}
+        // onSlideChange={() => console.log('slide change')}
       >
         {projects.map((project) => (
           <SwiperSlide>
@@ -129,13 +129,15 @@ const PersonalProjects = () => {
 export default PersonalProjects;
 
 const StyledProjectSection = styled.div`
-  border: 3px solid purple;
+  /* border: 3px solid purple; */
 
-  min-height: var(--container-height);
-  max-width: var(--max-width);
+  /* height: var(--container-height); */
+  min-height: 570px;
+  max-height: 900px;
+  /* max-width: var(--max-width); */
+  max-width: 1400px;
   width: 100%;
-  margin: auto;
-  padding: 5rem;
+  margin: 116px auto 119px;
 
   display: flex;
   flex-direction: column;
@@ -153,31 +155,17 @@ const StyledProjectSection = styled.div`
     }
   } */
   @media (max-width: 600px) {
-    padding: 5rem 0;
+    /* padding: 5rem 0; */
   }
 
-  h1,
-  h4 {
-    text-align: center;
-  }
-
-  h1 {
-    font-weight: 700 !important;
-    font-size: 3rem;
-    letter-spacing: 1px;
-    color: white;
-  }
-  h4 {
-    color: white;
-    letter-spacing: 1px;
-    font-size: 1.125rem;
-    font-weight: 400;
-    padding: 1.5rem 0 3rem;
+  p {
+    padding: 16px 0 32px;
   }
   .swiper-js-container {
     width: 100%;
     overflow: hidden;
     //pagination
+
     padding-bottom: 50px;
     /* .swiper-pagination {
       position: absolute;

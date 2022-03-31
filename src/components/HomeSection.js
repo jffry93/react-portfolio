@@ -44,7 +44,7 @@ const StyledHomepageContainer = styled(motion.div)`
   min-height: 500px;
   max-height: 800px;
   color: white;
-  /* border: red 3px solid; */
+
   background-image: url(${coffee});
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -66,8 +66,9 @@ const StyledHomepageContainer = styled(motion.div)`
     gap: 20px;
     margin-top: 1.35em;
     button {
-      min-width: 180px;
-      font-size: 1.625rem;
+      min-width: 130px;
+      /* font-size: 1.625rem; */
+      font-size: 17px;
     }
   }
 `;

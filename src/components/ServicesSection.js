@@ -23,6 +23,9 @@ const ServicesSection = () => {
       initial='hidden'
       ref={element}
     >
+      <StyledImage>
+        <img src={headshot} alt='headshot' />
+      </StyledImage>
       <StyledServicesDescription>
         <h2>About me</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
@@ -33,25 +36,23 @@ const ServicesSection = () => {
         </p>
         <motion.button variants={fade}>Resume</motion.button>
       </StyledServicesDescription>
-      <StyledImage>
-        <img src={headshot} alt='headshot' />
-      </StyledImage>
     </StyledServices>
   );
 };
 
 const StyledServices = styled.div`
-  border: 3px solid red;
+  /* border: 3px solid red; */
 
   /* min-height: 500px;
   height: var(--container-height); */
-  max-width: 1200px;
+  max-width: 1024px;
   /* max-height: 800px; */
   margin: auto;
 
   padding: 116px var(--layout-secondary-padding) 119px;
 
   display: flex;
+  flex-direction: row-reverse;
   align-items: center;
   gap: 45px;
   /* 
@@ -62,18 +63,16 @@ const StyledServices = styled.div`
     color: white;
   } */
   @media (max-width: 850px) {
-    flex-direction: column-reverse;
+    flex-direction: column;
     align-items: center;
     padding: 63px var(--layout-secondary-padding) 94px;
   }
   @media (max-width: 650px) {
-    flex-direction: column-reverse;
-    align-items: center;
     padding: 63px var(--layout-padding) 94px;
   }
 `;
 const StyledServicesDescription = styled.div`
-  border: 3px solid blue;
+  /* border: 3px solid blue; */
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -91,7 +90,7 @@ const StyledServicesDescription = styled.div`
 `;
 
 const StyledImage = styled.div`
-  border: 3px solid green;
+  /* border: 1px solid white; */
 
   height: 450px;
   width: 450px;

@@ -36,7 +36,7 @@ const GlobalStyle = createGlobalStyle`
 
         font-weight: 700;
         font-size: 17px;
-        padding: 8px 16px;
+        padding: .7rem 1.4rem;
         border: 1.5px solid white;
         background: transparent;
         color: white;
@@ -54,12 +54,17 @@ const GlobalStyle = createGlobalStyle`
     }
     h2{
         font-size: clamp(32px, 4vw, 48px);
-        font-weight: 700 ;
+        /* font-weight: lighter; */
         line-height: 1.07143;
         letter-spacing: -.005em;
     }
     h3{
         font-size: clamp(21px, 4vw, 28px);
+        line-height: 1.14286;
+        letter-spacing: .007em;
+    }
+    h4{
+        font-size: clamp(17px, 3vw, 23px);
         line-height: 1.14286;
         letter-spacing: .007em;
     }

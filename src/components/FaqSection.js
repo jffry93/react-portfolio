@@ -77,7 +77,6 @@ const Faq = styled.div`
     margin: auto;
     max-width: var(--max-width);
     padding: 0 2rem 2rem;
-    font-weight: lighter;
   }
   .faq-line {
     background: #cccccc;

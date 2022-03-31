@@ -25,13 +25,18 @@ const StyledSkillCard = styled.div`
   display: flex;
   flex-direction: column;
   height: 100%;
-  h2 {
-    font-size: 2rem;
+  h3 {
+    font-size: 1.4rem;
+  }
+  p {
+    font-size: 1rem;
   }
   a {
+    font-size: 1rem;
+
     width: fit-content;
     border: 2px solid white;
-    padding: 1rem;
+    padding: 0.7rem;
     text-decoration: none;
     color: white;
   }
