@@ -66,7 +66,7 @@ const StyledHomepageContainer = styled(motion.div)`
     gap: 20px;
     margin-top: 1.35em;
     button {
-      min-width: 130px;
+      min-width: 140px;
       /* font-size: 1.625rem; */
       font-size: 17px;
     }

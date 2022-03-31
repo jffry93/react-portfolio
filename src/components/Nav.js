@@ -1,5 +1,7 @@
+//ICONS
 import hamburger from '../img/icons/icon-hamburger.svg';
 import closeHamburger from '../img/icons/icon-close.svg';
+import downloadIcon from '../img/icons/download-solid.svg';
 
 import React from 'react';
 import styled from 'styled-components';
@@ -49,14 +51,14 @@ const Nav = ({ navToggle, setNavToggle }) => {
             animate={{ width: pathname === '/contact' ? '50%' : '0%' }}
           /> */}
           </li>
-          <button>Download Resume</button>
+          <button>
+            <div className='download'></div> <span>Resume</span>
+          </button>
         </ul>
         <StyledNavToggle
           onClick={() => setNavToggle(!navToggle)}
           className={`${navToggle ? 'close-toggle' : 'hamburger-toggle'}`}
-        >
-          <span></span>
-        </StyledNavToggle>
+        ></StyledNavToggle>
       </div>
     </StyledNav>
   );
@@ -121,8 +123,23 @@ const StyledNav = styled.nav`
       }
     }
     button {
-      font-size: 12px;
-      padding: 0.7rem 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+
+      padding: 0.7rem 1.4rem 0.7rem 1.1rem;
+      .download {
+        width: 12px;
+        height: 12px;
+        background-color: white;
+        background: url(${downloadIcon});
+        background-repeat: no-repeat;
+        transition: background 100ms ease-out;
+      }
+
+      span {
+        font-size: 12px;
+      }
     }
 
     //uses the value if the browser supports it
@@ -182,8 +199,13 @@ const StyledNav = styled.nav`
         /* padding: 0; */
       }
       button {
-        font-size: 16px;
-        padding: 1rem 2rem;
+        .download {
+          width: 16px;
+          height: 16px;
+        }
+        span {
+          font-size: 16px;
+        }
       }
     }
     .library-active {

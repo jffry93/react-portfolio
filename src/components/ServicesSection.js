@@ -3,7 +3,10 @@
 // import diaphragm from '../img/diaphragm.svg';
 // import money from '../img/money.svg';
 // import teamwork from '../img/teamwork.svg';
+//IMAGES
 import headshot from '../img/ben_parker.jpg';
+//ICONS
+import downloadIcon from '../img/icons/download-solid.svg';
 //Styles
 import styled from 'styled-components';
 //Reusable styles
@@ -34,7 +37,10 @@ const ServicesSection = () => {
           sint dignissimos debitis voluptate corporis voluptatem quae adipisci
           cupiditate,
         </p>
-        <motion.button variants={fade}>Resume</motion.button>
+        <motion.button variants={fade}>
+          {' '}
+          <div className='download'></div> <span>Resume</span>
+        </motion.button>
       </StyledServicesDescription>
     </StyledServices>
   );
@@ -83,9 +89,27 @@ const StyledServicesDescription = styled.div`
     max-width: 650px;
   }
   button {
+  }
+  button {
     margin-top: 32px;
     width: fit-content;
-    font-size: 1.625rem;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 0.7rem 1.4rem 0.7rem 1.1rem;
+    .download {
+      width: 17px;
+      height: 17px;
+      background-color: white;
+      background: url(${downloadIcon});
+      background-repeat: no-repeat;
+      transition: background 100ms ease-out;
+    }
+
+    span {
+      font-size: 17px;
+    }
   }
 `;
 

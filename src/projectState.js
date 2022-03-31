@@ -9,6 +9,8 @@ import theracer2 from './img/the-racer2.jpg';
 //VOUS BEAUTY CLINIC
 import vbcdesktop from './img/projects/vbc-desktop.png';
 import vbcmobile from './img/projects/iphonex783.png';
+import vbcBrowser from './img/projects/screenshots/vbc-shop-light.png';
+import vbcIpad from './img/projects/screenshots/vbc-ipad-930.png';
 //SVG ICONS
 import squarespaceIcon from './img/icons/squarespace-brands.svg';
 import paintBrush from './img/icons/paint-brush.svg';
@@ -199,6 +201,8 @@ const projectState = () => {
       ],
       mainImg: vbcdesktop,
       secondaryImg: vbcmobile,
+      browserImg: vbcBrowser,
+      ipadImg: vbcIpad,
       description: 'Breif Summary of Project',
       secondDescription:
         'VOUS Beauty Clinic specializes in cosmetic treatments & solutions.Lorem ipsum dolor sit, amet consectetur adipisicing elit.',

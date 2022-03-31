@@ -34,6 +34,8 @@ const PersonalProjects = () => {
   const [caseDetail, setCaseDetail] = useState({});
   const [showDetail, setShowDetail] = useState(false);
 
+  console.log(projects);
+
   return (
     <StyledProjectSection>
       {showDetail && (
@@ -106,6 +108,8 @@ const PersonalProjects = () => {
               secondaryTitle={project.secondaryTitle}
               desktopImg={project.mainImg}
               mobileImg={project.secondaryImg}
+              browserImg={project.browserImg}
+              ipadImg={project.ipadImg}
               roles={project.roles}
               icons={project.icons}
               highlights={project.highlights}
@@ -118,7 +122,7 @@ const PersonalProjects = () => {
               caseDetail={caseDetail}
               setCaseDetail={setCaseDetail}
               setShowDetail={setShowDetail}
-            ></Project>
+            />
           </SwiperSlide>
         ))}
       </Swiper>
