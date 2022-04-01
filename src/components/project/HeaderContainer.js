@@ -23,7 +23,9 @@ const StyledHeadingContainer = styled.div`
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  padding: 12px 22px;
+  gap: 16px;
+
+  padding: 12px var(--layout-padding);
   .title-container {
     display: flex;
     flex-direction: column;
@@ -38,5 +40,8 @@ const StyledHeadingContainer = styled.div`
     font-size: 15px;
     border-radius: 25px;
     padding: 0.7rem 1.1rem;
+  }
+  @media (max-width: 450px) {
+    padding: 12px var(--mobile-padding);
   }
 `;

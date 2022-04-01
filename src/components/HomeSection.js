@@ -42,14 +42,14 @@ export default HomeSection;
 const StyledHomepageContainer = styled(motion.div)`
   height: var(--container-height);
   min-height: 500px;
-  max-height: 800px;
+  max-height: 850px;
   color: white;
 
   background-image: url(${coffee});
   background-repeat: no-repeat;
+  background-size: cover;
   background-attachment: fixed;
   background-position: center;
-  background-size: cover;
   @media (max-width: 750px) {
     #buttons {
       flex-direction: column;
@@ -59,7 +59,7 @@ const StyledHomepageContainer = styled(motion.div)`
 
   .overlay {
     min-height: 500px;
-    max-height: 800px;
+    max-height: 850px;
   }
   .buttons {
     display: flex;

@@ -33,148 +33,162 @@ const MovieDetail = () => {
     //added a fraction tag around to add a function
     <>
       {movie && (
-        <StyledDetails
-          variants={pageAnimation}
-          initial='hidden'
-          animate='show'
-          exit='exit'
-        >
-          <StyledHeadLine>
-            <div className='apple-container'>
-              <div className='description-container'>
-                <div className='project-summary'>
-                  <h2>Summary of Project</h2>
-                  <h3>{movie.secondDescription}</h3>
-                  <button>Visit Website</button>
-                </div>
-              </div>
-              <div className='device-container'>
-                <div className='macbook'>
-                  <img
-                    className='macbook-frame'
-                    src={macbook}
-                    alt='desktop screenshot'
-                  />
-                  <div className='macbook-img'>
-                    <img src={movie.desktopImg} alt='desktop screenshot' />
+        <StyledOverflow className='overflowContainer'>
+          <StyledDetails
+            variants={pageAnimation}
+            initial='hidden'
+            animate='show'
+            exit='exit'
+          >
+            <StyledHeadLine>
+              <div className='apple-container'>
+                <div className='description-container'>
+                  <div className='project-summary'>
+                    <h2>Summary</h2>
+                    <p>{movie.secondDescription}</p>
+                    <button>Visit Website</button>
                   </div>
                 </div>
-                <div className='iphone'>
-                  <img
-                    className='iphone-frame'
-                    src={iphone}
-                    alt='mobile screenshot'
-                  />
-                  <div className='iphone-img'>
-                    <img src={movie.mobileImg} alt='mobile screenshot' />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </StyledHeadLine>
-          <StyledRoles>
-            <div className='role-container'>
-              <div className='roles-container'>
-                {movie.roles.map((role) => (
-                  <div className='role'>
-                    <div className='role-icon'>
-                      <img src={role.iconFa} alt='' />
-                      <h3>{role.title}</h3>
+                <div className='device-container'>
+                  <div className='macbook'>
+                    <img
+                      className='macbook-frame'
+                      src={macbook}
+                      alt='desktop screenshot'
+                    />
+                    <div className='macbook-img'>
+                      <img src={movie.desktopImg} alt='desktop screenshot' />
                     </div>
-                    <div className='line'></div>
-                    <p>{role.description}</p>
                   </div>
-                ))}
+                  <div className='iphone'>
+                    <img
+                      className='iphone-frame'
+                      src={iphone}
+                      alt='mobile screenshot'
+                    />
+                    <div className='iphone-img'>
+                      <img src={movie.mobileImg} alt='mobile screenshot' />
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
-          </StyledRoles>
-          <StyledTypography>
-            <div className='browser-container'>
-              <div className='typography-container'>
-                <div className='examples-container'>
-                  {movie.fonts.map((font) => (
-                    <div className='font-family-container'>
-                      <div className='font-title'>
-                        <h3 className='family-title'>{font.title}</h3>
-                        <h3>{font.fontFamily}</h3>
+            </StyledHeadLine>
+            <StyledRoles>
+              <div className='role-container'>
+                <div className='roles-container'>
+                  {movie.roles.map((role) => (
+                    <div className='role custom-card'>
+                      <div className='role-icon'>
+                        <img src={role.iconFa} alt='' />
+                        <h4>{role.title}</h4>
                       </div>
-
-                      <h3
-                        className='font-example'
-                        style={{
-                          fontFamily: `${font.fontFamily}`,
-                          fontWeight: `${font.fontWeight}`,
-                          letterSpacing: `${font.letterSpacing}`,
-                        }}
-                      >
-                        Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss
-                        Tt Uu Vv Ww Xx Yy Zz 1 2 3 4 5 6 7 8 9 0 ? !
-                      </h3>
+                      <div className='line'></div>
+                      <p>{role.description}</p>
                     </div>
                   ))}
                 </div>
               </div>
-              <div className='browser-screenshot'>
-                <img src={movie.browserImg} alt='' />
-              </div>
-            </div>
-          </StyledTypography>
-          <StyledPalette>
-            <div className='tablet-container'>
-              <div className='tablet-image'>
-                <img
-                  className='ipad-frame'
-                  src={ipad}
-                  alt='tablet screenshot'
-                />
-                <div className='ipad-img'>
-                  <img src={movie.ipadImg} alt='tablet screenshot' />
-                </div>
-              </div>
-              <div className='colour-container'>
-                <div className='palette-container'>
-                  <div className='colour-palettes'>
-                    {movie.colours.map((colour) => (
-                      <div
-                        className='colour-palette'
-                        style={{ backgroundColor: `${colour.hexCode}` }}
-                      >
-                        <p>{colour.hexCode}</p>
+            </StyledRoles>
+            <StyledTypography>
+              <div className='browser-container'>
+                <div className='typography-container'>
+                  <div className='examples-container'>
+                    {movie.fonts.map((font) => (
+                      <div className='font-family-container'>
+                        <div className='font-title'>
+                          <h4 className='family-title'>{font.title}</h4>
+                          <h3
+                            style={{
+                              fontFamily: `${font.fontFamily}`,
+                              fontWeight: `${font.fontWeight}`,
+                              letterSpacing: `${font.letterSpacing}`,
+                            }}
+                          >
+                            {font.fontFamily}
+                          </h3>
+                        </div>
+
+                        <p
+                          className='font-example'
+                          style={{
+                            fontFamily: `${font.fontFamily}`,
+                            fontWeight: `${font.fontWeight}`,
+                            letterSpacing: `${font.letterSpacing}`,
+                          }}
+                        >
+                          Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr
+                          Ss Tt Uu Vv Ww Xx Yy Zz 1 2 3 4 5 6 7 8 9 0 ? !
+                        </p>
                       </div>
                     ))}
                   </div>
-                  <h5>Click on hexcode to copy to clipboard</h5>
+                </div>
+                <div className='browser-screenshot'>
+                  <img src={movie.browserImg} alt='' />
                 </div>
               </div>
-            </div>
-          </StyledPalette>
-          <StyledSkills>
-            <div className='skill-details'>
-              <div className='icon-container'>
-                {movie.icons.map((icon) => (
-                  <div className='skill'>
-                    <div className='tool-text-container'>
-                      <h3>{icon.title}</h3>
-                      <p>{icon.description}</p>
-                    </div>
-                    <div className='tool-button-container'>
-                      <button target='_blank' className='project-button'>
-                        View Doc
-                      </button>
-                    </div>
+            </StyledTypography>
+            <StyledPalette>
+              <div className='tablet-container'>
+                <div className='tablet-image'>
+                  <img
+                    className='ipad-frame'
+                    src={ipad}
+                    alt='tablet screenshot'
+                  />
+                  <div className='ipad-img'>
+                    <img src={movie.ipadImg} alt='tablet screenshot' />
                   </div>
-                ))}
+                </div>
+                <div className='colour-container'>
+                  <div className='palette-container'>
+                    <div className='colour-palettes'>
+                      {movie.colours.map((colour) => (
+                        <div
+                          className='colour-palette'
+                          style={{ backgroundColor: `${colour.hexCode}` }}
+                        >
+                          <p>{colour.hexCode}</p>
+                        </div>
+                      ))}
+                    </div>
+                    <h5>Click on hexcode to copy to clipboard</h5>
+                  </div>
+                </div>
               </div>
-            </div>
-          </StyledSkills>
-          <StyledBackButton>
-            <button>Back</button>
-          </StyledBackButton>
-        </StyledDetails>
+            </StyledPalette>
+            <StyledSkills>
+              <div className='skill-details'>
+                <div className='icon-container'>
+                  {movie.icons.map((icon) => (
+                    <div className='skill'>
+                      <div className='tool-text-container'>
+                        <h4>{icon.title}</h4>
+                        <p>{icon.description}</p>
+                      </div>
+                      <div className='tool-button-container'>
+                        <button target='_blank' className='project-button'>
+                          View Doc
+                        </button>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </StyledSkills>
+            <StyledBackButton>
+              <button>Back</button>
+            </StyledBackButton>
+          </StyledDetails>
+        </StyledOverflow>
       )}
     </>
   );
 };
+const StyledOverflow = styled.div`
+  width: 100vw;
+  overflow: hidden;
+`;
 
 const StyledDetails = styled(motion.div)`
   color: white;
@@ -218,43 +232,37 @@ const StyledHeadLine = styled.div`
       gap: 16px;
       @media (max-width: 950px) {
         flex-direction: row;
+
         gap: 48px;
         max-width: 700px;
         margin: 0 auto;
+        max-width: 600px;
       }
       @media (max-width: 700px) {
         flex-direction: column;
         gap: 32px;
+        padding: 16px var(--mobile-padding) 32px;
       }
-      h3 {
-        color: var(--secondary-text-color);
+      p {
+        margin: 0 0 16px;
       }
+
       .view-container,
       .project-summary {
         display: flex;
         flex-direction: column;
         gap: 16px;
       }
-      .project-summary {
-        h2 {
-          /* white-space: nowrap; */
-        }
-      }
+
       .view-container {
-        h2 {
-          /* white-space: nowrap; */
-        }
         flex-wrap: wrap;
 
         .project-sites {
           display: flex;
-          /* flex-wrap: wrap; */
 
           gap: 16px;
           a {
             text-align: center;
-            /* align-self: flex-start; */
-            /* max-width: 120px; */
           }
 
           @media (max-width: 950px) {
@@ -273,7 +281,7 @@ const StyledHeadLine = styled.div`
     width: 100%;
     /* max-width: clamp(800px, 50vw, 1400px); */
     margin: auto;
-    padding: 32px 2rem;
+    padding: 32px 2rem 0;
     flex: 4;
 
     @media (max-width: 750px) {
@@ -347,9 +355,10 @@ const StyledRoles = styled.div`
     flex-direction: column;
     align-items: center;
     gap: 16px;
-    padding: 4rem;
+    padding: 60px;
     @media (max-width: 750px) {
       align-items: flex-start;
+      padding: 60px var(--mobile-padding);
     }
     .line {
       width: 100%;
@@ -380,9 +389,6 @@ const StyledRoles = styled.div`
     }
     .role {
       flex: 1;
-      background-color: #121212;
-      border-radius: 16px;
-      padding: 1.5rem 1rem;
       max-width: 350px;
       width: 100%;
     }
@@ -392,33 +398,35 @@ const StyledRoles = styled.div`
       gap: 16px;
       margin-bottom: 16px;
       img {
-        width: 25px;
-        height: 25px;
+        width: clamp(18px, 1vw, 30px);
+        height: clamp(18px, 1vw, 30px);
       }
     }
   }
 `;
 const StyledTypography = styled.div`
   min-height: 50vh;
-  overflow: hidden;
   margin: 4rem 0;
+
   .browser-container {
     display: flex;
     align-items: center;
     gap: 2rem;
     /* margin: 0 2rem; */
     position: relative;
+
+    .browser-screenshot {
+      min-width: clamp(700px, 60vw, 1200px);
+      margin: 0 1rem;
+    }
     @media (max-width: 650px) {
       flex-direction: column-reverse;
       align-items: flex-start;
       gap: 0;
       .browser-screenshot {
         padding: 0 0 4rem;
+        margin: 0 14px 0 0;
       }
-    }
-    .browser-screenshot {
-      min-width: clamp(900px, 60vw, 1200px);
-      margin: 0 1rem;
     }
   }
   .typography-container {
@@ -428,7 +436,7 @@ const StyledTypography = styled.div`
     gap: 16px;
     margin-left: 2rem;
     @media (max-width: 750px) {
-      margin: 0 2rem;
+      margin: 0 12px;
       padding: 4rem 0 0;
     }
     .examples-container {
@@ -476,8 +484,8 @@ const StyledPalette = styled.div`
     text-align: left;
 
     @media (max-width: 750px) {
-      margin: 4rem 2rem 0;
-      width: calc(100% - 4rem);
+      margin: 4rem 12px 0;
+      width: calc(100% - 24px);
     }
 
     .palette-container {
@@ -545,7 +553,7 @@ const StyledPalette = styled.div`
       flex: 3;
       margin-left: 2rem;
       @media (max-width: 750px) {
-        margin-right: 2rem;
+        margin-right: 12px;
       }
       .ipad-frame {
         position: relative;
@@ -564,7 +572,6 @@ const StyledPalette = styled.div`
   }
 `;
 const StyledSkills = styled.div`
-  border: 1px solid blue;
   width: 100%;
   height: 90vh;
   max-height: 700px;

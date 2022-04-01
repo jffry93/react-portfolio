@@ -8,7 +8,7 @@ const DeviceContainer = ({ secondDescription, url, desktopImg, mobileImg }) => {
     <StyledDescriptionContainer className='apple-container'>
       <div className='description-container'>
         <div className='project-summary'>
-          <h2>Summary of Project</h2>
+          <h2>Summary</h2>
           <p>{secondDescription}</p>
           <div className='project-sites'>
             {url.map((url) => (
@@ -107,7 +107,7 @@ const StyledAppleDevices = styled.div`
   border: 1px solid blue;
   @media (max-width: 750px) {
     width: 150%;
-    padding: unset;
+    padding: 32px var(--layout-padding) 0;
     right: 50%;
   }
   .macbook {

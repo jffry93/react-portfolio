@@ -72,7 +72,7 @@ const StyledSkillsContainer = styled.div`
   /* border: 3px solid yellow; */
 
   .skills-header {
-    max-width: calc(var(--max-width) - 4rem);
+    max-width: var(--max-width);
     margin: auto;
 
     padding: 116px var(--layout-secondary-padding) 0;

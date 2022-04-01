@@ -59,7 +59,10 @@ const StyledTabletContainer = styled.div`
     flex: 3;
     margin-left: 2rem;
     @media (max-width: 750px) {
-      margin-right: 2rem;
+      margin-right: 12px;
+    }
+    @media (max-width: 450px) {
+      margin-right: 7px;
     }
     .ipad-frame {
       position: relative;
@@ -87,6 +90,10 @@ const StyledColourContainer = styled.div`
   @media (max-width: 750px) {
     width: calc(100% - 4rem);
   }
+  @media (max-width: 450px) {
+    margin: auto;
+    width: calc(100% - 24px);
+  }
 
   .palette-container {
     display: flex;
@@ -100,6 +107,8 @@ const StyledColourContainer = styled.div`
     .colour-palettes {
       display: flex;
       flex-direction: column;
+      align-items: center;
+      justify-content: center;
       gap: 16px;
       width: 100%;
       .colour-palette {
@@ -108,7 +117,7 @@ const StyledColourContainer = styled.div`
         justify-content: center;
 
         border-radius: 8px;
-        /* max-width: 270px; */
+
         min-width: 250px;
         width: 100%;
         height: 80px;
@@ -122,6 +131,7 @@ const StyledColourContainer = styled.div`
       p {
         font-weight: 600;
         cursor: pointer;
+        padding: unset;
       }
     }
     h5 {

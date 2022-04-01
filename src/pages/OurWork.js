@@ -40,7 +40,7 @@ const OurWork = () => {
       </motion.div>
 
       <StyledMovie>
-        <Link to='/work/the-athlete'>
+        <Link to='/work/the-athlete' style={{ textDecoration: 'none' }}>
           <div className='work-card'>
             <div className='card-details'>
               <motion.h2 variants={fade}>The Athlete</motion.h2>
@@ -74,7 +74,7 @@ const OurWork = () => {
         animate={controls}
         initials='hidden'
       >
-        <Link to='/work/the-racer'>
+        <Link to='/work/the-racer' style={{ textDecoration: 'none' }}>
           <div className='work-card'>
             <div className='card-details'>
               <motion.h2 variants={fade}>The Racer</motion.h2>
@@ -103,7 +103,7 @@ const OurWork = () => {
         animate={control2}
         initials='hidden'
       >
-        <Link to='/work/good-times'>
+        <Link to='/work/good-times' style={{ textDecoration: 'none' }}>
           <div className='work-card'>
             <div className='card-details'>
               <motion.h2 variants={fade}>The GoodTimes</motion.h2>
@@ -133,35 +133,32 @@ const OurWork = () => {
 const StyledWork = styled(motion.div)`
   position: relative;
   overflow: hidden;
-  border: 1px solid red;
 `;
 
 const StyledMovie = styled(motion.div)`
-  border: 1px solid green;
-  width: 82%;
+  max-width: var(--max-width);
   margin: auto;
+
+  height: var(--container-height);
   min-height: 500px;
   max-height: 800px;
-  height: 85vh;
-  display: flex;
 
+  display: flex;
   justify-content: center;
   align-items: center;
   padding: 2rem 0;
 
   .work-card {
-    border: 1px solid yellow;
     display: flex;
     flex-wrap: wrap;
     gap: 32px;
     align-items: center;
     background-color: #1b1b1b;
+    margin: 0 var(--layout-secondary-padding);
 
     height: 60vh;
     min-height: 400px;
     max-height: 500px;
-    max-width: 1200px;
-    margin: auto;
 
     position: relative;
     .card-details {
@@ -211,7 +208,7 @@ const StyledHide = styled.div`
 const StyledFrame1 = styled(motion.div)`
   position: fixed;
   left: 0;
-  top: 10%;
+  top: 0;
   width: 100%;
   height: 100vh;
   background: #fffebf;

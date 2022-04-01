@@ -23,12 +23,19 @@ const GlobalStyle = createGlobalStyle`
         --layout-secondary-padding: 34px;
         --mobile-padding: 12px;
 
+        
+
 
         line-height: 1.47059;
         letter-spacing: -.022em;
         font-family: 'Inter', sans-serif;
         background: #1b1b1b;
         overflow-x: hidden;
+    }
+    .custom-card{
+        padding: 1.5rem 1rem 2rem;
+        background-color: #121212;
+        border-radius: 16px;
     }
     button {
         cursor: pointer;
@@ -83,32 +90,6 @@ const GlobalStyle = createGlobalStyle`
     h1,h2,h3,h4,h5,p{
         color: white;
     }
-    
-/* 
-    h2{
-        font-weight: lighter;
-        font-size: 4rem;
-    }
-    h3{
-        color: white;
-    }
-    h4{
-        font-weight: bold; 
-        font-size: 2rem;    
-    }
-    a{
-        font-size: 1.1rem;
-    }
-    span{
-        font-weight: bold;
-        color: #23d997;
-    }
-    p{
-        padding: 3rem 0rem;
-        color: #ccc;
-        font-size: 1.4rem;
-        line-height: 150%;
-    } */
     
 `;
 

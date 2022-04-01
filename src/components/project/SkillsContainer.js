@@ -9,13 +9,13 @@ const SkillsContainer = ({ skills }) => {
         <img src={toolIcon} alt='role icon' className='title-icon' />
         <h2>Skills & Tools</h2>
       </div>
-      <h3>Jack of all trades, master of some.</h3>
+      <h5>Jack of all trades, master of some.</h5>
 
       <div className='icon-container'>
         {skills.map((icon) => (
           <div className='skill'>
             <div className='tool-text-container'>
-              <h3>{icon.title}</h3>
+              <h4>{icon.title}</h4>
               <p>{icon.description}</p>
             </div>
             <div className='tool-button-container'>
@@ -37,8 +37,11 @@ const StyledSkillsContainer = styled.div`
   flex-direction: column;
   gap: 16px;
 
-  padding: 0 2rem;
+  padding: 0 var(--layout-padding);
   /* min-width: 400px; */
+  @media (max-width: 450px) {
+    padding: 0 var(--mobile-padding);
+  }
 
   .icon-container {
     display: grid;
@@ -70,6 +73,7 @@ const StyledSkillsContainer = styled.div`
         }
         p {
           color: var(--secondary-text-color);
+          padding: 0;
         }
       }
 

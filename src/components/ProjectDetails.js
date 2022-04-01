@@ -49,7 +49,7 @@ const ProjectDetails = ({ caseDetail, setShowDetail }) => {
         <SkillsContainer skills={project.icons} />
         <div className='section-divider'></div>
         <div className='final-container'>
-          <button className='shadow'>Back</button>
+          <button className='shadow project-button'>Back</button>
         </div>
         <div className='section-divider'></div>
       </StyledProjectDetail>
@@ -104,19 +104,23 @@ const StyledProjectDetail = styled(motion.div)`
   .title-with-icon {
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 8px;
     /* h2 {
       letter-spacing: 1.125px;
       white-space: nowrap;
     } */
     .title-icon {
-      width: clamp(27px, 1.5vw, 35px);
-      height: clamp(27px, 1.5vw, 35px);
+      width: clamp(22px, 3vw, 35px);
+      height: clamp(22px, 3vw, 35px);
     }
   }
   .section-divider {
-    padding: 80px;
+    padding: 116px;
+    @media (max-width: 800px) {
+      padding: 60px;
+    }
   }
+
   img {
     width: 100%;
   }
@@ -134,5 +138,8 @@ const StyledProjectDetail = styled(motion.div)`
 
   .final-container {
     text-align: center;
+    button {
+      font-weight: lighter;
+    }
   }
 `;

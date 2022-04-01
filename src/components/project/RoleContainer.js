@@ -7,16 +7,16 @@ const RoleContainer = ({ roles }) => {
     <StyledRoleContainer className='role-container'>
       <div className='title-with-icon'>
         <img src={roleIcon} alt='role icon' className='title-icon' />
-        <h2>My Role</h2>
+        <h2>Contributions</h2>
       </div>
-      <h4>Some $h!t I got done on this project!</h4>
+      <h5>Some things I got done on this project!</h5>
 
       <div className='roles-container'>
         {roles.map((role) => (
-          <div className='role'>
+          <div className='role custom-card'>
             <div className='role-icon'>
               <img src={role.iconFa} alt='' />
-              <h3>{role.title}</h3>
+              <h4>{role.title}</h4>
             </div>
             <p>{role.description}</p>
           </div>
@@ -37,6 +37,9 @@ const StyledRoleContainer = styled.div`
   @media (max-width: 750px) {
     align-items: flex-start;
   }
+  @media (max-width: 450px) {
+    padding: var(--mobile-padding);
+  }
   .title-icon {
     white-space: nowrap;
   }
@@ -47,7 +50,7 @@ const StyledRoleContainer = styled.div`
   }
   .roles-container {
     display: flex;
-    gap: 2rem;
+    gap: 16px;
     justify-content: center;
     padding: 16px 0;
     width: 100%;
@@ -60,9 +63,7 @@ const StyledRoleContainer = styled.div`
   }
   .role {
     flex: 1;
-    background-color: #121212;
-    border-radius: 16px;
-    padding: 1.5rem 1rem;
+
     max-width: 350px;
     width: 100%;
   }
@@ -71,9 +72,12 @@ const StyledRoleContainer = styled.div`
     align-items: center;
     gap: 16px;
     margin-bottom: 16px;
+    p {
+      padding: 0;
+    }
     img {
-      width: 25px;
-      height: 25px;
+      width: clamp(18px, 1vw, 30px);
+      height: clamp(18px, 1vw, 30px);
     }
   }
 `;

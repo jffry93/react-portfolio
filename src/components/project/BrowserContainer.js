@@ -8,14 +8,14 @@ const BrowserContainer = ({ fonts, browserImg }) => {
       <StyledTypographyContainer className='typography-container'>
         <div className='title-with-icon'>
           <img src={bookIcon} alt='role icon' className='title-icon' />
-          <h2>Typography</h2>
+          <h2>Fonts</h2>
         </div>
         {/* <h4>Absorb content easily.</h4> */}
         <div className='examples-container'>
           {fonts.map((font) => (
-            <div className='font-family-container'>
+            <div className='font-family-container custom-card'>
               <div className='font-title'>
-                <h3 className='family-title'>{font.title}</h3>
+                <h4 className='family-title'>{font.title}</h4>
                 <h3
                   style={{
                     fontFamily: `${font.fontFamily}`,
@@ -60,6 +60,8 @@ const StyledBrowserContainer = styled.div`
   @media (max-width: 650px) {
     flex-direction: column-reverse;
     align-items: flex-start;
+
+    margin: unset;
     .browser-screenshot {
       padding: 0 0 160px;
     }
@@ -67,6 +69,9 @@ const StyledBrowserContainer = styled.div`
   .browser-screenshot {
     min-width: clamp(900px, 60vw, 1200px);
     margin: 0 8px;
+    @media (max-width: 450px) {
+      margin: 0;
+    }
   }
 `;
 
@@ -76,30 +81,26 @@ const StyledTypographyContainer = styled.div`
   align-items: flex-start;
   gap: 16px;
 
-  @media (max-width: 750px) {
-    /* margin: 0 var(--layout-padding); */
+  @media (max-width: 650px) {
+    margin: 0 var(--layout-padding);
   }
   .examples-container {
     display: grid;
-    gap: 2rem;
+    gap: 16px;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-
-    margin-top: 16px;
 
     .font-family-container {
       border-radius: 16px;
-      background-color: #121212;
-      padding: 1.5rem 1rem;
 
       display: flex;
       flex-direction: column;
       @media (max-width: 330px) {
-        width: calc(100% - 22px);
+        width: calc(100% - 24px);
       }
       .family-title {
         color: var(--primary-text-color);
         font-weight: 600;
-        margin-bottom: 2px;
+        margin-bottom: 3px;
       }
       h3 {
         color: var(--secondary-text-color);
