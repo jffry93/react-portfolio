@@ -71,6 +71,9 @@ const StyledDescriptionContainer = styled.div`
       flex-direction: column;
       gap: 32px;
     }
+    p {
+      padding: 16px 0 32px;
+    }
     .project-summary {
       display: flex;
       flex-direction: column;
@@ -84,14 +87,14 @@ const StyledDescriptionContainer = styled.div`
         text-align: center;
       }
 
-      @media (max-width: 950px) {
+      /* @media (max-width: 950px) {
         flex-direction: column;
         gap: 8px;
       }
       @media (max-width: 700px) {
         flex-direction: row;
         gap: 16px;
-      }
+      } */
     }
   }
 `;

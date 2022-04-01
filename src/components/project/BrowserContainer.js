@@ -105,6 +105,9 @@ const StyledTypographyContainer = styled.div`
       h3 {
         color: var(--secondary-text-color);
       }
+      p {
+        padding-top: 16px;
+      }
     }
   }
 `;

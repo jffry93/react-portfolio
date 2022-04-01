@@ -40,6 +40,12 @@ const MovieDetail = () => {
             animate='show'
             exit='exit'
           >
+            <StyledTitle>
+              <div className='title-container'>
+                <h3>VOUS Beauty Clinic</h3>
+                <h4>Ecommerce</h4>
+              </div>
+            </StyledTitle>
             <StyledHeadLine>
               <div className='apple-container'>
                 <div className='description-container'>
@@ -187,14 +193,15 @@ const MovieDetail = () => {
 };
 const StyledOverflow = styled.div`
   width: 100vw;
-  overflow: hidden;
+  /* overflow: hidden; */
 `;
 
 const StyledDetails = styled(motion.div)`
   color: white;
+  min-height: var(--container-height);
 
-  max-width: calc(var(--max-width) - 4rem);
-  margin: auto;
+  /* max-width: calc(var(--max-width) - 4rem); */
+  /* margin: auto; */
   img {
     width: 100%;
   }
@@ -209,9 +216,35 @@ const StyledDetails = styled(motion.div)`
     border: var(--secondary-text-color) 1px solid;
   }
 `;
+const StyledTitle = styled(motion.div)`
+  /* border: 1px solid yellow; */
+  position: sticky;
+  top: var(--navbar-height);
+  z-index: 20;
+
+  background-color: #121212;
+  padding: 4px var(--layout-padding);
+  .title-container {
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 0 var(--layout-secondary-padding);
+  }
+
+  h4 {
+    color: var(--secondary-text-color);
+    /* padding: 8px 0 0; */
+  }
+
+  @media (max-width: 450px) {
+    padding: 12px var(--mobile-padding);
+  }
+`;
+
 const StyledHeadLine = styled.div`
-  border: 1px solid red;
+  /* border: 1px solid red; */
   height: 100%;
+  max-width: 1400px;
+  margin: auto;
 
   overflow: hidden;
 
@@ -241,6 +274,9 @@ const StyledHeadLine = styled.div`
       @media (max-width: 700px) {
         flex-direction: column;
         gap: 32px;
+        padding: 16px var(--layout-padding) 32px;
+      }
+      @media (max-width: 450px) {
         padding: 16px var(--mobile-padding) 32px;
       }
       p {
@@ -334,22 +370,22 @@ const StyledHeadLine = styled.div`
   }
 `;
 const StyledRoles = styled.div`
-  border: 1px solid blue;
   width: 100%;
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 0 var(--layout-padding);
+
   height: 90vh;
   max-height: 700px;
+
   display: flex;
-  margin: auto;
   align-items: center;
   justify-content: space-around;
   @media (max-width: 750px) {
     height: auto;
     max-height: unset;
   }
-  /* @media (max-width: 1300px) {
-    display: block;
-    margin: 2rem 2rem;
-  } */
+
   .role-container {
     display: flex;
     flex-direction: column;
@@ -406,7 +442,9 @@ const StyledRoles = styled.div`
 `;
 const StyledTypography = styled.div`
   min-height: 50vh;
-  margin: 4rem 0;
+  /* margin: 4rem 0; */
+  max-width: 1400px;
+  margin: auto;
 
   .browser-container {
     display: flex;
@@ -475,11 +513,14 @@ const StyledTypography = styled.div`
   } */
 `;
 const StyledPalette = styled.div`
+  max-width: 1400px;
+  margin: auto;
   .colour-container {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 16px;
+
     margin: 0 2rem;
     text-align: left;
 
@@ -573,6 +614,8 @@ const StyledPalette = styled.div`
 `;
 const StyledSkills = styled.div`
   width: 100%;
+  max-width: var(--max-width);
+  margin: auto;
   height: 90vh;
   max-height: 700px;
   display: flex;

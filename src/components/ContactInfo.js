@@ -10,7 +10,7 @@ import drake from '../img/icons/drake-sitting.png';
 const ContactInfo = () => {
   return (
     <StyledContactInfo>
-      <h1 className='contact-heading'>Contact Info</h1>
+      {/* <h1 className='contact-heading'>Contact Info</h1> */}
       <div className='contact-detail'>
         <div className='info-group'>
           <a
@@ -90,8 +90,8 @@ const ContactInfo = () => {
         </div>
       </div>
       <div className='footer'>
-        <p>Designed by </p>
-        <p>Jeffrey Zalischi</p>
+        <h5>Made in </h5>
+        <h4>Canada</h4>
       </div>
     </StyledContactInfo>
   );
@@ -101,21 +101,19 @@ export default ContactInfo;
 
 const StyledContactInfo = styled.div`
   width: 100%;
+  max-width: 300px;
   display: flex;
   flex-direction: column;
   flex: 1;
   @media (max-width: 1050px) {
-    justify-content: center;
+    justify-content: flex-start;
+    max-width: unset;
   }
-  h1 {
-    font-size: 2.4rem;
-    margin-bottom: 2rem;
-    white-space: nowrap;
-  }
+
   .contact-detail {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 32px;
   }
   .info-group {
     display: flex;
@@ -154,13 +152,13 @@ const StyledContactInfo = styled.div`
     width: 100%;
     height: 1px;
     background-color: white;
-    margin: 1.5rem 0;
+    margin: 32px 0;
   }
   .social-media {
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     justify-content: center;
-    gap: 1.5rem;
+    gap: 16px;
     color: rgba(0, 0, 0, 0.5);
     .icon-container {
       display: flex;
@@ -210,7 +208,7 @@ const StyledContactInfo = styled.div`
   .footer {
     margin: 3rem 0 0 0;
     text-align: center;
-    font-size: 0.9rem;
+    /* font-size: 0.9rem; */
     display: flex;
     align-items: center;
     justify-content: center;

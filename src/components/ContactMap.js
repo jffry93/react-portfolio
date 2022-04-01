@@ -68,12 +68,24 @@ export default ContactMap;
 const StyledMapContainer = styled.div`
   flex: 1;
   width: 100%;
+  position: sticky;
+  top: var(--navbar-height);
+  height: var(--container-height);
   @media (max-width: 1050px) {
-    flex: unset;
+    flex: 1.5;
   }
+  @media (max-width: 700px) {
+    height: unset;
+    position: relative;
+    top: 0;
+  }
+
   .map-container {
-    height: 90vh;
-    @media (max-width: 1050px) {
+    min-height: var(--container-height);
+    height: 100%;
+    position: sticky;
+    top: 0;
+    @media (max-width: 700px) {
       min-height: 300px;
       height: 30vh;
     }

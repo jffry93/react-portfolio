@@ -46,7 +46,7 @@ const PersonalProjects = () => {
         />
       )}
       <h2>Personal Projects</h2>
-      <p>Click on card to preview Case Study</p>
+      <p className='description'>Click on card to preview</p>
 
       <Swiper
         className='swiper-js-container'
@@ -162,7 +162,7 @@ const StyledProjectSection = styled.div`
     /* padding: 5rem 0; */
   }
 
-  p {
+  .description {
     padding: 16px 0 32px;
   }
   .swiper-js-container {

@@ -44,7 +44,6 @@ const StyledRoleContainer = styled.div`
     white-space: nowrap;
   }
   p {
-    padding: 0;
     text-align: left;
     color: var(--secondary-text-color);
   }

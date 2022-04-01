@@ -24,7 +24,7 @@ const ContactUs = () => {
       exit='exit'
       style={{ background: '#fff' }}
     >
-      <StyledContactContainer>
+      <StyledContactContainer id='unset-height'>
         <ContactForm
           formValidation={formValidation}
           setFormValidation={setFormValidation}
@@ -65,7 +65,7 @@ const StyledContactStyle = styled(motion.div)`
   background-position: center !important;
   background-size: cover !important;
   /* border: 3px solid yellow; */
-  min-height: 90vh;
+  min-height: var(--container-height);
   height: 100%;
   /* padding: 0 2rem; */
   /* width: 100%;
@@ -91,26 +91,25 @@ const StyledContactStyle = styled(motion.div)`
 `;
 const StyledContactContainer = styled.div`
   width: 100%;
-  max-width: calc(var(--max-width) - 4rem);
+  /* max-width: calc(var(--max-width) - 4rem); */
   margin: auto;
 
-  /* height: calc(90vh - 6rem); */
-  min-height: clamp(650px, 100%, calc(90vh - 6rem));
-  max-height: 750px;
+  min-height: var(--container-height);
+  /* max-height: 750px; */
   background-color: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(6px) !important;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  /* border: 3px solid green; */
 
-  border-radius: 8px;
-  overflow: hidden;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+
+  /* border-radius: 8px; */
+  /* overflow: hidden; */
   z-index: 2;
-  @media (max-width: 1050px) {
+  @media (max-width: 700px) {
     flex-direction: column-reverse;
     border-radius: 0;
-    min-height: 90vh;
+
     max-height: unset;
   }
 `;

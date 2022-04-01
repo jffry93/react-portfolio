@@ -93,9 +93,12 @@ const ContactForm = ({ formValidation, setFormValidation }) => {
       <StyledContactForm>
         <StyledForm ref={form} onSubmit={sendEmail} action=''>
           <h1>Let's Chat!</h1>
-          <p>
-            Please use this form to contact me and I will get back to you ASAP!
-          </p>
+          <div className='contact-description'>
+            <p>
+              Please use this form to contact me and I will get back to you
+              ASAP!
+            </p>
+          </div>
           <div className='form-group'>
             <label htmlFor='user_name'>
               {nameValidation ? (
@@ -183,14 +186,20 @@ const ContactForm = ({ formValidation, setFormValidation }) => {
 export default ContactForm;
 
 const StyledFormContainer = styled.div`
-  flex: 2;
+  flex: 1.5;
   display: flex;
-  height: 100%;
-  padding: 3rem 5rem;
-  gap: 5rem;
+  align-items: center;
+  gap: 60px;
+
+  min-height: var(--container-height);
+
+  padding: 60px 32px 60px 60px;
   @media (max-width: 1050px) {
     flex-direction: column;
     padding: 4rem;
+  }
+  @media (max-width: 700px) {
+    min-height: unset;
   }
 
   @media (max-width: 450px) {
@@ -204,32 +213,42 @@ const StyledContactForm = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: flex-end;
   flex: 1.5;
 
   h1 {
-    font-size: 2.4rem;
-    margin-bottom: 1.12rem;
+    /* font-size: 2.4rem; */
     white-space: nowrap;
   }
   p {
-    font-size: 1.1rem;
-    margin-bottom: 2rem;
+    /* font-size: 1.1rem; */
+    margin: 16px 0 32px;
+  }
+  .contact-description {
+    /* max-width: 250px; */
+  }
+  @media (max-width: 1050px) {
+    justify-content: flex-end;
   }
 `;
 
 const StyledForm = styled.form`
   height: 100%;
+  max-width: 450px;
   @media (max-width: 1050px) {
     display: flex;
     flex-direction: column;
     justify-content: center;
+  }
+  @media (max-width: 700px) {
+    max-width: unset;
   }
 
   .form-group {
     display: flex;
     flex-direction: column;
     width: 100%;
-    margin: 1rem 0;
+    margin: 16px 0 0;
     color: white; /* font-size: 1.5rem; */
     label {
       font-weight: 600;
@@ -248,6 +267,7 @@ const StyledForm = styled.form`
     }
     .validation-popup {
       display: flex;
+      align-items: center;
 
       gap: 1rem;
       /* margin-top: 0.5rem;
