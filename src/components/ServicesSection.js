@@ -5,6 +5,7 @@
 // import teamwork from '../img/teamwork.svg';
 //IMAGES
 import headshot from '../img/ben_parker.jpg';
+import myFace from '../img/myFace3.jpg';
 //ICONS
 import downloadIcon from '../img/icons/download-solid.svg';
 //Styles
@@ -30,7 +31,7 @@ const ServicesSection = () => {
       // scroll={(el) => el.scrollIntoView({ block: 'center' })}
     >
       <StyledImage variants={slideRight}>
-        <img src={headshot} alt='headshot' />
+        <img src={myFace} alt='headshot' />
       </StyledImage>
       <StyledServicesDescription variants={fade}>
         <h2>About me</h2>
@@ -130,8 +131,8 @@ const StyledServicesDescription = styled(motion.div)`
 const StyledImage = styled(motion.div)`
   /* border: 1px solid white; */
 
-  height: 450px;
-  width: 450px;
+  height: 400px;
+  width: 400px;
   border-radius: 50%;
 
   overflow: hidden;

@@ -4,6 +4,10 @@ import { Link } from 'react-router-dom';
 import athlete from '../img/athlete-small.png';
 import theracer from '../img/theracer-small.png';
 import goodtimes from '../img/goodtimes-small.png';
+import vbcThumb from '../img/projects/Vous/vbcThumb.png';
+import bayrichThumb from '../img/projects/Bayrich/weird.jpg';
+import nchThumb from '../img/projects/NCH/nchThumb.webp';
+import mdbbThumb from '../img/projects/MDBB/mdbbThumb.jpg';
 //PAGE ANIMATION
 import { motion } from 'framer-motion';
 import {
@@ -22,6 +26,7 @@ const OurWork = () => {
 
   const [element, controls] = useScroll();
   const [element2, control2] = useScroll();
+  const [element3, control3] = useScroll();
 
   return (
     <StyledWork
@@ -48,7 +53,7 @@ const OurWork = () => {
           <Link to='/work/the-athlete' style={{ textDecoration: 'none' }}>
             <motion.div variants={fade} className='work-card'>
               <div className='card-details'>
-                <motion.h2 variants={fade}>The Athlete</motion.h2>
+                <motion.h2 variants={fade}>Vous Beauty Clinic</motion.h2>
                 <motion.div
                   variants={lineAnimation}
                   className='line'
@@ -59,14 +64,14 @@ const OurWork = () => {
                   consectetur distinctio ab quis vitae eos.
                 </p>
                 <div>
-                  <button>View Github</button>
+                  <button>Learn More</button>
                 </div>
               </div>
               <StyledHide className='work-image'>
                 <motion.img
                   variants={photoAnimation}
-                  src={athlete}
-                  alt='athlete'
+                  src={vbcThumb}
+                  alt='Vous Beauty Clinic'
                 />
               </StyledHide>
             </motion.div>
@@ -82,7 +87,7 @@ const OurWork = () => {
           <Link to='/work/the-racer' style={{ textDecoration: 'none' }}>
             <motion.div variants={fade} className='work-card'>
               <div className='card-details'>
-                <h2 variants={fade}>The Racer</h2>
+                <h2 variants={fade}>Bayrich Construction</h2>
                 <motion.div
                   variants={lineAnimation}
                   className='line'
@@ -93,11 +98,11 @@ const OurWork = () => {
                   consectetur distinctio ab quis vitae eos.
                 </p>
                 <div>
-                  <button>View Github</button>
+                  <button>Learn More</button>
                 </div>
               </div>
               <StyledHide className='work-image'>
-                <img src={theracer} alt='the racer' />
+                <img src={bayrichThumb} alt='the racer' />
               </StyledHide>
             </motion.div>
           </Link>
@@ -112,7 +117,7 @@ const OurWork = () => {
           <Link to='/work/good-times' style={{ textDecoration: 'none' }}>
             <motion.div variants={fade} className='work-card'>
               <div className='card-details'>
-                <motion.h2 variants={fade}>The GoodTimes</motion.h2>
+                <motion.h2 variants={fade}>Natures Canopy House</motion.h2>
                 <motion.div
                   variants={lineAnimation}
                   className='line'
@@ -123,11 +128,41 @@ const OurWork = () => {
                   consectetur distinctio ab quis vitae eos.
                 </p>
                 <div>
-                  <button>View Github</button>
+                  <button>Learn More</button>
                 </div>
               </div>
               <StyledHide className='work-image'>
-                <img src={goodtimes} alt='the goodtimes' />
+                <img src={nchThumb} alt='the goodtimes' />
+              </StyledHide>
+            </motion.div>
+          </Link>
+        </StyledMovie>
+
+        <StyledMovie
+          ref={element3}
+          variants={fade}
+          animate={control3}
+          initials='hidden'
+        >
+          <Link to='/work/good-times' style={{ textDecoration: 'none' }}>
+            <motion.div variants={fade} className='work-card'>
+              <div className='card-details'>
+                <motion.h2 variants={fade}>Matthew Del Bel Belluz</motion.h2>
+                <motion.div
+                  variants={lineAnimation}
+                  className='line'
+                ></motion.div>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Voluptates, voluptas. Numquam at impedit reiciendis
+                  consectetur distinctio ab quis vitae eos.
+                </p>
+                <div>
+                  <button>Learn More</button>
+                </div>
+              </div>
+              <StyledHide className='work-image'>
+                <img src={mdbbThumb} alt='the goodtimes' />
               </StyledHide>
             </motion.div>
           </Link>
@@ -179,17 +214,11 @@ const StyledMovie = styled(motion.div)`
       @media (max-width: 750px) {
         position: absolute;
         height: 100%;
-        background: rgba(0, 0, 0, 0.5);
+        background: rgba(0, 0, 0, 0.7);
       }
       p {
         margin: 0 0 2rem;
       }
-    }
-    .work-image {
-      flex: 1.5;
-
-      display: flex;
-      height: 100%;
     }
   }
   h2 {
@@ -200,11 +229,30 @@ const StyledMovie = styled(motion.div)`
     background: #23d997;
     margin-bottom: 2rem;
   }
-  img {
-    flex: 2;
-    width: 100%;
+  .work-image {
+    flex: 1.5;
 
-    object-fit: cover;
+    display: flex;
+    height: 100%;
+    position: relative;
+
+    ::after {
+      content: ' ';
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 100%;
+      height: 100%;
+
+      background: rgba(0, 0, 0, 0.6);
+    }
+    img {
+      flex: 2;
+      width: 100%;
+
+      object-fit: cover;
+    }
   }
 `;
 

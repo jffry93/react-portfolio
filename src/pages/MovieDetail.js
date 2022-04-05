@@ -52,7 +52,7 @@ const MovieDetail = () => {
       {movie && (
         <StyledOverflow className='overflowContainer'>
           <StyledDetails
-            variants={pageAnimation}
+            variants={fade}
             initial='hidden'
             animate='show'
             exit='exit'
