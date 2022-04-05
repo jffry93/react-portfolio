@@ -1,8 +1,18 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
+//APPEAR WHEN IN VIEWPORT
+import { fade } from '../../animation';
+import { useScroll } from '../useScroll';
 
 const HeaderContainer = ({ title, secondaryTitle }) => {
+  const [element, controls] = useScroll();
   return (
-    <StyledHeadingContainer>
+    <StyledHeadingContainer
+      variants={fade}
+      animate={controls}
+      initial='hidden'
+      ref={element}
+    >
       <div className='title-container'>
         <h3>{title}</h3>
         <h4>{secondaryTitle}</h4>
@@ -14,7 +24,7 @@ const HeaderContainer = ({ title, secondaryTitle }) => {
 
 export default HeaderContainer;
 
-const StyledHeadingContainer = styled.div`
+const StyledHeadingContainer = styled(motion.div)`
   position: sticky;
   top: 0;
   z-index: 20;

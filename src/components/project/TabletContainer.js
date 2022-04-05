@@ -1,18 +1,35 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
+//APPEAR WHEN IN VIEWPORT
+import { fade, slideLeft, slideRight } from '../../animation';
+import { useScroll } from '../useScroll';
 //DEVICE
 import ipad from '../../img/devices/empty-ipad-horizontal.png';
 //ICONS
 import paletteIcon from '../../img/icons/palette-icon.svg';
 
 const TabletContainer = ({ colours, ipadImg }) => {
+  const [element, controls] = useScroll();
   return (
-    <StyledTabletContainer className='tablet-container'>
-      <div className='tablet-image'>
+    <StyledTabletContainer
+      variants={fade}
+      animate={controls}
+      initial='hidden'
+      ref={element}
+      className='tablet-container'
+    >
+      <motion.div
+        variants={slideLeft}
+        animate={controls}
+        initial='hidden'
+        ref={element}
+        className='tablet-image'
+      >
         <img className='ipad-frame' src={ipad} alt='tablet' />
         <div className='ipad-img'>
           <img src={ipadImg} alt='tablet screenshot' />
         </div>
-      </div>
+      </motion.div>
       <StyledColourContainer className='colour-container'>
         <div className='title-with-icon'>
           <img src={paletteIcon} alt='role icon' className='title-icon' />
@@ -39,12 +56,13 @@ const TabletContainer = ({ colours, ipadImg }) => {
 
 export default TabletContainer;
 
-const StyledTabletContainer = styled.div`
+const StyledTabletContainer = styled(motion.div)`
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-end;
-  margin: 5rem 0;
+  max-width: 1400px;
+  margin: 5rem auto;
   gap: 2rem;
   @media (max-width: 750px) {
     flex-direction: column;
@@ -66,7 +84,7 @@ const StyledTabletContainer = styled.div`
     }
     .ipad-frame {
       position: relative;
-      min-width: clamp(700px, 60vw, 1200px);
+      min-width: clamp(700px, 60vw, 1000px);
     }
     .ipad-img {
       position: absolute;

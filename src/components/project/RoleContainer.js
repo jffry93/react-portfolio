@@ -1,10 +1,21 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
+//APPEAR WHEN IN VIEWPORT
+import { fade } from '../../animation';
+import { useScroll } from '../useScroll';
 //svg icons
 import roleIcon from '../../img/icons/role-icon.svg';
 
 const RoleContainer = ({ roles }) => {
+  const [element, controls] = useScroll();
   return (
-    <StyledRoleContainer className='role-container'>
+    <StyledRoleContainer
+      variants={fade}
+      animate={controls}
+      initial='hidden'
+      ref={element}
+      className='role-container'
+    >
       <div className='title-with-icon'>
         <img src={roleIcon} alt='role icon' className='title-icon' />
         <h2>Contributions</h2>
@@ -28,7 +39,7 @@ const RoleContainer = ({ roles }) => {
 
 export default RoleContainer;
 
-const StyledRoleContainer = styled.div`
+const StyledRoleContainer = styled(motion.div)`
   display: flex;
   flex-direction: column;
   align-items: center;

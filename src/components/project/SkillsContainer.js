@@ -1,10 +1,21 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
+//APPEAR WHEN IN VIEWPORT
+import { fade } from '../../animation';
+import { useScroll } from '../useScroll';
 //ICON
 import toolIcon from '../../img/icons/tools-icon.svg';
 
 const SkillsContainer = ({ skills }) => {
+  const [element, controls] = useScroll();
   return (
-    <StyledSkillsContainer className='skill-details'>
+    <StyledSkillsContainer
+      variants={fade}
+      animate={controls}
+      initial='hidden'
+      ref={element}
+      className='skill-details'
+    >
       <div className='title-with-icon'>
         <img src={toolIcon} alt='role icon' className='title-icon' />
         <h2>Skills & Tools</h2>
@@ -32,12 +43,15 @@ const SkillsContainer = ({ skills }) => {
 
 export default SkillsContainer;
 
-const StyledSkillsContainer = styled.div`
+const StyledSkillsContainer = styled(motion.div)`
   display: flex;
   flex-direction: column;
   gap: 16px;
 
   padding: 0 var(--layout-padding);
+
+  max-width: 1400px;
+  margin: auto;
   /* min-width: 400px; */
   @media (max-width: 450px) {
     padding: 0 var(--mobile-padding);

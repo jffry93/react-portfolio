@@ -6,6 +6,11 @@ import downloadIcon from '../img/icons/download-solid.svg';
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import { HashLink, NavHashLink } from 'react-router-hash-link';
+
+//RESUME
+import MyResume from '../Resume/Jeffrey_Zalischi_Resume.pdf';
+
 //import { motion } from 'framer-motion';
 import { useLocation } from 'react-router';
 // import { StyledOverlay } from '../Styles';
@@ -16,44 +21,79 @@ const Nav = ({ navToggle, setNavToggle }) => {
   return (
     <StyledNav>
       <div className='nav-container'>
-        <Link to='/'>
+        <HashLink
+          to='/'
+          // scroll={(el) =>
+          //   el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+          // }
+        >
           <h2 id='logo'>JZ</h2>
-        </Link>
+        </HashLink>
 
         <ul className={`${navToggle ? 'library-active' : ''}`}>
-          <li>
-            <Link href='#' to='/'>
+          <li
+            onClick={() => {
+              if (window.innerWidth < 750) {
+                setNavToggle(!navToggle);
+              }
+            }}
+          >
+            <NavHashLink
+              activeClassName='selected'
+              href='#'
+              to='/'
+              // scroll={(el) =>
+              //   el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+              // }
+            >
               <span>About</span>
-            </Link>
+            </NavHashLink>
             {/* <StyledLine
             transition={{ duration: 0.75 }}
             initial={{ width: '0%' }}
             animate={{ width: pathname === '/' ? '50%' : '0%' }}
           /> */}
           </li>
-          <li>
-            <Link href='#' to='/work'>
+          <li
+            onClick={() => {
+              if (window.innerWidth < 750) {
+                setNavToggle(!navToggle);
+              }
+            }}
+          >
+            <NavHashLink activeClassName='selected' href='#' to='/work'>
               <span>Work</span>
-            </Link>
+            </NavHashLink>
             {/* <StyledLine
             transition={{ duration: 0.75 }}
             initial={{ width: '0%' }}
             animate={{ width: pathname === '/work' ? '50%' : '0%' }}
           /> */}
           </li>
-          <li>
-            <Link href='#' to='/contact'>
+          <li
+            onClick={() => {
+              if (window.innerWidth < 750) {
+                setNavToggle(!navToggle);
+              }
+            }}
+          >
+            <NavHashLink activeClassName='selected' href='#' to='/contact'>
               <span>Contact</span>
-            </Link>
+            </NavHashLink>
             {/* <StyledLine
             transition={{ duration: 0.75 }}
             initial={{ width: '0%' }}
             animate={{ width: pathname === '/contact' ? '50%' : '0%' }}
           /> */}
           </li>
-          <button>
+          <a
+            className='resume'
+            href={MyResume}
+            download='Jeffrey_Zalischi_Resume'
+            target='_blank'
+          >
             <div className='download'></div> <span>Resume</span>
-          </button>
+          </a>
         </ul>
         <StyledNavToggle
           onClick={() => setNavToggle(!navToggle)}
@@ -114,20 +154,28 @@ const StyledNav = styled.nav`
     margin: 0;
 
     font-size: 12px;
-    text-transform: uppercase;
+
     li {
       font-weight: 700;
       letter-spacing: 1px;
+      text-transform: uppercase;
       span {
         color: white;
       }
+      .selected {
+        span {
+          color: rgba(209, 209, 209, 0.5);
+        }
+      }
     }
-    button {
+    .resume {
       display: flex;
       align-items: center;
       gap: 12px;
 
       padding: 0.7rem 1.4rem 0.7rem 1.1rem;
+      border: 1px solid white;
+      font-weight: 600;
       .download {
         width: 12px;
         height: 12px;

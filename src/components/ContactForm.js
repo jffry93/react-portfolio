@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 //email JS
 import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
@@ -185,7 +186,7 @@ const ContactForm = ({ formValidation, setFormValidation }) => {
 
 export default ContactForm;
 
-const StyledFormContainer = styled.div`
+const StyledFormContainer = styled(motion.div)`
   flex: 1.5;
   display: flex;
   align-items: center;
@@ -193,7 +194,7 @@ const StyledFormContainer = styled.div`
 
   min-height: var(--container-height);
 
-  padding: 60px 32px 60px 60px;
+  padding: 16px 60px;
   @media (max-width: 1050px) {
     flex-direction: column;
     padding: 4rem;
@@ -220,10 +221,6 @@ const StyledContactForm = styled.div`
     /* font-size: 2.4rem; */
     white-space: nowrap;
   }
-  p {
-    /* font-size: 1.1rem; */
-    margin: 16px 0 32px;
-  }
   .contact-description {
     /* max-width: 250px; */
   }
@@ -234,30 +231,34 @@ const StyledContactForm = styled.div`
 
 const StyledForm = styled.form`
   height: 100%;
-  max-width: 450px;
+  max-width: 350px;
   @media (max-width: 1050px) {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    max-width: unset;
   }
   @media (max-width: 700px) {
-    max-width: unset;
+  }
+  p {
+    margin: 8px 0 16px;
   }
 
   .form-group {
     display: flex;
     flex-direction: column;
     width: 100%;
-    margin: 16px 0 0;
+    margin: 8px 0 0;
     color: white; /* font-size: 1.5rem; */
     label {
       font-weight: 600;
+      font-size: 0.9rem;
     }
 
     span {
       /* color: red; */
       margin-right: 0.7rem;
-      font-size: 0.95rem;
+      font-size: 0.9rem;
     }
     .required {
       margin-left: 2rem;
@@ -284,7 +285,7 @@ const StyledForm = styled.form`
         margin: 0;
         font-weight: 500;
         color: #f0544f;
-        font-size: 1rem;
+        font-size: 0.9rem;
       }
     }
     .validation-input {
@@ -296,6 +297,7 @@ const StyledForm = styled.form`
     margin: 0;
     input {
       color: grey;
+      background-color: var(--primary-text-color);
     }
   }
 

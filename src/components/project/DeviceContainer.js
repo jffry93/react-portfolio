@@ -1,12 +1,23 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
+//APPEAR WHEN IN VIEWPORT
+import { fade, slideLeft, slideRight } from '../../animation';
+import { useScroll } from '../useScroll';
 //device pngs
 import macbook from '../../img/devices/new-empty-macbook.png';
 import iphone from '../../img/devices/empty-iphone.png';
 
 const DeviceContainer = ({ secondDescription, url, desktopImg, mobileImg }) => {
+  const [element, controls] = useScroll();
   return (
     <StyledDescriptionContainer className='apple-container'>
-      <div className='description-container'>
+      <motion.div
+        variants={fade}
+        animate={controls}
+        initial='hidden'
+        ref={element}
+        className='description-container'
+      >
         <div className='project-summary'>
           <h2>Summary</h2>
           <p>{secondDescription}</p>
@@ -18,8 +29,14 @@ const DeviceContainer = ({ secondDescription, url, desktopImg, mobileImg }) => {
             ))}
           </div>
         </div>
-      </div>
-      <StyledAppleDevices className='device-container'>
+      </motion.div>
+      <StyledAppleDevices
+        variants={slideLeft}
+        animate={controls}
+        initial='hidden'
+        ref={element}
+        className='device-container'
+      >
         <div className='macbook'>
           <img
             className='macbook-frame'
@@ -42,18 +59,22 @@ const DeviceContainer = ({ secondDescription, url, desktopImg, mobileImg }) => {
 };
 
 export default DeviceContainer;
-const StyledDescriptionContainer = styled.div`
+const StyledDescriptionContainer = styled(motion.div)`
   display: flex;
   flex-direction: row;
 
-  background-color: #121212;
+  max-width: 1100px;
+  margin: auto;
+
+  /* background-color: #121212;
   border-top: 1px solid white;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid white; */
+
   @media (max-width: 950px) {
     flex-direction: column-reverse;
   }
   .description-container {
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     flex: 1;
     padding: 32px var(--layout-padding);
 
@@ -99,7 +120,7 @@ const StyledDescriptionContainer = styled.div`
   }
 `;
 
-const StyledAppleDevices = styled.div`
+const StyledAppleDevices = styled(motion.div)`
   position: relative;
   width: 100%;
   /* max-width: clamp(800px, 50vw, 1400px); */
@@ -107,7 +128,7 @@ const StyledAppleDevices = styled.div`
   padding: 32px 2rem;
   flex: 4;
 
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
   @media (max-width: 750px) {
     width: 150%;
     padding: 32px var(--layout-padding) 0;

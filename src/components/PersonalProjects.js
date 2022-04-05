@@ -6,6 +6,10 @@ import Project from './Project';
 import ProjectDetails from './ProjectDetails';
 //STYLING
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
+import { fade, slideDown } from '../animation';
+//reveal when in viewport
+import { useScroll } from './useScroll';
 //swiper
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.min.css';
@@ -34,10 +38,18 @@ const PersonalProjects = () => {
   const [caseDetail, setCaseDetail] = useState({});
   const [showDetail, setShowDetail] = useState(false);
 
+  const [element, controls] = useScroll();
+
   console.log(projects);
 
   return (
-    <StyledProjectSection>
+    <StyledProjectSection
+      variants={fade}
+      animate={controls}
+      initial='hidden'
+      ref={element}
+      id='home-projects'
+    >
       {showDetail && (
         <ProjectDetails
           caseDetail={caseDetail}
@@ -45,8 +57,8 @@ const PersonalProjects = () => {
           setShowDetail={setShowDetail}
         />
       )}
-      <h2>Personal Projects</h2>
-      <p className='description'>Click on card to preview</p>
+      <h2>Contributions</h2>
+      {/* <p className='description'>Click on card to preview</p> */}
 
       <Swiper
         className='swiper-js-container'
@@ -97,6 +109,7 @@ const PersonalProjects = () => {
           disableOnInteraction: false,
         }}
         speed={500}
+        disableOnInteraction={true}
         loop={true}
         // onSwiper={(swiper) => console.log(swiper)}
         // onSlideChange={() => console.log('slide change')}
@@ -106,6 +119,7 @@ const PersonalProjects = () => {
             <Project
               title={project.title}
               secondaryTitle={project.secondaryTitle}
+              thumbImg={project.thumbImg}
               desktopImg={project.mainImg}
               mobileImg={project.secondaryImg}
               browserImg={project.browserImg}
@@ -132,21 +146,22 @@ const PersonalProjects = () => {
 
 export default PersonalProjects;
 
-const StyledProjectSection = styled.div`
-  /* border: 3px solid purple; */
-
-  /* height: var(--container-height); */
+const StyledProjectSection = styled(motion.div)`
   min-height: 570px;
   max-height: 900px;
   /* max-width: var(--max-width); */
   max-width: 1400px;
   width: 100%;
+
   margin: 116px auto 119px;
 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  h2 {
+    margin-bottom: 32px;
+  }
 
   /* overflow-x: hidden; */
   /* display: grid;
@@ -190,12 +205,14 @@ const StyledProjectSection = styled.div`
 
       height: auto;
       width: 100%;
+
+      z-index: 3;
     }
   }
 
   .swiper-slide-next,
   .swiper-slide-prev {
-    opacity: 0.5;
+    opacity: 0.45;
   }
   .swiper-slide-active {
     transform: scale(1) !important;

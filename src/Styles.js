@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 export const StyledOverlay = styled.div`
   /* border: green 3px solid; */
@@ -11,6 +12,6 @@ export const StyledOverlay = styled.div`
   } */
 `;
 
-export const StyledHide = styled.div`
+export const StyledHide = styled(motion.div)`
   overflow: hidden;
 `;

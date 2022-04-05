@@ -5,11 +5,12 @@ import theracer from './img/theracer-small.png';
 import athlete2 from './img/athlete2.png';
 import goodtimes2 from './img/good-times2.jpg';
 import theracer2 from './img/the-racer2.jpg';
+
 //VOUS BEAUTY CLINIC
-import vbcdesktop from './img/projects/vbc-desktop.png';
-import vbcmobile from './img/projects/iphonex783.png';
-import vbcBrowser from './img/projects/screenshots/vbc-shop-light.png';
-import vbcIpad from './img/projects/screenshots/vbc-ipad-930.png';
+import vbcdesktop from './img/projects/Vous/vbc-desktop.png';
+import vbcmobile from './img/projects/Vous/iphonex783.png';
+import vbcBrowser from './img/projects/Vous/vbc-shop-light.png';
+import vbcIpad from './img/projects/Vous/vbc-ipad-930.png';
 //SVG ICONS
 import squarespaceIcon from './img/icons/squarespace-brands.svg';
 import paintBrush from './img/icons/paint-brush.svg';
@@ -18,12 +19,23 @@ import crop from './img/icons/crop.svg';
 export const MovieState = () => {
   return [
     {
-      title: 'The Athlete',
+      title: 'Vous Beauty Clinic',
+      secondaryTitle: 'E-Commerce',
       desktopImg: vbcdesktop,
       mobileImg: vbcmobile,
       browserImg: vbcBrowser,
       ipadImg: vbcIpad,
       url: '/work/the-athlete',
+      links: [
+        {
+          title: 'Website',
+          website: 'https://vousbeautyclinic.com/skincare',
+        },
+        {
+          title: 'Github',
+          website: 'https://vousbeautyclinic.com/skincare',
+        },
+      ],
       secondDescription:
         'VOUS Beauty Clinic specializes in cosmetic treatments & solutions.Lorem ipsum dolor sit, amet consectetur adipisicing elit.',
       awards: [

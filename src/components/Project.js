@@ -4,6 +4,7 @@ const Project = ({
   title,
   secondaryTitle,
   url,
+  thumbImg,
   desktopImg,
   mobileImg,
   browserImg,
@@ -23,6 +24,7 @@ const Project = ({
       title: { title }.title,
       secondaryTitle: { secondaryTitle }.secondaryTitle,
       url: { url }.url,
+      thumbImb: { thumbImg }.thumbImg,
       desktopImg: { desktopImg }.desktopImg,
       mobileImg: { mobileImg }.mobileImg,
       browserImg: { browserImg }.browserImg,
@@ -41,12 +43,13 @@ const Project = ({
   return (
     <StyledProject onClick={updateDetailHandler}>
       <StyledImgContainer>
-        <img src={desktopImg} alt='project image' />
+        <div id='overlay'></div>
+        <img src={thumbImg} alt='project image' />
       </StyledImgContainer>
       <StyledDetails>
         <h3>{title}</h3>
         <p>{secondaryTitle}</p>
-        <button href={url}>GitHub Repo</button>
+        <button>Learn more</button>
       </StyledDetails>
     </StyledProject>
   );
@@ -63,6 +66,37 @@ const StyledProject = styled.div`
 `;
 
 const StyledImgContainer = styled.div`
+  /* position: relative;
+  height: 60vh;
+  min-height: 500px;
+  max-height: 700px;
+  &:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 2;
+
+    content: " ";
+  } */
+  position: relative;
+  #overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    background-color: rgba(0, 0, 0, 0.35);
+
+    width: 100%;
+    height: 60vh;
+    min-height: 500px;
+    max-height: 700px;
+    z-index: 2;
+  }
+
   img {
     width: 100%;
     height: 60vh;
@@ -70,8 +104,8 @@ const StyledImgContainer = styled.div`
     max-height: 700px;
     display: block;
     /* border-radius: 20px 20px 0 0; */
-
     object-fit: cover;
+    z-index: 1;
   }
 `;
 

@@ -1,8 +1,15 @@
 import { useState } from 'react';
 //PAGE ANIMATION
-import { motion } from 'framer-motion';
-import { pageAnimation, titleAnimation } from '../animation';
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
+import {
+  fade,
+  pageAnimation,
+  sliderContainer,
+  sliderAnimation,
+  titleAnimation,
+} from '../animation';
+
 //IMAGES
 import cntower from '../img/alex_wong.jpg';
 import { SiNike } from 'react-icons/si';
@@ -15,25 +22,37 @@ const ContactUs = () => {
   const [formValidation, setFormValidation] = useState(false);
   document.body.style.overflow = 'auto';
   return (
-    // <>
-    //   <StyledDrake className='drake'>drake</StyledDrake>
     <StyledContactStyle
       variants={pageAnimation}
       initial='hidden'
       animate='show'
       exit='exit'
-      style={{ background: '#fff' }}
+      style={{ background: '#121212' }}
     >
-      <StyledContactContainer id='unset-height'>
-        <ContactForm
-          formValidation={formValidation}
-          setFormValidation={setFormValidation}
-        />
-        <ContactMap />
-      </StyledContactContainer>
+      <motion.div variants={sliderContainer}>
+        <StyledFrame1 variants={sliderAnimation}></StyledFrame1>
+        <StyledFrame2 variants={sliderAnimation}></StyledFrame2>
+        <StyledFrame3 variants={sliderAnimation}></StyledFrame3>
+        <StyledFrame4 variants={sliderAnimation}></StyledFrame4>
+      </motion.div>
+      <motion.div variants={fade} className='cntower-background'>
+        <StyledContactContainer id='unset-height'>
+          <motion.div variants={fade} className='fade-container'>
+            <ContactForm
+              formValidation={formValidation}
+              setFormValidation={setFormValidation}
+            />
+
+            <ContactMap />
+          </motion.div>
+        </StyledContactContainer>
+      </motion.div>
       {formValidation && (
-        <StyledStatus id='status'>
-          <div className='success-container'>
+        <StyledStatus
+          id='status'
+          onClick={() => setFormValidation(!formValidation)}
+        >
+          <div className='success-container '>
             <MdClose
               size={25}
               className='close-popup'
@@ -42,28 +61,23 @@ const ContactUs = () => {
             <div className='check-container'>
               <SiNike size={65} className='success-icon' />
             </div>
-            <h1>Awesome! </h1>
-            <h3>Your message went through</h3>
-            <h3>
+            <h2>Awesome! </h2>
+            <p>Your message went through.</p>
+            <p>
               If you can't wait you can call me at{' '}
-              <a href='tel:6474485732'>+1 (647) 448-5732</a>
-            </h3>
+              <a href='tel:6474485732'>+1 (647) 448-5732</a> or message me on
+              any social media platform.
+            </p>
           </div>
         </StyledStatus>
       )}
     </StyledContactStyle>
-    // </>
   );
 };
 
 export default ContactUs;
 
 const StyledContactStyle = styled(motion.div)`
-  background-image: url(${cntower}) !important;
-  background-repeat: no-repeat !important;
-  background-attachment: fixed !important;
-  background-position: center !important;
-  background-size: cover !important;
   /* border: 3px solid yellow; */
   min-height: var(--container-height);
   height: 100%;
@@ -75,7 +89,7 @@ const StyledContactStyle = styled(motion.div)`
   justify-content: center;
   align-items: center;
   position: relative;
-  ::after {
+  /* ::after {
     content: ''; // ::before and ::after both require content
     position: absolute;
     top: 0;
@@ -84,12 +98,20 @@ const StyledContactStyle = styled(motion.div)`
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     opacity: 0.7;
-  }
+  } */
   @media (max-width: 1050px) {
     padding: 0rem;
   }
+  .cntower-background {
+    background-image: url(${cntower}) !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+    background-position: center !important;
+    background-size: cover !important;
+    width: 100%;
+  }
 `;
-const StyledContactContainer = styled.div`
+const StyledContactContainer = styled(motion.div)`
   width: 100%;
   /* max-width: calc(var(--max-width) - 4rem); */
   margin: auto;
@@ -99,18 +121,21 @@ const StyledContactContainer = styled.div`
   background-color: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(6px) !important;
 
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-
   /* border-radius: 8px; */
   /* overflow: hidden; */
   z-index: 2;
-  @media (max-width: 700px) {
-    flex-direction: column-reverse;
-    border-radius: 0;
 
-    max-height: unset;
+  .fade-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    @media (max-width: 700px) {
+      flex-direction: column-reverse;
+      border-radius: 0;
+
+      max-height: unset;
+    }
   }
 `;
 
@@ -120,9 +145,9 @@ const StyledStatus = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  top: 10vh;
+  /* top: 10vh; */
   left: 0;
-  height: 90vh;
+  height: var(--container-height);
   width: 100%;
   z-index: 2;
   .success-container {
@@ -135,8 +160,8 @@ const StyledStatus = styled.div`
     align-items: center;
     text-align: center;
 
-    padding: 3rem 5rem;
-    border-radius: 8px;
+    padding: 32px 16px 60px 16px;
+    border-radius: 20px;
     .close-popup {
       color: grey;
       position: absolute;
@@ -157,21 +182,19 @@ const StyledStatus = styled.div`
       }
     }
 
-    h1 {
+    h2 {
       color: grey;
-      margin-bottom: 2rem;
+      margin-bottom: 32px;
     }
-    h3 {
+    p {
       color: grey;
       margin-bottom: 1rem;
-      font-weight: 500;
-      font-size: 1.1rem;
 
-      max-width: 200px;
+      max-width: 400px;
       a {
         text-decoration: none;
         color: grey;
-        font-weight: 700;
+        /* font-weight: 700; */
       }
     }
   }
@@ -187,4 +210,26 @@ const StyledStatus = styled.div`
   .error {
     background-color: rgb(250, 129, 92);
   } */
+`;
+
+const StyledFrame1 = styled(motion.div)`
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background: #fffebf;
+  z-index: 2;
+`;
+
+const StyledFrame2 = styled(StyledFrame1)`
+  background: #ff8efb;
+`;
+
+const StyledFrame3 = styled(StyledFrame1)`
+  background: #8ed2ff;
+`;
+
+const StyledFrame4 = styled(StyledFrame1)`
+  background: #8effa0;
 `;

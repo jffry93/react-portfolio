@@ -1,35 +1,44 @@
 // import home from '../img/home1.png';
 import styled from 'styled-components';
 import coffee from '../img/ibrahim.jpg';
+
 //Styled
 import { StyledOverlay, StyledHide } from '../Styles';
+
+import { Link } from 'react-router-dom';
+//SCROLL TO COMPONENT
+import { NavHashLink } from 'react-router-hash-link';
 
 //Framer Motion
 import { motion } from 'framer-motion';
 import { titleAnimation, fade } from '../animation';
+// import ScrollTop from './ScrollTop';
 
 const HomeSection = () => {
   return (
-    <StyledHomepageContainer>
+    <StyledHomepageContainer viewport={{ once: true }}>
       <StyledOverlay className='overlay'>
         <StyledDescription className='heading content'>
           <StyledHide>
-            <motion.h2 variants={titleAnimation}>Hi, I'm Jeff.</motion.h2>
-          </StyledHide>
-          {/* <StyledHide>
-            <motion.h3 variants={titleAnimation}>Jeff</motion.h3>
-          </StyledHide> */}
-          <StyledHide>
-            <motion.h1 variants={titleAnimation}>Frontend Developer</motion.h1>
-          </StyledHide>
-          <StyledHide>
+            <h2 variants={titleAnimation}>Hi, I'm Jeff.</h2>
+            <h1 variants={titleAnimation}>Frontend Developer</h1>
             <motion.h3 variants={titleAnimation}>
               I build things for the web.
             </motion.h3>
           </StyledHide>
           <StyledHide className='buttons' id='buttons'>
-            <motion.button variants={fade}>Let's talk</motion.button>
-            <motion.button variants={fade}>View Work</motion.button>
+            <Link href='#' to='/contact'>
+              <motion.button>Let's talk</motion.button>
+            </Link>
+            <NavHashLink
+              href='#'
+              to='/work'
+              // scroll={(el) =>
+              //   el.scrollIntoView({ behavior: 'smooth', block: 'center' })
+              // }
+            >
+              <motion.button>View Work</motion.button>
+            </NavHashLink>
           </StyledHide>
         </StyledDescription>
       </StyledOverlay>
@@ -50,6 +59,7 @@ const StyledHomepageContainer = styled(motion.div)`
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
+  /* transform: scaleX(-1); */
   @media (max-width: 750px) {
     #buttons {
       flex-direction: column;
@@ -60,6 +70,7 @@ const StyledHomepageContainer = styled(motion.div)`
   .overlay {
     min-height: 500px;
     max-height: 850px;
+    /* transform: scaleX(-1); */
   }
   .buttons {
     display: flex;
@@ -86,6 +97,9 @@ const StyledDescription = styled.div`
   }
 
   //greeting
+  h1 {
+    margin: 16px 0;
+  }
   h3 {
     /* font-size: clamp(1.5rem, 2.5vw, 2rem); */
     font-weight: 300;

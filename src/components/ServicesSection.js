@@ -9,12 +9,13 @@ import headshot from '../img/ben_parker.jpg';
 import downloadIcon from '../img/icons/download-solid.svg';
 //Styles
 import styled from 'styled-components';
-//Reusable styles
-import { StyledAbout } from '../Styles';
+//RESUME
+import MyResume from '../Resume/Jeffrey_Zalischi_Resume.pdf';
+
 //scroll animation that runs when an element is in view
 //Framer Motion
 import { motion } from 'framer-motion';
-import { fade } from '../animation';
+import { fade, slideDown, slideLeft, slideRight } from '../animation';
 import { useScroll } from './useScroll';
 
 const ServicesSection = () => {
@@ -25,11 +26,13 @@ const ServicesSection = () => {
       animate={controls}
       initial='hidden'
       ref={element}
+      // id='about'
+      // scroll={(el) => el.scrollIntoView({ block: 'center' })}
     >
-      <StyledImage>
+      <StyledImage variants={slideRight}>
         <img src={headshot} alt='headshot' />
       </StyledImage>
-      <StyledServicesDescription>
+      <StyledServicesDescription variants={fade}>
         <h2>About me</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
         <p>
@@ -37,16 +40,22 @@ const ServicesSection = () => {
           sint dignissimos debitis voluptate corporis voluptatem quae adipisci
           cupiditate,
         </p>
-        <motion.button variants={fade}>
+        <motion.a
+          variants={fade}
+          className='resume'
+          href={MyResume}
+          download='Jeffrey_Zalischi_Resume'
+          target='_blank'
+        >
           {' '}
           <div className='download'></div> <span>Resume</span>
-        </motion.button>
+        </motion.a>
       </StyledServicesDescription>
     </StyledServices>
   );
 };
 
-const StyledServices = styled.div`
+const StyledServices = styled(motion.div)`
   /* border: 3px solid red; */
 
   /* min-height: 500px;
@@ -61,6 +70,7 @@ const StyledServices = styled.div`
   flex-direction: row-reverse;
   align-items: center;
   gap: 45px;
+
   /* 
   p {
     font-weight: 400;
@@ -77,7 +87,7 @@ const StyledServices = styled.div`
     padding: 63px var(--layout-padding) 94px;
   }
 `;
-const StyledServicesDescription = styled.div`
+const StyledServicesDescription = styled(motion.div)`
   /* border: 3px solid blue; */
   display: flex;
   flex-direction: column;
@@ -88,9 +98,8 @@ const StyledServicesDescription = styled.div`
   @media (max-width: 850px) {
     max-width: 650px;
   }
-  button {
-  }
-  button {
+
+  a {
     margin-top: 32px;
     width: fit-content;
     display: flex;
@@ -98,6 +107,11 @@ const StyledServicesDescription = styled.div`
     gap: 12px;
 
     padding: 0.7rem 1.4rem 0.7rem 1.1rem;
+    border: 1px solid white;
+    color: white;
+    font-weight: 700;
+    font-size: 17px;
+    text-decoration: none;
     .download {
       width: 17px;
       height: 17px;
@@ -113,7 +127,7 @@ const StyledServicesDescription = styled.div`
   }
 `;
 
-const StyledImage = styled.div`
+const StyledImage = styled(motion.div)`
   /* border: 1px solid white; */
 
   height: 450px;

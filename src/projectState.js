@@ -7,10 +7,17 @@ import goodtimes2 from './img/good-times2.jpg';
 import theracer2 from './img/the-racer2.jpg';
 
 //VOUS BEAUTY CLINIC
-import vbcdesktop from './img/projects/vbc-desktop.png';
-import vbcmobile from './img/projects/iphonex783.png';
-import vbcBrowser from './img/projects/screenshots/vbc-shop-light.png';
-import vbcIpad from './img/projects/screenshots/vbc-ipad-930.png';
+import vbcdesktop from './img/projects/Vous/vbc-desktop.png';
+import vbcmobile from './img/projects/Vous/iphonex783.png';
+import vbcBrowser from './img/projects/Vous/vbc-shop-light.png';
+import vbcIpad from './img/projects/Vous/vbc-ipad-930.png';
+import vbcMain from './img/projects/Vous/vbcThumb.png';
+//NATURES CANOPY HOUSE
+import nchMain from './img/projects/NCH/nchThumb.webp';
+//BAYRICH CONSTRUCTION
+import bayrichMain from './img/projects/Bayrich/weird.jpg';
+//MATTHEW DEL BEL BELLUZ
+import mdbbMain from './img/projects/MDBB/mdbbThumb.jpg';
 //SVG ICONS
 import squarespaceIcon from './img/icons/squarespace-brands.svg';
 import paintBrush from './img/icons/paint-brush.svg';
@@ -19,8 +26,35 @@ import crop from './img/icons/crop.svg';
 const projectState = () => {
   return [
     {
-      title: 'Project 1',
-      mainImg: athlete,
+      title: 'Bayrich Construction',
+      secondaryTitle: 'Construction Website',
+      thumbImg: bayrichMain,
+      url: '/work/good-times',
+      secondaryImg: goodtimes2,
+      description:
+        '“Lorem Ipsum is simply dummy text of the printing and typesetting industry.”',
+      awards: [
+        {
+          title: 'Truly A masterpiece',
+          description:
+            '“Lorem Ipsum is simply dummy text of the printing and typesetting industry.”',
+        },
+        {
+          title: 'Fresh look on a brutal sport.',
+          description:
+            '“Lorem Ipsum is simply dummy text of the printing and typesetting industry.”',
+        },
+        {
+          title: 'It’s okay lmao.',
+          description:
+            '“Lorem Ipsum is simply dummy text of the printing and typesetting industry.”',
+        },
+      ],
+    },
+    {
+      title: 'Matthew Del Bel Belluz',
+      secondaryTitle: 'Actor Portfolio',
+      thumbImg: mdbbMain,
       secondaryImg: athlete2,
       url: '/work/the-athlete',
       description:
@@ -137,32 +171,9 @@ const projectState = () => {
       ],
     },
     {
-      title: 'Project 2',
-      mainImg: goodtimes,
-      url: '/work/good-times',
-      secondaryImg: goodtimes2,
-      description:
-        '“Lorem Ipsum is simply dummy text of the printing and typesetting industry.”',
-      awards: [
-        {
-          title: 'Truly A masterpiece',
-          description:
-            '“Lorem Ipsum is simply dummy text of the printing and typesetting industry.”',
-        },
-        {
-          title: 'Fresh look on a brutal sport.',
-          description:
-            '“Lorem Ipsum is simply dummy text of the printing and typesetting industry.”',
-        },
-        {
-          title: 'It’s okay lmao.',
-          description:
-            '“Lorem Ipsum is simply dummy text of the printing and typesetting industry.”',
-        },
-      ],
-    },
-    {
-      title: 'Project 3',
+      title: 'Natures Canopy House',
+      secondaryTitle: 'Cannabis Website',
+      thumbImg: nchMain,
       mainImg: theracer,
       url: '/work/the-racer',
       secondaryImg: theracer2,
@@ -188,7 +199,7 @@ const projectState = () => {
     },
     {
       title: 'VOUS Beauty Clinic',
-      secondaryTitle: 'E-Commerce',
+      secondaryTitle: 'Cosmetics & Spa Website',
       url: [
         {
           title: 'Website',
@@ -199,6 +210,7 @@ const projectState = () => {
           website: 'https://vousbeautyclinic.com/skincare',
         },
       ],
+      thumbImg: vbcMain,
       mainImg: vbcdesktop,
       secondaryImg: vbcmobile,
       browserImg: vbcBrowser,

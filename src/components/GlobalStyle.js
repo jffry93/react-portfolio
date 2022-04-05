@@ -50,7 +50,7 @@ const GlobalStyle = createGlobalStyle`
         transition: all 0.5s ease;
         font-family: 'Inter', sans-serif;
         &:hover{
-            background-color: white;
+            background-color: rgba(0,0,0,.5);
         }
         
     }
@@ -71,7 +71,7 @@ const GlobalStyle = createGlobalStyle`
         letter-spacing: .007em;
     }
     h4{
-        font-size: clamp(17px, 3vw, 23px);
+        font-size: clamp(17px, 3vw, 20px);
         line-height: 1.14286;
         letter-spacing: .007em;
     }
@@ -82,7 +82,7 @@ const GlobalStyle = createGlobalStyle`
         line-height: 1.381;
     }
     p{
-        font-size: clamp(17px, 1.2vw, 19px);
+        font-size: clamp(16px, 1.2vw, 17px);
         font-weight: lighter;
         line-height: clamp(25.000032424926758px, .5vw, 29.001001358032227px);
         letter-spacing:  clamp(.011em, .5vw, .022em);

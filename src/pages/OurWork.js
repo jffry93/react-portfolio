@@ -38,94 +38,101 @@ const OurWork = () => {
         <StyledFrame3 variants={sliderAnimation}></StyledFrame3>
         <StyledFrame4 variants={sliderAnimation}></StyledFrame4>
       </motion.div>
+      <motion.div variants={fade}>
+        <StyledMovie
+        // ref={element}
+        // variants={fade}
+        // animate={controls}
+        // initials='hidden'
+        >
+          <Link to='/work/the-athlete' style={{ textDecoration: 'none' }}>
+            <motion.div variants={fade} className='work-card'>
+              <div className='card-details'>
+                <motion.h2 variants={fade}>The Athlete</motion.h2>
+                <motion.div
+                  variants={lineAnimation}
+                  className='line'
+                ></motion.div>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Voluptates, voluptas. Numquam at impedit reiciendis
+                  consectetur distinctio ab quis vitae eos.
+                </p>
+                <div>
+                  <button>View Github</button>
+                </div>
+              </div>
+              <StyledHide className='work-image'>
+                <motion.img
+                  variants={photoAnimation}
+                  src={athlete}
+                  alt='athlete'
+                />
+              </StyledHide>
+            </motion.div>
+          </Link>
+        </StyledMovie>
 
-      <StyledMovie>
-        <Link to='/work/the-athlete' style={{ textDecoration: 'none' }}>
-          <div className='work-card'>
-            <div className='card-details'>
-              <motion.h2 variants={fade}>The Athlete</motion.h2>
-              <motion.div
-                variants={lineAnimation}
-                className='line'
-              ></motion.div>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Voluptates, voluptas. Numquam at impedit reiciendis consectetur
-                distinctio ab quis vitae eos.
-              </p>
-              <div>
-                <button>View Github</button>
+        <StyledMovie
+          ref={element}
+          variants={fade}
+          animate={controls}
+          initials='hidden'
+        >
+          <Link to='/work/the-racer' style={{ textDecoration: 'none' }}>
+            <motion.div variants={fade} className='work-card'>
+              <div className='card-details'>
+                <h2 variants={fade}>The Racer</h2>
+                <motion.div
+                  variants={lineAnimation}
+                  className='line'
+                ></motion.div>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Voluptates, voluptas. Numquam at impedit reiciendis
+                  consectetur distinctio ab quis vitae eos.
+                </p>
+                <div>
+                  <button>View Github</button>
+                </div>
               </div>
-            </div>
-            <StyledHide className='work-image'>
-              <motion.img
-                variants={photoAnimation}
-                src={athlete}
-                alt='athlete'
-              />
-            </StyledHide>
-          </div>
-        </Link>
-      </StyledMovie>
+              <StyledHide className='work-image'>
+                <img src={theracer} alt='the racer' />
+              </StyledHide>
+            </motion.div>
+          </Link>
+        </StyledMovie>
 
-      <StyledMovie
-        ref={element}
-        variants={fade}
-        animate={controls}
-        initials='hidden'
-      >
-        <Link to='/work/the-racer' style={{ textDecoration: 'none' }}>
-          <div className='work-card'>
-            <div className='card-details'>
-              <motion.h2 variants={fade}>The Racer</motion.h2>
-              <motion.div
-                variants={lineAnimation}
-                className='line'
-              ></motion.div>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Voluptates, voluptas. Numquam at impedit reiciendis consectetur
-                distinctio ab quis vitae eos.
-              </p>
-              <div>
-                <button>View Github</button>
+        <StyledMovie
+          ref={element2}
+          variants={fade}
+          animate={control2}
+          initials='hidden'
+        >
+          <Link to='/work/good-times' style={{ textDecoration: 'none' }}>
+            <motion.div variants={fade} className='work-card'>
+              <div className='card-details'>
+                <motion.h2 variants={fade}>The GoodTimes</motion.h2>
+                <motion.div
+                  variants={lineAnimation}
+                  className='line'
+                ></motion.div>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Voluptates, voluptas. Numquam at impedit reiciendis
+                  consectetur distinctio ab quis vitae eos.
+                </p>
+                <div>
+                  <button>View Github</button>
+                </div>
               </div>
-            </div>
-            <StyledHide className='work-image'>
-              <img src={theracer} alt='the racer' />
-            </StyledHide>
-          </div>
-        </Link>
-      </StyledMovie>
-      <StyledMovie
-        ref={element2}
-        variants={fade}
-        animate={control2}
-        initials='hidden'
-      >
-        <Link to='/work/good-times' style={{ textDecoration: 'none' }}>
-          <div className='work-card'>
-            <div className='card-details'>
-              <motion.h2 variants={fade}>The GoodTimes</motion.h2>
-              <motion.div
-                variants={lineAnimation}
-                className='line'
-              ></motion.div>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Voluptates, voluptas. Numquam at impedit reiciendis consectetur
-                distinctio ab quis vitae eos.
-              </p>
-              <div>
-                <button>View Github</button>
-              </div>
-            </div>
-            <StyledHide className='work-image'>
-              <img src={goodtimes} alt='the goodtimes' />
-            </StyledHide>
-          </div>
-        </Link>
-      </StyledMovie>
+              <StyledHide className='work-image'>
+                <img src={goodtimes} alt='the goodtimes' />
+              </StyledHide>
+            </motion.div>
+          </Link>
+        </StyledMovie>
+      </motion.div>
     </StyledWork>
   );
 };

@@ -1,6 +1,14 @@
+//STYLING
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-//REACT ICONS
+//APPEAR WHEN IN VIEWPORT
+import {
+  fade,
+  titleAnimation,
+  pageAnimation,
+  staggerContainer,
+} from '../animation';
+import { useScroll } from './useScroll';
 
 //COMPONENTS
 import HeaderContainer from './project/HeaderContainer';
@@ -11,49 +19,75 @@ import TabletContainer from './project/TabletContainer';
 import SkillsContainer from './project/SkillsContainer';
 
 const ProjectDetails = ({ caseDetail, setShowDetail }) => {
+  //HIDE POPUP
   const hideDetailHandler = (e) => {
     const element = e.target;
-    console.log(element);
+    // console.log(element);
     if (element.classList.contains('shadow')) {
-      console.log('popopopopopopopooooo');
       setShowDetail(false);
       document.body.style.overflow = 'auto';
     }
   };
-
+  //appear on scroll
+  const [element, controls] = useScroll();
+  //state holding data of project that was selected
   const project = caseDetail;
   console.log(caseDetail);
+
   return (
-    <StyledProjectShadow className='shadow' onClick={hideDetailHandler}>
-      <StyledProjectDetail>
-        <HeaderContainer
-          title={caseDetail.title}
-          secondaryTitle={project.secondaryTitle}
-        />
-        <DeviceContainer
-          secondDescription={project.secondDescription}
-          url={project.url}
-          desktopImg={project.desktopImg}
-          mobileImg={project.mobileImg}
-        />
-        <div className='section-divider'></div>
-        <RoleContainer roles={project.roles} />
-        <div className='section-divider'></div>
-        <BrowserContainer
-          fonts={project.fonts}
-          browserImg={project.browserImg}
-        />
-        <div className='section-divider'></div>
-        <TabletContainer ipadImg={project.ipadImg} colours={project.colours} />
-        <div className='section-divider'></div>
-        <SkillsContainer skills={project.icons} />
-        <div className='section-divider'></div>
-        <div className='final-container'>
-          <button className='shadow project-button'>Back</button>
-        </div>
-        <div className='section-divider'></div>
-      </StyledProjectDetail>
-    </StyledProjectShadow>
+    <motion.div
+      variants={staggerContainer}
+      initial='hidden'
+      animate='show'
+      // exit='exit'
+    >
+      <StyledProjectShadow
+        variants={titleAnimation}
+        animate='show'
+        initial='hidden'
+        // ref={element}
+        // ref={element}
+        className='shadow'
+        onClick={hideDetailHandler}
+      >
+        <StyledProjectDetail
+          variants={fade}
+          animate='show'
+          initial='hidden'
+          // ref={element}
+        >
+          <HeaderContainer
+            title={caseDetail.title}
+            secondaryTitle={project.secondaryTitle}
+          />
+          <DeviceContainer
+            secondDescription={project.secondDescription}
+            url={project.url}
+            desktopImg={project.desktopImg}
+            mobileImg={project.mobileImg}
+          />
+          <div className='section-divider'></div>
+          <RoleContainer roles={project.roles} />
+          <div className='section-divider'></div>
+          <BrowserContainer
+            fonts={project.fonts}
+            browserImg={project.browserImg}
+          />
+          <div className='section-divider'></div>
+          <TabletContainer
+            ipadImg={project.ipadImg}
+            colours={project.colours}
+          />
+          <div className='section-divider'></div>
+          <SkillsContainer skills={project.icons} />
+          <div className='section-divider'></div>
+          <div className='final-container'>
+            <button className='shadow project-button'>Back</button>
+          </div>
+          <div className='section-divider'></div>
+        </StyledProjectDetail>
+      </StyledProjectShadow>
+    </motion.div>
   );
 };
 
@@ -100,6 +134,9 @@ const StyledProjectDetail = styled(motion.div)`
   @media (max-width: 1600px) {
     width: 100%;
   }
+  h2 {
+    font-size: clamp(32px, 4vw, 40px);
+  }
 
   .title-with-icon {
     display: flex;
@@ -110,8 +147,8 @@ const StyledProjectDetail = styled(motion.div)`
       white-space: nowrap;
     } */
     .title-icon {
-      width: clamp(22px, 3vw, 35px);
-      height: clamp(22px, 3vw, 35px);
+      width: clamp(22px, 3vw, 30px);
+      height: clamp(22px, 3vw, 30px);
     }
   }
   .section-divider {

@@ -2,13 +2,13 @@
 import styled from 'styled-components';
 
 const SkillCard = ({ title, description, documentation }) => {
+  console.log(documentation);
   return (
     <StyledSkillCard>
       <h3>{title}</h3>
       <div className='space-container'>
         <p>{description}</p>
-        <a href={documentation} target='_blank'>
-          {' '}
+        <a href={documentation} target='_blank' rel='noreferrer'>
           {title} Doc
         </a>
       </div>

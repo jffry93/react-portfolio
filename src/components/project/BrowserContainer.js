@@ -1,10 +1,21 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
+//APPEAR WHEN IN VIEWPORT
+import { fade, slideRight } from '../../animation';
+import { useScroll } from '../useScroll';
 //ICONS
 import bookIcon from '../../img/icons/book-open-solid.svg';
 
 const BrowserContainer = ({ fonts, browserImg }) => {
+  const [element, controls] = useScroll();
   return (
-    <StyledBrowserContainer className='browser-container'>
+    <StyledBrowserContainer
+      variants={fade}
+      animate={controls}
+      initial='hidden'
+      ref={element}
+      className='browser-container'
+    >
       <StyledTypographyContainer className='typography-container'>
         <div className='title-with-icon'>
           <img src={bookIcon} alt='role icon' className='title-icon' />
@@ -16,15 +27,16 @@ const BrowserContainer = ({ fonts, browserImg }) => {
             <div className='font-family-container custom-card'>
               <div className='font-title'>
                 <h4 className='family-title'>{font.title}</h4>
-                <h3
+                <h4
                   style={{
                     fontFamily: `${font.fontFamily}`,
                     fontWeight: `${font.fontWeight}`,
                     letterSpacing: `${font.letterSpacing}`,
+                    color: 'var(--secondary-text-color)',
                   }}
                 >
                   {font.fontFamily}
-                </h3>
+                </h4>
               </div>
 
               <p
@@ -42,20 +54,28 @@ const BrowserContainer = ({ fonts, browserImg }) => {
           ))}
         </div>
       </StyledTypographyContainer>
-      <div className='browser-screenshot'>
+      <motion.div
+        variants={slideRight}
+        animate={controls}
+        initial='hidden'
+        ref={element}
+        className='browser-screenshot'
+      >
         <img src={browserImg} alt='browser screenshot' />
-      </div>
+      </motion.div>
     </StyledBrowserContainer>
   );
 };
 
 export default BrowserContainer;
 
-const StyledBrowserContainer = styled.div`
+const StyledBrowserContainer = styled(motion.div)`
   display: flex;
   align-items: center;
   gap: 2rem;
-  margin: 0 var(--layout-padding);
+  max-width: 1400px;
+  margin: auto;
+  padding: 0 var(--layout-padding);
   position: relative;
   @media (max-width: 650px) {
     flex-direction: column-reverse;
@@ -67,7 +87,8 @@ const StyledBrowserContainer = styled.div`
     }
   }
   .browser-screenshot {
-    min-width: clamp(900px, 60vw, 1200px);
+    width: 100%;
+    min-width: clamp(900px, 60vw, 1000px);
     margin: 0 8px;
     @media (max-width: 450px) {
       margin: 0;
