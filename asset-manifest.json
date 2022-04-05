@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/react-portfolio/static/css/main.35d6b2c1.chunk.css",
-    "main.js": "/react-portfolio/static/js/main.2a4a360b.chunk.js",
-    "main.js.map": "/react-portfolio/static/js/main.2a4a360b.chunk.js.map",
+    "main.js": "/react-portfolio/static/js/main.967e809d.chunk.js",
+    "main.js.map": "/react-portfolio/static/js/main.967e809d.chunk.js.map",
     "runtime-main.js": "/react-portfolio/static/js/runtime-main.09fcd760.js",
     "runtime-main.js.map": "/react-portfolio/static/js/runtime-main.09fcd760.js.map",
     "static/css/2.1a2a3f90.chunk.css": "/react-portfolio/static/css/2.1a2a3f90.chunk.css",
@@ -19,7 +19,6 @@
     "static/media/alex_wong.01020a37.jpg": "/react-portfolio/static/media/alex_wong.01020a37.jpg",
     "static/media/athlete-small.9c7a85d4.png": "/react-portfolio/static/media/athlete-small.9c7a85d4.png",
     "static/media/athlete2.b216a5ad.png": "/react-portfolio/static/media/athlete2.b216a5ad.png",
-    "static/media/ben_parker.d90efca0.jpg": "/react-portfolio/static/media/ben_parker.d90efca0.jpg",
     "static/media/book-open-solid.59c24569.svg": "/react-portfolio/static/media/book-open-solid.59c24569.svg",
     "static/media/crop.23966b02.svg": "/react-portfolio/static/media/crop.23966b02.svg",
     "static/media/download-solid.7026e29b.svg": "/react-portfolio/static/media/download-solid.7026e29b.svg",
@@ -32,7 +31,7 @@
     "static/media/icon-hamburger.5273efa7.svg": "/react-portfolio/static/media/icon-hamburger.5273efa7.svg",
     "static/media/iphonex783.f94cb974.png": "/react-portfolio/static/media/iphonex783.f94cb974.png",
     "static/media/mdbbThumb.7a06587e.jpg": "/react-portfolio/static/media/mdbbThumb.7a06587e.jpg",
-    "static/media/myFace3.1c3d72d4.jpg": "/react-portfolio/static/media/myFace3.1c3d72d4.jpg",
+    "static/media/myFace.24bd4901.jpg": "/react-portfolio/static/media/myFace.24bd4901.jpg",
     "static/media/nchThumb.816a84e6.webp": "/react-portfolio/static/media/nchThumb.816a84e6.webp",
     "static/media/new-empty-macbook.c4e9f228.png": "/react-portfolio/static/media/new-empty-macbook.c4e9f228.png",
     "static/media/paint-brush.526d2531.svg": "/react-portfolio/static/media/paint-brush.526d2531.svg",
@@ -53,6 +52,6 @@
     "static/css/2.1a2a3f90.chunk.css",
     "static/js/2.57ac9e26.chunk.js",
     "static/css/main.35d6b2c1.chunk.css",
-    "static/js/main.2a4a360b.chunk.js"
+    "static/js/main.967e809d.chunk.js"
   ]
 }
