@@ -50,6 +50,7 @@ const DeviceContainer = ({ secondDescription, url, desktopImg, mobileImg }) => {
         <div className='iphone'>
           <img className='iphone-frame' src={iphone} alt='mobile screenshot' />
           <div className='iphone-img'>
+            <div className='status-bar'></div>
             <img src={mobileImg} alt='mobile screenshot' />
           </div>
         </div>
@@ -152,28 +153,37 @@ const StyledAppleDevices = styled(motion.div)`
   }
   .iphone {
     position: absolute;
-    bottom: -50%; /* position the top  edge of the element at the middle of the parent */
-    right: 5%; /* position the left edge of the element at the middle of the parent */
+    bottom: 30%;
+    right: 5%;
 
-    transform: translate(50%, -50%);
-    width: 30%;
+    transform: translate(50%, 50%);
+    width: 29%;
+    max-width: 250px;
 
     margin: 5rem;
     z-index: 3;
+    @media (max-width: 750px) {
+      bottom: 20%;
+    }
     .iphone-frame {
       position: relative;
+      /* border: 1px solid red; */
     }
     .iphone-img {
-      border: 1px solid pink;
+      /* border: 1px solid pink; */
       position: absolute;
-      top: 50%; /* position the top  edge of the element at the middle of the parent */
-      left: 49%; /* position the left edge of the element at the middle of the parent */
-      border-radius: 15px;
+      top: 50%;
+      left: 50%;
+      border-radius: 17px;
       overflow: hidden;
       transform: translate(-50%, -50%);
       z-index: -1;
 
-      width: 61%;
+      width: 62.2%;
+      .status-bar {
+        height: clamp(12px, 3.2vw, 17px);
+        background-color: #1e1e1e;
+      }
     }
   }
 `;

@@ -92,7 +92,7 @@ const StyledTabletContainer = styled(motion.div)`
       left: 50%; /* position the left edge of the element at the middle of the parent */
       transform: translate(-50%, -50%);
 
-      width: 94.7%;
+      width: 95.3%;
       z-index: -1;
     }
   }
