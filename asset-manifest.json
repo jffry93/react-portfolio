@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/react-portfolio/static/css/main.35d6b2c1.chunk.css",
-    "main.js": "/react-portfolio/static/js/main.021be6f4.chunk.js",
-    "main.js.map": "/react-portfolio/static/js/main.021be6f4.chunk.js.map",
+    "main.js": "/react-portfolio/static/js/main.e3cce37f.chunk.js",
+    "main.js.map": "/react-portfolio/static/js/main.e3cce37f.chunk.js.map",
     "runtime-main.js": "/react-portfolio/static/js/runtime-main.09fcd760.js",
     "runtime-main.js.map": "/react-portfolio/static/js/runtime-main.09fcd760.js.map",
     "static/css/2.1a2a3f90.chunk.css": "/react-portfolio/static/css/2.1a2a3f90.chunk.css",
@@ -19,7 +19,7 @@
     "static/media/alex_wong.01020a37.jpg": "/react-portfolio/static/media/alex_wong.01020a37.jpg",
     "static/media/athlete-small.9c7a85d4.png": "/react-portfolio/static/media/athlete-small.9c7a85d4.png",
     "static/media/athlete2.b216a5ad.png": "/react-portfolio/static/media/athlete2.b216a5ad.png",
-    "static/media/bay400x780.ed928702.png": "/react-portfolio/static/media/bay400x780.ed928702.png",
+    "static/media/bay405x780.7ecc1f1e.png": "/react-portfolio/static/media/bay405x780.7ecc1f1e.png",
     "static/media/book-open-solid.59c24569.svg": "/react-portfolio/static/media/book-open-solid.59c24569.svg",
     "static/media/crop.23966b02.svg": "/react-portfolio/static/media/crop.23966b02.svg",
     "static/media/download-solid.7026e29b.svg": "/react-portfolio/static/media/download-solid.7026e29b.svg",
@@ -45,6 +45,7 @@
     "static/media/vbc-desktop.321c5062.png": "/react-portfolio/static/media/vbc-desktop.321c5062.png",
     "static/media/vbc-ipad-930.0e33d92f.png": "/react-portfolio/static/media/vbc-ipad-930.0e33d92f.png",
     "static/media/vbc-shop-light.d5c1d69c.png": "/react-portfolio/static/media/vbc-shop-light.d5c1d69c.png",
+    "static/media/vbc405x780.57941257.png": "/react-portfolio/static/media/vbc405x780.57941257.png",
     "static/media/vbcThumb.cdfd055a.png": "/react-portfolio/static/media/vbcThumb.cdfd055a.png",
     "static/media/weird.15f8f2df.jpg": "/react-portfolio/static/media/weird.15f8f2df.jpg"
   },
@@ -53,6 +54,6 @@
     "static/css/2.1a2a3f90.chunk.css",
     "static/js/2.e78d4b14.chunk.js",
     "static/css/main.35d6b2c1.chunk.css",
-    "static/js/main.021be6f4.chunk.js"
+    "static/js/main.e3cce37f.chunk.js"
   ]
 }
