@@ -6,14 +6,10 @@ import FaqSection from '../components/FaqSection';
 //PAGE ANIMATION
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-import {
-  pageAnimation,
-  fade,
-  sliderContainer,
-  sliderAnimation,
-} from '../animation';
+import { pageAnimation, fade } from '../animation';
 import ScrollTop from '../components/ScrollTop';
 import SkillsSections from '../components/SkillsSections';
+import ProjectSection from '../components/ProjectSection';
 
 const AboutUs = () => {
   document.body.style.overflow = 'auto';
@@ -36,7 +32,7 @@ const AboutUs = () => {
         <HomeSection />
         <ServicesSection />
         <SkillsSections />
-        <PersonalProjects />
+        <ProjectSection />
         <FaqSection />
       </motion.div>
     </motion.div>

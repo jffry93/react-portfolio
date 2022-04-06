@@ -8,7 +8,7 @@ import styled from 'styled-components';
 //detects when layout changes
 import { AnimateSharedLayout } from 'framer-motion';
 import { useScroll } from './useScroll';
-import { fade } from '../animation';
+// import { fade } from '../animation';
 
 const FaqSection = () => {
   const [element, controls] = useScroll();
@@ -60,7 +60,7 @@ const FaqSection = () => {
 };
 
 const Faq = styled.div`
-  padding: 10rem 0;
+  padding: 116px 0 119px;
   background: rgba(12, 12, 12, 0.5);
   display: block;
   color: white;
@@ -70,29 +70,29 @@ const Faq = styled.div`
   h2 {
     margin: auto;
     max-width: var(--max-width);
-    padding: 0 2rem 2rem;
+    padding: 0 22px 60px;
   }
   .faq-line {
     background: #cccccc;
     height: 0.2rem;
-    margin: 2rem 0rem;
+    margin: 32px 0rem;
     width: 100%;
   }
   h4 {
     margin: auto;
     max-width: var(--max-width);
-    padding: 0rem 2rem;
+    padding: 0rem 22px;
   }
   .question {
-    padding: 3rem 0;
+    padding: 32px 0;
     cursor: pointer;
   }
   .answer {
-    padding: 2rem 0rem;
+    padding: 32px 0rem;
     p {
       margin: auto;
       max-width: var(--max-width);
-      padding: 1rem 2rem;
+      padding: 16px 22px;
     }
   }
 `;

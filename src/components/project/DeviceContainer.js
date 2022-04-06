@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 //APPEAR WHEN IN VIEWPORT
-import { fade, slideLeft, slideRight } from '../../animation';
+import { fade, slideLeft } from '../../animation';
 import { useScroll } from '../useScroll';
 //device pngs
 import macbook from '../../img/devices/new-empty-macbook.png';

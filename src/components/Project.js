@@ -59,7 +59,7 @@ export default Project;
 
 const StyledProject = styled.div`
   position: relative;
-  border: 1px solid white;
+  /* border: 1px solid white; */
 
   overflow: hidden;
   cursor: pointer;
@@ -91,17 +91,17 @@ const StyledImgContainer = styled.div`
     background-color: rgba(0, 0, 0, 0.35);
 
     width: 100%;
-    height: 60vh;
-    min-height: 500px;
-    max-height: 700px;
+    /* height: 60vh; */
+    /* min-height: 500px;
+    max-height: 700px; */
     z-index: 2;
   }
 
   img {
     width: 100%;
-    height: 60vh;
+    height: 66vh;
     min-height: 500px;
-    max-height: 700px;
+    max-height: 900px;
     display: block;
     /* border-radius: 20px 20px 0 0; */
     object-fit: cover;
@@ -110,6 +110,7 @@ const StyledImgContainer = styled.div`
 `;
 
 const StyledDetails = styled.div`
+  max-width: 400px;
   padding: 1.5rem 1.5rem 3rem 1.5rem;
   h3 {
     color: white;

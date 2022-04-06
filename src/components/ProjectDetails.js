@@ -2,12 +2,7 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 //APPEAR WHEN IN VIEWPORT
-import {
-  fade,
-  titleAnimation,
-  pageAnimation,
-  staggerContainer,
-} from '../animation';
+import { fade, titleAnimation, staggerContainer } from '../animation';
 import { useScroll } from './useScroll';
 
 //COMPONENTS
@@ -137,10 +132,10 @@ const StyledProjectDetail = styled(motion.div)`
   h2 {
     font-size: clamp(32px, 4vw, 40px);
   }
-
   .title-with-icon {
     display: flex;
     align-items: center;
+
     gap: 8px;
     /* h2 {
       letter-spacing: 1.125px;
@@ -150,7 +145,11 @@ const StyledProjectDetail = styled(motion.div)`
       width: clamp(22px, 3vw, 30px);
       height: clamp(22px, 3vw, 30px);
     }
+    h2 {
+      margin-bottom: 0;
+    }
   }
+
   .section-divider {
     padding: 116px;
     @media (max-width: 800px) {

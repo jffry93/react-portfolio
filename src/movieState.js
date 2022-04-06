@@ -25,7 +25,7 @@ export const MovieState = () => {
       mobileImg: vbcmobile,
       browserImg: vbcBrowser,
       ipadImg: vbcIpad,
-      url: '/work/the-athlete',
+      url: '/react-portfolio/work/the-athlete',
       links: [
         {
           title: 'Website',

@@ -7,7 +7,7 @@ import ProjectDetails from './ProjectDetails';
 //STYLING
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-import { fade, slideDown } from '../animation';
+import { fade } from '../animation';
 //reveal when in viewport
 import { useScroll } from './useScroll';
 //swiper
@@ -44,11 +44,11 @@ const PersonalProjects = () => {
 
   return (
     <StyledProjectSection
-      variants={fade}
-      animate={controls}
-      initial='hidden'
-      ref={element}
-      id='home-projects'
+    // variants={fade}
+    // animate={controls}
+    // initial='hidden'
+    // ref={element}
+    // id='home-projects'
     >
       {showDetail && (
         <ProjectDetails
@@ -57,7 +57,6 @@ const PersonalProjects = () => {
           setShowDetail={setShowDetail}
         />
       )}
-      <h2>Contributions</h2>
       {/* <p className='description'>Click on card to preview</p> */}
 
       <Swiper
@@ -75,8 +74,8 @@ const PersonalProjects = () => {
         touchRatio={0.2}
         slidesPerView={1.5}
         breakpoints={{
-          1000: {
-            slidesPerView: 3.5,
+          1100: {
+            slidesPerView: 3.4,
             spaceBetween: 0,
             coverflowEffect: {
               rotate: 30,
@@ -147,13 +146,13 @@ const PersonalProjects = () => {
 export default PersonalProjects;
 
 const StyledProjectSection = styled(motion.div)`
-  min-height: 570px;
-  max-height: 900px;
+  /* min-height: 570px;
+  max-height: 1300px; */
   /* max-width: var(--max-width); */
-  max-width: 1400px;
+
   width: 100%;
 
-  margin: 116px auto 119px;
+  /* margin: 116px auto 119px; */
 
   display: flex;
   flex-direction: column;

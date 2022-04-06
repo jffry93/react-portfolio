@@ -174,8 +174,13 @@ const ContactForm = ({ formValidation, setFormValidation }) => {
               rows='5'
             />
           </div>
-          <div className='form-group submit-group'>
-            <input onClick={validateForm} type='submit' value='Send' />
+          <div className='form-group submit-group '>
+            <input
+              onClick={validateForm}
+              type='submit'
+              value='Send'
+              id='submit-button'
+            />
           </div>
         </StyledForm>
       </StyledContactForm>
@@ -205,7 +210,7 @@ const StyledFormContainer = styled(motion.div)`
 
   @media (max-width: 450px) {
     flex-direction: column;
-    padding: 4rem 1rem;
+    padding: 4rem 22px;
   }
 `;
 const StyledContactForm = styled.div`
@@ -275,6 +280,7 @@ const StyledForm = styled.form`
       margin-left: 1rem; */
 
       border-radius: 8px;
+
       color: #f0544f; /* background-color: red; */
       /* span {
         color: white;
@@ -294,17 +300,21 @@ const StyledForm = styled.form`
     }
   }
   .submit-group {
-    margin: 0;
+    margin: 4px 0;
+    /* padding: 0.7rem 1rem; */
+    background-color: #e6e5e5;
+    border-radius: 8px;
     input {
       color: grey;
       background-color: var(--primary-text-color);
     }
   }
 
-  .form-group input,
-  .form-group textarea {
+  input,
+  textarea {
     width: 100%;
     padding: 0.7rem 1rem;
+
     border-radius: 3px;
     /* font-size: 1.5rem; */
     border: 1px solid #6d6d6d;
@@ -314,12 +324,22 @@ const StyledForm = styled.form`
     border-radius: 3px;
     resize: vertical;
   }
-  button[type='submit'] {
+  /* button[type='submit'] {
     width: 100%;
     border: none;
     outline: none;
     padding: 20px;
     border-radius: 8px;
     background-color: black;
+  } */
+  #submit-button {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 0;
+    margin: 0;
+    height: 38px;
+
+    background-color: #e6e5e5;
   }
 `;

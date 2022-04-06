@@ -5,7 +5,7 @@ import downloadIcon from '../img/icons/download-solid.svg';
 
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import { HashLink, NavHashLink } from 'react-router-hash-link';
 
 //RESUME
@@ -22,7 +22,7 @@ const Nav = ({ navToggle, setNavToggle }) => {
     <StyledNav>
       <div className='nav-container'>
         <HashLink
-          to='/'
+          to='/react-portfolio/'
           // scroll={(el) =>
           //   el.scrollIntoView({ behavior: 'smooth', block: 'start' })
           // }
@@ -41,7 +41,7 @@ const Nav = ({ navToggle, setNavToggle }) => {
             <NavHashLink
               activeClassName='selected'
               href='#'
-              to='/'
+              to='/react-portfolio/'
               // scroll={(el) =>
               //   el.scrollIntoView({ behavior: 'smooth', block: 'start' })
               // }
@@ -61,7 +61,11 @@ const Nav = ({ navToggle, setNavToggle }) => {
               }
             }}
           >
-            <NavHashLink activeClassName='selected' href='#' to='/work'>
+            <NavHashLink
+              activeClassName='selected'
+              href='#'
+              to='/react-portfolio/work'
+            >
               <span>Work</span>
             </NavHashLink>
             {/* <StyledLine
@@ -77,7 +81,11 @@ const Nav = ({ navToggle, setNavToggle }) => {
               }
             }}
           >
-            <NavHashLink activeClassName='selected' href='#' to='/contact'>
+            <NavHashLink
+              activeClassName='selected'
+              href='#'
+              to='/react-portfolio/contact'
+            >
               <span>Contact</span>
             </NavHashLink>
             {/* <StyledLine

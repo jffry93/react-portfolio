@@ -1,19 +1,13 @@
 import { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 //components
-import HomeSection from '../components/HomeSection';
+// import HomeSection from '../components/HomeSection';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 //PAGE ANIMATION
-import {
-  pageAnimation,
-  fade,
-  titleAnimation,
-  slideLeft,
-  slideRight,
-} from '../animation';
+import { fade } from '../animation';
 //APPEAR WHEN IN VIEWPORT
-import { useScroll } from '../components/useScroll';
+// import { useScroll } from '../components/useScroll';
 //COMPONENTS
 // import HeaderContainer from '../components/project/HeaderContainer';
 import DeviceContainer from '../components/project/DeviceContainer';
@@ -24,9 +18,9 @@ import SkillsContainer from '../components/project/SkillsContainer';
 //JSON DATA
 import { MovieState } from '../movieState';
 //device pngs
-import macbook from '../img/devices/new-empty-macbook.png';
-import iphone from '../img/devices/empty-iphone.png';
-import ipad from '../img/devices/empty-ipad-horizontal.png';
+// import macbook from '../img/devices/new-empty-macbook.png';
+// import iphone from '../img/devices/empty-iphone.png';
+// import ipad from '../img/devices/empty-ipad-horizontal.png';
 
 const MovieDetail = () => {
   const history = useHistory();
@@ -45,7 +39,7 @@ const MovieDetail = () => {
   }, [movies, url]);
   console.log(movie);
 
-  const [element, controls] = useScroll();
+  // const [element, controls] = useScroll();
   return (
     //added a fraction tag around to add a function
     <>

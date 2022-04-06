@@ -93,10 +93,15 @@ const StyledSkillsContainer = styled(motion.div)`
       align-items: center;
       padding: 63px var(--layout-secondary-padding) 16px;
     }
+    @media (max-width: 500px) {
+      flex-direction: column-reverse;
+      align-items: center;
+      padding: 63px var(--layout-padding) 16px;
+    }
   }
 
   p {
-    padding: 16px 0 16px;
+    padding: 16px 0 24px;
   }
   .skills-container {
     padding-bottom: 119px;

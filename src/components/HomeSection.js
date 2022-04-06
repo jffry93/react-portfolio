@@ -11,7 +11,7 @@ import { NavHashLink } from 'react-router-hash-link';
 
 //Framer Motion
 import { motion } from 'framer-motion';
-import { titleAnimation, fade } from '../animation';
+import { titleAnimation } from '../animation';
 // import ScrollTop from './ScrollTop';
 
 const HomeSection = () => {
@@ -27,12 +27,12 @@ const HomeSection = () => {
             </motion.h3>
           </StyledHide>
           <StyledHide className='buttons' id='buttons'>
-            <Link href='#' to='/contact'>
+            <Link href='#' to='/react-portfolio/contact'>
               <motion.button>Let's talk</motion.button>
             </Link>
             <NavHashLink
               href='#'
-              to='/work'
+              to='/react-portfolio/work'
               // scroll={(el) =>
               //   el.scrollIntoView({ behavior: 'smooth', block: 'center' })
               // }
@@ -52,14 +52,16 @@ const StyledHomepageContainer = styled(motion.div)`
   height: var(--container-height);
   min-height: 500px;
   max-height: 850px;
+
   color: white;
 
   background-image: url(${coffee});
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
   background-position: center;
   /* transform: scaleX(-1); */
+  position: relative;
   @media (max-width: 750px) {
     #buttons {
       flex-direction: column;
@@ -68,8 +70,10 @@ const StyledHomepageContainer = styled(motion.div)`
   }
 
   .overlay {
+    /* border: 1px solid red; */
     min-height: 500px;
     max-height: 850px;
+    background-color: rgba(0, 0, 0, 0.5);
     /* transform: scaleX(-1); */
   }
   .buttons {

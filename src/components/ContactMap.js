@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import 'mapbox-gl/dist/mapbox-gl.css';
 import React, { useRef, useEffect, useState } from 'react';
-import mapboxgl, { marker } from '!mapbox-gl'; // eslint-disable-line import/no-webpack-loader-syntax
+import mapboxgl from '!mapbox-gl'; // eslint-disable-line import/no-webpack-loader-syntax
 
 mapboxgl.accessToken =
   'pk.eyJ1IjoiamZmcnk5MyIsImEiOiJja3l4NzJ1amYwMWR5MnVwbDQxa2Z2NHZvIn0.jkXVzTPcydwePjI4ZMw5zg';
@@ -87,6 +87,10 @@ const StyledMapContainer = styled.div`
     top: 0;
     @media (max-width: 700px) {
       min-height: 300px;
+      height: 30vh;
+    }
+    @media (max-width: 500px) {
+      min-height: 200px;
       height: 30vh;
     }
   }

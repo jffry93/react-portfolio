@@ -4,8 +4,7 @@
 // import money from '../img/money.svg';
 // import teamwork from '../img/teamwork.svg';
 //IMAGES
-import headshot from '../img/ben_parker.jpg';
-import myFace from '../img/myFace3.jpg';
+import myFace from '../img/myFace.jpg';
 //ICONS
 import downloadIcon from '../img/icons/download-solid.svg';
 //Styles
@@ -16,7 +15,7 @@ import MyResume from '../Resume/Jeffrey_Zalischi_Resume.pdf';
 //scroll animation that runs when an element is in view
 //Framer Motion
 import { motion } from 'framer-motion';
-import { fade, slideDown, slideLeft, slideRight } from '../animation';
+import { fade, slideRight } from '../animation';
 import { useScroll } from './useScroll';
 
 const ServicesSection = () => {
@@ -84,9 +83,9 @@ const StyledServices = styled(motion.div)`
     align-items: center;
     padding: 63px var(--layout-secondary-padding) 94px;
   }
-  @media (max-width: 650px) {
-    padding: 63px var(--layout-padding) 94px;
-  }
+  /* @media (max-width: 650px) {
+    padding: 63px 44px 94px;
+  } */
 `;
 const StyledServicesDescription = styled(motion.div)`
   /* border: 3px solid blue; */
@@ -98,6 +97,9 @@ const StyledServicesDescription = styled(motion.div)`
   z-index: 2;
   @media (max-width: 850px) {
     max-width: 650px;
+  }
+  h2 {
+    margin-bottom: 8px;
   }
 
   a {
@@ -154,9 +156,9 @@ const StyledImage = styled(motion.div)`
     /* margin: auto; */
     /* height: 70vh; */
     width: 100%;
-    min-width: 500px;
+    /* min-width: 400px; */
     @media (max-width: 750px) {
-      /* min-width: unset; */
+      min-width: unset;
     }
   }
 `;

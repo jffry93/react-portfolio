@@ -35,7 +35,7 @@ const StyledSkillCard = styled.div`
     font-size: 1rem;
 
     width: fit-content;
-    border: 2px solid white;
+    border: 1px solid white;
     padding: 0.7rem;
     text-decoration: none;
     color: white;

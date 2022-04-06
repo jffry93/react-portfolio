@@ -26,16 +26,16 @@ function App() {
       <Nav navToggle={navToggle} setNavToggle={setNavToggle} />
       <AnimatePresence exitBeforeEnter>
         <Switch location={location} key={location.key}>
-          <Route path='/' exact>
+          <Route path='/react-portfolio/' exact>
             <AboutUs />
           </Route>
-          <Route path='/work' exact>
+          <Route path='/react-portfolio/work' exact>
             <OurWork />
           </Route>
-          <Route path='/work/:id'>
+          <Route path='/react-portfolio/work/:id'>
             <MovieDetail />
           </Route>
-          <Route path='/contact'>
+          <Route path='/react-portfolio/contact'>
             <ContactUs />
           </Route>
         </Switch>

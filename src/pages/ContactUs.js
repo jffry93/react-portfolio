@@ -7,9 +7,9 @@ import {
   pageAnimation,
   sliderContainer,
   sliderAnimation,
-  titleAnimation,
 } from '../animation';
 
+import ScrollTop from '../components/ScrollTop';
 //IMAGES
 import cntower from '../img/alex_wong.jpg';
 import { SiNike } from 'react-icons/si';
@@ -29,6 +29,7 @@ const ContactUs = () => {
       exit='exit'
       style={{ background: '#121212' }}
     >
+      <ScrollTop />
       <motion.div variants={sliderContainer}>
         <StyledFrame1 variants={sliderAnimation}></StyledFrame1>
         <StyledFrame2 variants={sliderAnimation}></StyledFrame2>

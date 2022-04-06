@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 //ALL IMAGES
-import athlete from '../img/athlete-small.png';
-import theracer from '../img/theracer-small.png';
-import goodtimes from '../img/goodtimes-small.png';
+// import athlete from '../img/athlete-small.png';
+// import theracer from '../img/theracer-small.png';
+// import goodtimes from '../img/goodtimes-small.png';
 import vbcThumb from '../img/projects/Vous/vbcThumb.png';
 import bayrichThumb from '../img/projects/Bayrich/weird.jpg';
 import nchThumb from '../img/projects/NCH/nchThumb.webp';
@@ -20,6 +20,8 @@ import {
 } from '../animation';
 import { useScroll } from '../components/useScroll';
 import ScrollTop from '../components/ScrollTop';
+
+import PersonalProject from '../components/PersonalProjects';
 
 const OurWork = () => {
   document.body.style.overflow = 'auto';
@@ -44,50 +46,32 @@ const OurWork = () => {
         <StyledFrame4 variants={sliderAnimation}></StyledFrame4>
       </motion.div>
       <motion.div variants={fade}>
-        <StyledMovie
-        // ref={element}
-        // variants={fade}
-        // animate={controls}
-        // initials='hidden'
+        <motion.div variants={fade} className='paid-work'>
+          <PersonalProject />
+        </motion.div>
+        {/* <motion.div
+          ref={element}
+          variants={fade}
+          animate={controls}
+          initials='hidden'
+          className='personal-work'
         >
-          <Link to='/work/the-athlete' style={{ textDecoration: 'none' }}>
-            <motion.div variants={fade} className='work-card'>
-              <div className='card-details'>
-                <motion.h2 variants={fade}>Vous Beauty Clinic</motion.h2>
-                <motion.div
-                  variants={lineAnimation}
-                  className='line'
-                ></motion.div>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Voluptates, voluptas. Numquam at impedit reiciendis
-                  consectetur distinctio ab quis vitae eos.
-                </p>
-                <div>
-                  <button>Learn More</button>
-                </div>
-              </div>
-              <StyledHide className='work-image'>
-                <motion.img
-                  variants={photoAnimation}
-                  src={vbcThumb}
-                  alt='Vous Beauty Clinic'
-                />
-              </StyledHide>
-            </motion.div>
-          </Link>
-        </StyledMovie>
-
-        <StyledMovie
+          <h2>Personal Projects</h2>
+        </motion.div> */}
+        {/* <StyledMovie
           ref={element}
           variants={fade}
           animate={controls}
           initials='hidden'
         >
-          <Link to='/work/the-racer' style={{ textDecoration: 'none' }}>
+          <Link
+            to='/react-portfolio/work/the-athlete'
+            style={{ textDecoration: 'none' }}
+          >
+            <h2 variants={fade}>React Music App</h2>
             <motion.div variants={fade} className='work-card'>
               <div className='card-details'>
-                <h2 variants={fade}>Bayrich Construction</h2>
+                <h2 variants={fade}>Custom Music App</h2>
                 <motion.div
                   variants={lineAnimation}
                   className='line'
@@ -102,7 +86,7 @@ const OurWork = () => {
                 </div>
               </div>
               <StyledHide className='work-image'>
-                <img src={bayrichThumb} alt='the racer' />
+                <img src={vbcThumb} alt='the racer' />
               </StyledHide>
             </motion.div>
           </Link>
@@ -136,37 +120,7 @@ const OurWork = () => {
               </StyledHide>
             </motion.div>
           </Link>
-        </StyledMovie>
-
-        <StyledMovie
-          ref={element3}
-          variants={fade}
-          animate={control3}
-          initials='hidden'
-        >
-          <Link to='/work/good-times' style={{ textDecoration: 'none' }}>
-            <motion.div variants={fade} className='work-card'>
-              <div className='card-details'>
-                <motion.h2 variants={fade}>Matthew Del Bel Belluz</motion.h2>
-                <motion.div
-                  variants={lineAnimation}
-                  className='line'
-                ></motion.div>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Voluptates, voluptas. Numquam at impedit reiciendis
-                  consectetur distinctio ab quis vitae eos.
-                </p>
-                <div>
-                  <button>Learn More</button>
-                </div>
-              </div>
-              <StyledHide className='work-image'>
-                <img src={mdbbThumb} alt='the goodtimes' />
-              </StyledHide>
-            </motion.div>
-          </Link>
-        </StyledMovie>
+        </StyledMovie> */}
       </motion.div>
     </StyledWork>
   );
@@ -175,6 +129,20 @@ const OurWork = () => {
 const StyledWork = styled(motion.div)`
   position: relative;
   overflow: hidden;
+  .paid-work {
+    height: var(--container-height);
+    max-width: 2000px;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .personal-work {
+    max-width: var(--max-width);
+    margin: 32px auto;
+    padding: 0 var(--layout-padding);
+  }
 `;
 
 const StyledMovie = styled(motion.div)`
@@ -205,6 +173,7 @@ const StyledMovie = styled(motion.div)`
     position: relative;
     .card-details {
       flex: 1;
+      z-index: 1;
 
       display: flex;
       flex-direction: column;
