@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/react-portfolio/static/css/main.35d6b2c1.chunk.css",
-    "main.js": "/react-portfolio/static/js/main.e3cce37f.chunk.js",
-    "main.js.map": "/react-portfolio/static/js/main.e3cce37f.chunk.js.map",
+    "main.js": "/react-portfolio/static/js/main.f5c71ed8.chunk.js",
+    "main.js.map": "/react-portfolio/static/js/main.f5c71ed8.chunk.js.map",
     "runtime-main.js": "/react-portfolio/static/js/runtime-main.09fcd760.js",
     "runtime-main.js.map": "/react-portfolio/static/js/runtime-main.09fcd760.js.map",
     "static/css/2.1a2a3f90.chunk.css": "/react-portfolio/static/css/2.1a2a3f90.chunk.css",
@@ -19,6 +19,8 @@
     "static/media/alex_wong.01020a37.jpg": "/react-portfolio/static/media/alex_wong.01020a37.jpg",
     "static/media/athlete-small.9c7a85d4.png": "/react-portfolio/static/media/athlete-small.9c7a85d4.png",
     "static/media/athlete2.b216a5ad.png": "/react-portfolio/static/media/athlete2.b216a5ad.png",
+    "static/media/bay-browser-light.e8a66ce7.png": "/react-portfolio/static/media/bay-browser-light.e8a66ce7.png",
+    "static/media/bay1280x800.1dea56db.png": "/react-portfolio/static/media/bay1280x800.1dea56db.png",
     "static/media/bay405x780.7ecc1f1e.png": "/react-portfolio/static/media/bay405x780.7ecc1f1e.png",
     "static/media/book-open-solid.59c24569.svg": "/react-portfolio/static/media/book-open-solid.59c24569.svg",
     "static/media/crop.23966b02.svg": "/react-portfolio/static/media/crop.23966b02.svg",
@@ -31,8 +33,16 @@
     "static/media/icon-close.d47fda63.svg": "/react-portfolio/static/media/icon-close.d47fda63.svg",
     "static/media/icon-hamburger.5273efa7.svg": "/react-portfolio/static/media/icon-hamburger.5273efa7.svg",
     "static/media/iphonex783.f94cb974.png": "/react-portfolio/static/media/iphonex783.f94cb974.png",
+    "static/media/mdbb-browser-light.9524316e.png": "/react-portfolio/static/media/mdbb-browser-light.9524316e.png",
+    "static/media/mdbb1194x834.fdaab3c4.png": "/react-portfolio/static/media/mdbb1194x834.fdaab3c4.png",
+    "static/media/mdbb1280x800.658adec6.png": "/react-portfolio/static/media/mdbb1280x800.658adec6.png",
+    "static/media/mdbb405x780.363acc38.png": "/react-portfolio/static/media/mdbb405x780.363acc38.png",
     "static/media/mdbbThumb.7a06587e.jpg": "/react-portfolio/static/media/mdbbThumb.7a06587e.jpg",
     "static/media/myFace.24bd4901.jpg": "/react-portfolio/static/media/myFace.24bd4901.jpg",
+    "static/media/nch-browser-light.570adb06.png": "/react-portfolio/static/media/nch-browser-light.570adb06.png",
+    "static/media/nch1194x815.250fb295.png": "/react-portfolio/static/media/nch1194x815.250fb295.png",
+    "static/media/nch1280x800.08eef731.png": "/react-portfolio/static/media/nch1280x800.08eef731.png",
+    "static/media/nch405x780.917f863b.png": "/react-portfolio/static/media/nch405x780.917f863b.png",
     "static/media/nchThumb.816a84e6.webp": "/react-portfolio/static/media/nchThumb.816a84e6.webp",
     "static/media/new-empty-macbook.cd15fd20.png": "/react-portfolio/static/media/new-empty-macbook.cd15fd20.png",
     "static/media/paint-brush.526d2531.svg": "/react-portfolio/static/media/paint-brush.526d2531.svg",
@@ -45,7 +55,7 @@
     "static/media/vbc-desktop.321c5062.png": "/react-portfolio/static/media/vbc-desktop.321c5062.png",
     "static/media/vbc-ipad-930.0e33d92f.png": "/react-portfolio/static/media/vbc-ipad-930.0e33d92f.png",
     "static/media/vbc-shop-light.d5c1d69c.png": "/react-portfolio/static/media/vbc-shop-light.d5c1d69c.png",
-    "static/media/vbc405x780.57941257.png": "/react-portfolio/static/media/vbc405x780.57941257.png",
+    "static/media/vbc405x780.c7d0c8dd.png": "/react-portfolio/static/media/vbc405x780.c7d0c8dd.png",
     "static/media/vbcThumb.cdfd055a.png": "/react-portfolio/static/media/vbcThumb.cdfd055a.png",
     "static/media/weird.15f8f2df.jpg": "/react-portfolio/static/media/weird.15f8f2df.jpg"
   },
@@ -54,6 +64,6 @@
     "static/css/2.1a2a3f90.chunk.css",
     "static/js/2.e78d4b14.chunk.js",
     "static/css/main.35d6b2c1.chunk.css",
-    "static/js/main.e3cce37f.chunk.js"
+    "static/js/main.f5c71ed8.chunk.js"
   ]
 }
