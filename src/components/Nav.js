@@ -22,7 +22,7 @@ const Nav = ({ navToggle, setNavToggle }) => {
     <StyledNav>
       <div className='nav-container'>
         <HashLink
-          to='/react-portfolio/'
+          to='/'
           // scroll={(el) =>
           //   el.scrollIntoView({ behavior: 'smooth', block: 'start' })
           // }
@@ -41,7 +41,7 @@ const Nav = ({ navToggle, setNavToggle }) => {
             <NavHashLink
               activeClassName='selected'
               href='#'
-              to='/react-portfolio/'
+              to='/'
               // scroll={(el) =>
               //   el.scrollIntoView({ behavior: 'smooth', block: 'start' })
               // }
@@ -61,11 +61,7 @@ const Nav = ({ navToggle, setNavToggle }) => {
               }
             }}
           >
-            <NavHashLink
-              activeClassName='selected'
-              href='#'
-              to='/react-portfolio/work'
-            >
+            <NavHashLink activeClassName='selected' href='#' to='/work'>
               <span>Work</span>
             </NavHashLink>
             {/* <StyledLine
@@ -81,11 +77,7 @@ const Nav = ({ navToggle, setNavToggle }) => {
               }
             }}
           >
-            <NavHashLink
-              activeClassName='selected'
-              href='#'
-              to='/react-portfolio/contact'
-            >
+            <NavHashLink activeClassName='selected' href='#' to='/contact'>
               <span>Contact</span>
             </NavHashLink>
             {/* <StyledLine

@@ -27,12 +27,12 @@ const HomeSection = () => {
             </motion.h3>
           </StyledHide>
           <StyledHide className='buttons' id='buttons'>
-            <Link href='#' to='/react-portfolio/contact'>
+            <Link href='#' to='/contact'>
               <motion.button>Let's talk</motion.button>
             </Link>
             <NavHashLink
               href='#'
-              to='/react-portfolio/work'
+              to='/work'
               // scroll={(el) =>
               //   el.scrollIntoView({ behavior: 'smooth', block: 'center' })
               // }
