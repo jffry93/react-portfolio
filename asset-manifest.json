@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/react-portfolio/static/css/main.35d6b2c1.chunk.css",
-    "main.js": "/react-portfolio/static/js/main.efc8dc80.chunk.js",
-    "main.js.map": "/react-portfolio/static/js/main.efc8dc80.chunk.js.map",
+    "main.js": "/react-portfolio/static/js/main.71fa3a2b.chunk.js",
+    "main.js.map": "/react-portfolio/static/js/main.71fa3a2b.chunk.js.map",
     "runtime-main.js": "/react-portfolio/static/js/runtime-main.09fcd760.js",
     "runtime-main.js.map": "/react-portfolio/static/js/runtime-main.09fcd760.js.map",
     "static/css/2.1a2a3f90.chunk.css": "/react-portfolio/static/css/2.1a2a3f90.chunk.css",
@@ -22,8 +22,8 @@
     "static/media/book-open-solid.59c24569.svg": "/react-portfolio/static/media/book-open-solid.59c24569.svg",
     "static/media/crop.23966b02.svg": "/react-portfolio/static/media/crop.23966b02.svg",
     "static/media/download-solid.7026e29b.svg": "/react-portfolio/static/media/download-solid.7026e29b.svg",
-    "static/media/empty-ipad-horizontal.62542e83.png": "/react-portfolio/static/media/empty-ipad-horizontal.62542e83.png",
-    "static/media/empty-iphone.8f53b9ca.png": "/react-portfolio/static/media/empty-iphone.8f53b9ca.png",
+    "static/media/empty-ipad-horizontal.1ad0ca7e.png": "/react-portfolio/static/media/empty-ipad-horizontal.1ad0ca7e.png",
+    "static/media/empty-iphone.5af2f499.png": "/react-portfolio/static/media/empty-iphone.5af2f499.png",
     "static/media/good-times2.4ea1be17.jpg": "/react-portfolio/static/media/good-times2.4ea1be17.jpg",
     "static/media/goodtimes-small.94ab060d.png": "/react-portfolio/static/media/goodtimes-small.94ab060d.png",
     "static/media/ibrahim.307092ae.jpg": "/react-portfolio/static/media/ibrahim.307092ae.jpg",
@@ -33,7 +33,7 @@
     "static/media/mdbbThumb.7a06587e.jpg": "/react-portfolio/static/media/mdbbThumb.7a06587e.jpg",
     "static/media/myFace.24bd4901.jpg": "/react-portfolio/static/media/myFace.24bd4901.jpg",
     "static/media/nchThumb.816a84e6.webp": "/react-portfolio/static/media/nchThumb.816a84e6.webp",
-    "static/media/new-empty-macbook.c4e9f228.png": "/react-portfolio/static/media/new-empty-macbook.c4e9f228.png",
+    "static/media/new-empty-macbook.cd15fd20.png": "/react-portfolio/static/media/new-empty-macbook.cd15fd20.png",
     "static/media/paint-brush.526d2531.svg": "/react-portfolio/static/media/paint-brush.526d2531.svg",
     "static/media/palette-icon.cfbc67e7.svg": "/react-portfolio/static/media/palette-icon.cfbc67e7.svg",
     "static/media/role-icon.8c96069f.svg": "/react-portfolio/static/media/role-icon.8c96069f.svg",
@@ -41,17 +41,17 @@
     "static/media/the-racer2.580f15cd.jpg": "/react-portfolio/static/media/the-racer2.580f15cd.jpg",
     "static/media/theracer-small.51874213.png": "/react-portfolio/static/media/theracer-small.51874213.png",
     "static/media/tools-icon.a74cea41.svg": "/react-portfolio/static/media/tools-icon.a74cea41.svg",
-    "static/media/vbc-desktop.21daf576.png": "/react-portfolio/static/media/vbc-desktop.21daf576.png",
+    "static/media/vbc-desktop.321c5062.png": "/react-portfolio/static/media/vbc-desktop.321c5062.png",
     "static/media/vbc-ipad-930.0e33d92f.png": "/react-portfolio/static/media/vbc-ipad-930.0e33d92f.png",
-    "static/media/vbc-shop-light.91d1594a.png": "/react-portfolio/static/media/vbc-shop-light.91d1594a.png",
+    "static/media/vbc-shop-light.d5c1d69c.png": "/react-portfolio/static/media/vbc-shop-light.d5c1d69c.png",
     "static/media/vbcThumb.cdfd055a.png": "/react-portfolio/static/media/vbcThumb.cdfd055a.png",
-    "static/media/weird.d1a6f9a0.jpg": "/react-portfolio/static/media/weird.d1a6f9a0.jpg"
+    "static/media/weird.15f8f2df.jpg": "/react-portfolio/static/media/weird.15f8f2df.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.09fcd760.js",
     "static/css/2.1a2a3f90.chunk.css",
     "static/js/2.e78d4b14.chunk.js",
     "static/css/main.35d6b2c1.chunk.css",
-    "static/js/main.efc8dc80.chunk.js"
+    "static/js/main.71fa3a2b.chunk.js"
   ]
 }
