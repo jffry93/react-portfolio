@@ -34,11 +34,25 @@ const ServicesSection = () => {
       </StyledImage>
       <StyledServicesDescription variants={fade}>
         <h2>About me</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        <p>A developer that enjoys a well-written documentation.</p>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima in
-          sint dignissimos debitis voluptate corporis voluptatem quae adipisci
-          cupiditate,
+          I’ve been translating designs into web applications, interacting with
+          APIs and building modern reusable scalable components.
+        </p>
+        <p>
+          I’m extremely passionate about software development, learning new
+          skills and making the most out of my day.
+        </p>
+        <p>
+          Check out my{' '}
+          <a
+            className='github-link'
+            href='https://github.com/jffry93'
+            target='_blank'
+          >
+            Github
+          </a>{' '}
+          to see what I've been working on.
         </p>
         <motion.a
           variants={fade}
@@ -101,8 +115,16 @@ const StyledServicesDescription = styled(motion.div)`
   h2 {
     margin-bottom: 8px;
   }
+  .github-link {
+    color: white;
+    font-weight: 600;
+    transition: font-size 0.1s;
+  }
+  .github-link:hover {
+    font-size: clamp(17px, 1.2vw, 18px);
+  }
 
-  a {
+  .resume {
     margin-top: 32px;
     width: fit-content;
     display: flex;
@@ -115,6 +137,9 @@ const StyledServicesDescription = styled(motion.div)`
     font-weight: 700;
     font-size: 17px;
     text-decoration: none;
+    transform: scale(1);
+
+    transition: background-color 0.5s, transform 0.5s;
     .download {
       width: 17px;
       height: 17px;
@@ -127,6 +152,10 @@ const StyledServicesDescription = styled(motion.div)`
     span {
       font-size: 17px;
     }
+  }
+  .resume:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    transform: scale(1.03);
   }
 `;
 

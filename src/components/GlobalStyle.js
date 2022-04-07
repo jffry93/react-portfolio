@@ -51,9 +51,11 @@ const GlobalStyle = createGlobalStyle`
         font-family: 'Inter', sans-serif;
         &:hover{
             background-color: rgba(0,0,0,.5);
+            transform: scale(1.03) ;
         }
         
     }
+    
     h1{
         font-size: clamp(3.125rem, 4vw, 4rem);
         line-height: 1.07143;

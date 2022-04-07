@@ -80,6 +80,7 @@ const StyledHomepageContainer = styled(motion.div)`
     display: flex;
     gap: 20px;
     margin-top: 1.35em;
+    overflow: visible;
     button {
       min-width: 140px;
       /* font-size: 1.625rem; */

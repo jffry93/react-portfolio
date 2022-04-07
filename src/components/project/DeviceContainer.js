@@ -100,6 +100,9 @@ const StyledDescriptionContainer = styled(motion.div)`
       display: flex;
       flex-direction: column;
       gap: 0px;
+      h2 {
+        margin-bottom: 0;
+      }
     }
     //ARRANGEMENT OF BUTTONS
     .project-sites {

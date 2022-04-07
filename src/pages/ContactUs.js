@@ -90,6 +90,7 @@ const StyledContactStyle = styled(motion.div)`
   justify-content: center;
   align-items: center;
   position: relative;
+
   /* ::after {
     content: ''; // ::before and ::after both require content
     position: absolute;
@@ -146,7 +147,7 @@ const StyledStatus = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  /* top: 10vh; */
+  top: var(--navbar-height);
   left: 0;
   height: var(--container-height);
   width: 100%;

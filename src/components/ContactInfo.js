@@ -59,7 +59,7 @@ const ContactInfo = () => {
         </div>
         <div className='icon-container'>
           <a
-            href='www.linkedin.com/in/jffry93'
+            href='https://www.linkedin.com/in/jffry93/'
             target='_blank'
             className='linkedin'
           >

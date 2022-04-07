@@ -30,7 +30,7 @@ const skillsState = () => {
     {
       title: 'LESS',
       description:
-        '“Lorem Ipsum is simply dummy text of the printing and typesetting industry.”',
+        'A dynamic preprocessor style sheet language that can be compiled into Cascading Style Sheets and run on the client side or server side.',
       documentation: '"https://www.lesscss.org/"',
     },
     {
@@ -48,7 +48,7 @@ const skillsState = () => {
     {
       title: 'React',
       description:
-        'A open-source front-end JavaScript library for building user interfaces based on UI components.',
+        'An open-source front-end JavaScript library for building user interfaces based on UI components.',
       documentation: 'https://www.reactjs.org/',
     },
     {
@@ -76,13 +76,13 @@ const skillsState = () => {
     },
     {
       title: 'Tailwind',
-      description: 'A utility-first CSS framework packed with classes ',
+      description: 'A utility-first CSS framework packed with classes. ',
       documentation: 'https://www.tailwindcss.com',
     },
     {
       title: 'Jest',
       description:
-        'A JavaScript testing framework designed to ensure correctness of any JavaScript codebase',
+        'A JavaScript testing framework designed to ensure correctness of any JavaScript codebase.',
       documentation: 'https://www.jestjs.io',
     },
     {
@@ -105,13 +105,13 @@ const skillsState = () => {
     {
       title: 'Material',
       description:
-        'a library that allows the user to import and use different components to create a user interface in our React applications',
+        'A library that allows the user to import and use different components to create a user interface in our React applications.',
       documentation: 'https://mui.com',
     },
     {
       title: 'Git',
       description:
-        'software for tracking changes in any set of files, usually used for coordinating work among programmers.',
+        'Software for tracking changes in any set of files, usually used for coordinating work among programmers.',
       documentation: 'https://www.git-scm.com/',
     },
     {
@@ -141,13 +141,13 @@ const skillsState = () => {
     {
       title: 'Mapbox',
       description:
-        'Photoshop, for maps. Giving designers control over everything',
+        'Photoshop, for maps. Giving designers control over everything.',
       documentation: 'https://www.mapbox.com',
     },
     {
       title: 'EmailJS',
       description:
-        'Send emails using client-side technologies only. No server is required ',
+        'Send emails using client-side technologies only. No server is required. ',
       documentation: 'https://www.emailjs.com',
     },
 
@@ -159,9 +159,9 @@ const skillsState = () => {
         'https://www.squarespace.com/website-design/?channel=pbr&subchannel=go&campaign=pbr-dr-go-ca-en-squarespace-general-bmm&subcampaign=(brand-general_squarespaces_bmm)&&utm_source=google&utm_medium=pbr&utm_campaign=pbr-dr-go-ca-en-squarespace-general-bmm&utm_term=%2Bsquarespaces&gclid=Cj0KCQiA9OiPBhCOARIsAI0y71BWTQrHPzNlNAj3PLrK1YEnRFlPhD9T3zNybnHk4k4bu5YWFh_1UYMaAnxdEALw_wcB&gclsrc=aw.ds',
     },
     {
-      title: 'Wix',
+      title: 'WiX',
       description:
-        'a leading cloud-based development platform with millions of users worldwide.',
+        'A leading cloud-based development platform with millions of users worldwide.',
       documentation: 'https://www.wix.com/about/us',
     },
     {
@@ -169,6 +169,12 @@ const skillsState = () => {
       description:
         'A web creation platform made exclusively for designers and agencies. ',
       documentation: 'https://www.editorx.com',
+    },
+    {
+      title: 'Webflow',
+      description:
+        'Brings the power of website animations and interactions directly into a visual toolbox.',
+      documentation: 'https://webflow.com/',
     },
   ];
 };

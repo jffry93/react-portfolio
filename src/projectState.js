@@ -26,7 +26,10 @@ import mdbbBrowser from './img/projects/MDBB/mdbb-browser-light.png';
 import squarespaceIcon from './img/icons/squarespace-brands.svg';
 import paintBrush from './img/icons/paint-brush.svg';
 import crop from './img/icons/crop.svg';
-
+import customize from './img/icons/key-solid.svg';
+import progress from './img/icons/list-check-solid.svg';
+import update from './img/icons/arrows-rotate-solid.svg';
+import celebrate from './img/icons/champagne-glasses-solid.svg';
 const projectState = () => {
   return [
     {
@@ -44,6 +47,100 @@ const projectState = () => {
         {
           title: 'Website',
           website: 'https://www.bayrichconstruction.ca/',
+        },
+      ],
+      roles: [
+        {
+          iconFa: customize,
+          title: 'Customized',
+          description: 'Setup custom animations throughout whole site.',
+        },
+        {
+          iconFa: paintBrush,
+          title: 'Designed',
+          description:
+            'Oversaw the website alignment, typography, UI design and page animations.',
+        },
+        {
+          iconFa: progress,
+          title: 'Managed',
+          description:
+            'Created the whole website from scratch and completed the task within the discussed time frame.',
+        },
+        {
+          iconFa: update,
+          title: 'Updated',
+          description:
+            'Updated original Wix website before deciding EditorX is a better alternative.',
+        },
+      ],
+      icons: [
+        {
+          title: 'WiX',
+          description:
+            'A leading cloud-based development platform with millions of users worldwide.',
+          linkUrl: 'https://www.wix.com/about/us',
+        },
+        {
+          title: 'Editor X',
+          description:
+            'A web creation platform made exclusively for designers and agencies.',
+          linkUrl: 'https://www.editorx.com',
+        },
+        {
+          title: 'Adobe Photoshop',
+          description:
+            'A software used for editing photographs, compositing digital art, animating, and graphic design. ',
+          linkUrl: 'https://helpx.adobe.com/photoshop/user-guide.html',
+        },
+        {
+          title: 'JavaScript',
+          description:
+            'No website is complete without a bit of custom Vanilla Javascript.',
+          linkUrl: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
+        },
+      ],
+      colours: [
+        {
+          hexCode: '#AB2426',
+        },
+        {
+          hexCode: '#721819',
+        },
+        {
+          hexCode: '#1E1E1E',
+        },
+      ],
+      fonts: [
+        {
+          title: 'Primary',
+          fontFamily: "'Poppins', sans-serif",
+          fontWeight: '600',
+          letterSpacing: 'normal',
+        },
+        {
+          title: 'Secondary',
+          fontFamily: "'Raleway', sans-serif",
+          fontWeight: '100',
+          letterSpacing: '0.5px',
+        },
+      ],
+    },
+    {
+      title: 'VOUS Beauty Clinic',
+      secondaryTitle: 'Cosmetics & Spa Website',
+      thumbImg: vbcMain,
+      mainImg: vbcdesktop,
+      secondaryImg: vbcmobile,
+      browserImg: vbcBrowser,
+      ipadImg: vbcIpad,
+      description: 'Breif Summary of Project',
+      secondDescription:
+        'VOUS Beauty Clinic specializes in cosmetic treatments & solutions. This website was created for the business to sell products, provide information and schedule appointments.',
+      url: [
+        {
+          title: 'Website',
+          website: 'https://vousbeautyclinic.com/skincare',
         },
       ],
       roles: [
@@ -127,85 +224,80 @@ const projectState = () => {
       ipadImg: mdbbIpad,
       description: 'Breif Summary of Project',
       secondDescription:
-        'VOUS Beauty Clinic specializes in cosmetic treatments & solutions.Lorem ipsum dolor sit, amet consectetur adipisicing elit.',
+        'A professional actor that was looking to showcase his talents in the digital space. This portfolio provides his headshots, a quick reel, contact information and his resume.',
       url: [
         {
           title: 'Website',
-          website: 'https://vousbeautyclinic.com/skincare',
+          website: 'https://jffry93.github.io/actor-portfolio/',
         },
         {
           title: 'Github',
-          website: 'https://vousbeautyclinic.com/skincare',
+          website: 'https://github.com/jffry93/actor-portfolio',
         },
       ],
       roles: [
         {
-          iconFa: squarespaceIcon,
+          iconFa: progress,
           title: 'Managed',
-          description: 'Updated and maintained the Squarespace website.',
-        },
-        {
-          iconFa: paintBrush,
-          title: 'Integrated',
-          description: 'Added custom features and styling.',
+          description:
+            'Created the website from scratch, updated and maintained the website.',
         },
         {
           iconFa: crop,
+          title: 'Customized',
+          description:
+            'Integrated scroll high-jacking and the GreenSock animation library',
+        },
+        {
+          iconFa: paintBrush,
           title: 'Designed',
-          description: 'Oversaw the website alignment, typography, UI design.',
+          description:
+            'Oversaw the website alignment, typography, UI & UX design.',
         },
       ],
       icons: [
         {
-          title: 'Less',
-          description:
-            'LESS is dynamic preprocessor style sheet language the Squarespace uses',
-          linkUrl: 'https://lesscss.org/',
-        },
-        {
           title: 'JavaScript',
           description:
-            'No website is complete without a bit of Vanilla Javascript',
+            'No website is complete without some custom of Vanilla Javascript',
           linkUrl: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
         },
         {
-          title: 'Squarespace',
+          title: 'GSAP',
           description:
-            'Created a custom website using the Squarespace platform',
-          linkUrl:
-            'https://www.squarespace.com/website-design/?channel=pbr&subchannel=go&campaign=pbr-dr-go-ca-en-squarespace-general-bmm&subcampaign=(brand-general_squarespaces_bmm)&&utm_source=google&utm_medium=pbr&utm_campaign=pbr-dr-go-ca-en-squarespace-general-bmm&utm_term=%2Bsquarespaces&gclid=Cj0KCQiA9OiPBhCOARIsAI0y71BWTQrHPzNlNAj3PLrK1YEnRFlPhD9T3zNybnHk4k4bu5YWFh_1UYMaAnxdEALw_wcB&gclsrc=aw.ds',
+            'An industry standard JavaScript animation library from GreenSock that lets you craft high-performance animations that work in every major browser.',
+          linkUrl: 'https://www.greensock.com/products/',
+        },
+        {
+          title: 'SASS',
+          description:
+            'Sass is the most mature, stable, and powerful professional grade CSS extension language in the world.',
+          linkUrl: 'https://sass-lang.com/documentation',
         },
 
         {
           title: 'npm',
-          description:
-            'Used npm to gain access to Glide.js and other libraries',
+          description: 'Used npm to gain access to GSAP and other libraries',
           linkUrl: 'https://glidejs.com/',
         },
       ],
       colours: [
         {
-          hexCode: '#7FADAA',
+          hexCode: '#BD0C23',
         },
         {
-          hexCode: '#173633',
+          hexCode: '#000000',
         },
-        {
-          hexCode: '#070707',
-        },
+        // {
+        //   hexCode: '#EEEEEE',
+        // },
       ],
       fonts: [
         {
           title: 'Primary',
-          fontFamily: 'Bodoni Moda',
+          fontFamily: "'Montserrat', sans-serif",
           fontWeight: '600',
-          letterSpacing: '0.05em',
-        },
-        {
-          title: 'Secondary',
-          fontFamily: 'Quicksand',
-          fontWeight: '300',
-          letterSpacing: '0.02em',
+          letterSpacing: '-1px',
         },
       ],
     },
@@ -219,177 +311,79 @@ const projectState = () => {
       ipadImg: nchIpad,
       description: 'Breif Summary of Project',
       secondDescription:
-        'VOUS Beauty Clinic specializes in cosmetic treatments & solutions.Lorem ipsum dolor sit, amet consectetur adipisicing elit.',
+        'A business focused on building a relationship between cannabis and people, and the communities we work in. Browse a wide selection of cannabis products and find a location near you. ',
       url: [
         {
           title: 'Website',
-          website: 'https://vousbeautyclinic.com/skincare',
-        },
-        {
-          title: 'Github',
-          website: 'https://vousbeautyclinic.com/skincare',
+          website: 'https://www.naturescanopyhouse.com/',
         },
       ],
       roles: [
         {
-          iconFa: squarespaceIcon,
-          title: 'Managed',
-          description: 'Updated and maintained the Squarespace website.',
+          iconFa: celebrate,
+          title: 'Initial Commit',
+          description: 'Bought the domain and set up the initial page.',
+        },
+        {
+          iconFa: update,
+          title: 'Updated',
+          description: 'Changed and added content whenever requested to.',
         },
         {
           iconFa: paintBrush,
-          title: 'Integrated',
-          description: 'Added custom features and styling.',
-        },
-        {
-          iconFa: crop,
           title: 'Designed',
-          description: 'Oversaw the website alignment, typography, UI design.',
+          description: 'Contributed to the overall theme and design of site.',
         },
       ],
       icons: [
         {
-          title: 'Less',
+          title: 'Google API',
           description:
-            'LESS is dynamic preprocessor style sheet language the Squarespace uses',
-          linkUrl: 'https://lesscss.org/',
+            'Application programming interfaces developed by Google which allow communication with Google Services. ',
+          linkUrl: 'https://support.google.com/tagmanager/answer/6102821?hl=en',
+        },
+        {
+          title: 'Webflow',
+          description:
+            'Brings the power of website animations and interactions directly into a visual toolbox.',
+          linkUrl: 'https://webflow.com/',
+        },
+        {
+          title: 'Dutchie',
+          description:
+            'An online marketplace that connects consumers with their favorite local dispensaries and allows them to place an order for pickup or delivery.',
+          linkUrl: 'https://business.dutchie.com/pos',
         },
         {
           title: 'JavaScript',
           description:
-            'No website is complete without a bit of Vanilla Javascript',
+            'No website is complete without a bit of custom Vanilla Javascript',
           linkUrl: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
-        },
-        {
-          title: 'Squarespace',
-          description:
-            'Created a custom website using the Squarespace platform',
-          linkUrl:
-            'https://www.squarespace.com/website-design/?channel=pbr&subchannel=go&campaign=pbr-dr-go-ca-en-squarespace-general-bmm&subcampaign=(brand-general_squarespaces_bmm)&&utm_source=google&utm_medium=pbr&utm_campaign=pbr-dr-go-ca-en-squarespace-general-bmm&utm_term=%2Bsquarespaces&gclid=Cj0KCQiA9OiPBhCOARIsAI0y71BWTQrHPzNlNAj3PLrK1YEnRFlPhD9T3zNybnHk4k4bu5YWFh_1UYMaAnxdEALw_wcB&gclsrc=aw.ds',
-        },
-
-        {
-          title: 'npm',
-          description:
-            'Used npm to gain access to Glide.js and other libraries',
-          linkUrl: 'https://glidejs.com/',
         },
       ],
       colours: [
         {
-          hexCode: '#7FADAA',
+          hexCode: '#2D2926',
         },
         {
-          hexCode: '#173633',
+          hexCode: '#504C49',
         },
         {
-          hexCode: '#070707',
+          hexCode: '#EE2737',
         },
       ],
       fonts: [
         {
           title: 'Primary',
-          fontFamily: 'Bodoni Moda',
-          fontWeight: '600',
+          fontFamily: "'Kanit', sans-serif",
+          fontWeight: '500',
           letterSpacing: '0.05em',
         },
         {
           title: 'Secondary',
-          fontFamily: 'Quicksand',
-          fontWeight: '300',
-          letterSpacing: '0.02em',
-        },
-      ],
-    },
-    {
-      title: 'VOUS Beauty Clinic',
-      secondaryTitle: 'Cosmetics & Spa Website',
-      thumbImg: vbcMain,
-      mainImg: vbcdesktop,
-      secondaryImg: vbcmobile,
-      browserImg: vbcBrowser,
-      ipadImg: vbcIpad,
-      description: 'Breif Summary of Project',
-      secondDescription:
-        'VOUS Beauty Clinic specializes in cosmetic treatments & solutions.Lorem ipsum dolor sit, amet consectetur adipisicing elit.',
-      url: [
-        {
-          title: 'Website',
-          website: 'https://vousbeautyclinic.com/skincare',
-        },
-        {
-          title: 'Github',
-          website: 'https://vousbeautyclinic.com/skincare',
-        },
-      ],
-      roles: [
-        {
-          iconFa: squarespaceIcon,
-          title: 'Managed',
-          description: 'Updated and maintained the Squarespace website.',
-        },
-        {
-          iconFa: paintBrush,
-          title: 'Integrated',
-          description: 'Added custom features and styling.',
-        },
-        {
-          iconFa: crop,
-          title: 'Designed',
-          description: 'Oversaw the website alignment, typography, UI design.',
-        },
-      ],
-      icons: [
-        {
-          title: 'Less',
-          description:
-            'LESS is dynamic preprocessor style sheet language the Squarespace uses',
-          linkUrl: 'https://lesscss.org/',
-        },
-        {
-          title: 'JavaScript',
-          description:
-            'No website is complete without a bit of Vanilla Javascript',
-          linkUrl: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
-        },
-        {
-          title: 'Squarespace',
-          description:
-            'Created a custom website using the Squarespace platform',
-          linkUrl:
-            'https://www.squarespace.com/website-design/?channel=pbr&subchannel=go&campaign=pbr-dr-go-ca-en-squarespace-general-bmm&subcampaign=(brand-general_squarespaces_bmm)&&utm_source=google&utm_medium=pbr&utm_campaign=pbr-dr-go-ca-en-squarespace-general-bmm&utm_term=%2Bsquarespaces&gclid=Cj0KCQiA9OiPBhCOARIsAI0y71BWTQrHPzNlNAj3PLrK1YEnRFlPhD9T3zNybnHk4k4bu5YWFh_1UYMaAnxdEALw_wcB&gclsrc=aw.ds',
-        },
-
-        {
-          title: 'npm',
-          description:
-            'Used npm to gain access to Glide.js and other libraries',
-          linkUrl: 'https://glidejs.com/',
-        },
-      ],
-      colours: [
-        {
-          hexCode: '#7FADAA',
-        },
-        {
-          hexCode: '#173633',
-        },
-        {
-          hexCode: '#070707',
-        },
-      ],
-      fonts: [
-        {
-          title: 'Primary',
-          fontFamily: 'Bodoni Moda',
-          fontWeight: '600',
-          letterSpacing: '0.05em',
-        },
-        {
-          title: 'Secondary',
-          fontFamily: 'Quicksand',
-          fontWeight: '300',
-          letterSpacing: '0.02em',
+          fontFamily: 'sans-serif',
+          fontWeight: '200',
+          letterSpacing: '0.0em',
         },
       ],
     },

@@ -20,37 +20,32 @@ const FaqSection = () => {
       <AnimateSharedLayout>
         <Toggle title='How Do I Start?'>
           <div className='answer'>
-            <p>Lorem ipsum dolor sit amet.</p>
             <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Reiciendis, tempora!
+              Once you know what kind of website you want we can start right
+              away.
             </p>
+            <p>Click here to get in contact with me.</p>
           </div>
         </Toggle>
         <Toggle title='Daily Schedule'>
           <div className='answer'>
-            <p>Lorem ipsum dolor sit amet.</p>
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Reiciendis, tempora!
-            </p>
+            <p>Available Monday - Friday anytime between 9AM - 5PM EST.</p>
           </div>
         </Toggle>
         <Toggle title='Different Payment Methods'>
           <div className='answer'>
-            <p>Lorem ipsum dolor sit amet.</p>
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Reiciendis, tempora!
-            </p>
+            <p>E-transfer, Bitcoin and Paypal.</p>
+            <p>**Installment fees are optional**</p>
+            <p>Payment information will be provided with the invoice.</p>
           </div>
         </Toggle>
         <Toggle title='What Products Do You Offer?'>
           <div className='answer'>
-            <p>Lorem ipsum dolor sit amet.</p>
+            <p>Anything related to the web! </p>
+            <p> Some example include</p>
             <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Reiciendis, tempora!
+              Translating designs into web applications, interacting with APIs
+              and building modern reusable scalable components.
             </p>
           </div>
         </Toggle>
@@ -92,7 +87,7 @@ const Faq = styled.div`
     p {
       margin: auto;
       max-width: var(--max-width);
-      padding: 16px 22px;
+      padding: 12px 22px;
     }
   }
 `;
