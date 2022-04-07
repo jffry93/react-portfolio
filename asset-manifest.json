@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/react-portfolio/static/css/main.35d6b2c1.chunk.css",
-    "main.js": "/react-portfolio/static/js/main.6e74edbb.chunk.js",
-    "main.js.map": "/react-portfolio/static/js/main.6e74edbb.chunk.js.map",
+    "main.js": "/react-portfolio/static/js/main.f7f276d7.chunk.js",
+    "main.js.map": "/react-portfolio/static/js/main.f7f276d7.chunk.js.map",
     "runtime-main.js": "/react-portfolio/static/js/runtime-main.09fcd760.js",
     "runtime-main.js.map": "/react-portfolio/static/js/runtime-main.09fcd760.js.map",
     "static/css/2.1a2a3f90.chunk.css": "/react-portfolio/static/css/2.1a2a3f90.chunk.css",
@@ -19,6 +19,7 @@
     "static/media/Jeffrey_Zalischi_Resume.d9a1af0c.pdf": "/react-portfolio/static/media/Jeffrey_Zalischi_Resume.d9a1af0c.pdf",
     "static/media/index.css": "/react-portfolio/static/media/Neutra Text Bold.f2c4fd96.otf",
     "static/media/alex_wong.01020a37.jpg": "/react-portfolio/static/media/alex_wong.01020a37.jpg",
+    "static/media/arrows-rotate-solid.25f63259.svg": "/react-portfolio/static/media/arrows-rotate-solid.25f63259.svg",
     "static/media/athlete-small.9c7a85d4.png": "/react-portfolio/static/media/athlete-small.9c7a85d4.png",
     "static/media/athlete2.b216a5ad.png": "/react-portfolio/static/media/athlete2.b216a5ad.png",
     "static/media/bay-browser-light.480a1fa1.png": "/react-portfolio/static/media/bay-browser-light.480a1fa1.png",
@@ -26,6 +27,7 @@
     "static/media/bay1280x800.1fc15b13.png": "/react-portfolio/static/media/bay1280x800.1fc15b13.png",
     "static/media/bay405x780.7e704389.png": "/react-portfolio/static/media/bay405x780.7e704389.png",
     "static/media/book-open-solid.59c24569.svg": "/react-portfolio/static/media/book-open-solid.59c24569.svg",
+    "static/media/champagne-glasses-solid.a12fa3f8.svg": "/react-portfolio/static/media/champagne-glasses-solid.a12fa3f8.svg",
     "static/media/crop.23966b02.svg": "/react-portfolio/static/media/crop.23966b02.svg",
     "static/media/download-solid.7026e29b.svg": "/react-portfolio/static/media/download-solid.7026e29b.svg",
     "static/media/empty-ipad-horizontal.1ad0ca7e.png": "/react-portfolio/static/media/empty-ipad-horizontal.1ad0ca7e.png",
@@ -36,6 +38,8 @@
     "static/media/icon-close.d47fda63.svg": "/react-portfolio/static/media/icon-close.d47fda63.svg",
     "static/media/icon-hamburger.5273efa7.svg": "/react-portfolio/static/media/icon-hamburger.5273efa7.svg",
     "static/media/iphonex783.addfa5c9.png": "/react-portfolio/static/media/iphonex783.addfa5c9.png",
+    "static/media/key-solid.fb7c48e4.svg": "/react-portfolio/static/media/key-solid.fb7c48e4.svg",
+    "static/media/list-check-solid.efa24fc4.svg": "/react-portfolio/static/media/list-check-solid.efa24fc4.svg",
     "static/media/mdbb-browser-light.74fc42e6.png": "/react-portfolio/static/media/mdbb-browser-light.74fc42e6.png",
     "static/media/mdbb1280x800.a5a9d87d.png": "/react-portfolio/static/media/mdbb1280x800.a5a9d87d.png",
     "static/media/mdbb405x780.9b2cecc5.png": "/react-portfolio/static/media/mdbb405x780.9b2cecc5.png",
@@ -65,6 +69,6 @@
     "static/css/2.1a2a3f90.chunk.css",
     "static/js/2.e78d4b14.chunk.js",
     "static/css/main.35d6b2c1.chunk.css",
-    "static/js/main.6e74edbb.chunk.js"
+    "static/js/main.f7f276d7.chunk.js"
   ]
 }
