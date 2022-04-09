@@ -42,6 +42,9 @@ const TabletContainer = ({ colours, ipadImg }) => {
               <div
                 className='colour-palette'
                 style={{ backgroundColor: `${colour.hexCode}` }}
+                onClick={() => {
+                  navigator.clipboard.writeText(`${colour.hexCode}`);
+                }}
               >
                 <p>{colour.hexCode}</p>
               </div>
@@ -62,25 +65,31 @@ const StyledTabletContainer = styled(motion.div)`
   align-items: center;
   justify-content: flex-end;
   max-width: 1400px;
-  margin: 5rem auto;
-  gap: 2rem;
+  margin: 0px auto;
+  gap: 32px;
+
+  padding-right: 22px;
+
+  /* border: 1px solid red; */
   @media (max-width: 750px) {
     flex-direction: column;
     align-items: flex-end;
+    padding-right: 0;
+    gap: 60px;
     .tablet-image {
-      margin: 0 0 160px;
+      margin: 0;
     }
   }
   .tablet-image {
     display: flex;
     position: relative;
     flex: 3;
-    margin-left: 2rem;
+    margin-left: 14px;
     @media (max-width: 750px) {
       margin-right: 12px;
     }
     @media (max-width: 450px) {
-      margin-right: 7px;
+      margin-right: 18px;
     }
     .ipad-frame {
       position: relative;
@@ -102,16 +111,16 @@ const StyledColourContainer = styled.div`
   flex-direction: column;
   align-items: flex-start;
   gap: 16px;
-  margin: 0 32px;
+  margin: 0 auto;
   text-align: left;
 
   @media (max-width: 750px) {
-    width: calc(100% - 4rem);
+    width: calc(100% - 44px);
   }
-  @media (max-width: 450px) {
+  /* @media (max-width: 450px) {
     margin: auto;
-    width: calc(100% - 24px);
-  }
+    width: calc(100% - 44px);
+  } */
 
   .palette-container {
     display: flex;
@@ -140,16 +149,25 @@ const StyledColourContainer = styled.div`
         width: 100%;
         height: 80px;
         cursor: pointer;
+
+        /* transition: all 0.5s ease; */
         @media (max-width: 750px) {
           max-width: unset;
           width: 100%;
           min-width: unset;
         }
       }
+      .colour-palette:hover {
+        transform: scale(1.01);
+        p {
+          font-size: clamp(20px, 1.2vw, 21px);
+        }
+      }
       p {
         font-weight: 600;
         cursor: pointer;
         padding: unset;
+        /* transition: all 0.5s ease; */
       }
     }
     h5 {

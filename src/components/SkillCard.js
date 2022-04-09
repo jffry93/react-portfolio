@@ -39,6 +39,11 @@ const StyledSkillCard = styled.div`
     padding: 0.7rem;
     text-decoration: none;
     color: white;
+    transition: all 0.5s ease;
+  }
+  a:hover {
+    font-size: 1.05rem;
+    background-color: #242424;
   }
   .space-container {
     height: 100%;
@@ -47,4 +52,7 @@ const StyledSkillCard = styled.div`
     gap: 16px;
     justify-content: space-between;
   }
+  /* &:hover {
+    transform: scale(1.03);
+  } */
 `;

@@ -62,7 +62,7 @@ export const slideDown = {
   },
 };
 export const slideLeft = {
-  hidden: { x: -250, opacity: 0 },
+  hidden: { x: -200, opacity: 0 },
   show: {
     opacity: 1,
     x: 0,
@@ -70,7 +70,7 @@ export const slideLeft = {
   },
 };
 export const slideRight = {
-  hidden: { x: 250, opacity: 0 },
+  hidden: { x: 200, opacity: 0 },
   show: {
     opacity: 1,
     x: 0,

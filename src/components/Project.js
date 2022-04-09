@@ -132,6 +132,9 @@ const StyledDetails = styled.div`
     text-decoration: none;
     color: white;
   }
+  button:hover {
+    background-color: #242424;
+  }
 `;
 
 const StyledProjectDetails = styled.div`

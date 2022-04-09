@@ -64,20 +64,21 @@ const StyledDescriptionContainer = styled(motion.div)`
   display: flex;
   flex-direction: row;
 
-  max-width: 1100px;
+  max-width: 1200px;
   margin: auto;
-
+  gap: unset;
   /* background-color: #121212;
   border-top: 1px solid white;
   border-bottom: 1px solid white; */
 
   @media (max-width: 950px) {
     flex-direction: column-reverse;
+    gap: 32px;
   }
   .description-container {
     /* border: 1px solid blue; */
-    flex: 1;
-    padding: 32px var(--layout-padding);
+    flex: 1.7;
+    padding: 0px var(--layout-padding);
 
     display: flex;
     flex-direction: column;
@@ -110,6 +111,11 @@ const StyledDescriptionContainer = styled(motion.div)`
       gap: 16px;
       a {
         text-align: center;
+        transition: all 0.5s ease;
+      }
+      a:hover {
+        transform: scale(1.03);
+        background-color: transparent;
       }
 
       /* @media (max-width: 950px) {

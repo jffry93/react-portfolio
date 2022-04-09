@@ -53,9 +53,9 @@ const StyledSkillsContainer = styled(motion.div)`
   max-width: 1400px;
   margin: auto;
   /* min-width: 400px; */
-  @media (max-width: 450px) {
+  /* @media (max-width: 450px) {
     padding: 0 var(--mobile-padding);
-  }
+  } */
 
   .icon-container {
     display: grid;
@@ -93,6 +93,13 @@ const StyledSkillsContainer = styled(motion.div)`
 
       .tool-button-container {
         display: flex;
+      }
+      .project-button {
+        transition: all 0.5s ease;
+      }
+      .project-button:hover {
+        transform: scale(1.05);
+        background-color: #393939;
       }
     }
   }

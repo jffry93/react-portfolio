@@ -39,10 +39,10 @@ const ServicesSection = () => {
           I’ve been translating designs into web applications, interacting with
           APIs and building modern reusable scalable components.
         </p>
-        <p>
+        {/* <p>
           I’m extremely passionate about software development, learning new
           skills and making the most out of my day.
-        </p>
+        </p> */}
         <p>
           Check out my{' '}
           <a

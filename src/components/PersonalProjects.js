@@ -193,10 +193,12 @@ const StyledProjectSection = styled(motion.div)`
   .swiper-slide {
     opacity: 0;
     position: relative;
+    transition: transform 1.5s ease, opacity 1.5s ease;
 
-    transform: scale(0.8) !important;
+    transform: scale(0.6) !important;
     div:last-child {
-      display: none;
+      /* display: none; */
+      opacity: 0;
       position: absolute;
       top: 50%;
       left: -20%;
@@ -205,24 +207,30 @@ const StyledProjectSection = styled(motion.div)`
       height: auto;
       width: 100%;
 
-      z-index: 3;
+      /* z-index: 3; */
     }
   }
 
   .swiper-slide-next,
   .swiper-slide-prev {
     opacity: 0.45;
+    transition: transform 1.5s ease, opacity 1.5s ease;
+    transform: scale(0.8) !important;
   }
   .swiper-slide-active {
     transform: scale(1) !important;
-
+    opacity: 1;
+    transition: transform 1.5s ease, opacity 1.5s ease;
+    z-index: 3;
     div {
       overflow: visible;
       background-color: rgba(0, 0, 0, 0.9);
     }
-    opacity: 1;
+
     div:last-child {
-      display: block;
+      /* display: block; */
+      opacity: 1;
+      transition: opacity 0.5s ease-in !important;
     }
   }
   .swiper-button-prev,

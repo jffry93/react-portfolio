@@ -155,6 +155,9 @@ const StyledProjectDetail = styled(motion.div)`
     @media (max-width: 800px) {
       padding: 60px;
     }
+    @media (max-width: 500px) {
+      padding: 32px;
+    }
   }
 
   img {
@@ -176,6 +179,9 @@ const StyledProjectDetail = styled(motion.div)`
     text-align: center;
     button {
       font-weight: lighter;
+    }
+    button:hover {
+      background-color: transparent;
     }
   }
 `;

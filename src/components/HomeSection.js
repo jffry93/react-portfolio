@@ -2,6 +2,9 @@
 import styled from 'styled-components';
 import coffee from '../img/ibrahim.jpg';
 
+//IMAGES
+import unicef from '../img/UNICEF_Logo.png';
+
 //Styled
 import { StyledOverlay, StyledHide } from '../Styles';
 
@@ -18,6 +21,22 @@ const HomeSection = () => {
   return (
     <StyledHomepageContainer viewport={{ once: true }}>
       <StyledOverlay className='overlay'>
+        <div className='donate-bar'>
+          <a
+            href='https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwjJmrXu84f3AhUibG8EHcSmCU8YABABGgJqZg&ae=2&ohost=www.google.com&cid=CAESbeD2b_uN3OPM-AHG8_RTOtt2MNYsgiK2soHGi_TZrINMKVjQDUpCF1bR-IiSeSM4BkR-Qygcl1yNFBLdksYHI-9AttzsoJoAPrbYIB4AoIj_vahKjG2RcIlQJmAAzSfccxGjnIu-0jLlbAx7NIs&sig=AOD64_3e6dFZg4dCJA53TV4vEX6sKwlWdA&q&adurl&ved=2ahUKEwiNrKzu84f3AhXKG80KHQQoCDwQ0Qx6BAgFEAE'
+            target='_blank'
+            rel='noreferrer'
+          >
+            <input type='image' src={unicef} name='unicefLogo' />
+          </a>
+          <a
+            href='https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwjJmrXu84f3AhUibG8EHcSmCU8YABABGgJqZg&ae=2&ohost=www.google.com&cid=CAESbeD2b_uN3OPM-AHG8_RTOtt2MNYsgiK2soHGi_TZrINMKVjQDUpCF1bR-IiSeSM4BkR-Qygcl1yNFBLdksYHI-9AttzsoJoAPrbYIB4AoIj_vahKjG2RcIlQJmAAzSfccxGjnIu-0jLlbAx7NIs&sig=AOD64_3e6dFZg4dCJA53TV4vEX6sKwlWdA&q&adurl&ved=2ahUKEwiNrKzu84f3AhXKG80KHQQoCDwQ0Qx6BAgFEAE'
+            target='_blank'
+            rel='noreferrer'
+          >
+            Donate to support families affected by the war in Ukraine
+          </a>
+        </div>
         <StyledDescription className='heading content'>
           <StyledHide>
             <h2 variants={titleAnimation}>Hi, I'm Jeff.</h2>
@@ -75,6 +94,36 @@ const StyledHomepageContainer = styled(motion.div)`
     max-height: 850px;
     background-color: rgba(0, 0, 0, 0.5);
     /* transform: scaleX(-1); */
+    display: flex;
+    flex-direction: column;
+  }
+  .donate-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+
+    padding: 8px var(--layout-padding);
+    background-color: rgba(0, 0, 0, 0.6);
+    input {
+      width: 100px;
+      object-fit: contain;
+    }
+    a {
+      font-size: 14px;
+      text-align: center;
+      text-decoration: none;
+      color: var(--secondary-text-color);
+
+      display: flex;
+    }
+    a:hover {
+      color: var(--primary-text-color);
+    }
+    @media (max-width: 550px) {
+      flex-direction: column;
+      gap: 8px;
+    }
   }
   .buttons {
     display: flex;

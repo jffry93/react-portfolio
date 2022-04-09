@@ -47,11 +47,15 @@ const StyledHeadingContainer = styled(motion.div)`
     padding: 8px 0 0;
   }
   button {
-    font-size: 15px;
+    font-size: 12px;
     border-radius: 25px;
     padding: 0.7rem 1.1rem;
   }
   @media (max-width: 450px) {
     padding: 12px var(--mobile-padding);
+    button {
+      padding: 6px 12px;
+      background-color: #393939;
+    }
   }
 `;

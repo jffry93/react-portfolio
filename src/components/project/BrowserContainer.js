@@ -75,21 +75,31 @@ const StyledBrowserContainer = styled(motion.div)`
   gap: 2rem;
   max-width: 1400px;
   margin: auto;
-  padding: 0 var(--layout-padding);
+  padding: 0 0 0 var(--layout-padding);
   position: relative;
+
+  /* border: 1px solid red; */
   @media (max-width: 650px) {
     flex-direction: column-reverse;
     align-items: flex-start;
 
-    margin: unset;
+    /* margin: unset; */
+    padding: 0;
     .browser-screenshot {
-      padding: 0 0 160px;
+      padding: 0 0 160px 6px;
+    }
+    @media (max-width: 500px) {
+      .browser-screenshot {
+        padding: 0 0 44px 6px;
+      }
     }
   }
   .browser-screenshot {
     width: 100%;
     min-width: clamp(900px, 60vw, 1000px);
-    margin: 0 8px;
+    margin: 0 6px 0 0;
+
+    /* border: 1px solid blue; */
     @media (max-width: 450px) {
       margin: 0;
     }

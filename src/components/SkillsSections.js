@@ -39,8 +39,8 @@ const SkillsSections = () => {
           // onSwiper={(swiper) => console.log(swiper)}
           // onSlideChange={() => console.log('slide change')}
           loop={true}
-          // freeMode={true}
-          // touchRatio={1}
+          freeMode={true}
+          touchRatio={1}
           slidesPerView='auto'
           grabCursor={true}
           spaceBetween={30}
