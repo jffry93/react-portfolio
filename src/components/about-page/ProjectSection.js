@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-import { fade } from '../animation';
-import PersonalProjects from './PersonalProjects';
-import { useScroll } from './useScroll';
+import { fade } from '../../animation';
+import PersonalProjects from '../project/PersonalProjects';
+import { useScroll } from '../useScroll';
 
 const ProjectSection = () => {
   const [element, controls] = useScroll();

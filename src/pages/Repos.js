@@ -16,7 +16,7 @@ import BrowserContainer from '../components/project/BrowserContainer';
 import TabletContainer from '../components/project/TabletContainer';
 import SkillsContainer from '../components/project/SkillsContainer';
 //JSON DATA
-import { MovieState } from '../movieState';
+import { MovieState } from '../repoState';
 //device pngs
 // import macbook from '../img/devices/new-empty-macbook.png';
 // import iphone from '../img/devices/empty-iphone.png';

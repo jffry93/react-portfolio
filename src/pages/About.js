@@ -1,15 +1,15 @@
 import React from 'react';
-import HomeSection from '../components/HomeSection';
-import ServicesSection from '../components/ServicesSection';
-import PersonalProjects from '../components/PersonalProjects';
-import FaqSection from '../components/FaqSection';
+import HomeSection from '../components/about-page/HomeSection';
+import AboutSection from '../components/about-page/AboutSection';
+import PersonalProjects from '../components/project/PersonalProjects';
+import FaqSection from '../components/about-page/FaqSection';
+import SkillsSections from '../components/about-page/SkillsSections';
+import ProjectSection from '../components/about-page/ProjectSection';
 //PAGE ANIMATION
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { pageAnimation, fade } from '../animation';
 import ScrollTop from '../components/ScrollTop';
-import SkillsSections from '../components/SkillsSections';
-import ProjectSection from '../components/ProjectSection';
 
 const AboutUs = () => {
   document.body.style.overflow = 'auto';
@@ -30,7 +30,7 @@ const AboutUs = () => {
       </motion.div> */}
       <motion.div variants={fade}>
         <HomeSection />
-        <ServicesSection />
+        <AboutSection />
         <SkillsSections />
         <ProjectSection />
         <FaqSection />

@@ -5,10 +5,10 @@ import GlobalStyle from './components/GlobalStyle';
 //NavBar
 import Nav from './components/Nav';
 //Different Pages
-import AboutUs from './pages/AboutUs';
-import OurWork from './pages/OurWork';
-import ContactUs from './pages/ContactUs';
-import MovieDetail from './pages/MovieDetail';
+import About from './pages/About';
+import Work from './pages/Work';
+import Contact from './pages/Contact';
+import Repos from './pages/Repos';
 //React Router Dom
 import { Switch, Route, useLocation } from 'react-router-dom';
 //Animation
@@ -27,16 +27,16 @@ function App() {
       <AnimatePresence exitBeforeEnter>
         <Switch location={location} key={location.key}>
           <Route path='/' exact>
-            <AboutUs />
+            <About />
           </Route>
           <Route path='/work' exact>
-            <OurWork />
+            <Work />
           </Route>
           <Route path='/work/:id'>
-            <MovieDetail />
+            <Repos />
           </Route>
           <Route path='/contact'>
-            <ContactUs />
+            <Contact />
           </Route>
         </Switch>
       </AnimatePresence>

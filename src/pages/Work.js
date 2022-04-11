@@ -1,34 +1,25 @@
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
-//ALL IMAGES
-// import athlete from '../img/athlete-small.png';
-// import theracer from '../img/theracer-small.png';
-// import goodtimes from '../img/goodtimes-small.png';
-import vbcThumb from '../img/projects/Vous/vbcThumb.png';
-import bayrichThumb from '../img/projects/Bayrich/weird.jpg';
-import nchThumb from '../img/projects/NCH/nchThumb.webp';
-import mdbbThumb from '../img/projects/MDBB/mdbbThumb.jpg';
+// import { Link } from 'react-router-dom';
+
 //PAGE ANIMATION
 import { motion } from 'framer-motion';
 import {
   pageAnimation,
   fade,
-  photoAnimation,
-  lineAnimation,
   sliderAnimation,
   sliderContainer,
 } from '../animation';
-import { useScroll } from '../components/useScroll';
+// import { useScroll } from '../components/useScroll';
 import ScrollTop from '../components/ScrollTop';
 
-import PersonalProject from '../components/PersonalProjects';
+import PersonalProject from '../components/project/PersonalProjects';
 
 const OurWork = () => {
   document.body.style.overflow = 'auto';
 
-  const [element, controls] = useScroll();
-  const [element2, control2] = useScroll();
-  const [element3, control3] = useScroll();
+  // const [element, controls] = useScroll();
+  // const [element2, control2] = useScroll();
+  // const [element3, control3] = useScroll();
 
   return (
     <StyledWork

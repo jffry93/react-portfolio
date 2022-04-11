@@ -1,14 +1,14 @@
 import { useState } from 'react';
 //JSON DATA
-import skillsState from '../skillsState';
+import skillsState from '../../skillsState';
 //COMPONENTS
 import SkillCard from './SkillCard';
 //STYLING
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-import { fade, slideDown } from '../animation';
+import { fade, slideDown } from '../../animation';
 //reveal when in viewport
-import { useScroll } from './useScroll';
+import { useScroll } from '../useScroll';
 //swiper
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.min.css';

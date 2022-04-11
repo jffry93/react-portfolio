@@ -15,8 +15,8 @@ import cntower from '../img/alex_wong.jpg';
 import { SiNike } from 'react-icons/si';
 import { MdClose } from 'react-icons/md';
 //COMPONENTS
-import ContactForm from '../components/ContactForm';
-import ContactMap from '../components/ContactMap';
+import ContactForm from '../components/contact-page/ContactForm';
+import ContactMap from '../components/contact-page/ContactMap';
 
 const ContactUs = () => {
   const [formValidation, setFormValidation] = useState(false);

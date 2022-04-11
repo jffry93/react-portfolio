@@ -4,19 +4,19 @@
 // import money from '../img/money.svg';
 // import teamwork from '../img/teamwork.svg';
 //IMAGES
-import myFace from '../img/myFace.jpg';
+import myFace from '../../img/myFace.jpg';
 //ICONS
-import downloadIcon from '../img/icons/download-solid.svg';
+import downloadIcon from '../../img/icons/download-solid.svg';
 //Styles
 import styled from 'styled-components';
 //RESUME
-import MyResume from '../Resume/Jeffrey_Zalischi_Resume.pdf';
+import MyResume from '../../Resume/Jeffrey_Zalischi_Resume.pdf';
 
 //scroll animation that runs when an element is in view
 //Framer Motion
 import { motion } from 'framer-motion';
-import { fade, slideRight } from '../animation';
-import { useScroll } from './useScroll';
+import { fade, slideRight } from '../../animation';
+import { useScroll } from '../useScroll';
 
 const ServicesSection = () => {
   const [element, controls] = useScroll();
@@ -83,7 +83,7 @@ const StyledServices = styled(motion.div)`
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
-  gap: 45px;
+  gap: 60px;
 
   /* 
   p {
@@ -116,11 +116,12 @@ const StyledServicesDescription = styled(motion.div)`
     margin-bottom: 8px;
   }
   .github-link {
-    color: white;
+    color: var(--secondary-text-color);
     font-weight: 600;
     transition: font-size 0.1s;
   }
   .github-link:hover {
+    color: var(--primary-text-color);
     font-size: clamp(17px, 1.2vw, 18px);
   }
 

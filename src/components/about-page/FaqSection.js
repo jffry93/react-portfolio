@@ -1,13 +1,13 @@
 import React from 'react';
 //Toggle Reusable Component
-import Toggle from './Toggle';
+import Toggle from '../Toggle';
 //Styles
 import styled from 'styled-components';
 
 //Framer Motion
 //detects when layout changes
 import { AnimateSharedLayout } from 'framer-motion';
-import { useScroll } from './useScroll';
+import { useScroll } from '../useScroll';
 // import { fade } from '../animation';
 
 const FaqSection = () => {

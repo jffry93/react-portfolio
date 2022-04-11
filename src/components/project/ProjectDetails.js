@@ -2,16 +2,16 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 //APPEAR WHEN IN VIEWPORT
-import { fade, titleAnimation, staggerContainer } from '../animation';
-import { useScroll } from './useScroll';
+import { fade, titleAnimation, staggerContainer } from '../../animation';
+import { useScroll } from '../useScroll';
 
 //COMPONENTS
-import HeaderContainer from './project/HeaderContainer';
-import DeviceContainer from './project/DeviceContainer';
-import RoleContainer from './project/RoleContainer';
-import BrowserContainer from './project/BrowserContainer';
-import TabletContainer from './project/TabletContainer';
-import SkillsContainer from './project/SkillsContainer';
+import HeaderContainer from './HeaderContainer';
+import DeviceContainer from './DeviceContainer';
+import RoleContainer from './RoleContainer';
+import BrowserContainer from './BrowserContainer';
+import TabletContainer from './TabletContainer';
+import SkillsContainer from './SkillsContainer';
 
 const ProjectDetails = ({ caseDetail, setShowDetail }) => {
   //HIDE POPUP

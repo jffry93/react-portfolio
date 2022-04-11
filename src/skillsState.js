@@ -31,7 +31,7 @@ const skillsState = () => {
       title: 'LESS',
       description:
         'A dynamic preprocessor style sheet language that can be compiled into Cascading Style Sheets and run on the client side or server side.',
-      documentation: '"https://www.lesscss.org/"',
+      documentation: 'https://www.lesscss.org/',
     },
     {
       title: 'JavaScript',

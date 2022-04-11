@@ -5,7 +5,7 @@ import { SiIndeed } from 'react-icons/si';
 import { BsGithub } from 'react-icons/bs';
 import { GrMail } from 'react-icons/gr';
 import { RiLinkedinFill } from 'react-icons/ri';
-import drake from '../img/icons/drake-sitting.png';
+import drake from '../../img/icons/drake-sitting.png';
 
 const ContactInfo = () => {
   return (

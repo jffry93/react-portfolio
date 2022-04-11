@@ -1,5 +1,5 @@
 import { useState, useRef } from 'react';
-import projectState from '../projectState';
+import projectState from '../../projectState';
 
 //COMPONENTS
 import Project from './Project';
@@ -7,9 +7,9 @@ import ProjectDetails from './ProjectDetails';
 //STYLING
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-import { fade } from '../animation';
+import { fade } from '../../animation';
 //reveal when in viewport
-import { useScroll } from './useScroll';
+import { useScroll } from '../useScroll';
 //swiper
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.min.css';
