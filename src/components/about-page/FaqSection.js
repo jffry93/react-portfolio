@@ -65,7 +65,7 @@ const Faq = styled.div`
   h2 {
     margin: auto;
     max-width: var(--max-width);
-    padding: 0 22px 60px;
+    padding: 0 var(--layout-secondary-padding) 60px;
   }
   .faq-line {
     background: #cccccc;
@@ -76,7 +76,7 @@ const Faq = styled.div`
   h4 {
     margin: auto;
     max-width: var(--max-width);
-    padding: 0rem 22px;
+    padding: 0rem var(--layout-secondary-padding);
   }
   .question {
     padding: 32px 0;
@@ -87,7 +87,7 @@ const Faq = styled.div`
     p {
       margin: auto;
       max-width: var(--max-width);
-      padding: 12px 22px;
+      padding: 12px var(--layout-secondary-padding);
     }
   }
 `;

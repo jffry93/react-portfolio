@@ -113,10 +113,10 @@ const StyledHomepageContainer = styled(motion.div)`
     input {
       width: 100px;
       object-fit: contain;
-      /* filter: brightness(0) invert(1); */
+      filter: brightness(0) invert(1);
     }
     input:hover {
-      /* filter: brightness(0) invert(0.7); */
+      filter: brightness(0) invert(0.7);
     }
     a {
       font-size: 14px;

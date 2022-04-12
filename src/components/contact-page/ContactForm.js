@@ -339,7 +339,11 @@ const StyledForm = styled.form`
     padding: 0;
     margin: 0;
     height: 38px;
+    cursor: pointer;
 
     background-color: #e6e5e5;
+  }
+  #submit-button:hover {
+    background-color: #bcbcbc;
   }
 `;

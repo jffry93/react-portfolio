@@ -20,17 +20,18 @@ const ContactInfo = () => {
           >
             <FaMapMarkerAlt size={15} />
           </a>
-          <div className='location'>
+          <a
+            href='https://www.google.com/maps/place/Toronto,+ON/@43.717899,-79.6582408,10z/data=!3m1!4b1!4m5!3m4!1s0x89d4cb90d7c63ba5:0x323555502ab4c477!8m2!3d43.653226!4d-79.3831843'
+            target='_blank'
+            rel='noreferrer'
+            className='location'
+          >
             <p>HOMETOWN</p>
-            <a
-              href='https://www.google.com/maps/place/Toronto,+ON/@43.717899,-79.6582408,10z/data=!3m1!4b1!4m5!3m4!1s0x89d4cb90d7c63ba5:0x323555502ab4c477!8m2!3d43.653226!4d-79.3831843'
-              target='_blank'
-              rel='noreferrer'
-            >
+            <span>
               Toronto ON
               <img src={drake} alt='drake' />
-            </a>
-          </div>
+            </span>
+          </a>
         </div>
         <div className='info-group'>
           <a href='tel:6474485732'>
@@ -124,6 +125,9 @@ const StyledContactInfo = styled.div`
       color: white;
       font-size: 0.9rem;
     }
+    a:hover {
+      transform: scale(1.03);
+    }
     svg {
       color: white;
     }
@@ -148,6 +152,7 @@ const StyledContactInfo = styled.div`
       font-weight: 600;
     }
   }
+
   .line {
     width: 100%;
     height: 1px;
@@ -198,6 +203,9 @@ const StyledContactInfo = styled.div`
         );
         color: #f3f3f3;
       }
+    }
+    .icon-container:hover {
+      transform: scale(0.95);
     }
 
     @media (max-width: 1050px) {

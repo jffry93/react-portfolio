@@ -140,7 +140,7 @@ const StyledServicesDescription = styled(motion.div)`
     text-decoration: none;
     transform: scale(1);
 
-    transition: background-color 0.5s, transform 0.5s;
+    transition: background-color 0.3s, transform 0.5s;
     .download {
       width: 17px;
       height: 17px;

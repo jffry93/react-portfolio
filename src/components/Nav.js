@@ -162,12 +162,14 @@ const StyledNav = styled.nav`
       span {
         color: white;
       }
+
       .selected {
         span {
           color: rgba(209, 209, 209, 0.5);
         }
       }
     }
+
     .resume {
       display: flex;
       align-items: center;
@@ -176,18 +178,22 @@ const StyledNav = styled.nav`
       padding: 0.7rem 1.4rem 0.7rem 1.1rem;
       border: 1px solid white;
       font-weight: 600;
+      transition: all 0.3s ease-out;
       .download {
         width: 12px;
         height: 12px;
         background-color: white;
         background: url(${downloadIcon});
         background-repeat: no-repeat;
-        transition: background 100ms ease-out;
       }
 
       span {
         font-size: 12px;
       }
+    }
+    .resume:hover {
+      transform: scale(1.03);
+      background-color: rgba(39, 39, 39, 0.3);
     }
 
     //uses the value if the browser supports it
