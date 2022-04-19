@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/react-portfolio/static/css/main.35d6b2c1.chunk.css",
-    "main.js": "/react-portfolio/static/js/main.f1ed8d42.chunk.js",
-    "main.js.map": "/react-portfolio/static/js/main.f1ed8d42.chunk.js.map",
+    "main.js": "/react-portfolio/static/js/main.106d8cef.chunk.js",
+    "main.js.map": "/react-portfolio/static/js/main.106d8cef.chunk.js.map",
     "runtime-main.js": "/react-portfolio/static/js/runtime-main.09fcd760.js",
     "runtime-main.js.map": "/react-portfolio/static/js/runtime-main.09fcd760.js.map",
     "static/css/2.1a2a3f90.chunk.css": "/react-portfolio/static/css/2.1a2a3f90.chunk.css",
@@ -21,7 +21,6 @@
     "static/media/UNICEF_Logo.ce32fc89.png": "/react-portfolio/static/media/UNICEF_Logo.ce32fc89.png",
     "static/media/alex_wong.01020a37.jpg": "/react-portfolio/static/media/alex_wong.01020a37.jpg",
     "static/media/arrows-rotate-solid.25f63259.svg": "/react-portfolio/static/media/arrows-rotate-solid.25f63259.svg",
-    "static/media/background.9166141c.png": "/react-portfolio/static/media/background.9166141c.png",
     "static/media/bay-browser-light.480a1fa1.png": "/react-portfolio/static/media/bay-browser-light.480a1fa1.png",
     "static/media/bay1194x805.ef52ebd2.png": "/react-portfolio/static/media/bay1194x805.ef52ebd2.png",
     "static/media/bay1280x800.1fc15b13.png": "/react-portfolio/static/media/bay1280x800.1fc15b13.png",
@@ -37,8 +36,8 @@
     "static/media/icon-hamburger.5273efa7.svg": "/react-portfolio/static/media/icon-hamburger.5273efa7.svg",
     "static/media/iphonex783.addfa5c9.png": "/react-portfolio/static/media/iphonex783.addfa5c9.png",
     "static/media/key-solid.fb7c48e4.svg": "/react-portfolio/static/media/key-solid.fb7c48e4.svg",
-    "static/media/layer1.33f5363a.png": "/react-portfolio/static/media/layer1.33f5363a.png",
-    "static/media/layer2-less.614eec01.png": "/react-portfolio/static/media/layer2-less.614eec01.png",
+    "static/media/layer1.f1bcb396.png": "/react-portfolio/static/media/layer1.f1bcb396.png",
+    "static/media/layer2.bbc929e3.png": "/react-portfolio/static/media/layer2.bbc929e3.png",
     "static/media/list-check-solid.efa24fc4.svg": "/react-portfolio/static/media/list-check-solid.efa24fc4.svg",
     "static/media/mdbb-browser-light.74fc42e6.png": "/react-portfolio/static/media/mdbb-browser-light.74fc42e6.png",
     "static/media/mdbb1280x800.a5a9d87d.png": "/react-portfolio/static/media/mdbb1280x800.a5a9d87d.png",
@@ -53,6 +52,7 @@
     "static/media/paint-brush.526d2531.svg": "/react-portfolio/static/media/paint-brush.526d2531.svg",
     "static/media/palette-icon.cfbc67e7.svg": "/react-portfolio/static/media/palette-icon.cfbc67e7.svg",
     "static/media/role-icon.8c96069f.svg": "/react-portfolio/static/media/role-icon.8c96069f.svg",
+    "static/media/space.292dfe8c.png": "/react-portfolio/static/media/space.292dfe8c.png",
     "static/media/space_loop.7db6ae00.gif": "/react-portfolio/static/media/space_loop.7db6ae00.gif",
     "static/media/squarespace-brands.b0023bf9.svg": "/react-portfolio/static/media/squarespace-brands.b0023bf9.svg",
     "static/media/tools-icon.a74cea41.svg": "/react-portfolio/static/media/tools-icon.a74cea41.svg",
@@ -68,6 +68,6 @@
     "static/css/2.1a2a3f90.chunk.css",
     "static/js/2.a13727e9.chunk.js",
     "static/css/main.35d6b2c1.chunk.css",
-    "static/js/main.f1ed8d42.chunk.js"
+    "static/js/main.106d8cef.chunk.js"
   ]
 }
