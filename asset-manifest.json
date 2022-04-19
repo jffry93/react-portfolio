@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/react-portfolio/static/css/main.35d6b2c1.chunk.css",
-    "main.js": "/react-portfolio/static/js/main.106d8cef.chunk.js",
-    "main.js.map": "/react-portfolio/static/js/main.106d8cef.chunk.js.map",
-    "runtime-main.js": "/react-portfolio/static/js/runtime-main.09fcd760.js",
-    "runtime-main.js.map": "/react-portfolio/static/js/runtime-main.09fcd760.js.map",
+    "main.js": "/react-portfolio/static/js/main.056a0e4f.chunk.js",
+    "main.js.map": "/react-portfolio/static/js/main.056a0e4f.chunk.js.map",
+    "runtime-main.js": "/react-portfolio/static/js/runtime-main.d74d21ba.js",
+    "runtime-main.js.map": "/react-portfolio/static/js/runtime-main.d74d21ba.js.map",
     "static/css/2.1a2a3f90.chunk.css": "/react-portfolio/static/css/2.1a2a3f90.chunk.css",
-    "static/js/2.a13727e9.chunk.js": "/react-portfolio/static/js/2.a13727e9.chunk.js",
-    "static/js/2.a13727e9.chunk.js.map": "/react-portfolio/static/js/2.a13727e9.chunk.js.map",
-    "static/js/3.5e879e90.chunk.js": "/react-portfolio/static/js/3.5e879e90.chunk.js",
-    "static/js/3.5e879e90.chunk.js.map": "/react-portfolio/static/js/3.5e879e90.chunk.js.map",
+    "static/js/2.6151b9fc.chunk.js": "/react-portfolio/static/js/2.6151b9fc.chunk.js",
+    "static/js/2.6151b9fc.chunk.js.map": "/react-portfolio/static/js/2.6151b9fc.chunk.js.map",
+    "static/js/3.6ca57fdf.chunk.js": "/react-portfolio/static/js/3.6ca57fdf.chunk.js",
+    "static/js/3.6ca57fdf.chunk.js.map": "/react-portfolio/static/js/3.6ca57fdf.chunk.js.map",
     "index.html": "/react-portfolio/index.html",
     "static/css/2.1a2a3f90.chunk.css.map": "/react-portfolio/static/css/2.1a2a3f90.chunk.css.map",
     "static/css/main.35d6b2c1.chunk.css.map": "/react-portfolio/static/css/main.35d6b2c1.chunk.css.map",
-    "static/js/2.a13727e9.chunk.js.LICENSE.txt": "/react-portfolio/static/js/2.a13727e9.chunk.js.LICENSE.txt",
+    "static/js/2.6151b9fc.chunk.js.LICENSE.txt": "/react-portfolio/static/js/2.6151b9fc.chunk.js.LICENSE.txt",
     "static/media/2mdbb1194x815.e6361765.png": "/react-portfolio/static/media/2mdbb1194x815.e6361765.png",
     "static/media/2nch-browser-light.ae81a219.png": "/react-portfolio/static/media/2nch-browser-light.ae81a219.png",
     "static/media/Jeffrey_Zalischi_Resume.d9a1af0c.pdf": "/react-portfolio/static/media/Jeffrey_Zalischi_Resume.d9a1af0c.pdf",
@@ -64,10 +64,10 @@
     "static/media/weird.15f8f2df.jpg": "/react-portfolio/static/media/weird.15f8f2df.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.09fcd760.js",
+    "static/js/runtime-main.d74d21ba.js",
     "static/css/2.1a2a3f90.chunk.css",
-    "static/js/2.a13727e9.chunk.js",
+    "static/js/2.6151b9fc.chunk.js",
     "static/css/main.35d6b2c1.chunk.css",
-    "static/js/main.106d8cef.chunk.js"
+    "static/js/main.056a0e4f.chunk.js"
   ]
 }
