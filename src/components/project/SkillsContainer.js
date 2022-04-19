@@ -72,7 +72,7 @@ const StyledSkillsContainer = styled(motion.div)`
       flex-direction: column;
       justify-content: space-between;
       flex: 1;
-      gap: 24px;
+      gap: 32px;
 
       /* min-width: 250px; */
       background-color: #121212;

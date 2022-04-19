@@ -85,12 +85,7 @@ const StyledTabletContainer = styled(motion.div)`
     position: relative;
     flex: 3;
     margin-left: 14px;
-    @media (max-width: 750px) {
-      margin-right: 12px;
-    }
-    @media (max-width: 450px) {
-      margin-right: 18px;
-    }
+
     .ipad-frame {
       position: relative;
       min-width: clamp(700px, 60vw, 1000px);
@@ -103,6 +98,19 @@ const StyledTabletContainer = styled(motion.div)`
 
       width: 95.3%;
       z-index: -1;
+    }
+  }
+  @media (max-width: 750px) {
+    .tablet-image {
+      margin: 18px;
+    }
+  }
+  @media (max-width: 500px) {
+    .tablet-image {
+      margin-right: 20px;
+      .ipad-frame {
+        min-width: clamp(450px, 60vw, 1000px);
+      }
     }
   }
 `;

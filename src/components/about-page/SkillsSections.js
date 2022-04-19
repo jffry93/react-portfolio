@@ -30,7 +30,7 @@ const SkillsSections = () => {
     >
       <motion.div className='skills-header'>
         <h2>Skills & Tools</h2>
-        <p>Some neat tricks I've picked up along the way</p>
+        {/* <p>Some neat tricks I've picked up along the way</p> */}
       </motion.div>
       <div className='skills-container'>
         <Swiper
@@ -96,8 +96,11 @@ const StyledSkillsContainer = styled(motion.div)`
     @media (max-width: 500px) {
       flex-direction: column-reverse;
       align-items: center;
-      padding: 63px var(--layout-padding) 16px;
+      padding: 63px var(--mobile-padding) 16px;
     }
+  }
+  h2 {
+    padding-bottom: 16px;
   }
 
   p {
@@ -125,7 +128,7 @@ const StyledSkillsContainer = styled(motion.div)`
     height: auto;
     max-width: 320px;
     @media (max-width: 700px) {
-      max-width: 250px;
+      max-width: 270px;
     }
   }
 `;

@@ -88,6 +88,9 @@ const PersonalProjects = () => {
           600: {
             slidesPerView: 1.8,
           },
+          500: {
+            slidesPerView: 1.5,
+          },
         }}
         navigation
         pagination={{

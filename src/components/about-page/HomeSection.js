@@ -1,6 +1,6 @@
 // import home from '../img/home1.png';
 import styled from 'styled-components';
-import coffee from '../../img/ibrahim.jpg';
+import coffee from '../../img/space_loop.gif';
 
 //IMAGES
 import unicef from '../../img/UNICEF_Logo.png';
@@ -119,8 +119,8 @@ const StyledHomepageContainer = styled(motion.div)`
       filter: brightness(0) invert(0.7);
     }
     a {
-      font-size: 14px;
-      text-align: center;
+      font-size: 12px;
+      text-align: left;
       text-decoration: none;
       color: var(--primary-text-color);
 
@@ -130,8 +130,10 @@ const StyledHomepageContainer = styled(motion.div)`
       color: var(--secondary-text-color);
     }
     @media (max-width: 550px) {
-      flex-direction: column;
+      flex-direction: row;
       gap: 8px;
+
+      /* padding: 8px var(--mobile-padding); */
     }
   }
   .buttons {
@@ -155,8 +157,8 @@ const StyledDescription = styled.div`
   display: flex;
   flex-direction: column;
   gap: 16px;
-  @media (max-width: 450px) {
-    padding: var(--layout-padding);
+  @media (max-width: 500px) {
+    padding: var(--mobile-padding);
   }
 
   //greeting

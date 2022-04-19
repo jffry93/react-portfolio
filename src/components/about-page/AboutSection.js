@@ -21,7 +21,7 @@ import { useScroll } from '../useScroll';
 const ServicesSection = () => {
   const [element, controls] = useScroll();
   return (
-    <StyledServices
+    <StyledAbout
       variants={fade}
       animate={controls}
       initial='hidden'
@@ -65,11 +65,11 @@ const ServicesSection = () => {
           <div className='download'></div> <span>Resume</span>
         </motion.a>
       </StyledServicesDescription>
-    </StyledServices>
+    </StyledAbout>
   );
 };
 
-const StyledServices = styled(motion.div)`
+const StyledAbout = styled(motion.div)`
   /* border: 3px solid red; */
 
   /* min-height: 500px;
@@ -97,9 +97,9 @@ const StyledServices = styled(motion.div)`
     align-items: center;
     padding: 63px var(--layout-secondary-padding) 94px;
   }
-  /* @media (max-width: 650px) {
-    padding: 63px 44px 94px;
-  } */
+  @media (max-width: 500px) {
+    padding: 63px var(--mobile-padding) 94px;
+  }
 `;
 const StyledServicesDescription = styled(motion.div)`
   /* border: 3px solid blue; */
@@ -177,8 +177,8 @@ const StyledImage = styled(motion.div)`
     /* width: 300px; */
     /* width: 100%; */
     /* max-height: 400px; */
-    height: 250px;
-    width: 250px;
+    height: 200px;
+    width: 200px;
   }
 
   img {

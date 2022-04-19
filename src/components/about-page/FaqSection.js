@@ -90,6 +90,19 @@ const Faq = styled.div`
       padding: 12px var(--layout-secondary-padding);
     }
   }
+  @media (max-width: 500px) {
+    h2 {
+      padding: 0 var(--mobile-padding) 60px;
+    }
+    h4 {
+      padding: 0rem var(--mobile-padding);
+    }
+    .answer {
+      p {
+        padding: 12px var(--mobile-padding);
+      }
+    }
+  }
 `;
 
 export default FaqSection;

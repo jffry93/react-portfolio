@@ -25,14 +25,12 @@ const StyledSkillCard = styled.div`
   display: flex;
   flex-direction: column;
   height: 100%;
-  h3 {
-    font-size: 1.4rem;
-  }
+
   p {
-    font-size: 1rem;
+    /* font-size: 13px; */
   }
   a {
-    font-size: 1rem;
+    font-size: 15px;
 
     width: fit-content;
     border: 1px solid white;
@@ -55,4 +53,9 @@ const StyledSkillCard = styled.div`
   /* &:hover {
     transform: scale(1.03);
   } */
+  @media (max-width: 500px) {
+    p {
+      font-size: 13px;
+    }
+  }
 `;

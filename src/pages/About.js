@@ -10,6 +10,7 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { pageAnimation, fade } from '../animation';
 import ScrollTop from '../components/ScrollTop';
+import ParallaxSection from '../components/about-page/ParallaxSection';
 
 const AboutUs = () => {
   document.body.style.overflow = 'auto';
@@ -29,7 +30,8 @@ const AboutUs = () => {
         <StyledFrame4 variants={sliderAnimation}></StyledFrame4>
       </motion.div> */}
       <motion.div variants={fade}>
-        <HomeSection />
+        {/* <HomeSection /> */}
+        <ParallaxSection />
         <AboutSection />
         <SkillsSections />
         <ProjectSection />

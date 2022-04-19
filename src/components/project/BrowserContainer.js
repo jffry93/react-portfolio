@@ -96,12 +96,14 @@ const StyledBrowserContainer = styled(motion.div)`
   }
   .browser-screenshot {
     width: 100%;
-    min-width: clamp(900px, 60vw, 1000px);
-    margin: 0 6px 0 0;
+    min-width: clamp(700px, 60vw, 1000px);
+    padding: 0 0 44px 14px;
+    margin: 0;
 
     /* border: 1px solid blue; */
-    @media (max-width: 450px) {
+    @media (max-width: 500px) {
       margin: 0;
+      min-width: clamp(450px, 60vw, 1000px);
     }
   }
 `;
