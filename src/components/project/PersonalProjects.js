@@ -40,8 +40,6 @@ const PersonalProjects = () => {
 
   const [element, controls] = useScroll();
 
-  console.log(projects);
-
   return (
     <StyledProjectSection
     // variants={fade}

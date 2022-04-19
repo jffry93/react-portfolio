@@ -2,7 +2,7 @@
 import styled from 'styled-components';
 
 const SkillCard = ({ title, description, documentation }) => {
-  console.log(documentation);
+  // console.log(documentation);
   return (
     <StyledSkillCard>
       <h3>{title}</h3>
@@ -26,9 +26,6 @@ const StyledSkillCard = styled.div`
   flex-direction: column;
   height: 100%;
 
-  p {
-    /* font-size: 13px; */
-  }
   a {
     font-size: 15px;
 
@@ -37,10 +34,10 @@ const StyledSkillCard = styled.div`
     padding: 0.7rem;
     text-decoration: none;
     color: white;
-    transition: all 0.5s ease;
+    transition: all 0.3s;
   }
   a:hover {
-    font-size: 1.05rem;
+    transform: scale(1.03);
     background-color: #242424;
   }
   .space-container {

@@ -21,77 +21,71 @@ import { useScroll } from '../useScroll';
 const ServicesSection = () => {
   const [element, controls] = useScroll();
   return (
-    <StyledAbout
-      variants={fade}
-      animate={controls}
-      initial='hidden'
-      ref={element}
-      // id='about'
-      // scroll={(el) => el.scrollIntoView({ block: 'center' })}
-    >
-      <StyledImage variants={slideRight}>
-        <img src={myFace} alt='headshot' />
-      </StyledImage>
-      <StyledServicesDescription variants={fade}>
-        <h2>About me</h2>
-        <p>A developer that enjoys a well-written documentation.</p>
-        <p>
-          I’ve been translating designs into web applications, interacting with
-          APIs and building modern reusable scalable components.
-        </p>
-        {/* <p>
+    <StyledContainer>
+      <StyledAbout
+        variants={fade}
+        animate={controls}
+        initial='hidden'
+        ref={element}
+        // id='about'
+        // scroll={(el) => el.scrollIntoView({ block: 'center' })}
+      >
+        <StyledImage variants={slideRight}>
+          <img src={myFace} alt='headshot' />
+        </StyledImage>
+        <StyledServicesDescription variants={fade}>
+          <h2>About me</h2>
+          <p>A developer that enjoys a well-written documentation.</p>
+          <p>
+            I’ve been translating designs into web applications, interacting
+            with APIs and building modern reusable scalable components.
+          </p>
+          {/* <p>
           I’m extremely passionate about software development, learning new
           skills and making the most out of my day.
         </p> */}
-        <p>
-          Check out my{' '}
-          <a
-            className='github-link'
-            href='https://github.com/jffry93'
+          <p>
+            Check out my{' '}
+            <a
+              className='github-link'
+              href='https://github.com/jffry93'
+              target='_blank'
+            >
+              Github
+            </a>{' '}
+            to see what I've been working on.
+          </p>
+          <motion.a
+            variants={fade}
+            className='resume'
+            href={MyResume}
+            download='Jeffrey_Zalischi_Resume'
             target='_blank'
           >
-            Github
-          </a>{' '}
-          to see what I've been working on.
-        </p>
-        <motion.a
-          variants={fade}
-          className='resume'
-          href={MyResume}
-          download='Jeffrey_Zalischi_Resume'
-          target='_blank'
-        >
-          {' '}
-          <div className='download'></div> <span>Resume</span>
-        </motion.a>
-      </StyledServicesDescription>
-    </StyledAbout>
+            {' '}
+            <div className='download'></div> <span>Resume</span>
+          </motion.a>
+        </StyledServicesDescription>
+      </StyledAbout>
+    </StyledContainer>
   );
 };
 
-const StyledAbout = styled(motion.div)`
-  /* border: 3px solid red; */
+const StyledContainer = styled(motion.div)``;
 
+const StyledAbout = styled(motion.div)`
   /* min-height: 500px;
   height: var(--container-height); */
-  max-width: 1024px;
   /* max-height: 800px; */
+  max-width: 1024px;
   margin: auto;
-
   padding: 116px var(--layout-secondary-padding) 119px;
 
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
+  justify-content: space-between;
   gap: 60px;
-
-  /* 
-  p {
-    font-weight: 400;
-    letter-spacing: 2px;
-    line-height: 1.65;
-    color: white;
-  } */
   @media (max-width: 850px) {
     flex-direction: column;
     align-items: center;
@@ -108,9 +102,10 @@ const StyledServicesDescription = styled(motion.div)`
   flex: 1;
   gap: 16px;
 
-  z-index: 2;
+  max-width: 500px;
+
   @media (max-width: 850px) {
-    max-width: 650px;
+    /* max-width: 650px; */
   }
   h2 {
     margin-bottom: 8px;
@@ -118,11 +113,11 @@ const StyledServicesDescription = styled(motion.div)`
   .github-link {
     color: var(--secondary-text-color);
     font-weight: 600;
-    transition: font-size 0.1s;
+    transition: color 0.2s;
   }
   .github-link:hover {
     color: var(--primary-text-color);
-    font-size: clamp(17px, 1.2vw, 18px);
+    /* font-size: clamp(17px, 1.2vw, 18px); */
   }
 
   .resume {
@@ -163,8 +158,8 @@ const StyledServicesDescription = styled(motion.div)`
 const StyledImage = styled(motion.div)`
   /* border: 1px solid white; */
 
-  height: 400px;
-  width: 400px;
+  height: 300px;
+  width: 300px;
   border-radius: 50%;
 
   overflow: hidden;
