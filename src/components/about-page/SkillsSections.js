@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 //JSON DATA
 import skillsState from '../../skillsState';
 //COMPONENTS
@@ -21,6 +21,7 @@ SwiperCore.use([Navigation, Pagination, A11y, Autoplay]);
 const SkillsSections = () => {
   const [skills, setSkills] = useState(skillsState);
   const [element, controls] = useScroll();
+
   return (
     <StyledSkillsContainer
       variants={fade}
@@ -69,6 +70,9 @@ const SkillsSections = () => {
                 title={skill.title}
                 description={skill.description}
                 documentation={skill.documentation}
+                color={skill.hexCode}
+                color2={skill.hexCode2}
+                textColor={skill.textColor}
               />
             </SwiperSlide>
           ))}

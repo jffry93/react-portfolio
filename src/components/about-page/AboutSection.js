@@ -77,7 +77,7 @@ const StyledAbout = styled(motion.div)`
   /* min-height: 500px;
   height: var(--container-height); */
   /* max-height: 800px; */
-  max-width: 1024px;
+  max-width: 900px;
   margin: auto;
   padding: 116px var(--layout-secondary-padding) 119px;
 
@@ -102,7 +102,7 @@ const StyledServicesDescription = styled(motion.div)`
   flex: 1;
   gap: 16px;
 
-  max-width: 500px;
+  max-width: 450px;
 
   @media (max-width: 850px) {
     /* max-width: 650px; */
