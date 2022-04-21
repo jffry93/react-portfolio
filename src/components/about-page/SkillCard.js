@@ -30,7 +30,12 @@ const SkillCard = ({
 export default SkillCard;
 
 const StyledSkillCard = styled.div`
-  background: linear-gradient(155deg, #111111, #161616, #181818);
+  background-image: linear-gradient(
+    155deg,
+    ${(props) => props.color2 || props.color},
+    ${(props) => props.color}
+  );
+
   border-radius: 20px;
   padding: 1rem 1rem 2rem;
   display: flex;
@@ -38,7 +43,6 @@ const StyledSkillCard = styled.div`
   height: 100%;
   position: relative;
   z-index: 1;
-  transition: all 0.3s linear;
 
   a {
     font-size: 15px;
@@ -66,10 +70,11 @@ const StyledSkillCard = styled.div`
     h3,
     p,
     a {
-      color: ${(props) => props.textColor || 'white'};
+      /* color: ${(props) => props.textColor || 'white'};
+      transition: all 0.3s ease; */
     }
     a {
-      border: 1px solid ${(props) => props.textColor || 'white'};
+      /* border: 1px solid ${(props) => props.textColor || 'white'}; */
     }
 
     /* a:hover {
@@ -85,18 +90,19 @@ const StyledSkillCard = styled.div`
     left: 0;
 
     /* background: ${(props) => props.color || '#181818'}; */
-    background-image: linear-gradient(
+    background: linear-gradient(155deg, #111111, #161616, #181818);
+    /* background-image: linear-gradient(
       155deg,
       ${(props) => props.color2 || props.color},
       ${(props) => props.color}
-    );
+    ); */
     border-radius: 20px;
     z-index: -1;
     transition: all 0.3s linear;
-    opacity: 0;
+    opacity: 0.4;
   }
   &:hover:before {
-    opacity: 0.9;
+    opacity: 0.6;
   }
   @media (max-width: 500px) {
     p {

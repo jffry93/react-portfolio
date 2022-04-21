@@ -102,6 +102,15 @@ const skillsState = () => {
       textColor: '#242424',
     },
     {
+      title: 'Material',
+      description:
+        'A library that allows the user to import and use different components to create a user interface in our React applications.',
+      documentation: 'https://mui.com',
+      hexCode: '#01A6F1',
+      hexCode2: '#027BC0',
+      textColor: '#242424',
+    },
+    {
       title: 'Jest',
       description:
         'A JavaScript testing framework designed to ensure correctness of any JavaScript codebase.',
@@ -130,15 +139,7 @@ const skillsState = () => {
       hexCode: '#C10302',
       // textColor: '#242424',
     },
-    {
-      title: 'Material',
-      description:
-        'A library that allows the user to import and use different components to create a user interface in our React applications.',
-      documentation: 'https://mui.com',
-      hexCode: '#01A6F1',
-      hexCode2: '#027BC0',
-      textColor: '#242424',
-    },
+
     {
       title: 'Git',
       description:
@@ -162,6 +163,7 @@ const skillsState = () => {
       documentation:
         'https://www.adobe.com/ca/creativecloud/business/teams.html?sdid=KKQWX&mv=search&ef_id=Cj0KCQiAraSPBhDuARIsAM3Js4oa_6quAWB6b0z7m5ITJG7fGPz87HVOhybrLcQcvteeGOQu3BhcI9AaAmkbEALw_wcB:G:s&s_kwcid=AL!3085!3!495846071701!e!!g!!adobe!12231505439!122943076691&gclid=Cj0KCQiAraSPBhDuARIsAM3Js4oa_6quAWB6b0z7m5ITJG7fGPz87HVOhybrLcQcvteeGOQu3BhcI9AaAmkbEALw_wcB',
       hexCode: '#ED1001',
+      textColor: '#242424',
     },
     {
       title: 'Glide',
@@ -190,6 +192,7 @@ const skillsState = () => {
         'Send emails using client-side technologies only. No server is required. ',
       documentation: 'https://www.emailjs.com',
       hexCode: '#EF9A4F',
+      textColor: '#242424',
     },
 
     {
