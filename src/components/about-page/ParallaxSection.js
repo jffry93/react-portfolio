@@ -67,9 +67,10 @@ const ParallaxSection = () => {
       </div>
       <div className='container'>
         <motion.div className='content' style={{ y: y3, x: -0 }}>
-          <h2>Your</h2>
-          <h1>Digital Space </h1>
-          <h2>is limitless</h2>
+          <h2>Hi, I'm Jeff</h2>
+          <h1>Frontend Developer</h1>
+          <h3>Your digital space is limitless</h3>
+          <p></p>
           <div className='button-container'>
             <NavHashLink href='#' to='/contact'>
               <button>Let's Talk</button>

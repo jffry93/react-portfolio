@@ -132,23 +132,6 @@ const skillsState = () => {
       hexCode: '#7E3E8E',
     },
     {
-      title: 'npm',
-      description:
-        'Sets modules in place so that node can find them, and manages dependency conflicts intelligently.',
-      documentation: 'https://www.npmjs.com/',
-      hexCode: '#C10302',
-      // textColor: '#242424',
-    },
-
-    {
-      title: 'Git',
-      description:
-        'Software for tracking changes in any set of files, usually used for coordinating work among programmers.',
-      documentation: 'https://www.git-scm.com/',
-      hexCode: '#E44C31',
-      textColor: '#242424',
-    },
-    {
       title: 'Figma',
       description:
         'A vector graphics editor and prototyping tool which is primarily web-based.',
@@ -225,6 +208,23 @@ const skillsState = () => {
         'Brings the power of website animations and interactions directly into a visual toolbox.',
       documentation: 'https://webflow.com/',
       hexCode: '#3F4EF2',
+    },
+    {
+      title: 'npm',
+      description:
+        'Sets modules in place so that node can find them, and manages dependency conflicts intelligently.',
+      documentation: 'https://www.npmjs.com/',
+      hexCode: '#C10302',
+      // textColor: '#242424',
+    },
+
+    {
+      title: 'Git',
+      description:
+        'Software for tracking changes in any set of files, usually used for coordinating work among programmers.',
+      documentation: 'https://www.git-scm.com/',
+      hexCode: '#E44C31',
+      textColor: '#242424',
     },
   ];
 };

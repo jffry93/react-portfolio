@@ -64,11 +64,11 @@ const ProjectDetails = ({ caseDetail, setShowDetail }) => {
           <div className='section-divider'></div>
           <RoleContainer roles={project.roles} />
           <div className='section-divider'></div>
-          <BrowserContainer
+          {/* <BrowserContainer
             fonts={project.fonts}
             browserImg={project.browserImg}
           />
-          <div className='section-divider'></div>
+          <div className='section-divider'></div> */}
           <TabletContainer
             ipadImg={project.ipadImg}
             colours={project.colours}
