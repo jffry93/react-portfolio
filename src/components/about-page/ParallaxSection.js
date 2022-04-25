@@ -184,6 +184,9 @@ const StyledParallaxContainer = styled.div`
     }
   }
   @media (max-width: 550px) {
+    .content {
+      padding: 0 var(--layout-padding);
+    }
     .text {
       padding: 0 var(--layout-padding);
     }

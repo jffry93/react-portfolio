@@ -115,7 +115,7 @@ const StyledDetails = styled.div`
   h3 {
     color: white;
     font-weight: 700;
-    font-size: 2rem;
+    font-size: 1.7rem;
   }
   p {
     color: white;

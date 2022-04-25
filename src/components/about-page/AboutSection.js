@@ -4,6 +4,7 @@
 // import money from '../img/money.svg';
 // import teamwork from '../img/teamwork.svg';
 //IMAGES
+import { BsGithub } from 'react-icons/bs';
 import myFace from '../../img/myFace.jpg';
 //ICONS
 import downloadIcon from '../../img/icons/download-solid.svg';
@@ -31,7 +32,8 @@ const ServicesSection = () => {
         // scroll={(el) => el.scrollIntoView({ block: 'center' })}
       >
         <StyledImage variants={slideRight}>
-          <img src={myFace} alt='headshot' />
+          <div className='picture'></div>
+          {/* <img src={myFace} alt='headshot' /> */}
         </StyledImage>
         <StyledServicesDescription variants={fade}>
           <h2>About me</h2>
@@ -55,16 +57,28 @@ const ServicesSection = () => {
             </a>{' '}
             to see what I've been working on.
           </p>
-          <motion.a
-            variants={fade}
-            className='resume'
-            href={MyResume}
-            download='Jeffrey_Zalischi_Resume'
-            target='_blank'
-          >
-            {' '}
-            <div className='download'></div> <span>Resume</span>
-          </motion.a>
+          <div className='button-container'>
+            <motion.a
+              variants={fade}
+              className='resume'
+              href={MyResume}
+              download='Jeffrey_Zalischi_Resume'
+              target='_blank'
+            >
+              {' '}
+              <div className='download'></div> <span>Resume</span>
+            </motion.a>
+            <motion.a
+              variants={fade}
+              className='resume'
+              href={MyResume}
+              download='Jeffrey_Zalischi_Resume'
+              target='_blank'
+            >
+              {' '}
+              <BsGithub size={22} /> <span>Github</span>
+            </motion.a>
+          </div>
         </StyledServicesDescription>
       </StyledAbout>
     </StyledContainer>
@@ -92,7 +106,7 @@ const StyledAbout = styled(motion.div)`
     padding: 63px var(--layout-secondary-padding) 94px;
   }
   @media (max-width: 500px) {
-    padding: 63px var(--mobile-padding) 94px;
+    padding: 63px var(--layout-padding) 94px;
   }
 `;
 const StyledServicesDescription = styled(motion.div)`
@@ -118,6 +132,10 @@ const StyledServicesDescription = styled(motion.div)`
   .github-link:hover {
     color: var(--primary-text-color);
     /* font-size: clamp(17px, 1.2vw, 18px); */
+  }
+  .button-container {
+    display: flex;
+    gap: 8px;
   }
 
   .resume {
@@ -156,16 +174,26 @@ const StyledServicesDescription = styled(motion.div)`
 `;
 
 const StyledImage = styled(motion.div)`
-  /* border: 1px solid white; */
+  border-radius: 50%;
 
   height: 300px;
   width: 300px;
-  border-radius: 50%;
 
   overflow: hidden;
+
   display: flex;
   align-items: center;
   justify-content: center;
+  .picture {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+
+    background-image: url(${myFace});
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
   @media (max-width: 500px) {
     /* border-radius: 50%; */
     /* height: unset; */
@@ -174,6 +202,8 @@ const StyledImage = styled(motion.div)`
     /* max-height: 400px; */
     height: 200px;
     width: 200px;
+    border: 3px solid rgba(255, 255, 255, 1);
+    padding: 6px;
   }
 
   img {

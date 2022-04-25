@@ -91,15 +91,13 @@ const Faq = styled.div`
     }
   }
   @media (max-width: 500px) {
-    h2 {
-      padding: 0 var(--mobile-padding) 60px;
-    }
+    h2,
     h4 {
-      padding: 0rem var(--mobile-padding);
+      padding: 0rem var(--layout-padding);
     }
     .answer {
       p {
-        padding: 12px var(--mobile-padding);
+        padding: 12px var(--layout-padding);
       }
     }
   }

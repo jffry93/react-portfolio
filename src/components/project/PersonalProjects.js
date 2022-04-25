@@ -202,7 +202,7 @@ const StyledProjectSection = styled(motion.div)`
       opacity: 0;
       position: absolute;
       top: 50%;
-      left: -20%;
+      left: -15%;
       transform: translate(0%, -50%);
 
       height: auto;
@@ -236,7 +236,7 @@ const StyledProjectSection = styled(motion.div)`
   }
   .swiper-button-prev,
   .swiper-button-next {
-    color: white;
+    color: rgba(255, 255, 255, 0.5);
   }
   .swiper-pagination-bullet {
     background: grey;

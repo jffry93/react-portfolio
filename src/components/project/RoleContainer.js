@@ -50,7 +50,7 @@ const StyledRoleContainer = styled(motion.div)`
   }
   @media (max-width: 500px) {
     /* padding: var(--layout-padding); */
-    border: 1px solid white;
+    /* border: 1px solid white; */
   }
   .title-icon {
     white-space: nowrap;

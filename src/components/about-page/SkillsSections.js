@@ -100,7 +100,7 @@ const StyledSkillsContainer = styled(motion.div)`
     @media (max-width: 500px) {
       flex-direction: column-reverse;
       align-items: center;
-      padding: 63px var(--mobile-padding) 16px;
+      padding: 63px var(--layout-padding) 16px;
     }
   }
   h2 {
