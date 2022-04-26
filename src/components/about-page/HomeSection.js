@@ -1,6 +1,6 @@
 // import home from '../img/home1.png';
 import styled from 'styled-components';
-import coffee from '../../img/space_loop.gif';
+import coffee from '../../img/ibrahim.jpg';
 
 //IMAGES
 import unicef from '../../img/UNICEF_Logo.png';

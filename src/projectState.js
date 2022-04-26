@@ -3,7 +3,7 @@ import vbcdesktop from './img/projects/Vous/vbc-desktop.png';
 import vbcmobile from './img/projects/Vous/vbc405x780.png';
 import vbcBrowser from './img/projects/Vous/vbc-shop-light.png';
 import vbcIpad from './img/projects/Vous/vbc-ipad-930.png';
-import vbcMain from './img/projects/Vous/vbcThumb.png';
+import vbcMain from './img/projects/Vous/vbcThumb.webp';
 //NATURES CANOPY HOUSE
 import nchMain from './img/projects/NCH/nchThumb.webp';
 import nchMobile from './img/projects/NCH/nch405x780.png';
