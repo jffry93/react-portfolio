@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import stars from '../../img/parallax2/space.png';
 import layer1 from '../../img/parallax2/layer1.png';
 import layer2 from '../../img/parallax2/layer2.png';
-import clouds from '../../img/parallax/clouds.png';
 import unicef from '../../img/UNICEF_Logo.png';
 // import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 //FRAMER MOTION

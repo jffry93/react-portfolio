@@ -12,7 +12,7 @@ const SkillCard = ({
   textColor,
 }) => {
   useEffect(() => {
-    console.log(color);
+    // console.log(color);
   }, []);
   return (
     <StyledSkillCard color={color} color2={color2} textColor={textColor}>

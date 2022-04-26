@@ -1,3 +1,5 @@
+// import { useState } from 'react/cjs/react.development';
+
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 //APPEAR WHEN IN VIEWPORT
@@ -7,9 +9,24 @@ import { useScroll } from '../useScroll';
 import ipad from '../../img/devices/empty-ipad-horizontal.png';
 //ICONS
 import paletteIcon from '../../img/icons/palette-icon.svg';
+//REACT ICONS
+import { BsClipboard, BsClipboardCheck } from 'react-icons/bs';
 
 const TabletContainer = ({ colours, ipadImg }) => {
   const [element, controls] = useScroll();
+
+  // const [clipboard, setClipboard] = useState(false);
+
+  const toggleClipboard = (e) => {
+    const copied = e.currentTarget.childNodes[0].childNodes[0];
+    console.log(copied);
+    copied.style.display = 'block';
+
+    setTimeout(() => {
+      copied.style.display = 'none';
+    }, 2000);
+  };
+
   return (
     <StyledTabletContainer
       variants={fade}
@@ -42,10 +59,15 @@ const TabletContainer = ({ colours, ipadImg }) => {
               <div
                 className='colour-palette'
                 style={{ backgroundColor: `${colour.hexCode}` }}
-                onClick={() => {
+                onClick={(e) => {
                   navigator.clipboard.writeText(`${colour.hexCode}`);
+                  toggleClipboard(e);
                 }}
               >
+                <div className='clipboard-container'>
+                  <BsClipboardCheck className='clipboard-check' />
+                  <BsClipboard className='clipboard' />
+                </div>
                 <p>{colour.hexCode}</p>
               </div>
             ))}
@@ -157,6 +179,27 @@ const StyledColourContainer = styled.div`
         width: 100%;
         height: 80px;
         cursor: pointer;
+
+        position: relative;
+        .clipboard-container {
+          position: absolute;
+          top: 5px;
+          right: 5px;
+          .clipboard-check {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            display: none;
+            fill: white;
+          }
+          .clipboard {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            display: block;
+            fill: white;
+          }
+        }
 
         /* transition: all 0.5s ease; */
         @media (max-width: 750px) {
