@@ -1,3 +1,5 @@
+import { v4 as uuidv4 } from 'uuid';
+
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 //APPEAR WHEN IN VIEWPORT
@@ -24,7 +26,7 @@ const RoleContainer = ({ roles }) => {
 
       <div className='roles-container'>
         {roles.map((role) => (
-          <div className='role custom-card'>
+          <div key={uuidv4()} className='role custom-card'>
             <div className='role-icon'>
               <img src={role.iconFa} alt='' />
               <h4>{role.title}</h4>

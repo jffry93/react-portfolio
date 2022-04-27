@@ -1,3 +1,5 @@
+import { v4 as uuidv4 } from 'uuid';
+
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 //APPEAR WHEN IN VIEWPORT
@@ -24,7 +26,7 @@ const SkillsContainer = ({ skills }) => {
 
       <div className='icon-container'>
         {skills.map((icon) => (
-          <div className='skill'>
+          <div key={uuidv4()} className='skill'>
             <div className='tool-text-container'>
               <h4>{icon.title}</h4>
               <p>{icon.description}</p>

@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'react';
+import { v4 as uuidv4 } from 'uuid';
+
 //JSON DATA
 import skillsState from '../../skillsState';
 //COMPONENTS
@@ -15,6 +17,7 @@ import 'swiper/swiper-bundle.min.css';
 import 'swiper/swiper.min.css';
 //swiper core and modules
 import SwiperCore, { Navigation, Pagination, A11y, Autoplay } from 'swiper';
+
 //install swiper modules
 SwiperCore.use([Navigation, Pagination, A11y, Autoplay]);
 
@@ -51,7 +54,6 @@ const SkillsSections = () => {
           // }}
           autoplay={{
             delay: 1,
-            disableOnInteraction: false,
             onMouseEnter: () => this.swiper.autoplay.stop(),
           }}
           speed={2000}
@@ -64,8 +66,8 @@ const SkillsSections = () => {
             },
           }}
         >
-          {skills.map((skill) => (
-            <SwiperSlide>
+          {skills.map((skill, i) => (
+            <SwiperSlide key={uuidv4()}>
               <SkillCard
                 title={skill.title}
                 description={skill.description}

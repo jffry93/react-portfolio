@@ -1,4 +1,6 @@
-// import { useState } from 'react/cjs/react.development';
+import { useRef, useState, useEffect } from 'react/cjs/react.development';
+
+import { v4 as uuidv4 } from 'uuid';
 
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
@@ -15,17 +17,18 @@ import { BsClipboard, BsClipboardCheck } from 'react-icons/bs';
 const TabletContainer = ({ colours, ipadImg }) => {
   const [element, controls] = useScroll();
 
-  // const [clipboard, setClipboard] = useState(false);
+  const refClipboard = useRef();
 
-  const toggleClipboard = (e) => {
-    const copied = e.currentTarget.childNodes[0].childNodes[0];
-    console.log(copied);
-    copied.style.display = 'block';
-
-    setTimeout(() => {
-      copied.style.display = 'none';
-    }, 2000);
-  };
+  const [clipboard, setClipboard] = useState('');
+  //UPDATE CLIPBOARD ICON
+  useEffect(() => {
+    if (clipboard) {
+      clipboard.childNodes[0].childNodes[0].style.display = ' block';
+      setTimeout(() => {
+        clipboard.childNodes[0].childNodes[0].style.display = 'none';
+      }, 2000);
+    }
+  }, [clipboard]);
 
   return (
     <StyledTabletContainer
@@ -52,20 +55,21 @@ const TabletContainer = ({ colours, ipadImg }) => {
           <img src={paletteIcon} alt='role icon' className='title-icon' />
           <h2>Palette</h2>
         </div>
-        {/* <h3>Colors get the people going!</h3> */}
+
         <div className='palette-container'>
-          <div className='colour-palettes'>
-            {colours.map((colour) => (
+          <div className='colour-palettes' ref={refClipboard}>
+            {colours.map((colour, i) => (
               <div
+                key={uuidv4()}
                 className='colour-palette'
                 style={{ backgroundColor: `${colour.hexCode}` }}
                 onClick={(e) => {
+                  setClipboard(refClipboard.current.childNodes[i]);
                   navigator.clipboard.writeText(`${colour.hexCode}`);
-                  toggleClipboard(e);
                 }}
               >
                 <div className='clipboard-container'>
-                  <BsClipboardCheck className='clipboard-check' />
+                  <BsClipboardCheck className='clipboard-check' id='hide' />
                   <BsClipboard className='clipboard' />
                 </div>
                 <p>{colour.hexCode}</p>

@@ -1,3 +1,5 @@
+import { v4 as uuidv4 } from 'uuid';
+
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 //APPEAR WHEN IN VIEWPORT
@@ -23,7 +25,12 @@ const DeviceContainer = ({ secondDescription, url, desktopImg, mobileImg }) => {
           <p>{secondDescription}</p>
           <div className='project-sites'>
             {url.map((url) => (
-              <a href={url.website} target='_blank' className='project-button'>
+              <a
+                key={uuidv4()}
+                href={url.website}
+                target='_blank'
+                className='project-button'
+              >
                 Visit {url.title}
               </a>
             ))}

@@ -22,6 +22,7 @@ const ProjectSection = () => {
 export default ProjectSection;
 
 const StyledContributions = styled(motion.div)`
+  /* border: 1px solid white; */
   display: flex;
   flex-direction: column;
   align-items: center;

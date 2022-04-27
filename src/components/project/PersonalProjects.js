@@ -1,6 +1,8 @@
 import { useState, useRef } from 'react';
 import projectState from '../../projectState';
 
+import { v4 as uuidv4 } from 'uuid';
+
 //COMPONENTS
 import Project from './Project';
 import ProjectDetails from './ProjectDetails';
@@ -106,16 +108,14 @@ const PersonalProjects = () => {
         centeredSlides
         autoplay={{
           delay: 4000,
-          disableOnInteraction: false,
         }}
         speed={500}
-        disableOnInteraction={true}
         loop={true}
         // onSwiper={(swiper) => console.log(swiper)}
         // onSlideChange={() => console.log('slide change')}
       >
-        {projects.map((project) => (
-          <SwiperSlide>
+        {projects.map((project, i) => (
+          <SwiperSlide key={i}>
             <Project
               title={project.title}
               secondaryTitle={project.secondaryTitle}
@@ -221,7 +221,7 @@ const StyledProjectSection = styled(motion.div)`
   .swiper-slide-active {
     transform: scale(1) !important;
     opacity: 1;
-    transition: transform 1.5s ease, opacity 1.5s ease;
+    /* transition: transform 1.5s ease, opacity 1.5s ease; */
     z-index: 3;
     div {
       overflow: visible;

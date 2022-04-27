@@ -3,6 +3,7 @@ import React from 'react';
 import Toggle from '../Toggle';
 //Styles
 import styled from 'styled-components';
+import { fade } from '../../animation';
 
 //Framer Motion
 //detects when layout changes
@@ -13,7 +14,13 @@ import { useScroll } from '../useScroll';
 const FaqSection = () => {
   const [element, controls] = useScroll();
   return (
-    <Faq className='faq'>
+    <Faq
+      variants={fade}
+      animate={controls}
+      initial='hidden'
+      ref={element}
+      className='faq'
+    >
       <h2>
         Any Questions <span>FAQ</span>
       </h2>
