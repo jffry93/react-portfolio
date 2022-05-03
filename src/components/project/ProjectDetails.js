@@ -9,7 +9,7 @@ import { useScroll } from '../useScroll';
 import HeaderContainer from './HeaderContainer';
 import DeviceContainer from './DeviceContainer';
 import RoleContainer from './RoleContainer';
-import BrowserContainer from './BrowserContainer';
+// import BrowserContainer from './BrowserContainer';
 import TabletContainer from './TabletContainer';
 import SkillsContainer from './SkillsContainer';
 
@@ -27,7 +27,7 @@ const ProjectDetails = ({ caseDetail, setShowDetail }) => {
   const [element, controls] = useScroll();
   //state holding data of project that was selected
   const project = caseDetail;
-  console.log(caseDetail);
+  // console.log(caseDetail);
 
   return (
     <motion.div

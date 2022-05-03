@@ -1,5 +1,3 @@
-import { useRef, useState, useEffect } from 'react/cjs/react.development';
-
 import { v4 as uuidv4 } from 'uuid';
 
 import styled from 'styled-components';
@@ -17,18 +15,15 @@ import { BsClipboard, BsClipboardCheck } from 'react-icons/bs';
 const TabletContainer = ({ colours, ipadImg }) => {
   const [element, controls] = useScroll();
 
-  const refClipboard = useRef();
-
-  const [clipboard, setClipboard] = useState('');
-  //UPDATE CLIPBOARD ICON
-  useEffect(() => {
-    if (clipboard) {
-      clipboard.childNodes[0].childNodes[0].style.display = ' block';
-      setTimeout(() => {
-        clipboard.childNodes[0].childNodes[0].style.display = 'none';
-      }, 2000);
-    }
-  }, [clipboard]);
+  const clipboardHandler = (element, colour) => {
+    console.log('testing handler');
+    let clipboard = element.currentTarget.children[0];
+    clipboard.children[0].style.display = ' block';
+    navigator.clipboard.writeText(`${colour.hexCode}`);
+    setTimeout(() => {
+      clipboard.children[0].style.display = ' none';
+    }, 2000);
+  };
 
   return (
     <StyledTabletContainer
@@ -57,19 +52,18 @@ const TabletContainer = ({ colours, ipadImg }) => {
         </div>
 
         <div className='palette-container'>
-          <div className='colour-palettes' ref={refClipboard}>
+          <div className='colour-palettes'>
             {colours.map((colour, i) => (
               <div
                 key={uuidv4()}
                 className='colour-palette'
                 style={{ backgroundColor: `${colour.hexCode}` }}
                 onClick={(e) => {
-                  setClipboard(refClipboard.current.childNodes[i]);
-                  navigator.clipboard.writeText(`${colour.hexCode}`);
+                  clipboardHandler(e, colour);
                 }}
               >
                 <div className='clipboard-container'>
-                  <BsClipboardCheck className='clipboard-check' id='hide' />
+                  <BsClipboardCheck className='clipboard-check' />
                   <BsClipboard className='clipboard' />
                 </div>
                 <p>{colour.hexCode}</p>
@@ -96,7 +90,6 @@ const StyledTabletContainer = styled(motion.div)`
 
   padding-right: 22px;
 
-  /* border: 1px solid red; */
   @media (max-width: 750px) {
     flex-direction: column;
     align-items: flex-end;

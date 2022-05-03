@@ -67,6 +67,7 @@ const DeviceContainer = ({ secondDescription, url, desktopImg, mobileImg }) => {
 };
 
 export default DeviceContainer;
+
 const StyledDescriptionContainer = styled(motion.div)`
   display: flex;
   flex-direction: row;

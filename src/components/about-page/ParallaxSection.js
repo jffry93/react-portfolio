@@ -10,7 +10,7 @@ import {
   useViewportScroll,
   motion,
   useTransform,
-  useMotionValue,
+  // useMotionValue,
 } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 //REACT ROUTER
@@ -28,14 +28,14 @@ const ParallaxSection = () => {
     threshold: 0.5,
     triggerOnce: false,
   });
-  console.log(scrollYProgress);
+  // console.log(scrollYProgress);
 
-  const grow = {
-    start: { scale: 1 },
-    end: {
-      scale: 1.05,
-    },
-  };
+  // const grow = {
+  //   start: { scale: 1 },
+  //   end: {
+  //     scale: 1.05,
+  //   },
+  // };
 
   return (
     <StyledParallaxContainer>
