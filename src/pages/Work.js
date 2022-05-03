@@ -23,19 +23,19 @@ const OurWork = () => {
 
   return (
     <StyledWork
-      variants={pageAnimation}
+      variants={fade}
       initial='hidden'
       animate='show'
       exit='exit'
       style={{ background: '#121212' }}
     >
       <ScrollTop />
-      <motion.div variants={sliderContainer}>
+      {/* <motion.div variants={sliderContainer}>
         <StyledFrame1 variants={sliderAnimation}></StyledFrame1>
         <StyledFrame2 variants={sliderAnimation}></StyledFrame2>
         <StyledFrame3 variants={sliderAnimation}></StyledFrame3>
         <StyledFrame4 variants={sliderAnimation}></StyledFrame4>
-      </motion.div>
+      </motion.div> */}
       <motion.div variants={fade}>
         <motion.div variants={fade} className='paid-work'>
           <PersonalProject />

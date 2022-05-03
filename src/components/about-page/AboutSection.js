@@ -176,8 +176,8 @@ const StyledServicesDescription = styled(motion.div)`
 const StyledImage = styled(motion.div)`
   border-radius: 50%;
 
-  height: 300px;
-  width: 300px;
+  height: 250px;
+  width: 250px;
 
   overflow: hidden;
 
