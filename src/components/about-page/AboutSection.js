@@ -33,28 +33,26 @@ const ServicesSection = () => {
       >
         <StyledImage variants={slideRight}>
           <div className='picture'></div>
-          {/* <img src={myFace} alt='headshot' /> */}
         </StyledImage>
         <StyledServicesDescription variants={fade}>
-          <h2>About me</h2>
+          <h2>
+            <span className='about'>About</span> me
+          </h2>
           <p>A developer that enjoys a well-written documentation.</p>
           <p>
-            I’ve been translating designs into web applications, interacting
-            with APIs and building modern reusable scalable components.
+            Using modern javascript frameworks I've been translating designs
+            into web applications, interacting with REST APIs and building
+            modern reusable scalable components.
           </p>
-          {/* <p>
-          I’m extremely passionate about software development, learning new
-          skills and making the most out of my day.
-        </p> */}
           <p>
-            Check out my{' '}
+            Check out my
             <a
               className='github-link'
               href='https://github.com/jffry93'
               target='_blank'
             >
               Github
-            </a>{' '}
+            </a>
             to see what I've been working on.
           </p>
           <div className='button-container'>
@@ -71,8 +69,7 @@ const ServicesSection = () => {
             <motion.a
               variants={fade}
               className='resume'
-              href={MyResume}
-              download='Jeffrey_Zalischi_Resume'
+              href='https://github.com/jffry93'
               target='_blank'
             >
               {' '}
@@ -93,14 +90,14 @@ const StyledAbout = styled(motion.div)`
   /* max-height: 800px; */
   max-width: 900px;
   margin: auto;
-  padding: 116px var(--layout-secondary-padding) 119px;
+  padding: 116px 60px 119px;
 
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
   justify-content: space-between;
   gap: 60px;
-  @media (max-width: 850px) {
+  @media (max-width: 950px) {
     flex-direction: column;
     align-items: center;
     padding: 63px var(--layout-secondary-padding) 94px;
@@ -124,13 +121,18 @@ const StyledServicesDescription = styled(motion.div)`
   h2 {
     margin-bottom: 8px;
   }
+  .about {
+    font-size: clamp(37px, 5vw, 53px);
+  }
   .github-link {
-    color: var(--secondary-text-color);
+    text-decoration: none;
+    color: var(--primary-accent);
     font-weight: 600;
     transition: color 0.2s;
+    padding: 0px 4px;
   }
   .github-link:hover {
-    color: var(--primary-text-color);
+    color: var(--primary-accent-shade);
     /* font-size: clamp(17px, 1.2vw, 18px); */
   }
   .button-container {
@@ -168,8 +170,16 @@ const StyledServicesDescription = styled(motion.div)`
     }
   }
   .resume:hover {
-    background-color: rgba(0, 0, 0, 0.5);
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    background-color: var(--primary-accent);
+    border: 1px solid var(--primary-accent);
     transform: scale(1.03);
+  }
+  .resume:active {
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    background-color: var(--primary-accent-shade);
+    border: 1px solid var(--primary-accent-shade);
+    transform: scale(1);
   }
 `;
 

@@ -33,7 +33,9 @@ const SkillsSections = () => {
       ref={element}
     >
       <motion.div className='skills-header'>
-        <h2>Skills & Tools</h2>
+        <h2>
+          <span>Skills</span> & <span>Tools</span>
+        </h2>
         {/* <p>Some neat tricks I've picked up along the way</p> */}
       </motion.div>
       <div className='skills-container'>
@@ -55,6 +57,7 @@ const SkillsSections = () => {
           autoplay={{
             delay: 1,
             onMouseEnter: () => this.swiper.autoplay.stop(),
+            disableOnInteraction: false,
           }}
           speed={2000}
           breakpoints={{
@@ -107,6 +110,9 @@ const StyledSkillsContainer = styled(motion.div)`
   }
   h2 {
     padding-bottom: 16px;
+    span {
+      font-size: clamp(37px, 5vw, 53px);
+    }
   }
 
   p {
@@ -116,6 +122,9 @@ const StyledSkillsContainer = styled(motion.div)`
     padding-bottom: 119px;
     @media (max-width: 850px) {
       padding-bottom: 94px;
+    }
+    .swiper-container {
+      overflow: visible;
     }
   }
 

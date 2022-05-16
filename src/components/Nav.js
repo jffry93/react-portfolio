@@ -13,6 +13,7 @@ import MyResume from '../Resume/Jeffrey_Zalischi_Resume.pdf';
 
 //import { motion } from 'framer-motion';
 import { useLocation } from 'react-router';
+import SocialLinks from './FloatingIcons';
 // import { StyledOverlay } from '../Styles';
 
 const Nav = ({ navToggle, setNavToggle }) => {
@@ -86,6 +87,7 @@ const Nav = ({ navToggle, setNavToggle }) => {
             animate={{ width: pathname === '/contact' ? '50%' : '0%' }}
           /> */}
           </li>
+
           <a
             className='resume'
             href={MyResume}
@@ -109,18 +111,9 @@ const StyledNav = styled.nav`
   top: 0;
   z-index: 10;
   /* border: pink 3px solid; */
-  background: rgba(12, 12, 12);
+  background: var(--primary-color);
   backdrop-filter: blur(0.15rem);
-  .close-toggle {
-    background: url(${closeHamburger});
-    background-repeat: no-repeat;
-    transition: background 100ms ease-out;
-  }
-  .hamburger-toggle {
-    background: url(${hamburger});
-    background-repeat: no-repeat;
-    transition: background 100ms ease-out;
-  }
+
   a {
     color: white;
     text-decoration: none;
@@ -162,10 +155,13 @@ const StyledNav = styled.nav`
       span {
         color: white;
       }
+      span:hover {
+        color: var(--primary-accent);
+      }
 
       .selected {
         span {
-          color: rgba(209, 209, 209, 0.5);
+          color: var(--primary-accent);
         }
       }
     }
@@ -178,7 +174,7 @@ const StyledNav = styled.nav`
       padding: 0.7rem 1.4rem 0.7rem 1.1rem;
       border: 1px solid white;
       font-weight: 600;
-      transition: all 0.3s ease-out;
+      transition: all 0.2s ease-out;
       .download {
         width: 12px;
         height: 12px;
@@ -191,9 +187,19 @@ const StyledNav = styled.nav`
         font-size: 12px;
       }
     }
+
     .resume:hover {
+      background-color: var(--primary-accent);
+      border: 1px solid var(--primary-accent);
       transform: scale(1.03);
-      background-color: rgba(39, 39, 39, 0.3);
+
+      /* background-color: rgba(39, 39, 39, 0.3); */
+      color: var(--primary-text-color);
+      /* border: 1px solid var(--primary-accent); */
+      .download {
+        /* filter: brightness(0) saturate(100%) invert(78%) sepia(34%)
+          saturate(5165%) hue-rotate(315deg) brightness(101%) contrast(90%); */
+      }
     }
 
     //uses the value if the browser supports it
@@ -270,6 +276,27 @@ const StyledNav = styled.nav`
 `;
 const StyledNavToggle = styled.button`
   display: none;
+  &.close-toggle {
+    fill: white;
+    background: url(${closeHamburger});
+    background-repeat: no-repeat;
+    transition: background 100ms ease-out;
+  }
+  &.hamburger-toggle {
+    background: url(${hamburger});
+    background-repeat: no-repeat;
+    transition: background 100ms ease-out;
+  }
+  &.hamburger-toggle,
+  &.close-toggle {
+    filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(193deg)
+      brightness(101%) contrast(101%);
+  }
+  &.hamburger-toggle:hover,
+  &.close-toggle:hover {
+    filter: brightness(0) saturate(100%) invert(100%) sepia(3%) saturate(5039%)
+      hue-rotate(186deg) brightness(117%) contrast(76%);
+  }
   @media (max-width: 750px) {
     display: block;
     padding: 0%;

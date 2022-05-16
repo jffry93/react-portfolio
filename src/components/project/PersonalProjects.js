@@ -108,6 +108,7 @@ const PersonalProjects = () => {
         centeredSlides
         autoplay={{
           delay: 4000,
+          disableOnInteraction: false,
         }}
         speed={500}
         loop={true}

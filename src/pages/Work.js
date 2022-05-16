@@ -11,8 +11,9 @@ import {
 } from '../animation';
 // import { useScroll } from '../components/useScroll';
 import ScrollTop from '../components/ScrollTop';
-
+//components
 import PersonalProject from '../components/project/PersonalProjects';
+import FloatingIcons from '../components/FloatingIcons';
 
 const OurWork = () => {
   document.body.style.overflow = 'auto';
@@ -23,7 +24,7 @@ const OurWork = () => {
 
   return (
     <StyledWork
-      variants={fade}
+      variants={pageAnimation}
       initial='hidden'
       animate='show'
       exit='exit'
@@ -40,6 +41,7 @@ const OurWork = () => {
         <motion.div variants={fade} className='paid-work'>
           <PersonalProject />
         </motion.div>
+        {/* <FloatingIcons /> */}
         {/* <motion.div
           ref={element}
           variants={fade}

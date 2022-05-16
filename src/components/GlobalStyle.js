@@ -12,6 +12,13 @@ const GlobalStyle = createGlobalStyle`
         --primary-text-color: #e1e1e1;
         --secondary-text-color: #a5a5a5;
 
+        --primary-color: #5445a6;
+        --secondary-color: #7a5295;
+        --secondary-shade: #011f49;
+        --primary-accent: #f2816f;
+        --primary-accent-shade: #b06c62;
+        --secondary-accent: #071013;
+
         --max-width: 1200px;
 
         --navbar-height: 50px;
@@ -29,7 +36,7 @@ const GlobalStyle = createGlobalStyle`
         line-height: 1.47059;
         letter-spacing: -.022em;
         font-family: 'Inter', sans-serif;
-        background: #151515;
+        background:#5445a6; 
         overflow-x: hidden;
     }
     .custom-card{
@@ -91,6 +98,9 @@ const GlobalStyle = createGlobalStyle`
     }
     h1,h2,h3,h4,h5,p{
         color: white;
+    }
+    footer{
+        background-color:#115169 ;
     }
     
 `;

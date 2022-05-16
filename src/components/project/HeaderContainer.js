@@ -28,7 +28,7 @@ const StyledHeadingContainer = styled(motion.div)`
   position: sticky;
   top: 0;
   z-index: 20;
-  background-color: #121212;
+  background-color: var(--primary-color);
 
   display: flex;
   align-items: flex-start;
@@ -55,7 +55,7 @@ const StyledHeadingContainer = styled(motion.div)`
     padding: 12px var(--mobile-padding);
     button {
       padding: 6px 12px;
-      background-color: #393939;
+      /* background-color: #393939; */
     }
   }
 `;

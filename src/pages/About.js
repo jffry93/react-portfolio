@@ -11,7 +11,7 @@ import { motion } from 'framer-motion';
 import { pageAnimation, fade } from '../animation';
 import ScrollTop from '../components/ScrollTop';
 import ParallaxSection from '../components/about-page/ParallaxSection';
-import SocialLinks from '../components/SocialLinks';
+import FloatingIcons from '../components/FloatingIcons';
 
 const AboutUs = () => {
   document.body.style.overflow = 'auto';
@@ -21,7 +21,7 @@ const AboutUs = () => {
       initial='hidden'
       animate='show'
       exit='exit'
-      style={{ overflow: 'hidden' }}
+      style={{ overflow: 'hidden', background: '#121212' }}
     >
       <ScrollTop />
       {/* <motion.div variants={sliderContainer}>
@@ -37,7 +37,7 @@ const AboutUs = () => {
         <SkillsSections />
         <ProjectSection />
         <FaqSection />
-        <SocialLinks />
+        {/* <FloatingIcons /> */}
       </motion.div>
     </motion.div>
   );

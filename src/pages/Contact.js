@@ -23,7 +23,7 @@ const ContactUs = () => {
   document.body.style.overflow = 'auto';
   return (
     <StyledContactStyle
-      variants={fade}
+      variants={pageAnimation}
       initial='hidden'
       animate='show'
       exit='exit'

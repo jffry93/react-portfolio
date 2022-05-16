@@ -41,7 +41,7 @@ const SocialLinks = () => {
           </div>
         </a>
       </div>
-      <div className='icon-container'>
+      {/* <div className='icon-container'>
         <a
           href='https://www.instagram.com/jffry93/'
           target='_blank'
@@ -50,7 +50,7 @@ const SocialLinks = () => {
         >
           <FaInstagram size={22} className='instagram-icon' />
         </a>
-      </div>
+      </div> */}
       <div className='icon-container'>
         <a
           href='https://github.com/jffry93'
@@ -70,7 +70,7 @@ export default SocialLinks;
 const StyledContainer = styled.div`
   position: fixed;
   top: 50%;
-  right: 33px;
+  right: 34px;
   transform: translate(0%, -45%);
   z-index: 3;
 
@@ -89,28 +89,40 @@ const StyledContainer = styled.div`
       border-radius: 50%;
       line-height: 1;
       display: inline-flex;
+      flex: 1;
     }
     .indeed-icon {
       position: relative;
       right: 1.35px;
     }
-    .github {
+    .github,
+    .indeed,
+    .linkedin,
+    .resume {
+      color: white;
+      border: 1px solid white;
+    }
+    .github:hover {
       background-color: #6e5494;
       color: #f3f3f3;
+      border: 1px solid #6e5494;
     }
-    .indeed {
+    .indeed:hover {
       background-color: #003a9b;
       color: #f3f3f3;
+      border: 1px solid #003a9b;
     }
-    .linkedin {
+    .linkedin:hover {
       background-color: #0b66c2;
       color: #f3f3f3;
+      border: 1px solid #0b66c2;
     }
-    .resume {
-      background-color: #d6249f;
+    .resume:hover {
+      background-color: var(--primary-accent);
       color: #f3f3f3;
+      border: 1px solid var(--primary-accent);
     }
-    .instagram {
+    /* .instagram {
       background: radial-gradient(
         circle at 30% 107%,
         #fdf497 0%,
@@ -120,7 +132,7 @@ const StyledContainer = styled.div`
         #285aeb 90%
       );
       color: #f3f3f3;
-    }
+    } */
     a:hover {
       transform: scale(1.05) !important;
     }
@@ -128,7 +140,7 @@ const StyledContainer = styled.div`
       transform: scale(1);
     }
   }
-  @media (max-width: 600px) {
+  @media (max-width: 750px) {
     position: relative;
     top: 0;
     right: 0;
@@ -139,6 +151,6 @@ const StyledContainer = styled.div`
     flex-direction: row;
     justify-content: center;
     gap: 16px;
-    color: rgba(0, 0, 0, 0.5);
+    background-color: var(--primary-color);
   }
 `;

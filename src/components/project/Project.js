@@ -88,13 +88,13 @@ const StyledImgContainer = styled.div`
     top: 0;
     left: 0;
 
-    background-color: rgba(0, 0, 0, 0.35);
+    background-color: rgba(0, 0, 0, 0.6);
 
     width: 100%;
-    /* height: 60vh; */
+    height: 100%;
     /* min-height: 500px;
     max-height: 700px; */
-    z-index: 2;
+    /* z-index: 1; */
   }
 
   img {
@@ -105,7 +105,7 @@ const StyledImgContainer = styled.div`
     display: block;
     /* border-radius: 20px 20px 0 0; */
     object-fit: cover;
-    z-index: 1;
+    /* z-index: 1; */
   }
 `;
 

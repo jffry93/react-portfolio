@@ -4,7 +4,7 @@ import Signature from '../img/icons/white-sig.png';
 const Footer = () => {
   return (
     <StyledFooter>
-      <p>Created by</p>{' '}
+      <p>Created by</p>
       <a
         className='github-link'
         href='https://github.com/jffry93'
@@ -25,7 +25,18 @@ const StyledFooter = styled.div`
   gap: 8px;
 
   padding: 4px;
+  /* background-color: var(--secondary-accent); */
+  background-color: var(--primary-color);
+  p {
+    font-size: 13px;
+  }
+  a {
+    display: flex;
+    align-items: center;
+  }
   img {
-    width: 70px;
+    width: 50px;
+    filter: brightness(0) saturate(100%) invert(100%) sepia(5%) saturate(5%)
+      hue-rotate(44deg) brightness(114%) contrast(100%);
   }
 `;

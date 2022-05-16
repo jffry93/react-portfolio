@@ -49,7 +49,6 @@ const FaqSection = () => {
         <Toggle title='What Products Do You Offer?'>
           <div className='answer'>
             <p>Anything related to the web! </p>
-            <p> Some example include</p>
             <p>
               Translating designs into web applications, interacting with APIs
               and building modern reusable scalable components.
@@ -63,11 +62,13 @@ const FaqSection = () => {
 
 const Faq = styled.div`
   padding: 116px 0 119px;
-  background: rgba(12, 12, 12, 0.5);
+  background-color: var(--primary-color);
+  /* background: rgba(12, 12, 12, 0.5); */
   display: block;
   color: white;
   span {
     display: block;
+    color: var(--primary-accent);
   }
   h2 {
     margin: auto;
@@ -95,6 +96,7 @@ const Faq = styled.div`
       margin: auto;
       max-width: var(--max-width);
       padding: 12px var(--layout-secondary-padding);
+      color: var(--primary-text-color);
     }
   }
   @media (max-width: 500px) {

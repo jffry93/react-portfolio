@@ -1,4 +1,6 @@
 import { useState } from 'react';
+
+import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { fade } from '../animation';
 //reveal when in viewport
@@ -17,7 +19,9 @@ const Toggle = ({ children, title }) => {
       className='question'
       onClick={() => setToggle(!toggle)}
     >
-      <motion.h4 layout>{title}</motion.h4>
+      <StyledToggle layout className={toggle ? 'active' : ''}>
+        {title}
+      </StyledToggle>
       {toggle ? children : ''}
       <div className='faq-line'></div>
     </motion.div>
@@ -25,3 +29,15 @@ const Toggle = ({ children, title }) => {
 };
 
 export default Toggle;
+
+const StyledToggle = styled(motion.h4)`
+  &.active {
+    color: var(--primary-accent);
+  }
+  &:hover {
+    color: var(--primary-accent);
+  }
+  &:active {
+    color: var(--primary-accent-shade);
+  }
+`;

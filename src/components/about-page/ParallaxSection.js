@@ -66,8 +66,12 @@ const ParallaxSection = () => {
       </div>
       <div className='container'>
         <motion.div className='content' style={{ y: y3, x: -0 }}>
-          <h2>Hi, I'm Jeff</h2>
-          <h1>Frontend Developer</h1>
+          <h2>
+            Hi, I'm <span className='name'>Jeff</span>
+          </h2>
+          <h1>
+            Frontend <span className='title'>Developer</span>
+          </h1>
           <h3>Your digital space is limitless</h3>
           <p></p>
           <div className='button-container'>
@@ -99,6 +103,16 @@ const StyledParallaxContainer = styled.div`
 
   position: relative;
   overflow: hidden;
+
+  h3 {
+    color: var(--primary-text-color);
+  }
+  .name {
+    font-size: clamp(37px, 5vw, 53px);
+  }
+  .title {
+    font-size: clamp(3.35rem, 5.5vw, 4.2rem);
+  }
 
   .background-img {
     /* content: ''; // ::before and ::after both require content */
@@ -163,7 +177,9 @@ const StyledParallaxContainer = styled.div`
     gap: 16px;
 
     padding: 8px var(--layout-padding);
-    background-color: rgba(0, 0, 0, 0.6);
+    background: var(--secondary-accent);
+    backdrop-filter: blur(0.15rem);
+    /* background-color: rgba(0, 0, 0, 0.6); */
 
     position: relative;
     z-index: 4;
