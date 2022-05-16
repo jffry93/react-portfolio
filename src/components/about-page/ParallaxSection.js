@@ -74,9 +74,14 @@ const ParallaxSection = () => {
             <NavHashLink href='#' to='/contact'>
               <button>Let's Talk</button>
             </NavHashLink>
-            <NavHashLink href='#' to='/work'>
-              <button>View Work</button>
-            </NavHashLink>
+            <a
+              href='https://github.com/jffry93'
+              target='_blank'
+              className='resume'
+              rel='noreferrer'
+            >
+              <button>Visit Github</button>
+            </a>
           </div>
         </motion.div>
         <motion.img src={layer2} alt='' style={{ y: y2, x: -0 }} />

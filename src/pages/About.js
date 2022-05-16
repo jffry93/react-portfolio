@@ -11,6 +11,7 @@ import { motion } from 'framer-motion';
 import { pageAnimation, fade } from '../animation';
 import ScrollTop from '../components/ScrollTop';
 import ParallaxSection from '../components/about-page/ParallaxSection';
+import SocialLinks from '../components/SocialLinks';
 
 const AboutUs = () => {
   document.body.style.overflow = 'auto';
@@ -36,6 +37,7 @@ const AboutUs = () => {
         <SkillsSections />
         <ProjectSection />
         <FaqSection />
+        <SocialLinks />
       </motion.div>
     </motion.div>
   );

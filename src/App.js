@@ -14,6 +14,7 @@ import { Switch, Route, useLocation } from 'react-router-dom';
 //Animation
 //page transition
 import { AnimatePresence } from 'framer-motion';
+import Footer from './components/Footer';
 
 function App() {
   const [navToggle, setNavToggle] = useState(false);
@@ -40,6 +41,7 @@ function App() {
           </Route>
         </Switch>
       </AnimatePresence>
+      <Footer />
     </div>
   );
 }
