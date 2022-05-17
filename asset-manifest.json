@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/react-portfolio/static/css/main.35d6b2c1.chunk.css",
-    "main.js": "/react-portfolio/static/js/main.0448efdd.chunk.js",
-    "main.js.map": "/react-portfolio/static/js/main.0448efdd.chunk.js.map",
+    "main.js": "/react-portfolio/static/js/main.db11d9c5.chunk.js",
+    "main.js.map": "/react-portfolio/static/js/main.db11d9c5.chunk.js.map",
     "runtime-main.js": "/react-portfolio/static/js/runtime-main.d5ccd8cf.js",
     "runtime-main.js.map": "/react-portfolio/static/js/runtime-main.d5ccd8cf.js.map",
     "static/css/2.1a2a3f90.chunk.css": "/react-portfolio/static/css/2.1a2a3f90.chunk.css",
-    "static/js/2.d4087e83.chunk.js": "/react-portfolio/static/js/2.d4087e83.chunk.js",
-    "static/js/2.d4087e83.chunk.js.map": "/react-portfolio/static/js/2.d4087e83.chunk.js.map",
+    "static/js/2.b73c327c.chunk.js": "/react-portfolio/static/js/2.b73c327c.chunk.js",
+    "static/js/2.b73c327c.chunk.js.map": "/react-portfolio/static/js/2.b73c327c.chunk.js.map",
     "static/js/3.e0ee177d.chunk.js": "/react-portfolio/static/js/3.e0ee177d.chunk.js",
     "static/js/3.e0ee177d.chunk.js.map": "/react-portfolio/static/js/3.e0ee177d.chunk.js.map",
     "index.html": "/react-portfolio/index.html",
     "static/css/2.1a2a3f90.chunk.css.map": "/react-portfolio/static/css/2.1a2a3f90.chunk.css.map",
     "static/css/main.35d6b2c1.chunk.css.map": "/react-portfolio/static/css/main.35d6b2c1.chunk.css.map",
-    "static/js/2.d4087e83.chunk.js.LICENSE.txt": "/react-portfolio/static/js/2.d4087e83.chunk.js.LICENSE.txt",
+    "static/js/2.b73c327c.chunk.js.LICENSE.txt": "/react-portfolio/static/js/2.b73c327c.chunk.js.LICENSE.txt",
     "static/media/2mdbb1194x815.2cce9b20.png": "/react-portfolio/static/media/2mdbb1194x815.2cce9b20.png",
     "static/media/2nch-browser-light.e5137a0e.png": "/react-portfolio/static/media/2nch-browser-light.e5137a0e.png",
-    "static/media/Jeffrey_Zalischi_Resume.d9a1af0c.pdf": "/react-portfolio/static/media/Jeffrey_Zalischi_Resume.d9a1af0c.pdf",
+    "static/media/Jeffrey_Zalischi_Resume.753eccaa.pdf": "/react-portfolio/static/media/Jeffrey_Zalischi_Resume.753eccaa.pdf",
     "static/media/index.css": "/react-portfolio/static/media/Neutra Text Bold.f2c4fd96.otf",
     "static/media/UNICEF_Logo.ce32fc89.png": "/react-portfolio/static/media/UNICEF_Logo.ce32fc89.png",
     "static/media/alex_wong.daa976cf.jpg": "/react-portfolio/static/media/alex_wong.daa976cf.jpg",
@@ -43,12 +43,12 @@
     "static/media/mdbb1280x800.c2ff23d3.png": "/react-portfolio/static/media/mdbb1280x800.c2ff23d3.png",
     "static/media/mdbb405x780.0cf19e74.png": "/react-portfolio/static/media/mdbb405x780.0cf19e74.png",
     "static/media/mdbbThumb.2b4c92ab.jpg": "/react-portfolio/static/media/mdbbThumb.2b4c92ab.jpg",
-    "static/media/myFace.24bd4901.jpg": "/react-portfolio/static/media/myFace.24bd4901.jpg",
     "static/media/nch1194x815.da9a6b58.png": "/react-portfolio/static/media/nch1194x815.da9a6b58.png",
     "static/media/nch1280x800.8601c018.png": "/react-portfolio/static/media/nch1280x800.8601c018.png",
     "static/media/nch405x780.54c4a414.png": "/react-portfolio/static/media/nch405x780.54c4a414.png",
     "static/media/nchThumb.816a84e6.webp": "/react-portfolio/static/media/nchThumb.816a84e6.webp",
     "static/media/new-empty-macbook.d06d2cbb.png": "/react-portfolio/static/media/new-empty-macbook.d06d2cbb.png",
+    "static/media/newHeadshot.856af9ff.jpg": "/react-portfolio/static/media/newHeadshot.856af9ff.jpg",
     "static/media/paint-brush.526d2531.svg": "/react-portfolio/static/media/paint-brush.526d2531.svg",
     "static/media/palette-icon.cfbc67e7.svg": "/react-portfolio/static/media/palette-icon.cfbc67e7.svg",
     "static/media/role-icon.8c96069f.svg": "/react-portfolio/static/media/role-icon.8c96069f.svg",
@@ -65,8 +65,8 @@
   "entrypoints": [
     "static/js/runtime-main.d5ccd8cf.js",
     "static/css/2.1a2a3f90.chunk.css",
-    "static/js/2.d4087e83.chunk.js",
+    "static/js/2.b73c327c.chunk.js",
     "static/css/main.35d6b2c1.chunk.css",
-    "static/js/main.0448efdd.chunk.js"
+    "static/js/main.db11d9c5.chunk.js"
   ]
 }
