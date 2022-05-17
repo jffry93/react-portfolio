@@ -1,7 +1,9 @@
+import React, { useRef, useEffect, useState } from 'react';
+
+import myFace from '../../img/newHeadshot.jpg';
 import styled from 'styled-components';
 
 import 'mapbox-gl/dist/mapbox-gl.css';
-import React, { useRef, useEffect, useState } from 'react';
 import mapboxgl from '!mapbox-gl'; // eslint-disable-line import/no-webpack-loader-syntax
 
 mapboxgl.accessToken =
@@ -22,21 +24,21 @@ const ContactMap = () => {
       center: [lng, lat],
       zoom: zoom,
     });
-    const marker1 = new mapboxgl.Marker({ color: '#F0544F' })
+    const marker1 = new mapboxgl.Marker({ color: '#f2816f' })
       .setLngLat([-79.3832, 43.6952])
       .addTo(map.current);
     //ADD CONTAINER TO INCLUDE GIF AND TEXT
     let greetingContainer = document.createElement('div');
     greetingContainer.classList.add('greeting-container');
     let waveGif = document.createElement('img');
-    waveGif.src =
-      'https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif';
-    let greeting = document.createElement('h3');
-    let textNode = document.createTextNode('IM HERE!!');
-    greetingContainer.appendChild(greeting);
+    waveGif.src = myFace;
+    // 'https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif';
+    // let greeting = document.createElement('h3');
+    // let textNode = document.createTextNode('Hi');
+    // greetingContainer.appendChild(greeting);
     greetingContainer.appendChild(waveGif);
-    greeting.appendChild(textNode);
-    console.log(greeting);
+    // greeting.appendChild(textNode);
+    // console.log(greeting);
     marker1._element.appendChild(greetingContainer);
 
     const nav = new mapboxgl.NavigationControl({
@@ -109,19 +111,20 @@ const StyledMapContainer = styled.div`
     align-items: center;
     gap: 10px;
     /* border: 3px solid green; */
-    background-color: #f0544f;
-    padding: 1rem;
-    border-radius: 8px;
-
+    background-color: var(--primary-accent);
+    padding: 6.9px;
+    border-radius: 50%;
     position: absolute;
-    top: -45px;
+    top: -69px;
 
     h3 {
       white-space: nowrap;
     }
     img {
-      width: 40px;
-      height: 40px;
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 50%;
     }
   }
   .sidebar {

@@ -15,6 +15,7 @@ import {
 import { useInView } from 'react-intersection-observer';
 //REACT ROUTER
 import { NavHashLink } from 'react-router-hash-link';
+import DonationBar from '../DonationBar';
 
 const ParallaxSection = () => {
   const { scrollY, scrollYProgress } = useViewportScroll();
@@ -43,27 +44,7 @@ const ParallaxSection = () => {
         className='background-img'
         style={{ y: y1, x: -0 }}
       ></motion.div>
-      <div className='donate-bar'>
-        <a
-          href='https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwjJmrXu84f3AhUibG8EHcSmCU8YABABGgJqZg&ae=2&ohost=www.google.com&cid=CAESbeD2b_uN3OPM-AHG8_RTOtt2MNYsgiK2soHGi_TZrINMKVjQDUpCF1bR-IiSeSM4BkR-Qygcl1yNFBLdksYHI-9AttzsoJoAPrbYIB4AoIj_vahKjG2RcIlQJmAAzSfccxGjnIu-0jLlbAx7NIs&sig=AOD64_3e6dFZg4dCJA53TV4vEX6sKwlWdA&q&adurl&ved=2ahUKEwiNrKzu84f3AhXKG80KHQQoCDwQ0Qx6BAgFEAE'
-          target='_blank'
-          rel='noreferrer'
-        >
-          <input
-            type='image'
-            src={unicef}
-            name='unicefLogo'
-            className='unicef-logo'
-          />
-        </a>
-        <a
-          href='https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwjJmrXu84f3AhUibG8EHcSmCU8YABABGgJqZg&ae=2&ohost=www.google.com&cid=CAESbeD2b_uN3OPM-AHG8_RTOtt2MNYsgiK2soHGi_TZrINMKVjQDUpCF1bR-IiSeSM4BkR-Qygcl1yNFBLdksYHI-9AttzsoJoAPrbYIB4AoIj_vahKjG2RcIlQJmAAzSfccxGjnIu-0jLlbAx7NIs&sig=AOD64_3e6dFZg4dCJA53TV4vEX6sKwlWdA&q&adurl&ved=2ahUKEwiNrKzu84f3AhXKG80KHQQoCDwQ0Qx6BAgFEAE'
-          target='_blank'
-          rel='noreferrer'
-        >
-          Donate to support families affected by the war in Ukraine
-        </a>
-      </div>
+      {/* <DonationBar /> */}
       <div className='container'>
         <motion.div className='content' style={{ y: y3, x: -0 }}>
           <h2>
@@ -72,11 +53,15 @@ const ParallaxSection = () => {
           <h1>
             Frontend <span className='title'>Developer</span>
           </h1>
-          <h3>Your digital space is limitless</h3>
-          <p></p>
+
+          <h3>Your digital space is limitless.</h3>
+          {/* <p>
+            The only limitation is your imagination. If you can think it, it can
+            be built.
+          </p> */}
           <div className='button-container'>
-            <NavHashLink href='#' to='/contact'>
-              <button>Let's Talk</button>
+            <NavHashLink href='#' to='/work'>
+              <button>View Work</button>
             </NavHashLink>
             <a
               href='https://github.com/jffry93'
@@ -98,14 +83,22 @@ const ParallaxSection = () => {
 export default ParallaxSection;
 
 const StyledParallaxContainer = styled.div`
-  height: var(--container-height);
+  height: calc(var(--container-height));
   min-height: 500px;
 
   position: relative;
+
   overflow: hidden;
 
   h3 {
+    margin-top: 16px;
     color: var(--primary-text-color);
+  }
+  p {
+    margin-top: 8px;
+    line-height: 1.54286;
+    max-width: 420px;
+    font-weight: bold;
   }
   .name {
     font-size: clamp(37px, 5vw, 53px);
@@ -170,39 +163,7 @@ const StyledParallaxContainer = styled.div`
     bottom: 0;
     z-index: 2;
   }
-  .donate-bar {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 16px;
 
-    padding: 8px var(--layout-padding);
-    background: var(--secondary-accent);
-    backdrop-filter: blur(0.15rem);
-    /* background-color: rgba(0, 0, 0, 0.6); */
-
-    position: relative;
-    z-index: 4;
-    input {
-      width: 100px;
-      object-fit: contain;
-      filter: brightness(0) invert(1);
-    }
-    input:hover {
-      filter: brightness(0) invert(0.7);
-    }
-    a {
-      font-size: 12px;
-      text-align: left;
-      text-decoration: none;
-      color: var(--primary-text-color);
-
-      display: flex;
-    }
-    a:hover {
-      color: var(--secondary-text-color);
-    }
-  }
   @media (max-width: 550px) {
     .content {
       padding: 0 var(--layout-padding);
@@ -210,10 +171,7 @@ const StyledParallaxContainer = styled.div`
     .text {
       padding: 0 var(--layout-padding);
     }
-    .donate-bar {
-      flex-direction: row;
-      gap: 8px;
-    }
+
     /* padding: 8px var(--mobile-padding); */
   }
 `;

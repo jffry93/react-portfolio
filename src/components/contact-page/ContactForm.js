@@ -170,7 +170,7 @@ const ContactForm = ({ formValidation, setFormValidation }) => {
               className={`${messageValidation ? 'validation-input' : ''}`}
               name='message'
               required
-              placeholder='There is no characer limit because im lonely...'
+              placeholder='There is no characer limit'
               rows='5'
             />
           </div>
@@ -206,11 +206,12 @@ const StyledFormContainer = styled(motion.div)`
   }
   @media (max-width: 700px) {
     min-height: unset;
+    padding: 4rem 22px 32px;
   }
 
   @media (max-width: 450px) {
     flex-direction: column;
-    padding: 4rem 22px;
+    /* padding: 4rem 22px; */
   }
 `;
 const StyledContactForm = styled.div`
@@ -261,12 +262,13 @@ const StyledForm = styled.form`
     }
 
     span {
-      /* color: red; */
+      color: var(--primary-accent);
       margin-right: 0.7rem;
       font-size: 0.9rem;
     }
     .required {
       margin-left: 2rem;
+      color: var(--primary-accent);
     }
     .not-required {
       margin-left: 1.175rem;

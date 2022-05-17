@@ -130,6 +130,7 @@ const StyledNav = styled.nav`
     width: 100%;
     max-width: var(--max-width);
     padding: 0 var(--layout-padding);
+
     //mobile
     @media (max-width: 450px) {
       padding: 0 var(--mobile-padding);
@@ -239,7 +240,8 @@ const StyledNav = styled.nav`
       --gap: 4rem; //reset --gap variable
 
       position: fixed;
-      inset: 0 0 0 30%;
+      /* inset: 0 0 0 30%; */
+      inset: 0 0 0 0%;
 
       z-index: 2;
       height: 100vh;

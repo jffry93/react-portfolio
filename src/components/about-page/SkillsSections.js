@@ -109,6 +109,7 @@ const StyledSkillsContainer = styled(motion.div)`
     }
   }
   h2 {
+    color: var(--primary-text-color);
     padding-bottom: 16px;
     span {
       font-size: clamp(37px, 5vw, 53px);

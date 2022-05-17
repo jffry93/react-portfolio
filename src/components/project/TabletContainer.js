@@ -83,8 +83,8 @@ const StyledTabletContainer = styled(motion.div)`
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: flex-end;
-  max-width: 1400px;
+  justify-content: center;
+  max-width: 1200px;
   margin: 0px auto;
   gap: 32px;
 
@@ -102,7 +102,7 @@ const StyledTabletContainer = styled(motion.div)`
   .tablet-image {
     display: flex;
     position: relative;
-    flex: 3;
+    flex: 4;
     margin-left: 14px;
 
     .ipad-frame {
@@ -138,6 +138,8 @@ const StyledColourContainer = styled.div`
   flex-direction: column;
   align-items: flex-start;
   gap: 16px;
+  flex: 1.7;
+
   margin: 0 auto;
   text-align: left;
 

@@ -105,12 +105,18 @@ const StyledContactStyle = styled(motion.div)`
     padding: 0rem;
   }
   .cntower-background {
-    background-image: url(${cntower}) !important;
+    background-image: linear-gradient(
+      170deg,
+      var(--secondary-accent),
+      var(--primary-color)
+    );
+    /* background-image: url(${cntower}) !important;
     background-repeat: no-repeat !important;
     background-attachment: fixed !important;
     background-position: center !important;
-    background-size: cover !important;
+    background-size: cover !important; */
     width: 100%;
+    /* background-color: var(--primary-accent); */
   }
 `;
 const StyledContactContainer = styled(motion.div)`
@@ -120,7 +126,7 @@ const StyledContactContainer = styled(motion.div)`
 
   min-height: var(--container-height);
   /* max-height: 750px; */
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(6px) !important;
 
   /* border-radius: 8px; */

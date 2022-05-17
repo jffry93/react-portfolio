@@ -12,6 +12,7 @@ import { pageAnimation, fade } from '../animation';
 import ScrollTop from '../components/ScrollTop';
 import ParallaxSection from '../components/about-page/ParallaxSection';
 import FloatingIcons from '../components/FloatingIcons';
+import DonationBar from '../components/DonationBar';
 
 const AboutUs = () => {
   document.body.style.overflow = 'auto';
@@ -30,20 +31,24 @@ const AboutUs = () => {
         <StyledFrame3 variants={sliderAnimation}></StyledFrame3>
         <StyledFrame4 variants={sliderAnimation}></StyledFrame4>
       </motion.div> */}
-      <motion.div variants={fade}>
+      <StyledAboutContainer variants={fade}>
         {/* <HomeSection /> */}
+        <DonationBar />
         <ParallaxSection />
         <AboutSection />
         <SkillsSections />
         <ProjectSection />
         <FaqSection />
         {/* <FloatingIcons /> */}
-      </motion.div>
+      </StyledAboutContainer>
     </motion.div>
   );
 };
 
 export default AboutUs;
+const StyledAboutContainer = styled(motion.div)`
+  background-image: linear-gradient(135deg, #1b1b1b, #161616);
+`;
 
 const StyledFrame1 = styled(motion.div)`
   position: fixed;

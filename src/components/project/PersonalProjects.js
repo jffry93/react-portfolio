@@ -106,10 +106,10 @@ const PersonalProjects = () => {
           slideShadows: true,
         }}
         centeredSlides
-        autoplay={{
-          delay: 4000,
-          disableOnInteraction: false,
-        }}
+        // autoplay={{
+        //   delay: 4000,
+        //   disableOnInteraction: false,
+        // }}
         speed={500}
         loop={true}
         // onSwiper={(swiper) => console.log(swiper)}
@@ -148,8 +148,6 @@ const PersonalProjects = () => {
 export default PersonalProjects;
 
 const StyledProjectSection = styled(motion.div)`
-  /* min-height: 570px;
-  max-height: 1300px; */
   /* max-width: var(--max-width); */
 
   width: 100%;
@@ -198,19 +196,6 @@ const StyledProjectSection = styled(motion.div)`
     transition: transform 1.5s ease, opacity 1.5s ease;
 
     transform: scale(0.6) !important;
-    div:last-child {
-      /* display: none; */
-      opacity: 0;
-      position: absolute;
-      top: 50%;
-      left: -15%;
-      transform: translate(0%, -50%);
-
-      height: auto;
-      width: 100%;
-
-      /* z-index: 3; */
-    }
   }
 
   .swiper-slide-next,

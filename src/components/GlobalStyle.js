@@ -36,7 +36,7 @@ const GlobalStyle = createGlobalStyle`
         line-height: 1.47059;
         letter-spacing: -.022em;
         font-family: 'Inter', sans-serif;
-        background:#5445a6; 
+        background-color:#5445a6; 
         overflow-x: hidden;
     }
     .custom-card{

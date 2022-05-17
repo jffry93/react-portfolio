@@ -5,7 +5,7 @@
 // import teamwork from '../img/teamwork.svg';
 //IMAGES
 import { BsGithub } from 'react-icons/bs';
-import myFace from '../../img/myFace.jpg';
+import myFace from '../../img/newHeadshot.jpg';
 //ICONS
 import downloadIcon from '../../img/icons/download-solid.svg';
 //Styles
@@ -40,9 +40,8 @@ const ServicesSection = () => {
           </h2>
           <p>A developer that enjoys a well-written documentation.</p>
           <p>
-            Using modern javascript frameworks I've been translating designs
-            into web applications, interacting with REST APIs and building
-            modern reusable scalable components.
+            I've been translating designs into web applications, interacting
+            with REST APIs and building modern reusable scalable components.
           </p>
           <p>
             Check out my
@@ -120,6 +119,7 @@ const StyledServicesDescription = styled(motion.div)`
   }
   h2 {
     margin-bottom: 8px;
+    color: var(--primary-text-color);
   }
   .about {
     font-size: clamp(37px, 5vw, 53px);

@@ -32,5 +32,6 @@ const StyledContributions = styled(motion.div)`
     text-align: center;
     padding: 0 0 40px;
     font-size: clamp(37px, 5vw, 53px);
+    color: var(--primary-text-color);
   }
 `;

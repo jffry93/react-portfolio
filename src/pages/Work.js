@@ -122,8 +122,11 @@ const OurWork = () => {
 const StyledWork = styled(motion.div)`
   position: relative;
   overflow: hidden;
+  /* min-height: 600px; */
+
   .paid-work {
     height: var(--container-height);
+    min-height: 600px;
     max-width: 2000px;
     margin: auto;
 

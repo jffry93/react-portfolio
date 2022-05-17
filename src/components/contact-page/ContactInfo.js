@@ -26,10 +26,10 @@ const ContactInfo = () => {
             rel='noreferrer'
             className='location'
           >
-            <p>HOMETOWN</p>
+            {/* <p>HOMETOWN</p> */}
             <span>
               Toronto ON
-              <img src={drake} alt='drake' />
+              {/* <img src={drake} alt='drake' /> */}
             </span>
           </a>
         </div>
@@ -47,7 +47,7 @@ const ContactInfo = () => {
         </div>
       </div>
       <div className='line'></div>
-      <div className='social-media'>
+      {/* <div className='social-media'>
         <div className='icon-container'>
           <a
             href='https://github.com/jffry93'
@@ -89,7 +89,7 @@ const ContactInfo = () => {
             <FaInstagram size={22} className='instagram-icon' />
           </a>
         </div>
-      </div>
+      </div> */}
       <div className='footer'>
         <h5>Made in </h5>
         <h4>Canada</h4>
@@ -125,11 +125,19 @@ const StyledContactInfo = styled.div`
       color: white;
       font-size: 0.9rem;
     }
-    a:hover {
-      transform: scale(1.03);
-    }
     svg {
       color: white;
+    }
+  }
+
+  .info-group:hover {
+    a {
+      transform: scale(1.03);
+      color: var(--primary-accent);
+    }
+    svg {
+      transform: scale(1.03);
+      color: var(--primary-accent);
     }
   }
   .location {

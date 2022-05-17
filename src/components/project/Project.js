@@ -40,6 +40,7 @@ const Project = ({
     setShowDetail(true);
     document.body.style.overflow = 'hidden';
   };
+
   return (
     <StyledProject onClick={updateDetailHandler}>
       <StyledImgContainer>
@@ -49,7 +50,14 @@ const Project = ({
       <StyledDetails>
         <h3>{title}</h3>
         <p>{secondaryTitle}</p>
-        <button>Learn more</button>
+        <div className='button-container'>
+          <button>Learn more</button>
+          <button>
+            <a href={url[0].website} target='_blank'>
+              Visit Website
+            </a>
+          </button>
+        </div>
       </StyledDetails>
     </StyledProject>
   );
@@ -105,13 +113,27 @@ const StyledImgContainer = styled.div`
     display: block;
     /* border-radius: 20px 20px 0 0; */
     object-fit: cover;
-    /* z-index: 1; */
+    z-index: 1;
   }
 `;
 
 const StyledDetails = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
   max-width: 400px;
   padding: 1.5rem 1.5rem 3rem 1.5rem;
+
+  /* display: none; */
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: -15%;
+  transform: translate(0%, -50%);
+
+  height: auto;
+  width: 100%;
+
   h3 {
     color: white;
     font-weight: 700;
@@ -123,17 +145,34 @@ const StyledDetails = styled.div`
     line-height: 1;
     letter-spacing: 2px;
     font-weight: 400;
-    padding: 16px 0 32px;
+    /* padding: 16px 0 32px; */
   }
+  .button-container {
+    margin-top: 16px;
+    display: flex;
+    gap: 8px;
+    background-color: unset !important;
+  }
+
   button {
     /* border: 2px solid white; */
     padding: 0.7rem;
-    font-size: 17px;
+    font-size: 14px;
     text-decoration: none;
     color: white;
+    min-width: 120px;
   }
   button:hover {
     background-color: #242424;
+  }
+  a {
+    text-decoration: none;
+    color: var(--primary-text-color);
+  }
+  @media (max-width: 400px) {
+    .button-container {
+      flex-direction: column;
+    }
   }
 `;
 

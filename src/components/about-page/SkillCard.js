@@ -44,8 +44,7 @@ const StyledSkillCard = styled.div`
   height: 100%;
   position: relative;
   z-index: 1;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
-    rgba(0, 0, 0, 0.9) 0px 18px 36px -18px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
   a {
     font-size: 15px;
@@ -103,7 +102,7 @@ const StyledSkillCard = styled.div`
     left: 0;
 
     /* background: ${(props) => props.color || '#181818'}; */
-    background: linear-gradient(155deg, #161616, #181818, var(--primary-color));
+    background-image: linear-gradient(135deg, var(--secondary-accent), #2b2b2b);
     /* background-image: linear-gradient(
       155deg,
       ${(props) => props.color2 || props.color},

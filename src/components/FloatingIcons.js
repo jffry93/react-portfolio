@@ -7,6 +7,8 @@ import { GrMail } from 'react-icons/gr';
 import { RiLinkedinFill } from 'react-icons/ri';
 import { AiOutlineFileText } from 'react-icons/ai';
 
+import MyResume from '../Resume/Jeffrey_Zalischi_Resume.pdf';
+
 const SocialLinks = () => {
   return (
     <StyledContainer className='social-media'>
@@ -53,10 +55,10 @@ const SocialLinks = () => {
       </div> */}
       <div className='icon-container'>
         <a
-          href='https://github.com/jffry93'
-          target='_blank'
           className='resume'
-          rel='noreferrer'
+          href={MyResume}
+          download='Jeffrey_Zalischi_Resume'
+          target='_blank'
         >
           <AiOutlineFileText size={22} className='resume-icon' />
         </a>
@@ -101,6 +103,7 @@ const StyledContainer = styled.div`
     .resume {
       color: white;
       border: 1px solid white;
+      transition: all 0.2s ease;
     }
     .github:hover {
       background-color: #6e5494;
@@ -151,6 +154,6 @@ const StyledContainer = styled.div`
     flex-direction: row;
     justify-content: center;
     gap: 16px;
-    background-color: var(--primary-color);
+    /* background-color: var(--primary-color); */
   }
 `;

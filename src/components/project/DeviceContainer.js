@@ -75,6 +75,7 @@ const StyledDescriptionContainer = styled(motion.div)`
   max-width: 1200px;
   margin: auto;
   gap: unset;
+  padding: 0 var(--layout-padding);
   /* background-color: #121212;
   border-top: 1px solid white;
   border-bottom: 1px solid white; */
@@ -86,7 +87,7 @@ const StyledDescriptionContainer = styled(motion.div)`
   .description-container {
     /* border: 1px solid blue; */
     flex: 1.7;
-    padding: 0px var(--layout-padding);
+    padding: 0px var(--layout-padding) 0 0;
 
     display: flex;
     flex-direction: column;
@@ -143,13 +144,13 @@ const StyledAppleDevices = styled(motion.div)`
   width: 100%;
   /* max-width: clamp(800px, 50vw, 1400px); */
   margin: auto;
-  padding: 32px 2rem;
+  padding: 32px 0;
   flex: 4;
 
   /* border: 1px solid blue; */
   @media (max-width: 750px) {
     width: 150%;
-    padding: 32px var(--layout-padding) 0;
+    /* padding: 32px var(--layout-padding) 0; */
     right: 50%;
   }
   .macbook {

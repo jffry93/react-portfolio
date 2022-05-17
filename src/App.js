@@ -16,6 +16,7 @@ import { Switch, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import Footer from './components/Footer';
 import FloatingIcons from './components/FloatingIcons';
+import DonationBar from './components/DonationBar';
 
 function App() {
   const [navToggle, setNavToggle] = useState(false);
@@ -26,6 +27,7 @@ function App() {
     <div className='App'>
       <GlobalStyle />
       <Nav navToggle={navToggle} setNavToggle={setNavToggle} />
+      {/* <DonationBar /> */}
       <AnimatePresence exitBeforeEnter>
         <Switch location={location} key={location.key}>
           <Route path='/' exact>

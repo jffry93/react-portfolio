@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import { fade } from '../animation';
 //reveal when in viewport
 import { useScroll } from './useScroll';
+import { FaPlus, FaMinus } from 'react-icons/fa';
 
 const Toggle = ({ children, title }) => {
   const [toggle, setToggle] = useState(false);
@@ -20,7 +21,9 @@ const Toggle = ({ children, title }) => {
       onClick={() => setToggle(!toggle)}
     >
       <StyledToggle layout className={toggle ? 'active' : ''}>
-        {title}
+        {toggle ? <FaMinus /> : <FaPlus />}
+
+        <h4>{title}</h4>
       </StyledToggle>
       {toggle ? children : ''}
       <div className='faq-line'></div>
@@ -30,14 +33,35 @@ const Toggle = ({ children, title }) => {
 
 export default Toggle;
 
-const StyledToggle = styled(motion.h4)`
+const StyledToggle = styled(motion.div)`
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  margin: auto;
+  max-width: var(--max-width);
+  padding: 0rem var(--layout-secondary-padding);
+  svg {
+    height: clamp(15px, 2vw, 17px);
+    width: clamp(15px, 2vw, 17px);
+  }
   &.active {
     color: var(--primary-accent);
+
+    h4 {
+      color: var(--primary-accent);
+    }
   }
   &:hover {
     color: var(--primary-accent);
+    h4 {
+      color: var(--primary-accent);
+    }
   }
   &:active {
     color: var(--primary-accent-shade);
+    h4 {
+      color: var(--primary-accent-shade);
+    }
   }
 `;
