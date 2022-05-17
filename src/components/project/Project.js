@@ -1,4 +1,13 @@
 import styled from 'styled-components';
+import {
+  Routes,
+  Route,
+  Outlet,
+  Link,
+  useLocation,
+  useNavigate,
+  useParams,
+} from 'react-router-dom';
 
 const Project = ({
   title,
@@ -19,6 +28,12 @@ const Project = ({
   setCaseDetail,
   setShowDetail,
 }) => {
+  //REACT ROUTER
+  const location = useLocation();
+  const currentRoute = location.pathname;
+
+  console.log(currentRoute);
+  //DETAIL STATE HANDLER
   const updateDetailHandler = () => {
     setCaseDetail({
       title: { title }.title,
@@ -42,8 +57,8 @@ const Project = ({
   };
 
   return (
-    <StyledProject onClick={updateDetailHandler}>
-      <StyledImgContainer>
+    <StyledProject>
+      <StyledImgContainer onClick={updateDetailHandler}>
         <div id='overlay'></div>
         <img src={thumbImg} alt='project image' />
       </StyledImgContainer>
@@ -51,12 +66,10 @@ const Project = ({
         <h3>{title}</h3>
         <p>{secondaryTitle}</p>
         <div className='button-container'>
-          <button>Learn more</button>
-          <button>
-            <a href={url[0].website} target='_blank'>
-              Visit Website
-            </a>
-          </button>
+          <button onClick={updateDetailHandler}>Learn more</button>
+          <a href={url[0].website} target='_blank'>
+            <button>Visit Website</button>
+          </a>
         </div>
       </StyledDetails>
     </StyledProject>
@@ -134,6 +147,8 @@ const StyledDetails = styled.div`
   height: auto;
   width: 100%;
 
+  cursor: default;
+
   h3 {
     color: white;
     font-weight: 700;
@@ -169,7 +184,7 @@ const StyledDetails = styled.div`
     text-decoration: none;
     color: var(--primary-text-color);
   }
-  @media (max-width: 400px) {
+  @media (max-width: 450px) {
     .button-container {
       flex-direction: column;
     }

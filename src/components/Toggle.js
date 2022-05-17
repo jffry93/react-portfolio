@@ -41,6 +41,7 @@ const StyledToggle = styled(motion.div)`
   margin: auto;
   max-width: var(--max-width);
   padding: 0rem var(--layout-secondary-padding);
+
   svg {
     height: clamp(15px, 2vw, 17px);
     width: clamp(15px, 2vw, 17px);
@@ -63,5 +64,9 @@ const StyledToggle = styled(motion.div)`
     h4 {
       color: var(--primary-accent-shade);
     }
+  }
+  @media (max-width: 500px) {
+    gap: 0px;
+    padding: 0rem var(--layout-padding);
   }
 `;

@@ -108,6 +108,9 @@ const StyledContactStyle = styled(motion.div)`
     background-image: linear-gradient(
       170deg,
       var(--secondary-accent),
+      #372f64,
+      #493e89,
+      var(--primary-color),
       var(--primary-color)
     );
     /* background-image: url(${cntower}) !important;
@@ -126,7 +129,7 @@ const StyledContactContainer = styled(motion.div)`
 
   min-height: var(--container-height);
   /* max-height: 750px; */
-  background-color: rgba(0, 0, 0, 0.25);
+  /* background-color: rgba(0, 0, 0, 0.25); */
   backdrop-filter: blur(6px) !important;
 
   /* border-radius: 8px; */

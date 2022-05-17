@@ -162,7 +162,7 @@ const StyledServicesDescription = styled(motion.div)`
       background-color: white;
       background: url(${downloadIcon});
       background-repeat: no-repeat;
-      transition: background 100ms ease-out;
+      transition: all 100ms ease-out;
     }
 
     span {

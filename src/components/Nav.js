@@ -160,7 +160,7 @@ const StyledNav = styled.nav`
         color: var(--primary-accent);
       }
 
-      .selected {
+      .active {
         span {
           color: var(--primary-accent);
         }

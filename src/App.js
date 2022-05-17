@@ -11,6 +11,7 @@ import Contact from './pages/Contact';
 import Repos from './pages/Repos';
 //React Router Dom
 import { Switch, Route, useLocation } from 'react-router-dom';
+import { Routes } from 'react-router-dom';
 //Animation
 //page transition
 import { AnimatePresence } from 'framer-motion';
@@ -29,20 +30,11 @@ function App() {
       <Nav navToggle={navToggle} setNavToggle={setNavToggle} />
       {/* <DonationBar /> */}
       <AnimatePresence exitBeforeEnter>
-        <Switch location={location} key={location.key}>
-          <Route path='/' exact>
-            <About />
-          </Route>
-          <Route path='/work' exact>
-            <Work />
-          </Route>
-          <Route path='/work/:id'>
-            <Repos />
-          </Route>
-          <Route path='/contact'>
-            <Contact />
-          </Route>
-        </Switch>
+        <Routes location={location} key={location.key}>
+          <Route path='/' element={<About />} exact />
+          <Route path='/work' element={<Work />} exact />
+          <Route path='/contact' element={<Contact />} />
+        </Routes>
       </AnimatePresence>
       <FloatingIcons />
       <Footer />

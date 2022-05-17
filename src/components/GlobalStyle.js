@@ -49,7 +49,7 @@ const GlobalStyle = createGlobalStyle`
         width: fit-content ;
 
         font-weight: 700;
-        font-size: 17px;
+        font-size: 16px;
         padding: .7rem 1.4rem;
         border: 1.5px solid white;
         background: transparent;

@@ -217,7 +217,7 @@ const StyledProjectSection = styled(motion.div)`
     div:last-child {
       /* display: block; */
       opacity: 1;
-      transition: opacity 0.5s ease-in !important;
+      transition-property: opacity 0.6s ease-in !important;
     }
   }
   .swiper-button-prev,

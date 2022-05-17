@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+
 //components
 // import HomeSection from '../components/HomeSection';
 import styled from 'styled-components';
@@ -23,8 +25,10 @@ import { MovieState } from '../repoState';
 // import ipad from '../img/devices/empty-ipad-horizontal.png';
 
 const MovieDetail = () => {
-  const history = useHistory();
-  const url = history.location.pathname;
+  const navigate = useNavigate();
+  // navigate('/home');
+  //   const history = useHistory();
+  const url = navigate.location.pathname;
   //The Entire List of Movies Object
   const [movies, setMovies] = useState(MovieState);
   //Each individual Movie
