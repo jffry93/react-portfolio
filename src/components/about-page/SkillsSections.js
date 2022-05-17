@@ -73,6 +73,7 @@ const SkillsSections = () => {
             <SwiperSlide key={uuidv4()}>
               <SkillCard
                 title={skill.title}
+                secondTitle={skill.secondTitle}
                 description={skill.description}
                 documentation={skill.documentation}
                 color={skill.hexCode}

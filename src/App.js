@@ -31,8 +31,8 @@ function App() {
       {/* <DonationBar /> */}
       <AnimatePresence exitBeforeEnter>
         <Routes location={location} key={location.key}>
-          <Route path='/' element={<About />} exact />
-          <Route path='/work' element={<Work />} exact />
+          <Route path='/*' element={<About />} exact />
+          <Route path='/work/*' element={<Work />} exact />
           <Route path='/contact' element={<Contact />} />
         </Routes>
       </AnimatePresence>

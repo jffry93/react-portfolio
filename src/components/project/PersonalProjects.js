@@ -203,6 +203,11 @@ const StyledProjectSection = styled(motion.div)`
     opacity: 0.45;
     transition: transform 1.5s ease, opacity 1.5s ease;
     transform: scale(0.8) !important;
+    div:last-child {
+      display: none;
+      opacity: 1;
+      transition-property: opacity 0.6s ease-in !important;
+    }
   }
   .swiper-slide-active {
     transform: scale(1) !important;
@@ -215,7 +220,6 @@ const StyledProjectSection = styled(motion.div)`
     }
 
     div:last-child {
-      /* display: block; */
       opacity: 1;
       transition-property: opacity 0.6s ease-in !important;
     }

@@ -1,13 +1,4 @@
 import styled from 'styled-components';
-import {
-  Routes,
-  Route,
-  Outlet,
-  Link,
-  useLocation,
-  useNavigate,
-  useParams,
-} from 'react-router-dom';
 
 const Project = ({
   title,
@@ -28,11 +19,6 @@ const Project = ({
   setCaseDetail,
   setShowDetail,
 }) => {
-  //REACT ROUTER
-  const location = useLocation();
-  const currentRoute = location.pathname;
-
-  console.log(currentRoute);
   //DETAIL STATE HANDLER
   const updateDetailHandler = () => {
     setCaseDetail({
@@ -67,6 +53,7 @@ const Project = ({
         <p>{secondaryTitle}</p>
         <div className='button-container'>
           <button onClick={updateDetailHandler}>Learn more</button>
+
           <a href={url[0].website} target='_blank'>
             <button>Visit Website</button>
           </a>
@@ -113,6 +100,8 @@ const StyledImgContainer = styled.div`
 
     width: 100%;
     height: 100%;
+    border: 1px solid var(--secondary-accent);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     /* min-height: 500px;
     max-height: 700px; */
     /* z-index: 1; */

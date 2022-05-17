@@ -13,6 +13,7 @@ import ScrollTop from '../components/ScrollTop';
 import ParallaxSection from '../components/about-page/ParallaxSection';
 import FloatingIcons from '../components/FloatingIcons';
 import DonationBar from '../components/DonationBar';
+import { Routes, Route } from 'react-router-dom';
 
 const AboutUs = () => {
   document.body.style.overflow = 'auto';

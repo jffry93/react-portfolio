@@ -5,6 +5,7 @@ import styled from 'styled-components';
 
 const SkillCard = ({
   title,
+  secondTitle,
   description,
   documentation,
   color,
@@ -17,6 +18,7 @@ const SkillCard = ({
   return (
     <StyledSkillCard color={color} color2={color2} textColor={textColor}>
       <h3>{title}</h3>
+      <h4>{secondTitle}</h4>
       <div className='space-container'>
         <p>{description}</p>
         <a href={documentation} target='_blank' rel='noreferrer'>
@@ -45,16 +47,26 @@ const StyledSkillCard = styled.div`
   position: relative;
   z-index: 1;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  h4 {
+    /* font-size: 18px; */
+    margin-top: 2px;
+    color: ${(props) => props.color2 || props.color};
+  }
 
   a {
     font-size: 15px;
 
     width: fit-content;
-    border: 1px solid white;
+    border: 1px solid ${(props) => props.color2 || props.color};
     padding: 0.7rem;
     text-decoration: none;
     color: white;
     transition: transform 0.3s;
+    background-image: linear-gradient(
+      155deg,
+      ${(props) => props.color2 || props.color},
+      ${(props) => props.color}
+    );
   }
   a:hover {
     /* border: 2px solid white; */
@@ -74,8 +86,13 @@ const StyledSkillCard = styled.div`
       ${(props) => props.color2 || props.color},
       ${(props) => props.color}
     );
-    transform: scale(1.05);
+    transform: scale(1.02);
+    h4 {
+      color: var(--primary-text-color);
+    }
     a {
+      border: white 1px solid;
+      background-image: unset;
       background-color: rgba(0, 0, 0, 0.2);
     }
 
