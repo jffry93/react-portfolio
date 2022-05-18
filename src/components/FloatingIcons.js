@@ -10,6 +10,8 @@ import { AiOutlineFileText } from 'react-icons/ai';
 import MyResume from '../Resume/Jeffrey_Zalischi_Resume.pdf';
 
 const SocialLinks = () => {
+  console.log(window);
+
   return (
     <StyledContainer className='social-media'>
       <div className='icon-container'>
@@ -72,9 +74,10 @@ export default SocialLinks;
 const StyledContainer = styled.div`
   position: fixed;
   top: 50%;
-  right: 34px;
-  transform: translate(0%, -45%);
+  right: 22px;
+  transform: translate(0%, -50%);
   z-index: 3;
+  transition: transform 0.6s ease-out;
 
   display: flex;
   flex-direction: column;
@@ -145,13 +148,18 @@ const StyledContainer = styled.div`
   }
   @media (max-width: 750px) {
     position: relative;
-    top: 0;
-    right: 0;
-    transform: translate(0%, 0%);
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    transition: transform 0.6s ease-out;
     padding: 16px 0 8px;
+    /* 
+    height: 22px;
+    width: 22px; */
 
-    display: flex;
+    /* display: flex; */
     flex-direction: row;
+    /* align-items: flex-end; */
     justify-content: center;
     gap: 16px;
     /* background-color: var(--primary-color); */

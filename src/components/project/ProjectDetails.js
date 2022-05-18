@@ -55,31 +55,33 @@ const ProjectDetails = ({ caseDetail, setShowDetail }) => {
             title={caseDetail.title}
             secondaryTitle={project.secondaryTitle}
           />
-          <DeviceContainer
-            secondDescription={project.secondDescription}
-            url={project.url}
-            desktopImg={project.desktopImg}
-            mobileImg={project.mobileImg}
-          />
-          <div className='section-divider'></div>
-          <RoleContainer roles={project.roles} />
-          <div className='section-divider'></div>
-          {/* <BrowserContainer
+          <div className='main-container'>
+            <DeviceContainer
+              secondDescription={project.secondDescription}
+              url={project.url}
+              desktopImg={project.desktopImg}
+              mobileImg={project.mobileImg}
+            />
+            <div className='section-divider'></div>
+            <RoleContainer roles={project.roles} />
+            <div className='section-divider'></div>
+            {/* <BrowserContainer
             fonts={project.fonts}
             browserImg={project.browserImg}
           />
           <div className='section-divider'></div> */}
-          <TabletContainer
-            ipadImg={project.ipadImg}
-            colours={project.colours}
-          />
-          <div className='section-divider'></div>
-          <SkillsContainer skills={project.icons} />
-          <div className='section-divider'></div>
-          <div className='final-container'>
-            <button className='shadow project-button'>Back</button>
+            <TabletContainer
+              ipadImg={project.ipadImg}
+              colours={project.colours}
+            />
+            <div className='section-divider'></div>
+            <SkillsContainer skills={project.icons} />
+            <div className='section-divider'></div>
+            <div className='final-container'>
+              <button className='shadow project-button'>Back</button>
+            </div>
+            <div className='section-divider'></div>
           </div>
-          <div className='section-divider'></div>
         </StyledProjectDetail>
       </StyledProjectShadow>
     </motion.div>
@@ -122,7 +124,7 @@ const StyledProjectDetail = styled(motion.div)`
   z-index: 11;
   /* border-top-left-radius: 20px;
   border-top-right-radius: 20px; */
-  background: #1e1e1e;
+  background: var(--primary-color);
 
   /* margin: auto; */
   /* max-width: 1400px; */
@@ -163,11 +165,11 @@ const StyledProjectDetail = styled(motion.div)`
   img {
     width: 100%;
   }
-  /* .main-container {
+  .main-container {
     background-color: #1e1e1e;
     position: relative;
     z-index: 1;
-  } */
+  }
   .project-button {
     white-space: nowrap;
 

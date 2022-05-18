@@ -1,9 +1,11 @@
 import styled from 'styled-components';
 import Signature from '../img/icons/white-sig.png';
+import FloatingIcons from './FloatingIcons';
 
 const Footer = () => {
   return (
     <StyledFooter>
+      {/* <FloatingIcons /> */}
       <p>Created by</p>
       <a
         className='github-link'
@@ -27,6 +29,7 @@ const StyledFooter = styled.div`
   padding: 4px;
   /* background-color: var(--secondary-accent); */
   background-color: var(--primary-color);
+  position: relative;
   p {
     font-size: 13px;
   }

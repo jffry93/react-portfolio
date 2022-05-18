@@ -21,6 +21,7 @@ const Project = ({
 }) => {
   //DETAIL STATE HANDLER
   const updateDetailHandler = () => {
+    document.body.style.overflow = 'hidden';
     setCaseDetail({
       title: { title }.title,
       secondaryTitle: { secondaryTitle }.secondaryTitle,
@@ -39,7 +40,6 @@ const Project = ({
       fonts: { fonts }.fonts,
     });
     setShowDetail(true);
-    document.body.style.overflow = 'hidden';
   };
 
   return (
