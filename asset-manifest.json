@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/react-portfolio/static/css/main.35d6b2c1.chunk.css",
-    "main.js": "/react-portfolio/static/js/main.bfe7f7ef.chunk.js",
-    "main.js.map": "/react-portfolio/static/js/main.bfe7f7ef.chunk.js.map",
+    "main.js": "/react-portfolio/static/js/main.51be6d53.chunk.js",
+    "main.js.map": "/react-portfolio/static/js/main.51be6d53.chunk.js.map",
     "runtime-main.js": "/react-portfolio/static/js/runtime-main.010ccaf8.js",
     "runtime-main.js.map": "/react-portfolio/static/js/runtime-main.010ccaf8.js.map",
     "static/css/2.1a2a3f90.chunk.css": "/react-portfolio/static/css/2.1a2a3f90.chunk.css",
@@ -48,7 +48,7 @@
     "static/media/nch405x780.54c4a414.png": "/react-portfolio/static/media/nch405x780.54c4a414.png",
     "static/media/nchThumb.816a84e6.webp": "/react-portfolio/static/media/nchThumb.816a84e6.webp",
     "static/media/new-empty-macbook.d06d2cbb.png": "/react-portfolio/static/media/new-empty-macbook.d06d2cbb.png",
-    "static/media/newHeadshot.856af9ff.jpg": "/react-portfolio/static/media/newHeadshot.856af9ff.jpg",
+    "static/media/onlyFace.f9db03d7.png": "/react-portfolio/static/media/onlyFace.f9db03d7.png",
     "static/media/paint-brush.526d2531.svg": "/react-portfolio/static/media/paint-brush.526d2531.svg",
     "static/media/palette-icon.cfbc67e7.svg": "/react-portfolio/static/media/palette-icon.cfbc67e7.svg",
     "static/media/role-icon.8c96069f.svg": "/react-portfolio/static/media/role-icon.8c96069f.svg",
@@ -67,6 +67,6 @@
     "static/css/2.1a2a3f90.chunk.css",
     "static/js/2.51bb522d.chunk.js",
     "static/css/main.35d6b2c1.chunk.css",
-    "static/js/main.bfe7f7ef.chunk.js"
+    "static/js/main.51be6d53.chunk.js"
   ]
 }
