@@ -163,6 +163,11 @@ const StyledProjectDetail = styled(motion.div)`
   img {
     width: 100%;
   }
+  /* .main-container {
+    background-color: #1e1e1e;
+    position: relative;
+    z-index: 1;
+  } */
   .project-button {
     white-space: nowrap;
 

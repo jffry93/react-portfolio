@@ -42,7 +42,6 @@ const SkillsSections = () => {
         <Swiper
           modules={[Navigation, Pagination, A11y, Autoplay]}
           className='swiper-js-container'
-          // onSwiper={(swiper) => console.log(swiper)}
           // onSlideChange={() => console.log('slide change')}
           loop={true}
           freeMode={true}

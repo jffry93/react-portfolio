@@ -5,7 +5,7 @@
 // import teamwork from '../img/teamwork.svg';
 //IMAGES
 import { BsGithub } from 'react-icons/bs';
-import myFace from '../../img/newHeadshot.jpg';
+import myFace from '../../img/onlyFace.png';
 //ICONS
 import downloadIcon from '../../img/icons/download-solid.svg';
 //Styles
@@ -184,16 +184,23 @@ const StyledServicesDescription = styled(motion.div)`
 `;
 
 const StyledImage = styled(motion.div)`
-  border-radius: 50%;
-
-  height: 250px;
-  width: 250px;
-
-  overflow: hidden;
-
   display: flex;
   align-items: center;
   justify-content: center;
+
+  overflow: hidden;
+  border: 3px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  height: 250px;
+  width: 250px;
+
+  background: linear-gradient(144deg, #5445a6, #7a5295, #f2816f);
+  background-size: 600% 600%;
+
+  -webkit-animation: AnimationName 12s ease infinite;
+  -moz-animation: AnimationName 12s ease infinite;
+  animation: AnimationName 12s ease infinite;
+
   .picture {
     height: 100%;
     width: 100%;
@@ -205,23 +212,13 @@ const StyledImage = styled(motion.div)`
     background-position: center;
   }
   @media (max-width: 500px) {
-    /* border-radius: 50%; */
-    /* height: unset; */
-    /* width: 300px; */
-    /* width: 100%; */
-    /* max-height: 400px; */
     height: 200px;
     width: 200px;
-    border: 3px solid rgba(255, 255, 255, 1);
-    padding: 6px;
   }
 
   img {
-    /* min-height: 400px; */
-    /* margin: auto; */
-    /* height: 70vh; */
     width: 100%;
-    /* min-width: 400px; */
+
     @media (max-width: 750px) {
       min-width: unset;
     }

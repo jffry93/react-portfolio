@@ -83,7 +83,7 @@ const StyledTabletContainer = styled(motion.div)`
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   max-width: 1200px;
   margin: 0px auto;
   gap: 32px;
@@ -107,7 +107,7 @@ const StyledTabletContainer = styled(motion.div)`
 
     .ipad-frame {
       position: relative;
-      min-width: clamp(700px, 60vw, 1000px);
+      min-width: clamp(700px, 60vw, 850px);
     }
     .ipad-img {
       position: absolute;

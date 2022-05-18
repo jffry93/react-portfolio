@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react';
 
-import myFace from '../../img/newHeadshot.jpg';
+import myFace from '../../img/onlyFace.png';
 import styled from 'styled-components';
 
 import 'mapbox-gl/dist/mapbox-gl.css';
@@ -24,7 +24,9 @@ const ContactMap = () => {
       center: [lng, lat],
       zoom: zoom,
     });
-    const marker1 = new mapboxgl.Marker({ color: '#f2816f' })
+    const marker1 = new mapboxgl.Marker({
+      color: '#f2816f',
+    })
       .setLngLat([-79.3832, 43.6952])
       .addTo(map.current);
     //ADD CONTAINER TO INCLUDE GIF AND TEXT

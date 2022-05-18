@@ -305,7 +305,7 @@ const StyledForm = styled.form`
     margin: 4px 0;
     /* padding: 0.7rem 1rem; */
     background-color: #e6e5e5;
-    border-radius: 8px;
+    border-radius: 3px;
     input {
       color: grey;
       background-color: var(--primary-text-color);

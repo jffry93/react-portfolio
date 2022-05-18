@@ -102,6 +102,40 @@ const GlobalStyle = createGlobalStyle`
     footer{
         background-color:#115169 ;
     }
+
+  @-webkit-keyframes AnimationName {
+    0% {
+      background-position: 0% 5%;
+    }
+    50% {
+      background-position: 100% 96%;
+    }
+    100% {
+      background-position: 0% 5%;
+    }
+  }
+  @-moz-keyframes AnimationName {
+    0% {
+      background-position: 0% 5%;
+    }
+    50% {
+      background-position: 100% 96%;
+    }
+    100% {
+      background-position: 0% 5%;
+    }
+  }
+  @keyframes AnimationName {
+    0% {
+      background-position: 0% 5%;
+    }
+    50% {
+      background-position: 100% 96%;
+    }
+    100% {
+      background-position: 0% 5%;
+    }
+  }
     
 `;
 

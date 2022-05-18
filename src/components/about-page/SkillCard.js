@@ -62,11 +62,11 @@ const StyledSkillCard = styled.div`
     text-decoration: none;
     color: white;
     transition: transform 0.3s;
-    background-image: linear-gradient(
+    /* background-image: linear-gradient(
       155deg,
       ${(props) => props.color2 || props.color},
       ${(props) => props.color}
-    );
+    ); */
   }
   a:hover {
     /* border: 2px solid white; */
