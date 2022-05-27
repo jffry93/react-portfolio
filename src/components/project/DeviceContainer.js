@@ -24,7 +24,7 @@ const DeviceContainer = ({ secondDescription, url, desktopImg, mobileImg }) => {
           <h2>Summary</h2>
           <p>{secondDescription}</p>
           <div className='project-sites'>
-            {url.map((url) => (
+            {url?.map((url) => (
               <a
                 key={uuidv4()}
                 href={url.website}

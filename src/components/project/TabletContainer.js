@@ -53,7 +53,7 @@ const TabletContainer = ({ colours, ipadImg }) => {
 
         <div className='palette-container'>
           <div className='colour-palettes'>
-            {colours.map((colour, i) => (
+            {colours?.map((colour, i) => (
               <div
                 key={uuidv4()}
                 className='colour-palette'

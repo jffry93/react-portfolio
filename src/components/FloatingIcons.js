@@ -10,8 +10,6 @@ import { AiOutlineFileText } from 'react-icons/ai';
 import MyResume from '../Resume/Jeffrey_Zalischi_Resume.pdf';
 
 const SocialLinks = () => {
-  console.log(window);
-
   return (
     <StyledContainer className='social-media'>
       <div className='icon-container'>

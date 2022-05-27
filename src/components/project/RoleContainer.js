@@ -25,7 +25,7 @@ const RoleContainer = ({ roles }) => {
       <h5>Some things I got done on this project!</h5>
 
       <div className='roles-container'>
-        {roles.map((role) => (
+        {roles?.map((role) => (
           <div key={uuidv4()} className='role custom-card'>
             <div className='role-icon'>
               <img src={role.iconFa} alt='' />

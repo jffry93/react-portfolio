@@ -1,6 +1,10 @@
+import { Link, useLocation } from 'react-router-dom';
+import { HashLink, NavHashLink } from 'react-router-hash-link';
+import { useEffect } from 'react/cjs/react.production.min';
 import styled from 'styled-components';
 
 const Project = ({
+  path,
   title,
   secondaryTitle,
   url,
@@ -16,6 +20,7 @@ const Project = ({
   fonts,
   description,
   secondDescription,
+  caseDetail,
   setCaseDetail,
   setShowDetail,
 }) => {
@@ -23,6 +28,7 @@ const Project = ({
   const updateDetailHandler = () => {
     document.body.style.overflow = 'hidden';
     setCaseDetail({
+      path: { path }.path,
       title: { title }.title,
       secondaryTitle: { secondaryTitle }.secondaryTitle,
       url: { url }.url,
@@ -42,6 +48,12 @@ const Project = ({
     setShowDetail(true);
   };
 
+  //REACT ROUTER POPUP
+  let location = useLocation();
+  let state = location.state;
+  // console.log(caseDetail.title);
+  // console.log(location);
+
   return (
     <StyledProject>
       <StyledImgContainer onClick={updateDetailHandler}>
@@ -52,8 +64,9 @@ const Project = ({
         <h3>{title}</h3>
         <p>{secondaryTitle}</p>
         <div className='button-container'>
-          <button onClick={updateDetailHandler}>Learn more</button>
-
+          <HashLink to={`${path}`} state={{ background: location }}>
+            <button>Learn more</button>
+          </HashLink>
           <a href={url[0].website} target='_blank'>
             <button>Visit Website</button>
           </a>

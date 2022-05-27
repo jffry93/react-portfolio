@@ -194,12 +194,12 @@ const StyledImage = styled(motion.div)`
   height: 250px;
   width: 250px;
 
-  background: linear-gradient(144deg, #5445a6, #f2816f);
+  background: linear-gradient(144deg, #5445a6, #f2816f, #5445a6, #f2816f);
   background-size: 600% 600%;
 
-  -webkit-animation: AnimationName 12s ease infinite;
-  -moz-animation: AnimationName 12s ease infinite;
-  animation: AnimationName 12s ease infinite;
+  -webkit-animation: AnimationName 18s ease infinite;
+  -moz-animation: AnimationName 18s ease infinite;
+  animation: AnimationName 18s ease infinite;
 
   .picture {
     height: 100%;

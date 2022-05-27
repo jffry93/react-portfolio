@@ -1,3 +1,8 @@
+import { useState, useEffect } from 'react';
+//react router
+import { useNavigate, useLocation } from 'react-router-dom';
+import ProjectState from '../../projectState';
+
 //STYLING
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
@@ -14,77 +19,90 @@ import TabletContainer from './TabletContainer';
 import SkillsContainer from './SkillsContainer';
 
 const ProjectDetails = ({ caseDetail, setShowDetail }) => {
-  //HIDE POPUP
-  const hideDetailHandler = (e) => {
+  let location = useLocation(); //used to find current pathname
+  const url = location.pathname;
+  let navigate = useNavigate(); //used for back button
+
+  const [projectState, setProjectState] = useState(ProjectState);
+  const [project, setProject] = useState(null);
+
+  useEffect(() => {
+    //Popuplate project data based on url path
+    const currentProject = projectState.filter(
+      (stateProject) => stateProject.path === url
+    );
+    setProject(currentProject); //add to state
+    document.body.style.overflow = 'hidden';
+  }, [projectState]);
+
+  // close || go back when done with pop up
+  const hidePopupHandler = (e) => {
     const element = e.target;
-    // console.log(element);
     if (element.classList.contains('shadow')) {
-      setShowDetail(false);
       document.body.style.overflow = 'auto';
+      navigate(-1);
     }
   };
+
   //appear on scroll
   const [element, controls] = useScroll();
-  //state holding data of project that was selected
-  const project = caseDetail;
-  // console.log(caseDetail);
 
   return (
-    <motion.div
-      variants={staggerContainer}
-      initial='hidden'
-      animate='show'
-      // exit='exit'
-    >
-      <StyledProjectShadow
-        variants={titleAnimation}
-        animate='show'
-        initial='hidden'
-        // ref={element}
-        // ref={element}
-        className='shadow'
-        onClick={hideDetailHandler}
-      >
-        <StyledProjectDetail
-          variants={fade}
-          animate='show'
+    <>
+      {project && (
+        <motion.div
+          variants={staggerContainer}
           initial='hidden'
-          // ref={element}
+          animate='show'
+          exit='exit'
         >
-          <HeaderContainer
-            title={caseDetail.title}
-            secondaryTitle={project.secondaryTitle}
-          />
-          <div className='main-container'>
-            <DeviceContainer
-              secondDescription={project.secondDescription}
-              url={project.url}
-              desktopImg={project.desktopImg}
-              mobileImg={project.mobileImg}
-            />
-            <div className='section-divider'></div>
-            <RoleContainer roles={project.roles} />
-            <div className='section-divider'></div>
-            {/* <BrowserContainer
-            fonts={project.fonts}
-            browserImg={project.browserImg}
-          />
-          <div className='section-divider'></div> */}
-            <TabletContainer
-              ipadImg={project.ipadImg}
-              colours={project.colours}
-            />
-            <div className='section-divider'></div>
-            <SkillsContainer skills={project.icons} />
-            <div className='section-divider'></div>
-            <div className='final-container'>
-              <button className='shadow project-button'>Back</button>
-            </div>
-            <div className='section-divider'></div>
-          </div>
-        </StyledProjectDetail>
-      </StyledProjectShadow>
-    </motion.div>
+          <StyledProjectShadow
+            variants={titleAnimation}
+            animate='show'
+            initial='hidden'
+            ref={element}
+            className='shadow'
+            onClick={(e) => hidePopupHandler(e)}
+          >
+            <StyledProjectDetail
+              variants={fade}
+              animate='show'
+              initial='hidden'
+              ref={element}
+            >
+              <>
+                <HeaderContainer
+                  title={project[0]?.title}
+                  secondaryTitle={project[0]?.secondaryTitle}
+                />
+                <div className='main-container'>
+                  <DeviceContainer
+                    secondDescription={project[0]?.secondDescription}
+                    url={project[0]?.url}
+                    desktopImg={project[0]?.desktopImg}
+                    mobileImg={project[0]?.mobileImg}
+                  />
+                  <div className='section-divider'></div>
+                  <RoleContainer roles={project[0]?.roles} />
+                  <div className='section-divider'></div>
+                  <TabletContainer
+                    ipadImg={project[0]?.ipadImg}
+                    colours={project[0]?.colours}
+                  />
+                  <div className='section-divider'></div>
+                  <SkillsContainer skills={project[0]?.icons} />
+                  <div className='section-divider'></div>
+                  <div className='final-container'>
+                    <button className='shadow project-button'>Back</button>
+                  </div>
+                  <div className='section-divider'></div>
+                </div>
+              </>
+            </StyledProjectDetail>
+          </StyledProjectShadow>
+        </motion.div>
+      )}
+    </>
   );
 };
 
@@ -126,8 +144,6 @@ const StyledProjectDetail = styled(motion.div)`
   border-top-right-radius: 20px; */
   background: var(--primary-color);
 
-  /* margin: auto; */
-  /* max-width: 1400px; */
   @media (max-width: 1600px) {
     width: 100%;
   }
@@ -139,10 +155,6 @@ const StyledProjectDetail = styled(motion.div)`
     align-items: center;
 
     gap: 8px;
-    /* h2 {
-      letter-spacing: 1.125px;
-      white-space: nowrap;
-    } */
     .title-icon {
       width: clamp(22px, 3vw, 30px);
       height: clamp(22px, 3vw, 30px);

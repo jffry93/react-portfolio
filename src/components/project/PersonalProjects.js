@@ -2,10 +2,12 @@ import { useState, useRef } from 'react';
 import projectState from '../../projectState';
 
 import { v4 as uuidv4 } from 'uuid';
-
+//REACT ROUTER 6
+import { useLocation, Routes, Route } from 'react-router-dom';
 //COMPONENTS
 import Project from './Project';
 import ProjectDetails from './ProjectDetails';
+
 //STYLING
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
@@ -42,6 +44,9 @@ const PersonalProjects = () => {
 
   const [element, controls] = useScroll();
 
+  const location = useLocation();
+  let state = location.state;
+  // console.log(state?.background);
   return (
     <StyledProjectSection
     // variants={fade}
@@ -50,15 +55,15 @@ const PersonalProjects = () => {
     // ref={element}
     // id='home-projects'
     >
+      {/* 
       {showDetail && (
         <ProjectDetails
           caseDetail={caseDetail}
           showDetail={showDetail}
           setShowDetail={setShowDetail}
         />
-      )}
+      )} */}
       {/* <p className='description'>Click on card to preview</p> */}
-
       <Swiper
         className='swiper-js-container'
         modules={[
@@ -118,6 +123,7 @@ const PersonalProjects = () => {
         {projects.map((project, i) => (
           <SwiperSlide key={i}>
             <Project
+              path={project.path}
               title={project.title}
               secondaryTitle={project.secondaryTitle}
               thumbImg={project.thumbImg}

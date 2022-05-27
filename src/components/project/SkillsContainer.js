@@ -25,7 +25,7 @@ const SkillsContainer = ({ skills }) => {
       <h5>Jack of all trades, master of some.</h5>
 
       <div className='icon-container'>
-        {skills.map((icon) => (
+        {skills?.map((icon) => (
           <div key={uuidv4()} className='skill'>
             <div className='tool-text-container'>
               <h4>{icon.title}</h4>
