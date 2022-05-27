@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/react-portfolio/static/css/main.35d6b2c1.chunk.css",
-    "main.js": "/react-portfolio/static/js/main.2315ee3e.chunk.js",
-    "main.js.map": "/react-portfolio/static/js/main.2315ee3e.chunk.js.map",
+    "main.js": "/react-portfolio/static/js/main.aa456f5b.chunk.js",
+    "main.js.map": "/react-portfolio/static/js/main.aa456f5b.chunk.js.map",
     "runtime-main.js": "/react-portfolio/static/js/runtime-main.010ccaf8.js",
     "runtime-main.js.map": "/react-portfolio/static/js/runtime-main.010ccaf8.js.map",
     "static/css/2.1a2a3f90.chunk.css": "/react-portfolio/static/css/2.1a2a3f90.chunk.css",
-    "static/js/2.0d8f0597.chunk.js": "/react-portfolio/static/js/2.0d8f0597.chunk.js",
-    "static/js/2.0d8f0597.chunk.js.map": "/react-portfolio/static/js/2.0d8f0597.chunk.js.map",
+    "static/js/2.741112a5.chunk.js": "/react-portfolio/static/js/2.741112a5.chunk.js",
+    "static/js/2.741112a5.chunk.js.map": "/react-portfolio/static/js/2.741112a5.chunk.js.map",
     "static/js/3.4112d5f1.chunk.js": "/react-portfolio/static/js/3.4112d5f1.chunk.js",
     "static/js/3.4112d5f1.chunk.js.map": "/react-portfolio/static/js/3.4112d5f1.chunk.js.map",
     "index.html": "/react-portfolio/index.html",
     "static/css/2.1a2a3f90.chunk.css.map": "/react-portfolio/static/css/2.1a2a3f90.chunk.css.map",
     "static/css/main.35d6b2c1.chunk.css.map": "/react-portfolio/static/css/main.35d6b2c1.chunk.css.map",
-    "static/js/2.0d8f0597.chunk.js.LICENSE.txt": "/react-portfolio/static/js/2.0d8f0597.chunk.js.LICENSE.txt",
+    "static/js/2.741112a5.chunk.js.LICENSE.txt": "/react-portfolio/static/js/2.741112a5.chunk.js.LICENSE.txt",
     "static/media/2mdbb1194x815.2cce9b20.png": "/react-portfolio/static/media/2mdbb1194x815.2cce9b20.png",
     "static/media/2nch-browser-light.e5137a0e.png": "/react-portfolio/static/media/2nch-browser-light.e5137a0e.png",
     "static/media/Jeffrey_Zalischi_Resume.753eccaa.pdf": "/react-portfolio/static/media/Jeffrey_Zalischi_Resume.753eccaa.pdf",
@@ -25,16 +25,13 @@
     "static/media/bay1194x805.5663ad95.png": "/react-portfolio/static/media/bay1194x805.5663ad95.png",
     "static/media/bay1280x800.a7e260e9.png": "/react-portfolio/static/media/bay1280x800.a7e260e9.png",
     "static/media/bay405x780.1b47aba1.png": "/react-portfolio/static/media/bay405x780.1b47aba1.png",
-    "static/media/book-open-solid.59c24569.svg": "/react-portfolio/static/media/book-open-solid.59c24569.svg",
     "static/media/champagne-glasses-solid.a12fa3f8.svg": "/react-portfolio/static/media/champagne-glasses-solid.a12fa3f8.svg",
     "static/media/crop.23966b02.svg": "/react-portfolio/static/media/crop.23966b02.svg",
     "static/media/download-solid.7026e29b.svg": "/react-portfolio/static/media/download-solid.7026e29b.svg",
     "static/media/empty-ipad-horizontal.69725484.png": "/react-portfolio/static/media/empty-ipad-horizontal.69725484.png",
     "static/media/empty-iphone.13362a32.png": "/react-portfolio/static/media/empty-iphone.13362a32.png",
-    "static/media/ibrahim.5c5de7ec.jpg": "/react-portfolio/static/media/ibrahim.5c5de7ec.jpg",
     "static/media/icon-close.f982e313.svg": "/react-portfolio/static/media/icon-close.f982e313.svg",
     "static/media/icon-hamburger.15e6f8b4.svg": "/react-portfolio/static/media/icon-hamburger.15e6f8b4.svg",
-    "static/media/iphonex783.addfa5c9.png": "/react-portfolio/static/media/iphonex783.addfa5c9.png",
     "static/media/key-solid.fb7c48e4.svg": "/react-portfolio/static/media/key-solid.fb7c48e4.svg",
     "static/media/layer1.544d9c78.png": "/react-portfolio/static/media/layer1.544d9c78.png",
     "static/media/layer2.c1e8e9a0.png": "/react-portfolio/static/media/layer2.c1e8e9a0.png",
@@ -65,8 +62,8 @@
   "entrypoints": [
     "static/js/runtime-main.010ccaf8.js",
     "static/css/2.1a2a3f90.chunk.css",
-    "static/js/2.0d8f0597.chunk.js",
+    "static/js/2.741112a5.chunk.js",
     "static/css/main.35d6b2c1.chunk.css",
-    "static/js/main.2315ee3e.chunk.js"
+    "static/js/main.aa456f5b.chunk.js"
   ]
 }
