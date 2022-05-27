@@ -57,8 +57,10 @@ const Project = ({
   return (
     <StyledProject>
       <StyledImgContainer onClick={updateDetailHandler}>
-        <div id='overlay'></div>
-        <img src={thumbImg} alt='project image' />
+        <HashLink to={`${path}`} state={{ background: location }}>
+          <div id='overlay'></div>
+          <img src={thumbImg} alt='project image' />
+        </HashLink>
       </StyledImgContainer>
       <StyledDetails>
         <h3>{title}</h3>

@@ -24,8 +24,10 @@ function App() {
   const [navToggle, setNavToggle] = useState(false);
 
   const location = useLocation();
-  let state = location.state;
+  // let state = location.state;
   const background = location.state && location.state.background;
+  console.log(background);
+  console.log(location);
 
   return (
     <div className='App'>
@@ -33,14 +35,18 @@ function App() {
       <Nav navToggle={navToggle} setNavToggle={setNavToggle} />
 
       <AnimatePresence exitBeforeEnter>
-        <Routes location={background || location} key={location.key}>
-          <Route path='/*' element={<About />} />
-          <Route path='/work*' element={<Work />} />
+        <Routes location={background || location}>
+          <Route path='/' element={<About />}>
+            <Route path={`:path`} element={<ProjectDetails />} />
+          </Route>
+          <Route path='/work' element={<Work />} />
           <Route path='/contact' element={<Contact />} />
+          {/* 404 page */}
+          <Route path='*' element={<About />}></Route>
         </Routes>
-        {state?.background && (
+        {background && (
           <Routes>
-            <Route path={`/:path`} element={<ProjectDetails />} />
+            <Route path={`:path`} element={<ProjectDetails />} />
           </Routes>
         )}
       </AnimatePresence>

@@ -48,22 +48,7 @@ const PersonalProjects = () => {
   let state = location.state;
   // console.log(state?.background);
   return (
-    <StyledProjectSection
-    // variants={fade}
-    // animate={controls}
-    // initial='hidden'
-    // ref={element}
-    // id='home-projects'
-    >
-      {/* 
-      {showDetail && (
-        <ProjectDetails
-          caseDetail={caseDetail}
-          showDetail={showDetail}
-          setShowDetail={setShowDetail}
-        />
-      )} */}
-      {/* <p className='description'>Click on card to preview</p> */}
+    <StyledProjectSection>
       <Swiper
         className='swiper-js-container'
         modules={[
@@ -111,10 +96,10 @@ const PersonalProjects = () => {
           slideShadows: true,
         }}
         centeredSlides
-        // autoplay={{
-        //   delay: 4000,
-        //   disableOnInteraction: false,
-        // }}
+        autoplay={{
+          delay: 4000,
+          disableOnInteraction: false,
+        }}
         speed={500}
         loop={true}
         // onSwiper={(swiper) => console.log(swiper)}

@@ -25,7 +25,7 @@ const AboutUs = () => {
       exit='exit'
       style={{ overflow: 'hidden', background: '#121212' }}
     >
-      {/* <ScrollTop /> */}
+      <ScrollTop />
       {/* <motion.div variants={sliderContainer}>
         <StyledFrame1 variants={sliderAnimation}></StyledFrame1>
         <StyledFrame2 variants={sliderAnimation}></StyledFrame2>
