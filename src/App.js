@@ -23,11 +23,8 @@ import ProjectDetails from './components/project/ProjectDetails';
 function App() {
   const [navToggle, setNavToggle] = useState(false);
 
-  const location = useLocation();
-  // let state = location.state;
-  const background = location.state && location.state.background;
-  console.log(background);
-  console.log(location);
+  const location = useLocation(); //url path
+  const background = location.state && location.state.background; //pop up location
 
   return (
     <div className='App'>
@@ -36,13 +33,9 @@ function App() {
 
       <AnimatePresence exitBeforeEnter>
         <Routes location={background || location}>
-          <Route path='/' element={<About />}>
-            <Route path={`:path`} element={<ProjectDetails />} />
-          </Route>
+          <Route path='/*' element={<About />} />
           <Route path='/work' element={<Work />} />
           <Route path='/contact' element={<Contact />} />
-          {/* 404 page */}
-          <Route path='*' element={<About />}></Route>
         </Routes>
         {background && (
           <Routes>
@@ -50,6 +43,7 @@ function App() {
           </Routes>
         )}
       </AnimatePresence>
+
       <FloatingIcons />
       <Footer />
     </div>

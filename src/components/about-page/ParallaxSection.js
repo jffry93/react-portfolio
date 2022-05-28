@@ -15,14 +15,13 @@ import {
 import { useInView } from 'react-intersection-observer';
 //REACT ROUTER
 import { NavHashLink } from 'react-router-hash-link';
-import DonationBar from '../DonationBar';
 
 const ParallaxSection = () => {
   const { scrollY, scrollYProgress } = useViewportScroll();
   // console.log(scrollY);
   const y1 = useTransform(scrollY, [0, 1000], [0, -100]);
   const y2 = useTransform(scrollY, [0, 1000], [0, 60]);
-  const y3 = useTransform(scrollY, [0, 1000], [0, 8]);
+  const y3 = useTransform(scrollY, [0, 1000], [0, -40]);
 
   const [ref, inView, entry] = useInView({
     /* Optional options */

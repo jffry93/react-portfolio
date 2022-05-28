@@ -1,19 +1,10 @@
-import { useState, useRef } from 'react';
-import projectState from '../../projectState';
-
-import { v4 as uuidv4 } from 'uuid';
-//REACT ROUTER 6
-import { useLocation, Routes, Route } from 'react-router-dom';
+import { useState } from 'react';
+import projectState from '../../projectState'; // All
 //COMPONENTS
 import Project from './Project';
-import ProjectDetails from './ProjectDetails';
-
 //STYLING
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-import { fade } from '../../animation';
-//reveal when in viewport
-import { useScroll } from '../useScroll';
 //swiper
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.min.css';
@@ -39,14 +30,7 @@ SwiperCore.use([
 
 const PersonalProjects = () => {
   const [projects, setProjects] = useState(projectState);
-  const [caseDetail, setCaseDetail] = useState({});
-  const [showDetail, setShowDetail] = useState(false);
 
-  const [element, controls] = useScroll();
-
-  const location = useLocation();
-  let state = location.state;
-  // console.log(state?.background);
   return (
     <StyledProjectSection>
       <Swiper
@@ -112,22 +96,8 @@ const PersonalProjects = () => {
               title={project.title}
               secondaryTitle={project.secondaryTitle}
               thumbImg={project.thumbImg}
-              desktopImg={project.mainImg}
-              mobileImg={project.secondaryImg}
-              browserImg={project.browserImg}
-              ipadImg={project.ipadImg}
-              roles={project.roles}
-              icons={project.icons}
-              highlights={project.highlights}
-              colours={project.colours}
-              fonts={project.fonts}
               url={project.url}
-              description={project.description}
-              secondDescription={project.secondDescription}
               key={project.url}
-              caseDetail={caseDetail}
-              setCaseDetail={setCaseDetail}
-              setShowDetail={setShowDetail}
             />
           </SwiperSlide>
         ))}
@@ -229,18 +199,4 @@ const StyledProjectSection = styled(motion.div)`
   .swiper-slide-shadow-left {
     /* border-radius: 20px; */
   }
-`;
-const StyledProjectList = styled.div`
-  /* border: 3px solid red;
-  width: 100%; */
-
-  /* display: flex; */
-  /* gap: 2rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  padding: 5rem 0 0; */
-  /* grid-gap: 10rem; */
-  /* @media (max-width: 500px) {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  } */
 `;

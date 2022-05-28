@@ -1,7 +1,5 @@
 import React from 'react';
-import HomeSection from '../components/about-page/HomeSection';
 import AboutSection from '../components/about-page/AboutSection';
-import PersonalProjects from '../components/project/PersonalProjects';
 import FaqSection from '../components/about-page/FaqSection';
 import SkillsSections from '../components/about-page/SkillsSections';
 import ProjectSection from '../components/about-page/ProjectSection';
@@ -11,9 +9,7 @@ import { motion } from 'framer-motion';
 import { pageAnimation, fade } from '../animation';
 import ScrollTop from '../components/ScrollTop';
 import ParallaxSection from '../components/about-page/ParallaxSection';
-import FloatingIcons from '../components/FloatingIcons';
 import DonationBar from '../components/DonationBar';
-import { Routes, Route } from 'react-router-dom';
 
 const AboutUs = () => {
   document.body.style.overflow = 'auto';
@@ -26,21 +22,13 @@ const AboutUs = () => {
       style={{ overflow: 'hidden', background: '#121212' }}
     >
       <ScrollTop />
-      {/* <motion.div variants={sliderContainer}>
-        <StyledFrame1 variants={sliderAnimation}></StyledFrame1>
-        <StyledFrame2 variants={sliderAnimation}></StyledFrame2>
-        <StyledFrame3 variants={sliderAnimation}></StyledFrame3>
-        <StyledFrame4 variants={sliderAnimation}></StyledFrame4>
-      </motion.div> */}
       <StyledAboutContainer variants={fade}>
-        {/* <HomeSection /> */}
         <DonationBar />
         <ParallaxSection />
         <AboutSection />
         <SkillsSections />
         <ProjectSection />
         <FaqSection />
-        {/* <FloatingIcons /> */}
       </StyledAboutContainer>
     </motion.div>
   );

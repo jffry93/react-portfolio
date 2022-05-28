@@ -87,7 +87,7 @@ const FaqSection = () => {
 };
 
 const Faq = styled.div`
-  padding: 116px 0 119px;
+  padding: 116px 0 0px;
   background-color: var(--primary-color);
   /* background: rgba(12, 12, 12, 0.5); */
   display: block;

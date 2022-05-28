@@ -43,6 +43,17 @@ const ProjectDetails = ({ caseDetail, setShowDetail }) => {
       navigate(-1);
     }
   };
+  //CLOSE POPUP WHEN CLICK ESC
+  useEffect(() => {
+    const close = (e) => {
+      if (e.keyCode === 27) {
+        document.body.style.overflow = 'auto';
+        navigate(-1);
+      }
+    };
+    window.addEventListener('keydown', close);
+    return () => window.removeEventListener('keydown', close);
+  }, []);
 
   //appear on scroll
   const [element, controls] = useScroll();

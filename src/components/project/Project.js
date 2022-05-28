@@ -1,62 +1,15 @@
-import { Link, useLocation } from 'react-router-dom';
-import { HashLink, NavHashLink } from 'react-router-hash-link';
-import { useEffect } from 'react/cjs/react.production.min';
+import { useLocation } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
+
 import styled from 'styled-components';
 
-const Project = ({
-  path,
-  title,
-  secondaryTitle,
-  url,
-  thumbImg,
-  desktopImg,
-  mobileImg,
-  browserImg,
-  ipadImg,
-  roles,
-  icons,
-  highlights,
-  colours,
-  fonts,
-  description,
-  secondDescription,
-  caseDetail,
-  setCaseDetail,
-  setShowDetail,
-}) => {
-  //DETAIL STATE HANDLER
-  const updateDetailHandler = () => {
-    document.body.style.overflow = 'hidden';
-    setCaseDetail({
-      path: { path }.path,
-      title: { title }.title,
-      secondaryTitle: { secondaryTitle }.secondaryTitle,
-      url: { url }.url,
-      thumbImb: { thumbImg }.thumbImg,
-      desktopImg: { desktopImg }.desktopImg,
-      mobileImg: { mobileImg }.mobileImg,
-      browserImg: { browserImg }.browserImg,
-      ipadImg: { ipadImg }.ipadImg,
-      description: { description }.description,
-      secondDescription: { secondDescription }.secondDescription,
-      roles: { roles }.roles,
-      icons: { icons }.icons,
-      highlights: { highlights }.highlights,
-      colours: { colours }.colours,
-      fonts: { fonts }.fonts,
-    });
-    setShowDetail(true);
-  };
-
+const Project = ({ path, title, secondaryTitle, url, thumbImg }) => {
   //REACT ROUTER POPUP
   let location = useLocation();
-  let state = location.state;
-  // console.log(caseDetail.title);
-  // console.log(location);
 
   return (
     <StyledProject>
-      <StyledImgContainer onClick={updateDetailHandler}>
+      <StyledImgContainer>
         <HashLink to={`${path}`} state={{ background: location }}>
           <div id='overlay'></div>
           <img src={thumbImg} alt='project image' />
@@ -82,29 +35,12 @@ export default Project;
 
 const StyledProject = styled.div`
   position: relative;
-  /* border: 1px solid white; */
 
   overflow: hidden;
   cursor: pointer;
 `;
 
 const StyledImgContainer = styled.div`
-  /* position: relative;
-  height: 60vh;
-  min-height: 500px;
-  max-height: 700px;
-  &:after {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: block;
-    background: rgba(0, 0, 0, 0.9);
-    z-index: 2;
-
-    content: " ";
-  } */
   position: relative;
   #overlay {
     position: absolute;
@@ -117,9 +53,6 @@ const StyledImgContainer = styled.div`
     height: 100%;
     border: 1px solid var(--secondary-accent);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    /* min-height: 500px;
-    max-height: 700px; */
-    /* z-index: 1; */
   }
 
   img {
@@ -137,7 +70,7 @@ const StyledImgContainer = styled.div`
 const StyledDetails = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 8px;
   max-width: 400px;
   padding: 1.5rem 1.5rem 3rem 1.5rem;
 
@@ -168,18 +101,19 @@ const StyledDetails = styled.div`
   }
   .button-container {
     margin-top: 16px;
+    background-color: unset !important;
+
     display: flex;
     gap: 8px;
-    background-color: unset !important;
   }
 
   button {
-    /* border: 2px solid white; */
     padding: 0.7rem;
     font-size: 14px;
     text-decoration: none;
+    white-space: nowrap;
+
     color: white;
-    min-width: 120px;
   }
   button:hover {
     background-color: #242424;
@@ -191,10 +125,10 @@ const StyledDetails = styled.div`
   @media (max-width: 450px) {
     .button-container {
       flex-direction: column;
+      button {
+        width: 70%;
+        min-width: 150px;
+      }
     }
   }
-`;
-
-const StyledProjectDetails = styled.div`
-  /* display: none; */
 `;

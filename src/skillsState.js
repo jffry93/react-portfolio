@@ -56,6 +56,16 @@ const skillsState = () => {
       // hexCode2: '#000',
     },
     {
+      title: 'TypeScript',
+      secondTitle: 'Browser Language',
+      description:
+        'TypeScript is a strongly typed programming language that builds on JavaScript, giving you better tooling at any scale.',
+      documentation: 'https://www.typescriptlang.org',
+      hexCode: '#3178c6',
+      textColor: '#242424',
+      // hexCode2: '#000',
+    },
+    {
       title: 'jQuery',
       secondTitle: 'JavaScript Library',
       description:
@@ -73,12 +83,31 @@ const skillsState = () => {
       textColor: '#242424',
     },
     {
+      title: 'Vite',
+      secondTitle: 'JavaScript Framework',
+      description:
+        "A build tool that comes with a dev server, and it bundles your code for production. It's similar to Vue CLI but leaner and faster.",
+      documentation: 'https://vitejs.dev',
+      hexCode: '#58b3fe',
+      hexCode2: '#bb36fe',
+      textColor: '#242424',
+    },
+    {
       title: 'Redux',
       secondTitle: 'State Management',
       description:
-        'An open-source JavaScript library for managing and centralizing application state.',
+        'An open-source JavaScript library for managing and centralizing application state. Redux toolkit is the modern way of using Redux.',
       documentation: 'https://redux.js.org',
       hexCode: '#7A3FB9',
+    },
+    {
+      title: 'VictoryChart',
+      secondTitle: 'Data Visualization',
+      description:
+        'VictoryChart is a data visualization charting library using d3. VictoryChart controls the layout of the chart, and coordinates animations and shared events.',
+      documentation:
+        'https://formidable.com/open-source/victory/docs/victory-chart/',
+      hexCode: '#de5a45',
     },
     {
       title: 'Framer Motion',
@@ -150,6 +179,41 @@ const skillsState = () => {
       hexCode: '#7E3E8E',
     },
     {
+      title: 'Node.js',
+      secondTitle: 'JavaScript',
+      description:
+        'Node.js is primarily used for non-blocking, event-driven servers, due to its single-threaded nature',
+      documentation: 'https://nodejs.org/en/',
+      hexCode: '#73b955',
+      hexCode2: '#3e863d',
+    },
+    {
+      title: 'Express',
+      secondTitle: 'Framework',
+      description:
+        'Express is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications.',
+      documentation: 'https://expressjs.com',
+      hexCode: '#259dff',
+    },
+    {
+      title: 'MongoDB.',
+      secondTitle: 'Database',
+      description:
+        'Classified as a NoSQL database program, MongoDB uses JSON-like documents with optional schemas.',
+      documentation: 'https://www.mongodb.com',
+      hexCode: '#116149',
+    },
+    {
+      title: 'Firebase',
+      secondTitle: 'Database',
+      description:
+        'Store & sync data between your users in realtime with the Firebase Realtime Database.',
+      documentation: 'https://firebase.google.com',
+      hexCode: '#ffcc30',
+      hexCode2: '#f58411',
+    },
+
+    {
       title: 'Figma',
       secondTitle: 'Design Software',
       description:
@@ -162,7 +226,7 @@ const skillsState = () => {
     {
       title: 'Adobe',
       secondTitle: 'Design Software',
-      description: '“An industry standard tool for the publishing industry,',
+      description: 'An industry standard tool for the publishing industry,',
       documentation:
         'https://www.adobe.com/ca/creativecloud/business/teams.html?sdid=KKQWX&mv=search&ef_id=Cj0KCQiAraSPBhDuARIsAM3Js4oa_6quAWB6b0z7m5ITJG7fGPz87HVOhybrLcQcvteeGOQu3BhcI9AaAmkbEALw_wcB:G:s&s_kwcid=AL!3085!3!495846071701!e!!g!!adobe!12231505439!122943076691&gclid=Cj0KCQiAraSPBhDuARIsAM3Js4oa_6quAWB6b0z7m5ITJG7fGPz87HVOhybrLcQcvteeGOQu3BhcI9AaAmkbEALw_wcB',
       hexCode: '#ED1001',
@@ -200,6 +264,15 @@ const skillsState = () => {
         'Send emails using client-side technologies only. No server is required. ',
       documentation: 'https://www.emailjs.com',
       hexCode: '#EF9A4F',
+      textColor: '#242424',
+    },
+    {
+      title: 'WeatherAPI',
+      secondTitle: '3rd Party Library',
+      description:
+        'Designed for developers by developers, Weather API is the ultimate weather and geolocation API trusted by +100K users worldwide. ',
+      documentation: 'https://www.weatherapi.com',
+      hexCode: '#5cb377',
       textColor: '#242424',
     },
 
