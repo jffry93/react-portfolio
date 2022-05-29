@@ -146,6 +146,7 @@ const StyledContactContainer = styled(motion.div)`
       border-radius: 0;
 
       max-height: unset;
+      align-items: center;
     }
   }
 `;

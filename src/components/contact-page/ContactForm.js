@@ -343,9 +343,11 @@ const StyledForm = styled.form`
     height: 38px;
     cursor: pointer;
 
+    border-radius: 3px;
     background-color: #e6e5e5;
   }
   #submit-button:hover {
     background-color: #bcbcbc;
+    border-radius: 3px;
   }
 `;

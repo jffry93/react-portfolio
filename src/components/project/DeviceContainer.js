@@ -7,14 +7,14 @@ import { fade, slideLeft } from '../../animation';
 import { useScroll } from '../useScroll';
 //device pngs
 import macbook from '../../img/devices/new-empty-macbook.png';
-import iphone from '../../img/devices/empty-iphone.png';
+import iphone from '../../img/devices/newiphonetest2.png';
 
 const DeviceContainer = ({ secondDescription, url, desktopImg, mobileImg }) => {
   const [element, controls] = useScroll();
   return (
     <StyledDescriptionContainer className='apple-container'>
       <motion.div
-        variants={fade}
+        // variants={fade}
         animate={controls}
         initial='hidden'
         ref={element}
@@ -38,12 +38,19 @@ const DeviceContainer = ({ secondDescription, url, desktopImg, mobileImg }) => {
         </div>
       </motion.div>
       <StyledAppleDevices
-        variants={slideLeft}
+        // variants={slideLeft}
         animate={controls}
         initial='hidden'
         ref={element}
-        className='device-container'
+        // className='device-container'
       >
+        <div className='iphone'>
+          <img className='iphone-frame' src={iphone} alt='mobile screenshot' />
+          <div className='iphone-img'>
+            <div className='status-bar'></div>
+            <img src={mobileImg} alt='mobile screenshot' />
+          </div>
+        </div>
         <div className='macbook'>
           <img
             className='macbook-frame'
@@ -52,13 +59,6 @@ const DeviceContainer = ({ secondDescription, url, desktopImg, mobileImg }) => {
           />
           <div className='macbook-img'>
             <img src={desktopImg} alt='desktop screenshot' />
-          </div>
-        </div>
-        <div className='iphone'>
-          <img className='iphone-frame' src={iphone} alt='mobile screenshot' />
-          <div className='iphone-img'>
-            <div className='status-bar'></div>
-            <img src={mobileImg} alt='mobile screenshot' />
           </div>
         </div>
       </StyledAppleDevices>
@@ -147,7 +147,6 @@ const StyledAppleDevices = styled(motion.div)`
   padding: 32px 0;
   flex: 4;
 
-  /* border: 1px solid blue; */
   @media (max-width: 750px) {
     width: 150%;
     /* padding: 32px var(--layout-padding) 0; */
@@ -155,6 +154,7 @@ const StyledAppleDevices = styled(motion.div)`
   }
   .macbook {
     position: relative;
+
     .macbook-frame {
       position: relative;
       z-index: 2;
@@ -170,37 +170,46 @@ const StyledAppleDevices = styled(motion.div)`
     }
   }
   .iphone {
+    /* display: flex; */
+
     position: absolute;
-    bottom: 30%;
-    right: 5%;
+    top: 50%;
+    right: 0%;
 
-    transform: translate(50%, 50%);
-    width: 29%;
-    max-width: 250px;
-
-    margin: 5rem;
+    transform: translate(0%, -50%);
+    width: 20%;
+    /* width: clamp(100px, 100%, 150px); */
     z-index: 3;
-    @media (max-width: 750px) {
-      bottom: 20%;
-    }
+
     .iphone-frame {
       position: relative;
+      /* border: 1px solid pink; */
       /* border: 1px solid red; */
     }
     .iphone-img {
-      /* border: 1px solid pink; */
+      display: flex;
+      flex-direction: column;
+      z-index: -1;
+
       position: absolute;
-      top: 50%;
+      top: 49%;
       left: 50%;
-      border-radius: 17px;
       overflow: hidden;
       transform: translate(-50%, -50%);
       z-index: -1;
+      border-radius: clamp(14px, 3vw, 19px);
+      width: 96%;
+      background-color: #1e1e1e;
+      box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px,
+        rgba(0, 0, 0, 0.05) 0px 5px 10px;
 
-      width: 62.2%;
       .status-bar {
-        height: clamp(12px, 3.2vw, 17px);
+        height: clamp(10px, 3vw, 17px);
         background-color: #1e1e1e;
+      }
+
+      @media (max-width: 350px) {
+        top: 48%;
       }
     }
   }
