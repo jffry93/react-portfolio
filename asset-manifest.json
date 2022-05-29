@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/react-portfolio/static/css/main.35d6b2c1.chunk.css",
-    "main.js": "/react-portfolio/static/js/main.aa456f5b.chunk.js",
-    "main.js.map": "/react-portfolio/static/js/main.aa456f5b.chunk.js.map",
+    "main.js": "/react-portfolio/static/js/main.442714f1.chunk.js",
+    "main.js.map": "/react-portfolio/static/js/main.442714f1.chunk.js.map",
     "runtime-main.js": "/react-portfolio/static/js/runtime-main.010ccaf8.js",
     "runtime-main.js.map": "/react-portfolio/static/js/runtime-main.010ccaf8.js.map",
     "static/css/2.1a2a3f90.chunk.css": "/react-portfolio/static/css/2.1a2a3f90.chunk.css",
@@ -29,7 +29,6 @@
     "static/media/crop.23966b02.svg": "/react-portfolio/static/media/crop.23966b02.svg",
     "static/media/download-solid.7026e29b.svg": "/react-portfolio/static/media/download-solid.7026e29b.svg",
     "static/media/empty-ipad-horizontal.69725484.png": "/react-portfolio/static/media/empty-ipad-horizontal.69725484.png",
-    "static/media/empty-iphone.13362a32.png": "/react-portfolio/static/media/empty-iphone.13362a32.png",
     "static/media/icon-close.f982e313.svg": "/react-portfolio/static/media/icon-close.f982e313.svg",
     "static/media/icon-hamburger.15e6f8b4.svg": "/react-portfolio/static/media/icon-hamburger.15e6f8b4.svg",
     "static/media/key-solid.fb7c48e4.svg": "/react-portfolio/static/media/key-solid.fb7c48e4.svg",
@@ -45,6 +44,7 @@
     "static/media/nch405x780.54c4a414.png": "/react-portfolio/static/media/nch405x780.54c4a414.png",
     "static/media/nchThumb.816a84e6.webp": "/react-portfolio/static/media/nchThumb.816a84e6.webp",
     "static/media/new-empty-macbook.d06d2cbb.png": "/react-portfolio/static/media/new-empty-macbook.d06d2cbb.png",
+    "static/media/newiphonetest2.5af74f37.png": "/react-portfolio/static/media/newiphonetest2.5af74f37.png",
     "static/media/onlyFace.f9db03d7.png": "/react-portfolio/static/media/onlyFace.f9db03d7.png",
     "static/media/paint-brush.526d2531.svg": "/react-portfolio/static/media/paint-brush.526d2531.svg",
     "static/media/palette-icon.cfbc67e7.svg": "/react-portfolio/static/media/palette-icon.cfbc67e7.svg",
@@ -64,6 +64,6 @@
     "static/css/2.1a2a3f90.chunk.css",
     "static/js/2.741112a5.chunk.js",
     "static/css/main.35d6b2c1.chunk.css",
-    "static/js/main.aa456f5b.chunk.js"
+    "static/js/main.442714f1.chunk.js"
   ]
 }
