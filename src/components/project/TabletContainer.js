@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from 'uuid';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 //APPEAR WHEN IN VIEWPORT
-import { fade, slideLeft } from '../../animation';
+import { fade, slideLeft, slideRight } from '../../animation';
 import { useScroll } from '../useScroll';
 //DEVICE
 import ipad from '../../img/devices/empty-ipad-horizontal.png';

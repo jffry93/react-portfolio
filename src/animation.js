@@ -45,7 +45,7 @@ export const staggerContainer = {
   },
 };
 
-export const titleAnimation = {
+export const slideUp = {
   hidden: { y: 250, opacity: 0 },
   show: {
     opacity: 1,

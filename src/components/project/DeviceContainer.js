@@ -3,18 +3,18 @@ import { v4 as uuidv4 } from 'uuid';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 //APPEAR WHEN IN VIEWPORT
-import { fade, slideLeft } from '../../animation';
+import { fade, slideLeft, slideRight, slideUp } from '../../animation';
 import { useScroll } from '../useScroll';
 //device pngs
 import macbook from '../../img/devices/new-empty-macbook.png';
-import iphone from '../../img/devices/newiphonetest2.png';
+import iphone from '../../img/devices/newiphonetest5.png';
 
 const DeviceContainer = ({ secondDescription, url, desktopImg, mobileImg }) => {
   const [element, controls] = useScroll();
   return (
     <StyledDescriptionContainer className='apple-container'>
       <motion.div
-        // variants={fade}
+        variants={fade}
         animate={controls}
         initial='hidden'
         ref={element}
@@ -38,20 +38,30 @@ const DeviceContainer = ({ secondDescription, url, desktopImg, mobileImg }) => {
         </div>
       </motion.div>
       <StyledAppleDevices
-        // variants={slideLeft}
+        variants={slideLeft}
         animate={controls}
         initial='hidden'
         ref={element}
         // className='device-container'
       >
-        <div className='iphone'>
+        <motion.div
+          variants={fade}
+          animate={controls}
+          initial='hidden'
+          className='iphone'
+        >
           <img className='iphone-frame' src={iphone} alt='mobile screenshot' />
           <div className='iphone-img'>
             <div className='status-bar'></div>
             <img src={mobileImg} alt='mobile screenshot' />
           </div>
-        </div>
-        <div className='macbook'>
+        </motion.div>
+        <motion.div
+          variants={slideLeft}
+          animate={controls}
+          initial='hidden'
+          className='macbook'
+        >
           <img
             className='macbook-frame'
             src={macbook}
@@ -60,7 +70,7 @@ const DeviceContainer = ({ secondDescription, url, desktopImg, mobileImg }) => {
           <div className='macbook-img'>
             <img src={desktopImg} alt='desktop screenshot' />
           </div>
-        </div>
+        </motion.div>
       </StyledAppleDevices>
     </StyledDescriptionContainer>
   );

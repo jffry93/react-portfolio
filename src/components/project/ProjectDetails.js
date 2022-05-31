@@ -7,7 +7,7 @@ import ProjectState from '../../projectState';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 //APPEAR WHEN IN VIEWPORT
-import { fade, titleAnimation, staggerContainer } from '../../animation';
+import { fade, slideUp, staggerContainer } from '../../animation';
 import { useScroll } from '../useScroll';
 
 //COMPONENTS
@@ -68,7 +68,7 @@ const ProjectDetails = ({ caseDetail, setShowDetail }) => {
           exit='exit'
         >
           <StyledProjectShadow
-            variants={titleAnimation}
+            variants={slideUp}
             animate='show'
             initial='hidden'
             ref={element}
