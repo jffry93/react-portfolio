@@ -1,1 +1,0 @@
-{"version":3,"sources":["webpack://src/index.css"],"names":[],"mappings":"AAAA,WACE,wBAAyB,CACzB,6GAEF","file":"main.35d6b2c1.chunk.css","sourcesContent":["@font-face {\n  font-family: 'Javascript';\n  src: local('Javascript'),\n    url(./fonts/Neutra\\ Text\\ Bold.otf) format('truetype');\n}\n"]}
