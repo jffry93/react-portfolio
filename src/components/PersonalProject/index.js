@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import projectState from '../../data/state/projectState'; // All
+// import projectState from '../../data/state/projectState'; // All
 //COMPONENTS
 import Project from './Project';
 //STYLING
@@ -18,6 +18,7 @@ import SwiperCore, {
 	EffectFade,
 	Autoplay,
 } from 'swiper';
+import projectData from '../../data/state/projectData';
 //install swiper modules
 SwiperCore.use([
 	Navigation,
@@ -29,7 +30,7 @@ SwiperCore.use([
 ]);
 
 const PersonalProjects = () => {
-	const [projects, setProjects] = useState(projectState);
+	const [projects, setProjects] = useState(projectData);
 
 	return (
 		<StyledProjectSection>
@@ -59,8 +60,8 @@ const PersonalProjects = () => {
 							slideShadows: true,
 						},
 					},
-					600: {
-						slidesPerView: 1.8,
+					800: {
+						slidesPerView: 2.8,
 					},
 					500: {
 						slidesPerView: 1.5,
@@ -149,7 +150,6 @@ const StyledProjectSection = styled(motion.div)`
 		opacity: 0;
 		position: relative;
 		transition: transform 1.5s ease, opacity 1.5s ease;
-
 		transform: scale(0.6) !important;
 	}
 

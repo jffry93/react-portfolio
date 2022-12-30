@@ -3,39 +3,17 @@ import styled from 'styled-components';
 import stars from '../../../../assets/img/parallax2/space.png';
 import layer1 from '../../../../assets/img/parallax2/layer1.png';
 import layer2 from '../../../../assets/img/parallax2/layer2.png';
-import unicef from '../../../../assets/img/UNICEF_Logo.png';
-// import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 //FRAMER MOTION
-import {
-	useViewportScroll,
-	motion,
-	useTransform,
-	// useMotionValue,
-} from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
-//REACT ROUTER
+import { useViewportScroll, motion, useTransform } from 'framer-motion';
+
 import { NavHashLink } from 'react-router-hash-link';
 
 const ParallaxSection = () => {
-	const { scrollY, scrollYProgress } = useViewportScroll();
-	// console.log(scrollY);
+	const { scrollY } = useViewportScroll();
+
 	const y1 = useTransform(scrollY, [0, 1000], [0, -100]);
 	const y2 = useTransform(scrollY, [0, 1000], [0, 60]);
 	const y3 = useTransform(scrollY, [0, 1000], [0, -40]);
-
-	const [ref, inView, entry] = useInView({
-		/* Optional options */
-		threshold: 0.5,
-		triggerOnce: false,
-	});
-	// console.log(scrollYProgress);
-
-	// const grow = {
-	//   start: { scale: 1 },
-	//   end: {
-	//     scale: 1.05,
-	//   },
-	// };
 
 	return (
 		<StyledParallaxContainer>
@@ -43,21 +21,17 @@ const ParallaxSection = () => {
 				className='background-img'
 				style={{ y: y1, x: -0 }}
 			></motion.div>
-			{/* <DonationBar /> */}
 			<div className='container'>
 				<motion.div className='content' style={{ y: y3, x: -0 }}>
 					<h2>
 						Hi, I'm <span className='name'>Jeff</span>
 					</h2>
 					<h1>
-						Frontend <span className='title'>Developer</span>
+						Full Stack <span className='title'>Developer</span>
 					</h1>
 
 					<h3>Your digital space is limitless.</h3>
-					{/* <p>
-            The only limitation is your imagination. If you can think it, it can
-            be built.
-          </p> */}
+
 					<div className='button-container'>
 						<NavHashLink href='#' to='/work'>
 							<button>View Work</button>

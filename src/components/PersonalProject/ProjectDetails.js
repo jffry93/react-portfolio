@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 //react router
 import { useNavigate, useLocation } from 'react-router-dom';
-import ProjectState from '../../data/state/projectState';
+// import ProjectState from '../../data/state/projectState';
 
 //STYLING
 import styled from 'styled-components';
@@ -21,13 +21,14 @@ import RoleContainer from './RoleContainer';
 // import BrowserContainer from './BrowserContainer';
 import TabletContainer from './TabletContainer';
 import SkillsContainer from './SkillsContainer';
+import projectData from '../../data/state/projectData';
 
 const ProjectDetails = ({ caseDetail, setShowDetail }) => {
 	let location = useLocation(); //used to find current pathname
 	const url = location.pathname;
 	let navigate = useNavigate(); //used for back button
 
-	const [projectState, setProjectState] = useState(ProjectState);
+	const [projectState, setProjectState] = useState(projectData);
 	const [project, setProject] = useState(null);
 
 	useEffect(() => {
@@ -130,7 +131,6 @@ const StyledProjectShadow = styled(motion.div)`
 	overflow-y: scroll;
 
 	position: fixed;
-	/* top: var(--navbar-height); */
 	top: 0;
 	left: 0;
 	z-index: 10;

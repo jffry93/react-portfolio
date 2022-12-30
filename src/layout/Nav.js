@@ -1,33 +1,15 @@
-//ICONS
 import hamburger from '../assets/img/icons/icon-hamburger.svg';
 import closeHamburger from '../assets/img/icons/icon-close.svg';
 import downloadIcon from '../assets/img/icons/download-solid.svg';
-
-import React from 'react';
 import styled from 'styled-components';
-// import { Link } from 'react-router-dom';
 import { HashLink, NavHashLink } from 'react-router-hash-link';
-
-//RESUME
 import MyResume from '../assets/resume/Jeffrey_Zalischi_Resume.pdf';
 
-//import { motion } from 'framer-motion';
-import { useLocation } from 'react-router';
-import SocialLinks from './FloatingIcons';
-// import { StyledOverlay } from '../Styles';
-
 const Nav = ({ navToggle, setNavToggle }) => {
-	const { pathname } = useLocation();
-
 	return (
 		<StyledNav>
 			<div className='nav-container'>
-				<HashLink
-					to='/'
-					// scroll={(el) =>
-					//   el.scrollIntoView({ behavior: 'smooth', block: 'start' })
-					// }
-				>
+				<HashLink to='/'>
 					<h2 id='logo'>JZ</h2>
 				</HashLink>
 
@@ -39,21 +21,9 @@ const Nav = ({ navToggle, setNavToggle }) => {
 							}
 						}}
 					>
-						<NavHashLink
-							activeClassName='selected'
-							href='#'
-							to='/'
-							// scroll={(el) =>
-							//   el.scrollIntoView({ behavior: 'smooth', block: 'start' })
-							// }
-						>
+						<NavHashLink activeClassName='selected' href='#' to='/'>
 							<span>About</span>
 						</NavHashLink>
-						{/* <StyledLine
-            transition={{ duration: 0.75 }}
-            initial={{ width: '0%' }}
-            animate={{ width: pathname === '/' ? '50%' : '0%' }}
-          /> */}
 					</li>
 					<li
 						onClick={() => {
@@ -65,11 +35,6 @@ const Nav = ({ navToggle, setNavToggle }) => {
 						<NavHashLink activeClassName='selected' href='#' to='/work'>
 							<span>Work</span>
 						</NavHashLink>
-						{/* <StyledLine
-            transition={{ duration: 0.75 }}
-            initial={{ width: '0%' }}
-            animate={{ width: pathname === '/work' ? '50%' : '0%' }}
-          /> */}
 					</li>
 					<li
 						onClick={() => {
@@ -81,18 +46,12 @@ const Nav = ({ navToggle, setNavToggle }) => {
 						<NavHashLink activeClassName='selected' href='#' to='/contact'>
 							<span>Contact</span>
 						</NavHashLink>
-						{/* <StyledLine
-            transition={{ duration: 0.75 }}
-            initial={{ width: '0%' }}
-            animate={{ width: pathname === '/contact' ? '50%' : '0%' }}
-          /> */}
 					</li>
 
 					<a
 						className='resume'
 						href={MyResume}
 						download='Jeffrey_Zalischi_Resume'
-						target='_blank'
 					>
 						<div className='download'></div> <span>Resume</span>
 					</a>
@@ -110,7 +69,6 @@ const StyledNav = styled.nav`
 	position: sticky;
 	top: 0;
 	z-index: 10;
-	/* border: pink 3px solid; */
 	background: var(--primary-color);
 	backdrop-filter: blur(0.15rem);
 

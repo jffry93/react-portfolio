@@ -15,8 +15,7 @@ import { Routes } from 'react-router-dom';
 //page transition
 import { AnimatePresence } from 'framer-motion';
 import Footer from './layout/Footer';
-import FloatingIcons from './layout/FloatingIcons';
-import ProjectDetails from './components/project/ProjectDetails';
+import ProjectDetails from './components/PersonalProject/ProjectDetails';
 
 function App() {
 	const [navToggle, setNavToggle] = useState(false);

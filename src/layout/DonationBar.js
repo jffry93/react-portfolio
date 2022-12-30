@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-
 import unicef from '../assets/img/UNICEF_Logo.png';
 
 const DonationBar = () => {

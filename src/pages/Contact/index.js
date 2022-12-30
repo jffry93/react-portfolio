@@ -6,7 +6,7 @@ import { fade, pageAnimation } from '../../lib/framer-motion/animation';
 
 import useScrollTop from '../../hooks/useScrollTop';
 //IMAGES
-import cntower from '../../assets/img/alex_wong.jpg';
+
 import { SiNike } from 'react-icons/si';
 import { MdClose } from 'react-icons/md';
 //COMPONENTS
@@ -102,13 +102,8 @@ const StyledContactStyle = styled(motion.div)`
 			var(--primary-color),
 			var(--primary-color)
 		);
-		/* background-image: url(${cntower}) !important;
-    background-repeat: no-repeat !important;
-    background-attachment: fixed !important;
-    background-position: center !important;
-    background-size: cover !important; */
+
 		width: 100%;
-		/* background-color: var(--primary-accent); */
 	}
 `;
 const StyledContactContainer = styled(motion.div)`

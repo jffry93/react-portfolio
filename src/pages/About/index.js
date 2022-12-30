@@ -36,25 +36,3 @@ export default AboutUs;
 const StyledAboutContainer = styled(motion.div)`
 	background-image: linear-gradient(135deg, #1b1b1b, #161616);
 `;
-
-const StyledFrame1 = styled(motion.div)`
-	position: fixed;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100vh;
-	background: #fffebf;
-	z-index: 2;
-`;
-
-const StyledFrame2 = styled(StyledFrame1)`
-	background: #ff8efb;
-`;
-
-const StyledFrame3 = styled(StyledFrame1)`
-	background: #8ed2ff;
-`;
-
-const StyledFrame4 = styled(StyledFrame1)`
-	background: #8effa0;
-`;

@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 
 //JSON DATA
@@ -8,7 +8,7 @@ import SkillCard from './components/SkillCard';
 //STYLING
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-import { fade, slideDown } from '../../../../lib/framer-motion/animation';
+import { fade } from '../../../../lib/framer-motion/animation';
 //reveal when in viewport
 import { useScroll } from '../../../../hooks/useScroll';
 //swiper
@@ -22,7 +22,7 @@ import SwiperCore, { Navigation, Pagination, A11y, Autoplay } from 'swiper';
 SwiperCore.use([Navigation, Pagination, A11y, Autoplay]);
 
 const SkillsSections = () => {
-	const [skills, setSkills] = useState(skillsState);
+	const [skills] = useState(skillsState);
 	const [element, controls] = useScroll();
 
 	return (

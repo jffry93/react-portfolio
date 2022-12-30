@@ -1,16 +1,7 @@
-// import React from 'react';
-// import clock from '../img/clock.svg';
-// import diaphragm from '../img/diaphragm.svg';
-// import money from '../img/money.svg';
-// import teamwork from '../img/teamwork.svg';
-//IMAGES
 import { BsGithub } from 'react-icons/bs';
 import myFace from '../../../../assets/img/onlyFace.png';
-//ICONS
 import downloadIcon from '../../../../assets/img/icons/download-solid.svg';
-//Styles
 import styled from 'styled-components';
-//RESUME
 import MyResume from '../../../../assets/resume/Jeffrey_Zalischi_Resume.pdf';
 
 //scroll animation that runs when an element is in view
@@ -21,6 +12,7 @@ import { useScroll } from '../../../../hooks/useScroll';
 
 const ServicesSection = () => {
 	const [element, controls] = useScroll();
+
 	return (
 		<StyledContainer>
 			<StyledAbout
@@ -40,15 +32,21 @@ const ServicesSection = () => {
 					</h2>
 					<p>A developer that enjoys a well-written documentation.</p>
 					<p>
-						I've been translating designs into web applications, interacting
-						with REST APIs and building modern reusable scalable components.
+						Proficient in modern web development technologies and comfortable
+						with a wide range of libraries.
 					</p>
+
+					<p>
+						Experienced with translating designs into web applications and
+						building modern scalable components for several years
+					</p>
+
 					<p>
 						Check out my
 						<a
 							className='github-link'
 							href='https://github.com/jffry93'
-							target='_blank'
+							// target='_blank'
 						>
 							Github
 						</a>
@@ -82,6 +80,11 @@ const ServicesSection = () => {
 };
 
 const StyledContainer = styled(motion.div)``;
+
+const StyledMoreInfo = styled(motion.div)`
+	text-align: center;
+	color: white;
+`;
 
 const StyledAbout = styled(motion.div)`
 	/* min-height: 500px;

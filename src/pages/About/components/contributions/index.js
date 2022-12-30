@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { fade } from '../../../../lib/framer-motion/animation';
-import PersonalProjects from '../../../../components/project/PersonalProjects';
+import PersonalProjects from '../../../../components/PersonalProject';
 import { useScroll } from '../../../../hooks/useScroll';
 
 const ProjectSection = () => {
@@ -26,7 +26,8 @@ const StyledContributions = styled(motion.div)`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	margin: 116px auto 119px;
+	padding: 116px 0 119px;
+	margin: auto;
 	max-width: 1600px;
 	.title {
 		text-align: center;
