@@ -2,11 +2,14 @@ import styled from 'styled-components';
 import CreatedBy from './components/CreatedBy';
 import FaqSection from './components/Questions';
 import FloatingIcons from '../FloatingIcons';
+import { useLocation } from 'react-router-dom';
 
 const Footer = () => {
+	const location = useLocation();
+	console.log(location);
 	return (
 		<StyledFooter>
-			<FaqSection />
+			{location.pathname !== '/contact' && <FaqSection />}
 			<FloatingIcons />
 			<CreatedBy />
 		</StyledFooter>
@@ -21,7 +24,6 @@ const StyledFooter = styled.div`
 	justify-content: center;
 	align-items: center;
 
-	padding: 0 0 8px;
 	background-color: var(--primary-color);
 	position: relative;
 	p {

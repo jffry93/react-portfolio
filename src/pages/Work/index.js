@@ -1,14 +1,10 @@
 import styled from 'styled-components';
-// import { Link } from 'react-router-dom';
-
 //PAGE ANIMATION
 import { motion } from 'framer-motion';
 import { pageAnimation, fade } from '../../lib/framer-motion/animation';
-
 import useScrollTop from '../../hooks/useScrollTop';
 //components
-import PersonalProject from '../../components/project/PersonalProjects';
-// import SideCurtain from '../../assets/style/SideCurtain';
+import PersonalProject from '../../components/PersonalProject';
 
 const OurWork = () => {
 	useScrollTop();
@@ -22,11 +18,8 @@ const OurWork = () => {
 			exit='exit'
 			style={{ background: '#121212' }}
 		>
-			{/* <SideCurtain /> */}
-			<motion.div variants={fade}>
-				<motion.div variants={fade} className='paid-work'>
-					<PersonalProject />
-				</motion.div>
+			<motion.div variants={fade} className='paid-work'>
+				<PersonalProject />
 			</motion.div>
 		</StyledWork>
 	);
@@ -40,7 +33,7 @@ const StyledWork = styled(motion.div)`
 	.paid-work {
 		height: var(--container-height);
 		min-height: 600px;
-		max-width: 2000px;
+		max-width: 1600px;
 		margin: auto;
 
 		display: flex;
@@ -52,28 +45,6 @@ const StyledWork = styled(motion.div)`
 		margin: 32px auto;
 		padding: 0 var(--layout-padding);
 	}
-`;
-
-const StyledFrame1 = styled(motion.div)`
-	position: fixed;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100vh;
-	background: #fffebf;
-	z-index: 2;
-`;
-
-const StyledFrame2 = styled(StyledFrame1)`
-	background: #ff8efb;
-`;
-
-const StyledFrame3 = styled(StyledFrame1)`
-	background: #8ed2ff;
-`;
-
-const StyledFrame4 = styled(StyledFrame1)`
-	background: #8effa0;
 `;
 
 export default OurWork;

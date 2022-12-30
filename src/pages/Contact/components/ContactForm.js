@@ -1,98 +1,90 @@
 import { useState } from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-//email JS
-import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import ContactInfo from './ContactInfo';
-//REACT ICONS
-import { BiError } from 'react-icons/bi';
+import Form from './Form';
 
 const ContactForm = ({ formValidation, setFormValidation }) => {
-	const [nameValidation, setNameValidation] = useState(false);
-	const [emailValidation, setEmailValidation] = useState(false);
-	const [messageValidation, setMessageValidation] = useState(false);
+	const [legitCheck, setLegitCheck] = useState({
+		name: false,
+		email: false,
+		message: false,
+	});
+	const [formData, setFormData] = useState({
+		name: '',
+		email: '',
+		subject: '',
+		message: '',
+	});
+	const validateForm = () => {
+		const legitObject = { ...legitCheck };
 
-	//EMAIL JS
-	const form = useRef(null);
-
-	function validateForm(e) {
-		// console.log(form.current[0]); //name
-		function validateName() {
-			if (form.current[0].value === '') {
-				setNameValidation(true);
-				return false;
-			} else {
-				setNameValidation(false);
-			}
+		//NAME
+		if (formData.name === '') {
+			legitObject.name = true;
+		} else {
+			legitObject.name = false;
 		}
-		function validateEmail() {
-			if (
-				form.current[1].value
-					.toLowerCase()
-					.match(
-						/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-					)
-			) {
-				setEmailValidation(false);
-			} else {
-				setEmailValidation(true);
-			}
+		//EMAIL
+		if (
+			formData.email
+				.toLowerCase()
+				.match(
+					/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+				)
+		) {
+			legitObject.email = false;
+		} else {
+			legitObject.email = true;
 		}
-		function validateMessage() {
-			if (form.current[3].value === '') {
-				setMessageValidation(true);
-			} else {
-				setMessageValidation(false);
-			}
+		//MESSAGE
+		if (formData.message === '') {
+			legitObject.message = true;
+		} else {
+			legitObject.message = false;
 		}
-		validateName();
-		validateEmail();
-		validateMessage();
-	}
 
-	function sendEmail(e) {
-		e.preventDefault();
+		setLegitCheck(legitObject);
+		return Object.values(legitObject).every((item) => {
+			return item === false;
+		});
+	};
 
-		emailjs
-			.sendForm(
-				'service_wm8y8eo',
-				'template_8mqb8d4',
-				e.target,
-				'user_l63HFouUVaxbBVgQdO1Td'
-			)
-			.then(
-				(result) => {
-					console.log(result.text);
+	const sendEmail = async (e) => {
+		try {
+			e.preventDefault();
+			if (validateForm()) {
+				const response = await emailjs.sendForm(
+					'service_wm8y8eo',
+					'template_8mqb8d4',
+					e.target,
+					'user_l63HFouUVaxbBVgQdO1Td'
+				);
+				if (response.text === 'OK') {
 					setFormValidation(true);
+					setFormData({
+						name: '',
+						email: '',
+						message: '',
+						subject: '',
+					});
 					e.target.reset();
-				},
-				(error) => {
-					console.log(error.text);
+				} else {
+					console.log(response.text);
 				}
-			);
-	}
-	// function dontSendEmail(e) {
-	//   e.preventDefault();
-	//   console.log('all fields must be filled');
-	// }
-
-	// let emailID = form.current[1].value;
-	// const re =
-	//   /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
-	// console.log(emailID); //email
-	// if (emailID == '') {
-	//   setEmailValidation(false);
-	// } else {
-	//   setEmailValidation(true);
-	// }
-
-	// console.log(form.current[3]); //message
+			} else {
+				console.log('some inputs need to be filled');
+			}
+		} catch (err) {
+			console.log('unable to send data to email js');
+		}
+	};
 
 	return (
 		<StyledFormContainer>
 			<StyledContactForm>
-				<StyledForm ref={form} onSubmit={sendEmail} action=''>
+				<StyledForm onSubmit={sendEmail} action=''>
 					<h1>Let's Chat!</h1>
 					<div className='contact-description'>
 						<p>
@@ -100,80 +92,12 @@ const ContactForm = ({ formValidation, setFormValidation }) => {
 							ASAP!
 						</p>
 					</div>
-					<div className='form-group'>
-						<label htmlFor='user_name'>
-							{nameValidation ? (
-								<div className='validation-popup'>
-									<BiError size={15} />
-									<p>New phone who dis?</p>
-								</div>
-							) : (
-								<>
-									<span>*</span>Name <span className='required'>Required</span>
-								</>
-							)}
-						</label>
-						<input
-							className={`${nameValidation ? 'validation-input' : ''}`}
-							type='text'
-							name='user_name'
-							placeholder='Enter Name or Alias'
-							required
-						/>
-					</div>
-					<div className='form-group'>
-						<label htmlFor='user-email'>
-							{emailValidation ? (
-								<div className='validation-popup'>
-									<BiError size={15} />
-									<p>I won't send you spam</p>
-								</div>
-							) : (
-								<>
-									<span>*</span>Email <span className='required'>Required</span>
-								</>
-							)}
-						</label>
-						<input
-							className={`${emailValidation ? 'validation-input' : ''}`}
-							type='email'
-							name='user_email'
-							placeholder='Enter a valid email address'
-							required
-						/>
-					</div>
-					<div className='form-group'>
-						<label className='not-required' htmlFor='user_subject'>
-							Subject
-						</label>
-						<input
-							type='text'
-							name='user_subject'
-							placeholder='Enter brief description'
-						/>
-					</div>
-					<div className='form-group'>
-						<label htmlFor='message'>
-							{messageValidation ? (
-								<div className='validation-popup'>
-									<BiError size={15} />
-									<p>Use those fingers</p>
-								</div>
-							) : (
-								<>
-									<span>*</span>Message{' '}
-									<span className='required'>Required</span>
-								</>
-							)}
-						</label>
-						<textarea
-							className={`${messageValidation ? 'validation-input' : ''}`}
-							name='message'
-							required
-							placeholder='There is no characer limit'
-							rows='5'
-						/>
-					</div>
+					<Form
+						legitCheck={legitCheck}
+						formData={formData}
+						setFormData={setFormData}
+					/>
+
 					<div className='form-group submit-group '>
 						<input
 							onClick={validateForm}

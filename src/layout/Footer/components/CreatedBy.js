@@ -16,5 +16,5 @@ const CreatedBy = () => {
 export default CreatedBy;
 
 const StyledCreated = styled(StyledCenterRow)`
-	margin-top: 8px;
+	padding: 8px 0;
 `;

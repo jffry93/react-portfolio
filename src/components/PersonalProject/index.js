@@ -46,7 +46,7 @@ const PersonalProjects = () => {
 				spaceBetween={0}
 				watchSlidesProgress={true}
 				touchRatio={0.2}
-				slidesPerView={1.5}
+				slidesPerView={2}
 				breakpoints={{
 					1100: {
 						slidesPerView: 3.4,
@@ -109,7 +109,7 @@ const PersonalProjects = () => {
 export default PersonalProjects;
 
 const StyledProjectSection = styled(motion.div)`
-	/* max-width: var(--max-width); */
+	/* max-width: 900px; */
 
 	width: 100%;
 
@@ -143,13 +143,7 @@ const StyledProjectSection = styled(motion.div)`
 	.swiper-js-container {
 		width: 100%;
 		overflow: hidden;
-		//pagination
-
 		padding-bottom: 50px;
-		/* .swiper-pagination {
-      position: absolute;
-      bottom: 0;
-    } */
 	}
 	.swiper-slide {
 		opacity: 0;
