@@ -66,7 +66,7 @@ export const questionAnswer = [
 					>
 						Github
 					</a>{' '}
-					to see all my project and recent work!
+					to see all my projects and recent work!
 				</StyledRow>
 			</>
 		),

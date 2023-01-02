@@ -110,11 +110,7 @@ const PersonalProjects = () => {
 export default PersonalProjects;
 
 const StyledProjectSection = styled(motion.div)`
-	/* max-width: 900px; */
-
 	width: 100%;
-
-	/* margin: 116px auto 119px; */
 
 	display: flex;
 	flex-direction: column;
@@ -122,20 +118,6 @@ const StyledProjectSection = styled(motion.div)`
 	justify-content: center;
 	h2 {
 		margin-bottom: 32px;
-	}
-
-	/* overflow-x: hidden; */
-	/* display: grid;
-  place-items: center center; */
-	/* ${SwiperSlide} {
-    div:first-child {
-      div:last-child {
-        display: none;
-      }
-    }
-  } */
-	@media (max-width: 600px) {
-		/* padding: 5rem 0; */
 	}
 
 	.description {
@@ -188,9 +170,5 @@ const StyledProjectSection = styled(motion.div)`
 	}
 	.swiper-pagination-bullet-active {
 		background: white;
-	}
-	.swiper-slide-shadow-right,
-	.swiper-slide-shadow-left {
-		/* border-radius: 20px; */
 	}
 `;

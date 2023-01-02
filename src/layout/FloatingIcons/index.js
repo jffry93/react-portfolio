@@ -3,19 +3,32 @@ import Icons from './Icons';
 
 const SocialLinks = () => {
 	return (
-		<StyledContainer className='social-media'>
-			<Icons />
-		</StyledContainer>
+		<StyledFull>
+			<StyledContainer className='social-media'>
+				<Icons />
+			</StyledContainer>
+		</StyledFull>
 	);
 };
 
 export default SocialLinks;
+const StyledFull = styled.div`
+	position: fixed;
+	top: 0;
+	height: 100vh;
+	width: 100%;
+	max-width: 1600px;
+
+	z-index: 10;
+	@media (max-width: 750px) {
+		all: unset;
+	}
+`;
 
 const StyledContainer = styled.div`
-	/* margin: auto; */
-	position: fixed;
+	position: absolute;
 	top: 50%;
-	right: 22px;
+	right: 40px;
 	transform: translate(0%, -50%);
 	z-index: 3;
 	transition: transform 0.6s ease-out;
@@ -25,6 +38,7 @@ const StyledContainer = styled.div`
 	justify-content: center;
 	gap: 16px;
 	color: rgba(0, 0, 0, 0.5);
+
 	.icon-container {
 		display: flex;
 		align-items: center;

@@ -13,7 +13,7 @@ const DonationBar = () => {
 		fetchJoke();
 
 		// Set up the interval
-		const intervalId = setInterval(fetchJoke, 8000);
+		const intervalId = setInterval(fetchJoke, 12000);
 
 		// Clear the interval when the component unmounts
 		return () => clearInterval(intervalId);
