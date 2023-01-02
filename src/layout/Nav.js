@@ -9,7 +9,7 @@ const Nav = ({ navToggle, setNavToggle }) => {
 	return (
 		<StyledNav>
 			<div className='nav-container'>
-				<HashLink to='/test'>
+				<HashLink to='/'>
 					<h2 id='logo'>JZ</h2>
 				</HashLink>
 

@@ -102,40 +102,19 @@ const GlobalStyle = createGlobalStyle`
     footer{
         background-color:#115169 ;
     }
+    @keyframes fade-in-out {
+  0% {
+    opacity: 0;  /* start at 0% opacity */
+  }
+  50% {
+    opacity: 1;  /* reach 100% opacity at 50% */
+  }
+  100% {
+    opacity: 0;  /* return to 0% opacity at 100% */
+  }
+}
 
-  @-webkit-keyframes AnimationName {
-    0% {
-      background-position: 0% 5%;
-    }
-    50% {
-      background-position: 100% 96%;
-    }
-    100% {
-      background-position: 0% 5%;
-    }
-  }
-  @-moz-keyframes AnimationName {
-    0% {
-      background-position: 0% 5%;
-    }
-    50% {
-      background-position: 100% 96%;
-    }
-    100% {
-      background-position: 0% 5%;
-    }
-  }
-  @keyframes AnimationName {
-    0% {
-      background-position: 0% 5%;
-    }
-    50% {
-      background-position: 100% 96%;
-    }
-    100% {
-      background-position: 0% 5%;
-    }
-  }
+
     
 `;
 

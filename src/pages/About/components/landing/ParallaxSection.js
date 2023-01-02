@@ -8,6 +8,7 @@ import { useViewportScroll, motion, useTransform } from 'framer-motion';
 
 import { NavHashLink } from 'react-router-hash-link';
 import SpaceStars from '../../../../data/style/SpaceStars.js';
+import ScrollDownText from './ScrollDownText';
 
 const ParallaxSection = () => {
 	const { scrollY } = useViewportScroll();
@@ -19,10 +20,6 @@ const ParallaxSection = () => {
 	return (
 		<>
 			<StyledParallaxContainer>
-				{/* <motion.div
-				className='background-img'
-				style={{ y: y1, x: -0 }}
-			></motion.div> */}
 				<SpaceStars />
 				<div className='container'>
 					<motion.div className='content' style={{ y: y3, x: -0 }}>
@@ -52,6 +49,7 @@ const ParallaxSection = () => {
 					<motion.img src={layer2} alt='' style={{ y: y2, x: -0 }} />
 					<motion.img src={layer1} alt='' />
 				</div>
+				<ScrollDownText />
 			</StyledParallaxContainer>
 		</>
 	);
@@ -64,7 +62,6 @@ const StyledParallaxContainer = styled.div`
 	min-height: 500px;
 
 	position: relative;
-
 	overflow: hidden;
 
 	h3 {

@@ -1,21 +1,28 @@
+import { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import unicef from '../assets/img/UNICEF_Logo.png';
 
 const DonationBar = () => {
+	const [joke, setJoke] = useState(null);
+	useEffect(() => {
+		const fetchJoke = async () => {
+			const response = await fetch('https://icanhazdadjoke.com/slack');
+			const json = await response.json();
+			console.log(json.attachments[0].text.length);
+			setJoke(json.attachments[0].text);
+		};
+		fetchJoke();
+
+		// Set up the interval
+		const intervalId = setInterval(fetchJoke, 8000);
+
+		// Clear the interval when the component unmounts
+		return () => clearInterval(intervalId);
+	}, []);
+
 	return (
 		<StyledDonation className='donate-bar'>
-			<a
-				href='https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwjJmrXu84f3AhUibG8EHcSmCU8YABABGgJqZg&ae=2&ohost=www.google.com&cid=CAESbeD2b_uN3OPM-AHG8_RTOtt2MNYsgiK2soHGi_TZrINMKVjQDUpCF1bR-IiSeSM4BkR-Qygcl1yNFBLdksYHI-9AttzsoJoAPrbYIB4AoIj_vahKjG2RcIlQJmAAzSfccxGjnIu-0jLlbAx7NIs&sig=AOD64_3e6dFZg4dCJA53TV4vEX6sKwlWdA&q&adurl&ved=2ahUKEwiNrKzu84f3AhXKG80KHQQoCDwQ0Qx6BAgFEAE'
-				target='_blank'
-				rel='noreferrer'
-			>
-				<input
-					type='image'
-					src={unicef}
-					name='unicefLogo'
-					className='unicef-logo'
-				/>
-				<span>Donate to support families affected by the war in Ukraine</span>
+			<a href='https://icanhazdadjoke.com/api' target='_blank' rel='noreferrer'>
+				<span>{joke && `"${joke}"`} </span>
 			</a>
 		</StyledDonation>
 	);
@@ -46,7 +53,7 @@ const StyledDonation = styled.div`
 		gap: 16px;
 
 		font-size: 12px;
-		text-align: left;
+		text-align: center;
 		text-decoration: none;
 		color: var(--primary-text-color);
 	}

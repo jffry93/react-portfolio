@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { FaList } from 'react-icons/fa';
 import { FiGrid } from 'react-icons/fi';
 import { BsViewList } from 'react-icons/bs';
 //JSON DATA
@@ -7,17 +6,12 @@ import skillsState from '../../../../data/state/skillsState';
 //STYLING
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-import { fade } from '../../../../lib/framer-motion/animation';
+
 //reveal when in viewport
 import { useScroll } from '../../../../hooks/useScroll';
 
-//swiper core and modules
-// import SwiperCore, { Navigation, Pagination, A11y, Autoplay } from 'swiper';
 import SkillsList from './components/SkillsList';
 import SkillsGrid from './components/SkillsGrid';
-
-//install swiper modules
-// SwiperCore.use([Navigation, Pagination, A11y, Autoplay]);
 
 const SkillsSections = () => {
 	const [skills] = useState(skillsState);
@@ -77,11 +71,14 @@ const StyledButtonContainer = styled.div`
 		width: 120px;
 	}
 	.active {
-		background-color: rgba(0, 0, 0, 0.6);
+		/* color: var(--primary-accent); */
+		/* border-color: var(--primary-accent); */
+		background-color: rgba(0, 0, 0, 0.8);
 		/* font-size: clamp(17px, 1.2vw, 18px); */
 	}
 	.active:hover {
-		background-color: var(--primary-accent);
+		color: var(--primary-accent);
+		border-color: var(--primary-accent);
 		/* font-size: clamp(17px, 1.2vw, 18px); */
 	}
 `;

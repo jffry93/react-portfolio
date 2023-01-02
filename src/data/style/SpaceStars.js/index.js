@@ -9,7 +9,6 @@ const SpaceStars = () => {
 	var dpr = window.devicePixelRatio || 1;
 	const { innerWidth, innerHeight } = window;
 	const [canvas, setCanvas] = useState(starsCanvas.current);
-
 	// constants for the behavior of the model
 	const sNumber = 600; // number of Stars
 	const sSize = 0.3; // minimum size of Star
