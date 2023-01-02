@@ -1,20 +1,19 @@
 {
   "files": {
     "main.css": "/react-portfolio/static/css/main.16106f3c.chunk.css",
-    "main.js": "/react-portfolio/static/js/main.a8421e6e.chunk.js",
-    "main.js.map": "/react-portfolio/static/js/main.a8421e6e.chunk.js.map",
-    "runtime-main.js": "/react-portfolio/static/js/runtime-main.892c048f.js",
-    "runtime-main.js.map": "/react-portfolio/static/js/runtime-main.892c048f.js.map",
-    "static/css/2.24d2ee48.chunk.css": "/react-portfolio/static/css/2.24d2ee48.chunk.css",
-    "static/js/2.17344fd6.chunk.js": "/react-portfolio/static/js/2.17344fd6.chunk.js",
-    "static/js/2.17344fd6.chunk.js.map": "/react-portfolio/static/js/2.17344fd6.chunk.js.map",
+    "main.js": "/react-portfolio/static/js/main.1a3d9d4b.chunk.js",
+    "main.js.map": "/react-portfolio/static/js/main.1a3d9d4b.chunk.js.map",
+    "runtime-main.js": "/react-portfolio/static/js/runtime-main.160ec3fa.js",
+    "runtime-main.js.map": "/react-portfolio/static/js/runtime-main.160ec3fa.js.map",
+    "static/css/2.1a2a3f90.chunk.css": "/react-portfolio/static/css/2.1a2a3f90.chunk.css",
+    "static/js/2.783cf4aa.chunk.js": "/react-portfolio/static/js/2.783cf4aa.chunk.js",
+    "static/js/2.783cf4aa.chunk.js.map": "/react-portfolio/static/js/2.783cf4aa.chunk.js.map",
     "index.html": "/react-portfolio/index.html",
-    "static/css/2.24d2ee48.chunk.css.map": "/react-portfolio/static/css/2.24d2ee48.chunk.css.map",
+    "static/css/2.1a2a3f90.chunk.css.map": "/react-portfolio/static/css/2.1a2a3f90.chunk.css.map",
     "static/css/main.16106f3c.chunk.css.map": "/react-portfolio/static/css/main.16106f3c.chunk.css.map",
-    "static/js/2.17344fd6.chunk.js.LICENSE.txt": "/react-portfolio/static/js/2.17344fd6.chunk.js.LICENSE.txt",
+    "static/js/2.783cf4aa.chunk.js.LICENSE.txt": "/react-portfolio/static/js/2.783cf4aa.chunk.js.LICENSE.txt",
     "static/media/Jeffrey_Zalischi_Resume.1054a871.pdf": "/react-portfolio/static/media/Jeffrey_Zalischi_Resume.1054a871.pdf",
     "static/media/index.css": "/react-portfolio/static/media/Neutra Text Bold.f2c4fd96.otf",
-    "static/media/UNICEF_Logo.ce32fc89.png": "/react-portfolio/static/media/UNICEF_Logo.ce32fc89.png",
     "static/media/download-solid.7026e29b.svg": "/react-portfolio/static/media/download-solid.7026e29b.svg",
     "static/media/empty-ipad-horizontal.277e8630.png": "/react-portfolio/static/media/empty-ipad-horizontal.277e8630.png",
     "static/media/icon-close.f982e313.svg": "/react-portfolio/static/media/icon-close.f982e313.svg",
@@ -30,10 +29,10 @@
     "static/media/tools-icon.a74cea41.svg": "/react-portfolio/static/media/tools-icon.a74cea41.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.892c048f.js",
-    "static/css/2.24d2ee48.chunk.css",
-    "static/js/2.17344fd6.chunk.js",
+    "static/js/runtime-main.160ec3fa.js",
+    "static/css/2.1a2a3f90.chunk.css",
+    "static/js/2.783cf4aa.chunk.js",
     "static/css/main.16106f3c.chunk.css",
-    "static/js/main.a8421e6e.chunk.js"
+    "static/js/main.1a3d9d4b.chunk.js"
   ]
 }
