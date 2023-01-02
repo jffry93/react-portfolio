@@ -77,7 +77,7 @@ const StyledButtonContainer = styled.div`
 		width: 120px;
 	}
 	.active {
-		background-color: rgba(50, 50, 50, 0.9);
+		background-color: rgba(0, 0, 0, 0.6);
 		/* font-size: clamp(17px, 1.2vw, 18px); */
 	}
 	.active:hover {

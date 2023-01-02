@@ -7,6 +7,7 @@ import layer2 from '../../../../assets/img/parallax2/layer2.png';
 import { useViewportScroll, motion, useTransform } from 'framer-motion';
 
 import { NavHashLink } from 'react-router-hash-link';
+import SpaceStars from '../../../../data/style/SpaceStars.js';
 
 const ParallaxSection = () => {
 	const { scrollY } = useViewportScroll();
@@ -16,40 +17,43 @@ const ParallaxSection = () => {
 	const y3 = useTransform(scrollY, [0, 1000], [0, -40]);
 
 	return (
-		<StyledParallaxContainer>
-			<motion.div
+		<>
+			<StyledParallaxContainer>
+				{/* <motion.div
 				className='background-img'
 				style={{ y: y1, x: -0 }}
-			></motion.div>
-			<div className='container'>
-				<motion.div className='content' style={{ y: y3, x: -0 }}>
-					<h2>
-						Hi, I'm <span className='name'>Jeff</span>
-					</h2>
-					<h1>
-						Full Stack <span className='title'>Developer</span>
-					</h1>
+			></motion.div> */}
+				<SpaceStars />
+				<div className='container'>
+					<motion.div className='content' style={{ y: y3, x: -0 }}>
+						<h2>
+							Hi, I'm <span className='name'>Jeff</span>
+						</h2>
+						<h1>
+							Full Stack <span className='title'>Developer</span>
+						</h1>
 
-					<h3>Your digital space is limitless.</h3>
+						<h3>Your digital space is limitless.</h3>
 
-					<div className='button-container'>
-						<NavHashLink href='#' to='/work'>
-							<button>View Work</button>
-						</NavHashLink>
-						<a
-							href='https://github.com/jffry93'
-							target='_blank'
-							className='resume'
-							rel='noreferrer'
-						>
-							<button>Visit Github</button>
-						</a>
-					</div>
-				</motion.div>
-				<motion.img src={layer2} alt='' style={{ y: y2, x: -0 }} />
-				<motion.img src={layer1} alt='' />
-			</div>
-		</StyledParallaxContainer>
+						<div className='button-container'>
+							<NavHashLink href='#' to='/work'>
+								<button>View Work</button>
+							</NavHashLink>
+							<a
+								href='https://github.com/jffry93'
+								target='_blank'
+								className='resume'
+								rel='noreferrer'
+							>
+								<button>Visit Github</button>
+							</a>
+						</div>
+					</motion.div>
+					<motion.img src={layer2} alt='' style={{ y: y2, x: -0 }} />
+					<motion.img src={layer1} alt='' />
+				</div>
+			</StyledParallaxContainer>
+		</>
 	);
 };
 

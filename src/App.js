@@ -16,6 +16,7 @@ import { Routes } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import Footer from './layout/Footer';
 import ProjectDetails from './components/PersonalProject/ProjectDetails';
+import Test from './data/style/SpaceStars.js/index.js';
 
 function App() {
 	const [navToggle, setNavToggle] = useState(false);
@@ -31,6 +32,7 @@ function App() {
 			<AnimatePresence exitBeforeEnter>
 				<Routes location={background || location}>
 					<Route path='/*' element={<About />} />
+					<Route path='/test' element={<Test />} />
 					<Route path='/work' element={<Work />} />
 					<Route path='/contact' element={<Contact />} />
 				</Routes>
