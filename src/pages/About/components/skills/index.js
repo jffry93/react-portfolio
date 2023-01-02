@@ -1,33 +1,32 @@
 import { useState } from 'react';
-import { v4 as uuidv4 } from 'uuid';
-
+import { FaList } from 'react-icons/fa';
+import { FiGrid } from 'react-icons/fi';
+import { BsViewList } from 'react-icons/bs';
 //JSON DATA
 import skillsState from '../../../../data/state/skillsState';
-//COMPONENTS
-import SkillCard from './components/SkillCard';
 //STYLING
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { fade } from '../../../../lib/framer-motion/animation';
 //reveal when in viewport
 import { useScroll } from '../../../../hooks/useScroll';
-//swiper
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/swiper-bundle.min.css';
-import 'swiper/swiper.min.css';
+
 //swiper core and modules
-import SwiperCore, { Navigation, Pagination, A11y, Autoplay } from 'swiper';
+// import SwiperCore, { Navigation, Pagination, A11y, Autoplay } from 'swiper';
+import SkillsList from './components/SkillsList';
+import SkillsGrid from './components/SkillsGrid';
 
 //install swiper modules
-SwiperCore.use([Navigation, Pagination, A11y, Autoplay]);
+// SwiperCore.use([Navigation, Pagination, A11y, Autoplay]);
 
 const SkillsSections = () => {
 	const [skills] = useState(skillsState);
+	const [displaySkills, setDisplaySkills] = useState(false);
 	const [element, controls] = useScroll();
-
+	console.log(displaySkills);
 	return (
 		<StyledSkillsContainer
-			variants={fade}
+			// variants={fade}
 			animate={controls}
 			initial='hidden'
 			ref={element}
@@ -36,58 +35,56 @@ const SkillsSections = () => {
 				<h2>
 					<span>Skills</span> & <span>Tools</span>
 				</h2>
-				{/* <p>Some neat tricks I've picked up along the way</p> */}
+				<StyledButtonContainer>
+					<button
+						className={!displaySkills ? 'active' : ''}
+						onClick={() => setDisplaySkills(false)}
+					>
+						<BsViewList size='18px' />
+						List
+					</button>
+					<button
+						className={displaySkills ? 'active' : ''}
+						onClick={() => setDisplaySkills(true)}
+					>
+						<FiGrid size='18px' />
+						Grid
+					</button>
+				</StyledButtonContainer>
 			</motion.div>
-			<div className='skills-container'>
-				<Swiper
-					modules={[Navigation, Pagination, A11y, Autoplay]}
-					className='swiper-js-container'
-					// onSlideChange={() => console.log('slide change')}
-					loop={true}
-					freeMode={true}
-					touchRatio={1}
-					slidesPerView='auto'
-					grabCursor={true}
-					spaceBetween={30}
-					// pagination={{
-					//   clickable: true,
-					//   type: 'bullets',
-					// }}
-					autoplay={{
-						delay: 1,
-						onMouseEnter: () => this.swiper.autoplay.stop(),
-						disableOnInteraction: false,
-					}}
-					speed={2000}
-					breakpoints={{
-						700: {
-							pagination: {
-								clickable: true,
-								type: 'bullets',
-							},
-						},
-					}}
-				>
-					{skills.map((skill, i) => (
-						<SwiperSlide key={uuidv4()}>
-							<SkillCard
-								title={skill.title}
-								secondTitle={skill.secondTitle}
-								description={skill.description}
-								documentation={skill.documentation}
-								color={skill.hexCode}
-								color2={skill.hexCode2}
-								textColor={skill.textColor}
-							/>
-						</SwiperSlide>
-					))}
-				</Swiper>
-			</div>
+			{displaySkills ? (
+				<SkillsGrid skills={skills} />
+			) : (
+				<SkillsList skills={skills} />
+			)}
 		</StyledSkillsContainer>
 	);
 };
 
 export default SkillsSections;
+
+const StyledButtonContainer = styled.div`
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 8px;
+
+	button {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 10px;
+		width: 120px;
+	}
+	.active {
+		background-color: rgba(50, 50, 50, 0.9);
+		/* font-size: clamp(17px, 1.2vw, 18px); */
+	}
+	.active:hover {
+		background-color: var(--primary-accent);
+		/* font-size: clamp(17px, 1.2vw, 18px); */
+	}
+`;
 
 const StyledSkillsContainer = styled(motion.div)`
 	/* border: 3px solid yellow; */
@@ -109,6 +106,7 @@ const StyledSkillsContainer = styled(motion.div)`
 		}
 	}
 	h2 {
+		text-align: center;
 		color: var(--primary-text-color);
 		padding-bottom: 16px;
 		span {

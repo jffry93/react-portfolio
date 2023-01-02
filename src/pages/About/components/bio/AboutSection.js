@@ -38,7 +38,7 @@ const ServicesSection = () => {
 
 					<p>
 						Experienced with translating designs into web applications and
-						building modern scalable components for several years
+						building modern scalable components.
 					</p>
 
 					<p>
@@ -80,11 +80,6 @@ const ServicesSection = () => {
 };
 
 const StyledContainer = styled(motion.div)``;
-
-const StyledMoreInfo = styled(motion.div)`
-	text-align: center;
-	color: white;
-`;
 
 const StyledAbout = styled(motion.div)`
 	/* min-height: 500px;
