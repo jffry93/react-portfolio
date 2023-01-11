@@ -30,12 +30,13 @@ const MapBox = ({ lng, setLng, lat, setLat }) => {
 		let greetingContainer = document.createElement('div');
 		greetingContainer.classList.add('greeting-container');
 		let waveGif = document.createElement('img');
-		waveGif.src = myFace;
+		waveGif.src =
+			'https://res.cloudinary.com/dcfqlsnzh/image/upload/v1673469927/cgmp3z3ki78pouub1nx5.png';
 		// 'https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif';
-		// let greeting = document.createElement('h3');
-		// let textNode = document.createTextNode('Hi');
-		// greetingContainer.appendChild(greeting);
-		greetingContainer.appendChild(waveGif);
+		let greeting = document.createElement('h4');
+		greeting.innerText = "I'm here!";
+		greetingContainer.appendChild(greeting);
+		// greetingContainer.appendChild(waveGif);
 		// greeting.appendChild(textNode);
 		// console.log(greeting);
 		marker1._element.appendChild(greetingContainer);

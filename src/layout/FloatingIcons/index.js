@@ -18,19 +18,20 @@ const StyledFull = styled.div`
 	height: 100vh;
 	width: 100%;
 	max-width: 1600px;
-
-	z-index: 10;
+	visibility: hidden;
+	z-index: 5;
 	@media (max-width: 750px) {
 		all: unset;
 	}
 `;
 
 const StyledContainer = styled.div`
+	visibility: visible;
+	z-index: 1;
 	position: absolute;
 	top: 50%;
 	right: 40px;
 	transform: translate(0%, -50%);
-	z-index: 3;
 	transition: transform 0.6s ease-out;
 
 	display: flex;
@@ -39,7 +40,12 @@ const StyledContainer = styled.div`
 	gap: 16px;
 	color: rgba(0, 0, 0, 0.5);
 
+	z-index: 10;
+
 	.icon-container {
+		position: relative;
+
+		z-index: 10 !important;
 		display: flex;
 		align-items: center;
 		justify-content: center;

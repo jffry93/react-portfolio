@@ -204,7 +204,7 @@ const StyledImage = styled(motion.div)`
 		width: 100%;
 		border-radius: 50%;
 
-		background-image: url(${myFace});
+		background-image: url(${'https://res.cloudinary.com/dcfqlsnzh/image/upload/v1673470528/pn0cirbpcecwp8iva1rl.png'});
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: center;

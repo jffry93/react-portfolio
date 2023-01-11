@@ -55,18 +55,18 @@ const StyledMapContainer = styled.div`
 		display: none;
 	}
 	.greeting-container {
-		display: flex;
+		display: none;
 		justify-content: center;
 		align-items: center;
 		gap: 10px;
 		/* border: 3px solid green; */
-		background-color: var(--primary-accent);
+		/* background-color: var(--primary-accent); */
 		padding: 6.9px;
-		border-radius: 50%;
+		/* border-radius: 50%; */
 		position: absolute;
-		top: -69px;
+		top: 30px;
 
-		h3 {
+		h4 {
 			white-space: nowrap;
 		}
 		img {
